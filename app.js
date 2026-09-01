@@ -2,6 +2,7 @@ const STORAGE_KEY = "facharbeit-pt3-guide-v1";
 const DATA_URL = "data/requirements.json";
 const STATE_VERSION = 2;
 const BACKUP_SCHEMA = "facharbeit-workspace-backup";
+const SPECIALIZATION_IDS = new Set(["heilpaedagogik", "other"]);
 
 const phaseTitles = {
   start: "Start & Formalia",
@@ -41,6 +42,7 @@ function createEmptyState() {
     version: STATE_VERSION,
     mode: "facharbeit",
     activePhase: "start",
+    specialization: "",
     topic: "",
     answers: {},
     answerStatus: {},
@@ -68,6 +70,7 @@ function isImportableState(value, { requireVersion = false, requireActivePhase =
   if (requireVersion && value.version !== STATE_VERSION) return false;
   if (requireActivePhase && !modePhases[value.mode].includes(value.activePhase)) return false;
   if (value.answerStatus !== undefined && !isObjectRecord(value.answerStatus)) return false;
+  if (value.specialization !== undefined && value.specialization !== "" && !SPECIALIZATION_IDS.has(value.specialization)) return false;
   return true;
 }
 
@@ -109,6 +112,7 @@ function normalizeState(candidate = {}) {
   const source = safeObject(candidate);
   next.mode = modePhases[source.mode] ? source.mode : next.mode;
   next.activePhase = modePhases[next.mode].includes(source.activePhase) ? source.activePhase : modePhases[next.mode][0];
+  next.specialization = SPECIALIZATION_IDS.has(source.specialization) ? source.specialization : "";
   next.topic = typeof source.topic === "string" ? source.topic.slice(0, 260) : "";
 
   for (const [id, value] of Object.entries(safeObject(source.answers))) {
@@ -172,10 +176,14 @@ function refsHtml(refs = []) {
     .map((item) => {
       const source = model.sources.find((candidate) => candidate.id === item.source_id);
       if (!source) return "";
-      const href = `${source.file}#page=${item.page}`;
+      const href = source.file.toLowerCase().endsWith(".pdf") ? `${source.file}#page=${item.page}` : source.file;
       return `<a class="ref-link" href="${href}" target="_blank" rel="noopener">${escapeHtml(source.title)}, S. ${item.page}</a>`;
     })
     .join("");
+}
+
+function specializationConfig(id = state.specialization) {
+  return (model.specializations || []).find((item) => item.id === id) || null;
 }
 
 function allRequirementsByPhase() {
@@ -271,13 +279,14 @@ function renderDeadline() {
 function renderModeSummary() {
   const box = document.querySelector("#modeSummary");
   if (state.mode === "facharbeit") {
+    const specialization = specializationConfig();
     const pills = model.facharbeit.sections
       .filter((section) => section.weight_percent)
       .map((section) => `<span class="pill">${escapeHtml(section.title)}: ${section.weight_percent} %</span>`)
       .join("");
     box.innerHTML = `
       <p><strong>Schriftlicher Teil:</strong> ${escapeHtml(model.facharbeit.competence)}</p>
-      <div class="weight-list">${pills}<span class="pill deduction">Schreibkompetenz: bis −${model.facharbeit.writing_deduction.deduction_max_percent} %</span></div>
+      <div class="weight-list">${specialization ? `<span class="pill specialization-pill">Vertiefung: ${escapeHtml(specialization.label)}</span>` : ""}${pills}<span class="pill deduction">Schreibkompetenz: bis −${model.facharbeit.writing_deduction.deduction_max_percent} %</span></div>
     `;
   } else {
     const pills = model.kolloquium.sections
@@ -304,11 +313,63 @@ function renderModeButtons() {
   });
 }
 
+function renderSpecializationGate() {
+  const content = document.querySelector("#specializationContent");
+  const gate = document.querySelector("#specializationGate");
+  const selected = specializationConfig();
+  const ready = Boolean(selected);
+
+  document.querySelector("#workbench").hidden = !ready;
+  document.querySelector("#workflow").hidden = !ready;
+  gate.classList.toggle("has-selection", ready);
+
+  if (!ready) {
+    content.innerHTML = `
+      <div class="specialization-options" role="group" aria-label="Vertiefung auswählen">
+        ${(model.specializations || [])
+          .map(
+            (item) => `
+              <button class="specialization-option" type="button" data-specialization="${escapeHtml(item.id)}">
+                <strong>${escapeHtml(item.label)}</strong>
+                <span>${escapeHtml(item.description)}</span>
+              </button>
+            `,
+          )
+          .join("")}
+      </div>
+    `;
+  } else {
+    content.innerHTML = `
+      <div class="specialization-selected">
+        <div>
+          <span class="source-badge ${selected.source_id ? "status-binding" : "help"}">${selected.source_id ? "Vertiefungsspezifische Vorgabe aktiv" : "Allgemeine Vorgaben aktiv"}</span>
+          <strong>${escapeHtml(selected.label)}</strong>
+          <p>${escapeHtml(selected.selected_note)}</p>
+          ${selected.refs?.length ? `<div class="refs">${refsHtml(selected.refs)}</div>` : ""}
+        </div>
+        <button id="changeSpecialization" class="button compact secondary" type="button">Vertiefung ändern</button>
+      </div>
+    `;
+  }
+
+  content.querySelectorAll("[data-specialization]").forEach((button) => {
+    button.addEventListener("click", () => setSpecialization(button.dataset.specialization));
+  });
+  document.querySelector("#changeSpecialization")?.addEventListener("click", () => {
+    state.specialization = "";
+    saveState();
+    renderAll();
+    document.querySelector("#specialization-title")?.focus({ preventScroll: true });
+    announce("Vertiefung kann neu ausgewählt werden.");
+  });
+}
+
 function renderOutline() {
   const section = document.querySelector("#outlineSection");
-  section.hidden = state.mode !== "facharbeit";
+  section.hidden = state.mode !== "facharbeit" || !state.specialization;
   if (section.hidden) return;
-  const outline = model.facharbeit.required_outline;
+  const specialization = specializationConfig();
+  const outline = specialization?.required_outline || model.facharbeit.required_outline;
   document.querySelector("#outlineContent").innerHTML = `
     <div class="outline-notice">
       <p><strong>${escapeHtml(outline.note)}</strong></p>
@@ -319,9 +380,9 @@ function renderOutline() {
       ${outline.items
         .map(
           (item) => `
-            <div class="outline-row ${item.number.includes(".") ? "outline-sub" : ""}">
+            <div class="outline-row ${item.level === "sub" || item.number.includes(".") ? "outline-sub" : ""}">
               <span class="outline-number">${escapeHtml(item.number)}</span>
-              <span>${escapeHtml(item.title)}</span>
+              <span>${escapeHtml(item.title)}${item.guidance ? `<small class="outline-guidance">${escapeHtml(item.guidance)}</small>` : ""}</span>
             </div>
           `,
         )
@@ -475,6 +536,35 @@ function renderGuidance(phase) {
   `;
 }
 
+function renderSpecializationGuidance(phase) {
+  if (state.mode !== "facharbeit") return "";
+  const specialization = specializationConfig();
+  const guidance = specialization?.phase_guidance?.find((item) => item.phase === phase);
+  if (!guidance) return "";
+  return `
+    <section class="specialization-panel" aria-labelledby="specialization-guidance-heading">
+      <div class="guidance-heading">
+        <p class="eyebrow">Vertiefung ${escapeHtml(specialization.label)}</p>
+        <h4 id="specialization-guidance-heading">${escapeHtml(guidance.title)}</h4>
+        <p>${escapeHtml(guidance.note || specialization.guidance_note)}</p>
+      </div>
+      <div class="specialization-guidance-list">
+        ${guidance.items
+          .map(
+            (item) => `
+              <div class="specialization-guidance-item">
+                ${item.label ? `<strong>${escapeHtml(item.label)}</strong>` : ""}
+                <span>${escapeHtml(item.text)}</span>
+              </div>
+            `,
+          )
+          .join("")}
+      </div>
+      <div class="refs">${refsHtml(guidance.refs || specialization.refs)}</div>
+    </section>
+  `;
+}
+
 function renderStage() {
   const phase = state.activePhase;
   const section = sectionForPhase(phase);
@@ -491,6 +581,7 @@ function renderStage() {
       <h3 id="stage-title" tabindex="-1">${escapeHtml(phaseTitles[phase])}</h3>
       <p>${escapeHtml(stageDescription(phase))}</p>
     </div>
+    ${renderSpecializationGuidance(phase)}
     <div class="two-column">
       <section class="panel" aria-labelledby="requirements-heading">
         <h4 id="requirements-heading">Belegte Anforderungen</h4>
@@ -677,6 +768,7 @@ function exportMarkdown() {
     "",
     `Export: ${new Date().toLocaleString("de-DE")}`,
     `Bereich: ${state.mode === "facharbeit" ? "Facharbeit" : "Kolloquium"}`,
+    state.specialization ? `Vertiefung: ${specializationConfig()?.label || state.specialization}` : "Vertiefung: –",
     state.topic ? `Arbeitstitel: ${state.topic}` : "Arbeitstitel: –",
     "",
   ];
@@ -735,6 +827,15 @@ function resetState() {
   announce("Lokaler Arbeitsstand gelöscht.");
 }
 
+function setSpecialization(specialization) {
+  if (!SPECIALIZATION_IDS.has(specialization)) return;
+  state.specialization = specialization;
+  saveState();
+  renderAll();
+  document.querySelector("#workbench")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  announce(`Vertiefung ${specializationConfig()?.label || specialization} ausgewählt.`);
+}
+
 function setMode(mode) {
   if (!modePhases[mode] || mode === state.mode) return;
   state.mode = mode;
@@ -771,6 +872,7 @@ function wireGlobalActions() {
 }
 
 function renderAll() {
+  renderSpecializationGate();
   renderExamSplit();
   renderDeadline();
   renderModeButtons();

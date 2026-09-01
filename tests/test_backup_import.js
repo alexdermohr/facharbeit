@@ -8,6 +8,7 @@ function currentState() {
     version: STATE_VERSION,
     mode: "facharbeit",
     activePhase: "start",
+    specialization: "heilpaedagogik",
     topic: "Bindung im pädagogischen Alltag",
     answers: { q1: "Ein belastbarer Entwurf" },
     answerStatus: { q1: "draft" },
@@ -47,6 +48,15 @@ test("arrays and unrelated objects are rejected before confirmation", () => {
   assert.throws(() => extractBackupState([]), /gültiges Backup-Objekt/);
   assert.throws(() => extractBackupState({ foo: "bar" }), /unterstützter Facharbeits-Arbeitsstand/);
   assert.throws(() => extractBackupState({ state: currentState() }), /unterstützter Facharbeits-Arbeitsstand/);
+});
+
+test("invalid specialization is rejected", () => {
+  const state = currentState();
+  state.specialization = "invented";
+  assert.throws(
+    () => extractBackupState({ schema: BACKUP_SCHEMA, version: STATE_VERSION, state }),
+    /keinen gültigen Arbeitsstand/,
+  );
 });
 
 test("wrong schemas and unsupported versions are rejected", () => {

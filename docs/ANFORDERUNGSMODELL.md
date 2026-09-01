@@ -1,15 +1,15 @@
 # Anforderungsmodell für Prüfungsteil III
 
-Dieses Dokument strukturiert die **dreizehn derzeit im Repository abgelegten Schuldokumente**. Es ergänzt sie nicht stillschweigend um allgemeines Wissen. Die maschinenlesbare Fassung liegt in [`data/requirements.json`](../data/requirements.json).
+Dieses Dokument strukturiert die **vierzehn derzeit im Repository abgelegten Schuldokumente** (dreizehn PDFs und ein DOCX). Es ergänzt sie nicht stillschweigend um allgemeines Wissen. Die maschinenlesbare Fassung liegt in [`data/requirements.json`](../data/requirements.json).
 
 ## 1. Quellenhierarchie
 
-Die neuen Materialien machen eine Unterscheidung nötig: Nicht jedes PDF hat dieselbe Funktion.
+Die Materialien machen eine Unterscheidung nötig: Nicht jede Schuldokument-Datei hat dieselbe Funktion.
 
 | Ebene | Dokumente | Verwendung im Modell |
 | --- | --- | --- |
 | Prüfungs-/Bewertungsdokumente | Bewertungsbogen Facharbeit, PT-3-Information, Bewertungshinweise Kolloquium | Prüfungsaufbau, Bewertungsgewichte, formale und fachliche Leistungserwartungen |
-| Verbindliche Vorgabe | „Verbindliche Gliederung für Facharbeiten“ | Endgliederung der schriftlichen Facharbeit |
+| Verbindliche Vorgaben | „Verbindliche Gliederung für Facharbeiten“; „Verbindliche Gliederung für Facharbeiten im Arbeitsfeld Heilpädagogik“ | Allgemeine Endgliederung sowie vertiefungsspezifische Endgliederung für Heilpädagogik |
 | Schulische Richtlinie | „Richtlinien zum wissenschaftlichen Arbeiten“ | Zitation, Quellenangaben und KI-Nutzung einschließlich Kennzeichnungspflichten |
 | Unterrichtshilfen | Situationsbeschreibung, Fachthemen-Fragen, Fünf-Ebenen-Blatt, Recherche, Qualität von Textquellen, Prompten, Verdichtung, Grundsätze wissenschaftlichen Schreibens | Konkretisierung und Arbeitshilfe; keine zusätzlichen Bewertungspunkte |
 
@@ -28,7 +28,9 @@ Das Informationspapier weist ausdrücklich darauf hin, dass eine mangelhafte Ges
 
 ## 3. Verbindliche Gliederung der Facharbeit
 
-Das neue Gliederungsblatt bezeichnet die folgenden Punkte **unabhängig vom Schwerpunkt als verbindlich**; zusätzliche Unterpunkte sind möglich:
+### Allgemeine Gliederung
+
+Das allgemeine Gliederungsblatt bezeichnet die folgenden Punkte **unabhängig vom Schwerpunkt als verbindlich**; zusätzliche Unterpunkte sind möglich:
 
 1. **Wahrnehmen und Erleben – Beschreibung der Praxissituation**
    1.1 Einleitung und Kontext
@@ -42,7 +44,27 @@ Das neue Gliederungsblatt bezeichnet die folgenden Punkte **unabhängig vom Schw
    3.3 Konkreter Plan für die Umsetzung
    3.4 Antizipieren
 
-**Einzuordnende Spannung:** Der Bewertungsbogen behandelt die Einleitung als eigenen Abschnitt, während die verbindliche Endgliederung sie unter 1.1 einordnet. Deshalb bleibt „Einleitung“ in der Website ein eigener **Arbeits**schritt, die Endfassung soll aber die verbindliche Nummerierung verwenden.
+### Vertiefung Heilpädagogik
+
+Zusätzlich liegt ein eigenes Blatt mit dem Titel **„Verbindliche Gliederung für Facharbeiten im Arbeitsfeld Heilpädagogik“** vor. Die Website fragt die Vertiefung deshalb zu Beginn ab. Bei **Heilpädagogik** wird diese spezifische Struktur angezeigt:
+
+- **Einleitung** – mit der Orientierungsfrage, worum und um wen es geht und inwiefern die Arbeit heilpädagogisch relevant ist.
+- **1 Wahrnehmen und Erleben – Beschreibung der Praxissituation**
+  - **1.1 Kontext**
+  - **1.2 Beschreibung des Menschen** – mit der Orientierungsfrage, welche Informationen zum Verständnis der anschließenden Ausgangslage benötigt werden
+  - **1.3 Detaillierte Beschreibung der Ausgangssituation**
+- **2 Verstehen und Analysieren**
+  - **2.1** Empathisches Verstehen und Analysieren mit dem Fünf Ebenen Modell – ergänzt um die Frage, inwiefern das **ICF-CY** bei der Analyse hilft
+  - **2.2** Fachliche Auseinandersetzung und Arbeitshypothese
+- **3 Entscheiden und Planen**
+  - **3.1** Ziel für das pädagogische Handeln – Förderplanung berücksichtigen und den Nutzen einer **SMARTen Zielformulierung** prüfen
+  - **3.2** Planungsentscheidungen – Umsetzung des **Empowerment**-Gedankens prüfen
+  - **3.3** konkreter Plan für die Umsetzung – ausreichende **Kleinschrittigkeit** im Verhältnis zu den Voraussetzungen des Menschen prüfen
+  - **3.4** Antizipieren – **Teilhabebarrieren** beim Antizipieren berücksichtigen
+
+Die Fragen stehen im Heilpädagogik-Blatt in eckigen Klammern. Das Modell behandelt sie deshalb als **Orientierungshinweise innerhalb einer verbindlichen Gliederung**, nicht als neue offizielle Bewertungskriterien.
+
+**Einzuordnende Spannung:** Der Bewertungsbogen behandelt die Einleitung als eigenen Abschnitt. Die allgemeine Gliederung ordnet „Einleitung und Kontext“ als 1.1 ein, während das Heilpädagogik-Blatt „Einleitung“ vor Abschnitt 1 führt und „Kontext“ innerhalb von Abschnitt 1 nennt. Zudem enthält keines der beiden Gliederungsblätter eine ausdrückliche Vorrangregel. Die Website löst das transparent: Die Vertiefung wird zuerst gewählt; bei Heilpädagogik wird die speziellere Gliederung vorrangig angezeigt, beide Quellen bleiben sichtbar.
 
 ## 4. Facharbeit: Bewertung und Konkretisierung
 
@@ -147,7 +169,7 @@ Weiterhin belegt sind:
 
 ## 8. Planungsdatum
 
-Für die Website ist **13.11.2026** als mitgeteilter Abgabetermin hinterlegt. Diese Angabe ist bewusst als `user_provided` markiert. **Sie stammt nicht aus den dreizehn PDFs.** Das Modell macht daraus deshalb keine PDF-belegte Prüfungsanforderung.
+Für die Website ist **13.11.2026** als mitgeteilter Abgabetermin hinterlegt. Diese Angabe ist bewusst als `user_provided` markiert. **Sie stammt nicht aus den hinterlegten Schuldokumenten.** Das Modell macht daraus deshalb keine PDF-belegte Prüfungsanforderung.
 
 ## 9. Kolloquium
 
@@ -164,8 +186,9 @@ Die drei bisherigen Prüfungsdokumente bleiben unverändert maßgeblich. Bewertu
 
 1. Es ist nicht ausdrücklich definiert, welche Bestandteile in die **12–15 Seiten** eingerechnet werden.
 2. Die verbindliche Gliederung verweist auf **exemplarische Gliederungen im Anhang**; diese Beispiele liegen nicht vor.
-3. Der konkrete Abgabetermin **13.11.2026** ist als Planungsangabe vorhanden, aber in den PDF-Quellen nicht belegt.
+3. Der konkrete Abgabetermin **13.11.2026** ist als Planungsangabe vorhanden, aber in den Schuldokumenten nicht belegt.
+4. Für andere Vertiefungen als Heilpädagogik liegen derzeit **keine entsprechend bezeichneten vertiefungsspezifischen verbindlichen Gliederungsblätter** im Quellenordner.
 
 ## 11. Quellen
 
-Eine vollständige Quellenmatrix mit Status, Rolle und Abgrenzung liegt in [`QUELLENMATRIX.md`](QUELLENMATRIX.md). Die PDF-Dateien liegen unter [`quellen/`](../quellen/).
+Eine vollständige Quellenmatrix mit Status, Rolle und Abgrenzung liegt in [`QUELLENMATRIX.md`](QUELLENMATRIX.md). Die Quelldateien (PDF und DOCX) liegen unter [`quellen/`](../quellen/).
