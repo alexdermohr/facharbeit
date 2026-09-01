@@ -2,7 +2,7 @@
   "schema_version": 1,
   "title": "Anforderungsmodell Prüfungsteil III – Facharbeit und Kolloquium",
   "school": "Anna-Warburg-Schule, Fachschule für Sozialpädagogik",
-  "source_basis": "Zwölf im Repository abgelegte schulische Dokumente: drei Prüfungs-/Bewertungsdokumente, eine ausdrücklich verbindliche Gliederung, eine schulische Richtlinie zum wissenschaftlichen Arbeiten und sieben Unterrichtshilfen.",
+  "source_basis": "Dreizehn im Repository abgelegte schulische Dokumente: drei Prüfungs-/Bewertungsdokumente, eine ausdrücklich verbindliche Gliederung, eine schulische Richtlinie zum wissenschaftlichen Arbeiten und acht Unterrichtshilfen.",
   "separation_rule": "Prüfungs-/Bewertungsdokumente, verbindliche Vorgaben und schulische Richtlinien werden von Unterrichtshilfen getrennt ausgewiesen. Leitfragen bleiben als derived_guidance gekennzeichnet und sind keine zusätzlichen offiziellen Bewertungskriterien.",
   "sources": [
     {
@@ -104,6 +104,18 @@
       "status": "instructional",
       "status_label": "Unterrichtshilfe",
       "sha256": "09058a97ec16848acc1169f23873de05fc2a155b3a6d954a1a22abbd1afd8798"
+    },
+    {
+      "id": "textquellen-qualitaet",
+      "title": "Die Qualität von Textquellen",
+      "file": "quellen/AB-Die-Qualitaet-von-Textquellen.pdf",
+      "date": "ohne eindeutige Datumsangabe",
+      "pages": 2,
+      "role": "Unterrichtshilfe zur Bewertung von Internetquellen, zur Zitierfähigkeit sowie zu Herkunft und Qualität verwendeter Quellen.",
+      "status": "instructional",
+      "status_label": "Unterrichtshilfe",
+      "date_note": "Im Blatt selbst ist kein Ausgabedatum angegeben; beide Fußnoten nennen den 20.11.2012 als Abrufdatum der zugrunde liegenden Webquellen.",
+      "sha256": "5342996342192ad746c583dad6cfd3e30cfdab8874301792da91984a4d8d11c5"
     },
     {
       "id": "prompten-hilfe",
@@ -277,6 +289,14 @@
         {
           "source_id": "online-recherche",
           "page": 22
+        },
+        {
+          "source_id": "textquellen-qualitaet",
+          "page": 1
+        },
+        {
+          "source_id": "textquellen-qualitaet",
+          "page": 2
         }
       ],
       "numeric": {
@@ -1333,12 +1353,12 @@
       {
         "id": "q-sources",
         "phase": "start",
-        "prompt": "Welche mindestens zwei belastbaren Quellen willst du verwenden – und warum passen sie fachlich zu deiner Ausgangslage?",
+        "prompt": "Welche mindestens zwei belastbaren Quellen willst du verwenden – und wie prüfst du Autor, Herkunft, Aktualität, Quellenangaben und fachliche Eignung?",
         "maps_to": [
           "formal-sources",
           "fa-va-literature"
         ],
-        "hint": "Die Recherchehilfe nennt Fachportale, Bibliothekswege und Google Scholar. Das separat erwähnte Papier mit vollständigen Qualitätskriterien für Textquellen liegt jedoch weiterhin nicht vor.",
+        "hint": "Das Qualitätsblatt konkretisiert die im Seminar verlangte Prüfung: Bei Internetseiten unter anderem Autor/Expertise, Betreiber, Zielgruppe, Quellenangaben, inhaltliche und formale Qualität sowie Aktualität prüfen. Bei unklarer Herkunft oder Urheberschaft soll die Quelle nicht verwendet werden.",
         "origin": "derived_guidance",
         "refs": [
           {
@@ -1348,6 +1368,14 @@
           {
             "source_id": "online-recherche",
             "page": 22
+          },
+          {
+            "source_id": "textquellen-qualitaet",
+            "page": 1
+          },
+          {
+            "source_id": "textquellen-qualitaet",
+            "page": 2
           }
         ]
       },
@@ -1779,11 +1807,6 @@
   },
   "documented_gaps": [
     {
-      "id": "gap-literature-quality",
-      "title": "Vollständige Qualitätskriterien für Textquellen fehlen",
-      "text": "Die Recherchehilfe nennt Suchwege, Fachportale und Google Scholar. Die Verdichtungshilfe verweist zusätzlich auf ein Papier „Die Qualität von Textquellen“. Dieses Papier liegt im aktuellen Quellenordner nicht vor; deshalb werden keine vollständigen Qualitätskriterien erfunden."
-    },
-    {
       "id": "gap-page-scope",
       "title": "Was zählt in die 12–15 Seiten?",
       "text": "Die Dokumente nennen 12–15 Seiten, definieren aber weiterhin nicht ausdrücklich, welche Bestandteile in diesen Seitenumfang eingerechnet werden."
@@ -2195,6 +2218,87 @@
             {
               "source_id": "online-recherche",
               "page": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guide-source-quality",
+      "phase": "verstehen-analysieren",
+      "title": "Textquellen auf Qualität und Zitierfähigkeit prüfen",
+      "kind_label": "Unterrichtshilfe",
+      "importance": "critical",
+      "items": [
+        {
+          "text": "Prüfe bei Internetseiten, ob Autor und Kontakt benannt sind und ob fachliche Referenzen oder Expertise erkennbar sind.",
+          "refs": [
+            {
+              "source_id": "textquellen-qualitaet",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Prüfe Betreiber bzw. Server und Zielgruppe; ordne ein, ob die Seite eher wissenschaftlich oder kommerziell ausgerichtet ist und ob Werbung erscheint.",
+          "refs": [
+            {
+              "source_id": "textquellen-qualitaet",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Prüfe Quellenangaben und inhaltliche Qualität: logische Gliederung, Vollständigkeit bzw. Kennzeichnung eines Ausschnitts, Detailtiefe und verständliche Navigation.",
+          "refs": [
+            {
+              "source_id": "textquellen-qualitaet",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Prüfe formale Sorgfalt und Aktualität: Rechtschreib- oder Tippfehler, veraltete bzw. blinde Links, Erstell- und Update-Zeitpunkt sowie regelmäßige Aktualisierung.",
+          "refs": [
+            {
+              "source_id": "textquellen-qualitaet",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Das Blatt nennt zusätzlich Zweckmäßigkeit von Grafiken und Animationen, eine Nur-Text-Option und eine seiteninterne Suchfunktion als Prüfpunkte für Internetseiten.",
+          "refs": [
+            {
+              "source_id": "textquellen-qualitaet",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Als zitierfähig führt das Blatt unter anderem wissenschaftliche Fach- und Lehrbücher, wissenschaftliche Veröffentlichungen, Forschungsberichte, Archivalien und valide Internetquellen auf; außerdem dokumentierte Expertengespräche und eigene Erhebungen.",
+          "refs": [
+            {
+              "source_id": "textquellen-qualitaet",
+              "page": 2
+            }
+          ]
+        },
+        {
+          "text": "Als nicht zitierfähig führt das Blatt unter anderem Populärliteratur, Boulevardmedien, Vorlesungsskripte, allgemeine Lexika, private Webpräsenzen und Wikipedia auf.",
+          "refs": [
+            {
+              "source_id": "textquellen-qualitaet",
+              "page": 2
+            }
+          ]
+        },
+        {
+          "text": "Bevorzuge anerkannte wissenschaftliche Quellen, verwende keine Quellen mit unklarer Herkunft oder Urheberschaft, arbeite möglichst mit der neuesten Auflage und zitiere fremdsprachige Quellen möglichst in der Originalsprache.",
+          "refs": [
+            {
+              "source_id": "textquellen-qualitaet",
+              "page": 2
             }
           ]
         }

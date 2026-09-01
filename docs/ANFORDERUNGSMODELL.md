@@ -1,6 +1,6 @@
 # Anforderungsmodell für Prüfungsteil III
 
-Dieses Dokument strukturiert die **zwölf derzeit im Repository abgelegten Schuldokumente**. Es ergänzt sie nicht stillschweigend um allgemeines Wissen. Die maschinenlesbare Fassung liegt in [`data/requirements.json`](../data/requirements.json).
+Dieses Dokument strukturiert die **dreizehn derzeit im Repository abgelegten Schuldokumente**. Es ergänzt sie nicht stillschweigend um allgemeines Wissen. Die maschinenlesbare Fassung liegt in [`data/requirements.json`](../data/requirements.json).
 
 ## 1. Quellenhierarchie
 
@@ -11,7 +11,7 @@ Die neuen Materialien machen eine Unterscheidung nötig: Nicht jedes PDF hat die
 | Prüfungs-/Bewertungsdokumente | Bewertungsbogen Facharbeit, PT-3-Information, Bewertungshinweise Kolloquium | Prüfungsaufbau, Bewertungsgewichte, formale und fachliche Leistungserwartungen |
 | Verbindliche Vorgabe | „Verbindliche Gliederung für Facharbeiten“ | Endgliederung der schriftlichen Facharbeit |
 | Schulische Richtlinie | „Richtlinien zum wissenschaftlichen Arbeiten“ | Zitation, Quellenangaben und KI-Nutzung einschließlich Kennzeichnungspflichten |
-| Unterrichtshilfen | Situationsbeschreibung, Fachthemen-Fragen, Fünf-Ebenen-Blatt, Recherche, Prompten, Verdichtung, Grundsätze wissenschaftlichen Schreibens | Konkretisierung und Arbeitshilfe; keine zusätzlichen Bewertungspunkte |
+| Unterrichtshilfen | Situationsbeschreibung, Fachthemen-Fragen, Fünf-Ebenen-Blatt, Recherche, Qualität von Textquellen, Prompten, Verdichtung, Grundsätze wissenschaftlichen Schreibens | Konkretisierung und Arbeitshilfe; keine zusätzlichen Bewertungspunkte |
 
 Die Website kennzeichnet diese Rollen. Unterrichtshilfen werden **nicht** zu neuen offiziellen Bewertungskriterien hochgestuft.
 
@@ -77,7 +77,11 @@ Das Blatt zur Identifizierung fachlicher Themen ergänzt die Analyse um Prüffra
 
 Die Recherchehilfe empfiehlt, den Fokus auf ein bis zwei Kernthemen zu verdichten, passende Schlagworte zu bilden und in Fachzeitschriften, Bibliothekskatalogen sowie Google Scholar zu recherchieren. KI kann Schlagwortideen liefern, deren Ergebnisse aber kritisch mit der eigenen Analyse abgeglichen werden müssen. Suchoperatoren wie Anführungszeichen, AND/OR, `*` und `-` werden als Hilfen genannt.
 
-**Weiterhin offen:** Das separate Papier mit den vollständigen Qualitätskriterien für Textquellen liegt nicht vor. Die Recherchehilfe nennt gute Suchwege, ersetzt dieses fehlende Qualitätskriterien-Papier aber nicht.
+**Qualität und Zitierfähigkeit von Textquellen:** Das nun vorliegende Unterrichtsblatt konkretisiert die im Informationspapier erwähnten Qualitätskriterien. Für Internetseiten nennt es Autor und Expertise, Betreiber/Server, Zielgruppe und kommerzielle Ausrichtung, Quellenangaben, inhaltliche und formale Qualität, Aktualität, den Zweck von Grafiken sowie eine seiteninterne Suchfunktion.
+
+Für die Zitierfähigkeit führt das Blatt unter anderem wissenschaftliche Fach- und Lehrbücher, wissenschaftliche Veröffentlichungen, Forschungsberichte, Geschäftsberichte, Archivalien und valide Internetquellen an. Auch schriftlich dokumentierte Expertengespräche, eigene Umfragen bzw. Interviews, systematische Beobachtungen, eigene Versuchsergebnisse und E-Mails werden genannt. Als nicht zitierfähig ordnet das Blatt Populärliteratur, Boulevardmedien, Vorlesungsskripte, allgemeine Lexika, private Webpräsenzen und Wikipedia ein.
+
+Zur Herkunft und Qualität empfiehlt das Blatt anerkannte wissenschaftliche Quellen, rät von Quellen mit unklarer Herkunft oder Urheberschaft ab, empfiehlt möglichst die neueste Auflage und bei fremdsprachigen Quellen das Zitieren in der Originalsprache. Das Blatt bleibt eine **Unterrichtshilfe** und wird nicht zu einer zusätzlichen Bewertungsrubrik gemacht.
 
 ### Entscheiden & Planen
 
@@ -143,7 +147,7 @@ Weiterhin belegt sind:
 
 ## 8. Planungsdatum
 
-Für die Website ist **13.11.2026** als mitgeteilter Abgabetermin hinterlegt. Diese Angabe ist bewusst als `user_provided` markiert. **Sie stammt nicht aus den zwölf PDFs.** Das Modell macht daraus deshalb keine PDF-belegte Prüfungsanforderung.
+Für die Website ist **13.11.2026** als mitgeteilter Abgabetermin hinterlegt. Diese Angabe ist bewusst als `user_provided` markiert. **Sie stammt nicht aus den dreizehn PDFs.** Das Modell macht daraus deshalb keine PDF-belegte Prüfungsanforderung.
 
 ## 9. Kolloquium
 
@@ -158,10 +162,9 @@ Die drei bisherigen Prüfungsdokumente bleiben unverändert maßgeblich. Bewertu
 
 ## 10. Verbleibende Lücken
 
-1. Das im Unterricht erwähnte Papier mit den vollständigen **Qualitätskriterien für Textquellen** fehlt.
-2. Es ist nicht ausdrücklich definiert, welche Bestandteile in die **12–15 Seiten** eingerechnet werden.
-3. Die verbindliche Gliederung verweist auf **exemplarische Gliederungen im Anhang**; diese Beispiele liegen nicht vor.
-4. Der konkrete Abgabetermin **13.11.2026** ist als Planungsangabe vorhanden, aber in den PDF-Quellen nicht belegt.
+1. Es ist nicht ausdrücklich definiert, welche Bestandteile in die **12–15 Seiten** eingerechnet werden.
+2. Die verbindliche Gliederung verweist auf **exemplarische Gliederungen im Anhang**; diese Beispiele liegen nicht vor.
+3. Der konkrete Abgabetermin **13.11.2026** ist als Planungsangabe vorhanden, aber in den PDF-Quellen nicht belegt.
 
 ## 11. Quellen
 
