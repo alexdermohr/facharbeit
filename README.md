@@ -16,7 +16,9 @@ Die Website berechnet **keine Note**.
 
 `index.html`, `styles.css` und `app.js` bilden eine statische Website ohne Backend. Antworten und Häkchen werden ausschließlich per `localStorage` im eigenen Browser gespeichert. Der Arbeitsstand kann als JSON exportiert werden.
 
-Nach dem Merge auf `main` wird die Website über GitHub Pages veröffentlicht:
+Die Website ist als statische Seite vollständig im Repository enthalten. Für eine öffentliche GitHub-Pages-URL muss im Repository einmalig **Settings → Pages → Source: GitHub Actions** aktiviert werden. Danach kann der Workflow **Deploy GitHub Pages** manuell gestartet werden.
+
+Vorgesehene URL nach Aktivierung:
 
 **https://alexdermohr.github.io/facharbeit/**
 
