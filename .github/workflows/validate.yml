@@ -23,3 +23,5 @@ jobs:
         run: python3 -m unittest discover -s tests
       - name: Check JavaScript syntax
         run: node --check app.js
+      - name: Browser UI smoke (desktop + mobile)
+        run: bash tests/ui_smoke.sh

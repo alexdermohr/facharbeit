@@ -1,5 +1,6 @@
 const STORAGE_KEY = "facharbeit-pt3-guide-v1";
 const DATA_URL = "data/requirements.json";
+const STATE_VERSION = 2;
 
 const phaseTitles = {
   start: "Start & Formalia",
@@ -32,32 +33,85 @@ const modePhases = {
 };
 
 let model;
-let state = {
-  mode: "facharbeit",
-  activePhase: "start",
-  topic: "",
-  answers: {},
-  checks: {},
-};
+let state = createEmptyState();
+
+function createEmptyState() {
+  return {
+    version: STATE_VERSION,
+    mode: "facharbeit",
+    activePhase: "start",
+    topic: "",
+    answers: {},
+    answerStatus: {},
+    checks: {},
+  };
+}
+
+function safeObject(value) {
+  return value && typeof value === "object" && !Array.isArray(value) ? value : {};
+}
+
+function normalizeState(candidate = {}) {
+  const next = createEmptyState();
+  const source = safeObject(candidate);
+  next.mode = modePhases[source.mode] ? source.mode : next.mode;
+  next.activePhase = modePhases[next.mode].includes(source.activePhase) ? source.activePhase : modePhases[next.mode][0];
+  next.topic = typeof source.topic === "string" ? source.topic.slice(0, 260) : "";
+
+  for (const [id, value] of Object.entries(safeObject(source.answers))) {
+    if (typeof value === "string") next.answers[id] = value;
+  }
+  for (const [id, value] of Object.entries(safeObject(source.checks))) {
+    if (value === true) next.checks[id] = true;
+  }
+  for (const [id, value] of Object.entries(safeObject(source.answerStatus))) {
+    if (value === "draft" || value === "checked") next.answerStatus[id] = value;
+  }
+
+  // Frühere Versionen kannten nur eine 20-Zeichen-Heuristik. Bestehende Texte
+  // werden deshalb bewusst als Entwurf statt automatisch als "geprüft" migriert.
+  if (!source.answerStatus) {
+    for (const [id, value] of Object.entries(next.answers)) {
+      if (value.trim()) next.answerStatus[id] = "draft";
+    }
+  }
+  return next;
+}
 
 function loadState() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return;
-    const saved = JSON.parse(raw);
-    state = {
-      ...state,
-      ...saved,
-      answers: saved.answers || {},
-      checks: saved.checks || {},
-    };
+    state = normalizeState(JSON.parse(raw));
   } catch (error) {
     console.warn("Lokaler Stand konnte nicht gelesen werden.", error);
   }
 }
 
 function saveState() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  try {
+    state.version = STATE_VERSION;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch (error) {
+    console.warn("Lokaler Stand konnte nicht gespeichert werden.", error);
+  }
+}
+
+function announce(message) {
+  const status = document.querySelector("#uiStatus");
+  status.textContent = "";
+  window.setTimeout(() => {
+    status.textContent = message;
+  }, 20);
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }
 
 function refsHtml(refs = []) {
@@ -66,7 +120,7 @@ function refsHtml(refs = []) {
       const source = model.sources.find((candidate) => candidate.id === item.source_id);
       if (!source) return "";
       const href = `${source.file}#page=${item.page}`;
-      return `<a class="ref-link" href="${href}" target="_blank" rel="noopener">${source.title}, S. ${item.page}</a>`;
+      return `<a class="ref-link" href="${href}" target="_blank" rel="noopener">${escapeHtml(source.title)}, S. ${item.page}</a>`;
     })
     .join("");
 }
@@ -104,6 +158,43 @@ function stageDescription(phase) {
   return section?.expectation || "Bearbeite die belegten Kriterien mit den zugeordneten Leitfragen.";
 }
 
+function phaseWeightLabel(phase) {
+  const section = sectionForPhase(phase);
+  if (section?.weight_percent) return `${section.weight_percent} %`;
+  if (phase === "schreibkompetenz") return `bis −${model.facharbeit.writing_deduction.deduction_max_percent} %`;
+  if (phase === "praesentation-gespraech") return `bis −${model.kolloquium.presentation_deduction.deduction_max_percent} %`;
+  if (phase === "start") return "Formalia";
+  return "ohne Einzelgewicht";
+}
+
+function questionStatus(questionId) {
+  const answer = (state.answers[questionId] || "").trim();
+  if (!answer) return "open";
+  return state.answerStatus[questionId] === "checked" ? "checked" : "draft";
+}
+
+function questionStatusLabel(status) {
+  if (status === "checked") return "Selbst geprüft";
+  if (status === "draft") return "Entwurf";
+  return "Offen";
+}
+
+function renderExamSplit() {
+  const split = model.exam.grade_split_percent;
+  document.querySelector("#examSplit").innerHTML = `
+    <article class="split-card ${state.mode === "facharbeit" ? "active" : ""}">
+      <span>Facharbeit</span>
+      <strong>${split.facharbeit} %</strong>
+      <small>schriftlicher Anteil an PT 3</small>
+    </article>
+    <article class="split-card ${state.mode === "kolloquium" ? "active" : ""}">
+      <span>Kolloquium</span>
+      <strong>${split.kolloquium} %</strong>
+      <small>mündlicher Anteil an PT 3</small>
+    </article>
+  `;
+}
+
 function renderDeadline() {
   const deadline = model.planning_context?.submission_deadline;
   const value = document.querySelector("#deadlineValue");
@@ -129,28 +220,34 @@ function renderModeSummary() {
   if (state.mode === "facharbeit") {
     const pills = model.facharbeit.sections
       .filter((section) => section.weight_percent)
-      .map((section) => `<span class="pill">${section.title}: ${section.weight_percent} %</span>`)
+      .map((section) => `<span class="pill">${escapeHtml(section.title)}: ${section.weight_percent} %</span>`)
       .join("");
     box.innerHTML = `
-      <p><strong>Schriftlicher Teil:</strong> ${model.facharbeit.competence}</p>
+      <p><strong>Schriftlicher Teil:</strong> ${escapeHtml(model.facharbeit.competence)}</p>
       <div class="weight-list">${pills}<span class="pill deduction">Schreibkompetenz: bis −${model.facharbeit.writing_deduction.deduction_max_percent} %</span></div>
     `;
   } else {
     const pills = model.kolloquium.sections
-      .map((section) => `<span class="pill">${section.title}: ${section.weight_percent} %</span>`)
+      .map((section) => `<span class="pill">${escapeHtml(section.title)}: ${section.weight_percent} %</span>`)
       .join("");
+    const format = Object.fromEntries(model.kolloquium.format.map((item) => [item.id, item.value]));
     box.innerHTML = `
-      <p><strong>Mündlicher Teil:</strong> ${model.kolloquium.competence}</p>
+      <p><strong>Mündlicher Teil:</strong> ${escapeHtml(model.kolloquium.competence)}</p>
+      <div class="format-strip" aria-label="Rahmen des Kolloquiums">
+        <span>${escapeHtml(format["kol-duration"] || "")}</span>
+        <span>${escapeHtml(format["kol-talk"] || "")}</span>
+        <span>${escapeHtml(format["kol-medium"] || "")}</span>
+      </div>
       <div class="weight-list">${pills}<span class="pill deduction">Präsentation/Gespräch: bis −${model.kolloquium.presentation_deduction.deduction_max_percent} %</span></div>
     `;
   }
 }
 
-function renderModeTabs() {
+function renderModeButtons() {
   document.querySelectorAll(".mode-tab").forEach((button) => {
     const active = button.dataset.mode === state.mode;
     button.classList.toggle("active", active);
-    button.setAttribute("aria-selected", String(active));
+    button.setAttribute("aria-pressed", String(active));
   });
 }
 
@@ -161,8 +258,8 @@ function renderOutline() {
   const outline = model.facharbeit.required_outline;
   document.querySelector("#outlineContent").innerHTML = `
     <div class="outline-notice">
-      <p><strong>${outline.note}</strong></p>
-      <p>${outline.navigation_note}</p>
+      <p><strong>${escapeHtml(outline.note)}</strong></p>
+      <p>${escapeHtml(outline.navigation_note)}</p>
       <div class="refs">${refsHtml(outline.refs)}</div>
     </div>
     <div class="outline-list">
@@ -170,14 +267,31 @@ function renderOutline() {
         .map(
           (item) => `
             <div class="outline-row ${item.number.includes(".") ? "outline-sub" : ""}">
-              <span class="outline-number">${item.number}</span>
-              <span>${item.title}</span>
+              <span class="outline-number">${escapeHtml(item.number)}</span>
+              <span>${escapeHtml(item.title)}</span>
             </div>
           `,
         )
         .join("")}
     </div>
   `;
+}
+
+function setActivePhase(phase, { focusStage = false } = {}) {
+  if (!modePhases[state.mode].includes(phase)) return;
+  state.activePhase = phase;
+  saveState();
+  renderStepNav();
+  renderStage();
+  renderTopicTool();
+  updateProgress();
+  renderCurrentStep();
+  if (focusStage) {
+    const heading = document.querySelector("#stage-title");
+    heading?.focus({ preventScroll: true });
+    document.querySelector("#stageContent")?.scrollIntoView({ block: "start", behavior: "smooth" });
+    announce(`${phaseTitles[phase]} geöffnet.`);
+  }
 }
 
 function renderStepNav() {
@@ -187,26 +301,32 @@ function renderStepNav() {
     state.activePhase = phases[0];
     saveState();
   }
+
   nav.innerHTML = phases
     .map((phase, index) => {
       const active = phase === state.activePhase;
       return `
-        <button class="step-button ${active ? "active" : ""}" type="button" data-phase="${phase}">
-          <span>Schritt ${index + 1}</span>
-          <strong>${phaseTitles[phase]}</strong>
+        <button class="step-button ${active ? "active" : ""}" type="button" data-phase="${phase}" ${active ? 'aria-current="step"' : ""}>
+          <span class="step-kicker">Schritt ${index + 1}</span>
+          <strong>${escapeHtml(phaseTitles[phase])}</strong>
+          <span class="step-weight">${escapeHtml(phaseWeightLabel(phase))}</span>
         </button>
       `;
     })
     .join("");
 
   nav.querySelectorAll(".step-button").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.activePhase = button.dataset.phase;
-      saveState();
-      renderStepNav();
-      renderStage();
-    });
+    button.addEventListener("click", () => setActivePhase(button.dataset.phase, { focusStage: true }));
   });
+
+  const index = phases.indexOf(state.activePhase);
+  const previous = document.querySelector("#previousStepButton");
+  const next = document.querySelector("#nextStepButton");
+  previous.disabled = index <= 0;
+  next.disabled = index >= phases.length - 1;
+  previous.dataset.phase = index > 0 ? phases[index - 1] : "";
+  next.dataset.phase = index < phases.length - 1 ? phases[index + 1] : "";
+  document.querySelector("#stepPosition").textContent = `${index + 1} von ${phases.length}`;
 }
 
 function renderRequirements(phase) {
@@ -220,9 +340,9 @@ function renderRequirements(phase) {
           const text = requirement.text || `${requirement.label}: ${requirement.value}`;
           return `
             <div class="requirement-item ${checked ? "checked" : ""}">
-              <input id="check-${requirement.id}" type="checkbox" data-requirement="${requirement.id}" ${checked ? "checked" : ""}>
-              <label for="check-${requirement.id}">
-                ${text}
+              <input id="check-${escapeHtml(requirement.id)}" type="checkbox" data-requirement="${escapeHtml(requirement.id)}" ${checked ? "checked" : ""}>
+              <label for="check-${escapeHtml(requirement.id)}">
+                ${escapeHtml(text)}
                 <span class="refs">${refsHtml(requirement.refs)}</span>
               </label>
             </div>
@@ -241,14 +361,22 @@ function renderQuestions(phase) {
       ${questions
         .map((question, index) => {
           const answer = state.answers[question.id] || "";
-          const answered = answer.trim().length >= 20;
+          const status = questionStatus(question.id);
+          const actionLabel = status === "checked" ? "Prüfung zurücknehmen" : "Als selbst geprüft markieren";
           return `
-            <article class="question-card ${answered ? "answered" : ""}" data-question-card="${question.id}">
-              <span class="question-number">Leitfrage ${index + 1}</span>
-              <h5>${question.prompt}</h5>
-              <p>${question.hint}</p>
+            <article class="question-card status-${status}" data-question-card="${escapeHtml(question.id)}">
+              <div class="question-topline">
+                <span class="question-number">Leitfrage ${index + 1}</span>
+                <span class="question-status status-${status}">${questionStatusLabel(status)}</span>
+              </div>
+              <h5>${escapeHtml(question.prompt)}</h5>
+              <p>${escapeHtml(question.hint)}</p>
               ${question.refs?.length ? `<div class="refs question-refs">${refsHtml(question.refs)}</div>` : ""}
-              <textarea data-question="${question.id}" aria-label="Antwort auf: ${question.prompt.replaceAll('"', "&quot;")}" placeholder="Gedanken, Stichpunkte oder Formulierungsentwurf …">${answer}</textarea>
+              <textarea data-question="${escapeHtml(question.id)}" aria-label="Antwort auf: ${escapeHtml(question.prompt)}" placeholder="Gedanken, Stichpunkte oder Formulierungsentwurf …">${escapeHtml(answer)}</textarea>
+              <div class="question-actions">
+                <button class="button compact question-check" type="button" data-question-status="${escapeHtml(question.id)}" ${status === "open" ? "disabled" : ""}>${actionLabel}</button>
+                <span class="question-status-hint">${status === "checked" ? "Bei einer Änderung wird der Status wieder zum Entwurf." : "Markiere erst nach eigener inhaltlicher Prüfung."}</span>
+              </div>
             </article>
           `;
         })
@@ -264,21 +392,21 @@ function renderGuidance(phase) {
     <section class="guidance-panel" aria-labelledby="guidance-heading">
       <div class="guidance-heading">
         <p class="eyebrow">Zusätzliche schulische Hilfen</p>
-        <h4 id="guidance-heading">So konkretisieren die neuen Dokumente diesen Schritt</h4>
+        <h4 id="guidance-heading">So konkretisieren die Dokumente diesen Schritt</h4>
       </div>
       <div class="guidance-grid">
         ${cards
           .map(
             (card) => `
               <article class="guidance-card ${card.importance === "critical" ? "critical" : ""}">
-                <span class="source-badge ${card.importance === "critical" ? "rule" : "help"}">${card.kind_label}</span>
-                <h5>${card.title}</h5>
+                <span class="source-badge ${card.importance === "critical" ? "rule" : "help"}">${escapeHtml(card.kind_label)}</span>
+                <h5>${escapeHtml(card.title)}</h5>
                 <ul>
                   ${card.items
                     .map(
                       (item) => `
                         <li>
-                          ${item.label ? `<strong>${item.label}:</strong> ` : ""}${item.text}
+                          ${item.label ? `<strong>${escapeHtml(item.label)}:</strong> ` : ""}${escapeHtml(item.text)}
                           <span class="refs">${refsHtml(item.refs)}</span>
                         </li>
                       `,
@@ -298,14 +426,17 @@ function renderStage() {
   const phase = state.activePhase;
   const section = sectionForPhase(phase);
   const good = section?.good_performance
-    ? `<div class="good-box"><strong>Orientierung an einer guten Leistung</strong>${section.good_performance}</div>`
+    ? `<div class="good-box"><strong>Orientierung an einer guten Leistung</strong>${escapeHtml(section.good_performance)}</div>`
     : "";
 
   document.querySelector("#stageContent").innerHTML = `
     <div class="stage-head">
-      <p class="eyebrow">${state.mode === "facharbeit" ? "Facharbeit" : "Kolloquium"}</p>
-      <h3>${phaseTitles[phase]}</h3>
-      <p>${stageDescription(phase)}</p>
+      <div class="stage-label-row">
+        <p class="eyebrow">${state.mode === "facharbeit" ? "Facharbeit" : "Kolloquium"}</p>
+        <span class="stage-weight">${escapeHtml(phaseWeightLabel(phase))}</span>
+      </div>
+      <h3 id="stage-title" tabindex="-1">${escapeHtml(phaseTitles[phase])}</h3>
+      <p>${escapeHtml(stageDescription(phase))}</p>
     </div>
     <div class="two-column">
       <section class="panel" aria-labelledby="requirements-heading">
@@ -315,6 +446,7 @@ function renderStage() {
       </section>
       <section class="panel" aria-labelledby="questions-heading">
         <h4 id="questions-heading">Abgeleitete Leitfragen</h4>
+        <p class="panel-intro">Text eingeben erzeugt einen Entwurf. Erst deine bewusste Markierung zählt als selbst geprüft.</p>
         ${renderQuestions(phase)}
       </section>
     </div>
@@ -324,18 +456,44 @@ function renderStage() {
   document.querySelectorAll("[data-requirement]").forEach((checkbox) => {
     checkbox.addEventListener("change", () => {
       state.checks[checkbox.dataset.requirement] = checkbox.checked;
+      if (!checkbox.checked) delete state.checks[checkbox.dataset.requirement];
       saveState();
       renderStage();
       updateProgress();
+      announce(checkbox.checked ? "Anforderung als geprüft markiert." : "Prüfmarkierung entfernt.");
     });
   });
 
   document.querySelectorAll("[data-question]").forEach((textarea) => {
     textarea.addEventListener("input", () => {
-      state.answers[textarea.dataset.question] = textarea.value;
+      const id = textarea.dataset.question;
+      state.answers[id] = textarea.value;
+      if (textarea.value.trim()) state.answerStatus[id] = "draft";
+      else delete state.answerStatus[id];
       saveState();
-      textarea.closest(".question-card").classList.toggle("answered", textarea.value.trim().length >= 20);
+      const card = textarea.closest(".question-card");
+      const status = questionStatus(id);
+      card.className = `question-card status-${status}`;
+      card.querySelector(".question-status").className = `question-status status-${status}`;
+      card.querySelector(".question-status").textContent = questionStatusLabel(status);
+      const button = card.querySelector("[data-question-status]");
+      button.disabled = status === "open";
+      button.textContent = "Als selbst geprüft markieren";
+      card.querySelector(".question-status-hint").textContent = "Markiere erst nach eigener inhaltlicher Prüfung.";
       updateProgress();
+    });
+  });
+
+  document.querySelectorAll("[data-question-status]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const id = button.dataset.questionStatus;
+      const current = questionStatus(id);
+      if (current === "open") return;
+      state.answerStatus[id] = current === "checked" ? "draft" : "checked";
+      saveState();
+      renderStage();
+      updateProgress();
+      announce(state.answerStatus[id] === "checked" ? "Leitfrage als selbst geprüft markiert." : "Leitfrage wieder als Entwurf markiert.");
     });
   });
 }
@@ -343,19 +501,31 @@ function renderStage() {
 function updateProgress() {
   const phases = modePhases[state.mode];
   const visibleQuestions = model.derived_guidance.questions.filter((question) => phases.includes(question.phase));
-  const answered = visibleQuestions.filter((question) => (state.answers[question.id] || "").trim().length >= 20).length;
+  const checkedQuestions = visibleQuestions.filter((question) => questionStatus(question.id) === "checked").length;
+  const draftQuestions = visibleQuestions.filter((question) => questionStatus(question.id) === "draft").length;
 
   const requirementMap = allRequirementsByPhase();
   const visibleRequirements = phases.flatMap((phase) => requirementMap[phase] || []);
-  const checked = visibleRequirements.filter((requirement) => state.checks[requirement.id]).length;
+  const checkedRequirements = visibleRequirements.filter((requirement) => state.checks[requirement.id]).length;
 
-  document.querySelector("#questionProgress").textContent = `${answered} / ${visibleQuestions.length}`;
-  document.querySelector("#requirementProgress").textContent = `${checked} / ${visibleRequirements.length}`;
-  document.querySelector("#questionProgressBar").style.width = `${visibleQuestions.length ? (answered / visibleQuestions.length) * 100 : 0}%`;
-  document.querySelector("#requirementProgressBar").style.width = `${visibleRequirements.length ? (checked / visibleRequirements.length) * 100 : 0}%`;
+  document.querySelector("#questionProgress").textContent = `${checkedQuestions} / ${visibleQuestions.length}`;
+  document.querySelector("#questionProgressNote").textContent = `${draftQuestions} Entwurf${draftQuestions === 1 ? "" : "e"} · ${visibleQuestions.length - checkedQuestions - draftQuestions} offen`;
+  document.querySelector("#requirementProgress").textContent = `${checkedRequirements} / ${visibleRequirements.length}`;
+  document.querySelector("#requirementProgressNote").textContent = `${visibleRequirements.length - checkedRequirements} noch offen`;
+  document.querySelector("#questionProgressBar").style.width = `${visibleQuestions.length ? (checkedQuestions / visibleQuestions.length) * 100 : 0}%`;
+  document.querySelector("#requirementProgressBar").style.width = `${visibleRequirements.length ? (checkedRequirements / visibleRequirements.length) * 100 : 0}%`;
+}
+
+function renderCurrentStep() {
+  const phases = modePhases[state.mode];
+  const index = phases.indexOf(state.activePhase);
+  document.querySelector("#currentStepLabel").textContent = phaseTitles[state.activePhase];
+  document.querySelector("#currentStepMeta").textContent = `Schritt ${index + 1} von ${phases.length} · ${phaseWeightLabel(state.activePhase)}`;
 }
 
 function renderTopicTool() {
+  const section = document.querySelector("#topicSection");
+  section.hidden = state.mode !== "facharbeit" || state.activePhase !== "start";
   const input = document.querySelector("#topicInput");
   input.value = state.topic || "";
 
@@ -383,8 +553,8 @@ function renderGaps() {
     .map(
       (gap) => `
         <article class="gap-card">
-          <strong>${gap.title || gap.id.replace("gap-", "").replaceAll("-", " ")}</strong>
-          <p>${gap.text}</p>
+          <strong>${escapeHtml(gap.title || gap.id.replace("gap-", "").replaceAll("-", " "))}</strong>
+          <p>${escapeHtml(gap.text)}</p>
         </article>
       `,
     )
@@ -396,8 +566,8 @@ function renderTensions() {
     .map(
       (item) => `
         <article class="gap-card tension-card">
-          <strong>${item.title}</strong>
-          <p>${item.text}</p>
+          <strong>${escapeHtml(item.title)}</strong>
+          <p>${escapeHtml(item.text)}</p>
           <div class="refs">${refsHtml(item.refs)}</div>
         </article>
       `,
@@ -410,68 +580,154 @@ function renderSources() {
     .map(
       (source) => `
         <article class="source-card">
-          <span class="source-badge status-${source.status}">${source.status_label}</span>
-          <a href="${source.file}" target="_blank" rel="noopener">${source.title}</a>
-          <p>${source.role}</p>
-          <p class="source-meta">Stand: ${source.date} · ${source.pages} ${source.pages === 1 ? "Seite" : "Seiten"}</p>
-          ${source.date_note ? `<p class="source-note">${source.date_note}</p>` : ""}
+          <span class="source-badge status-${escapeHtml(source.status)}">${escapeHtml(source.status_label)}</span>
+          <a href="${escapeHtml(source.file)}" target="_blank" rel="noopener">${escapeHtml(source.title)}</a>
+          <p>${escapeHtml(source.role)}</p>
+          <p class="source-meta">Stand: ${escapeHtml(source.date)} · ${source.pages} ${source.pages === 1 ? "Seite" : "Seiten"}</p>
+          ${source.date_note ? `<p class="source-note">${escapeHtml(source.date_note)}</p>` : ""}
         </article>
       `,
     )
     .join("");
 }
 
-function exportAnswers() {
-  const payload = {
-    exported_at: new Date().toISOString(),
-    source_model: model.title,
-    planning_context: model.planning_context,
-    mode: state.mode,
-    topic: state.topic,
-    answers: state.answers,
-    checks: state.checks,
-    note: "Lokaler Arbeitsstand; keine schulische Bewertung oder Notenprognose.",
-  };
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+function downloadText(filename, content, type) {
+  const blob = new Blob([content], { type });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `facharbeit-arbeitsstand-${new Date().toISOString().slice(0, 10)}.json`;
+  link.download = filename;
   document.body.appendChild(link);
   link.click();
   link.remove();
   URL.revokeObjectURL(url);
 }
 
+function exportBackup() {
+  const payload = {
+    schema: "facharbeit-workspace-backup",
+    version: STATE_VERSION,
+    exported_at: new Date().toISOString(),
+    source_model: model.title,
+    planning_context: model.planning_context,
+    state,
+    note: "Lokaler Arbeitsstand; keine schulische Bewertung oder Notenprognose.",
+  };
+  downloadText(`facharbeit-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(payload, null, 2), "application/json");
+  announce("JSON-Backup exportiert.");
+}
+
+function exportMarkdown() {
+  const phases = modePhases[state.mode];
+  const lines = [
+    "# Facharbeit – Arbeitsstand",
+    "",
+    `Export: ${new Date().toLocaleString("de-DE")}`,
+    `Bereich: ${state.mode === "facharbeit" ? "Facharbeit" : "Kolloquium"}`,
+    state.topic ? `Arbeitstitel: ${state.topic}` : "Arbeitstitel: –",
+    "",
+  ];
+
+  for (const phase of phases) {
+    lines.push(`## ${phaseTitles[phase]}`, "");
+    const requirements = allRequirementsByPhase()[phase] || [];
+    if (requirements.length) {
+      lines.push("### Anforderungen", "");
+      for (const requirement of requirements) {
+        const text = requirement.text || `${requirement.label}: ${requirement.value}`;
+        lines.push(`- [${state.checks[requirement.id] ? "x" : " "}] ${text}`);
+      }
+      lines.push("");
+    }
+
+    const questions = model.derived_guidance.questions.filter((question) => question.phase === phase);
+    if (questions.length) {
+      lines.push("### Leitfragen", "");
+      for (const question of questions) {
+        const status = questionStatusLabel(questionStatus(question.id));
+        lines.push(`#### ${question.prompt}`, "", `Status: ${status}`, "", state.answers[question.id] || "_(offen)_", "");
+      }
+    }
+  }
+
+  downloadText(`facharbeit-arbeitsstand-${new Date().toISOString().slice(0, 10)}.md`, lines.join("\n"), "text/markdown;charset=utf-8");
+  announce("Markdown-Export erstellt.");
+}
+
+async function importBackup(file) {
+  try {
+    const payload = JSON.parse(await file.text());
+    const candidate = payload?.state || payload;
+    if (!candidate || typeof candidate !== "object") throw new Error("Kein gültiger Arbeitsstand gefunden.");
+    const imported = normalizeState(candidate);
+    const confirmed = window.confirm("Der Import ersetzt den aktuell lokal gespeicherten Arbeitsstand. Fortfahren?");
+    if (!confirmed) return;
+    state = imported;
+    saveState();
+    renderAll();
+    announce("Backup importiert und Arbeitsstand wiederhergestellt.");
+  } catch (error) {
+    console.error(error);
+    window.alert("Das Backup konnte nicht importiert werden. Bitte eine von dieser Website exportierte JSON-Datei wählen.");
+  } finally {
+    document.querySelector("#importInput").value = "";
+  }
+}
+
 function resetState() {
-  const confirmed = window.confirm("Alle lokal gespeicherten Antworten und Häkchen wirklich löschen?");
+  const confirmed = window.confirm("Alle lokal gespeicherten Antworten, Statusmarkierungen und Häkchen wirklich löschen?");
   if (!confirmed) return;
   localStorage.removeItem(STORAGE_KEY);
-  state = { mode: "facharbeit", activePhase: "start", topic: "", answers: {}, checks: {} };
+  state = createEmptyState();
   renderAll();
+  announce("Lokaler Arbeitsstand gelöscht.");
+}
+
+function setMode(mode) {
+  if (!modePhases[mode] || mode === state.mode) return;
+  state.mode = mode;
+  state.activePhase = modePhases[mode][0];
+  saveState();
+  renderAll();
+  announce(`${mode === "facharbeit" ? "Facharbeit" : "Kolloquium"} ausgewählt.`);
 }
 
 function wireGlobalActions() {
   document.querySelectorAll(".mode-tab").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.mode = button.dataset.mode;
-      state.activePhase = modePhases[state.mode][0];
-      saveState();
-      renderAll();
-    });
+    button.addEventListener("click", () => setMode(button.dataset.mode));
   });
-  document.querySelector("#exportButton").addEventListener("click", exportAnswers);
+  document.querySelector("#previousStepButton").addEventListener("click", (event) => {
+    const phase = event.currentTarget.dataset.phase;
+    if (phase) setActivePhase(phase, { focusStage: true });
+  });
+  document.querySelector("#nextStepButton").addEventListener("click", (event) => {
+    const phase = event.currentTarget.dataset.phase;
+    if (phase) setActivePhase(phase, { focusStage: true });
+  });
+  document.querySelector("#continueButton").addEventListener("click", () => {
+    document.querySelector("#stageContent")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.querySelector("#stage-title")?.focus({ preventScroll: true });
+  });
+  document.querySelector("#exportButton").addEventListener("click", exportBackup);
+  document.querySelector("#markdownButton").addEventListener("click", exportMarkdown);
+  document.querySelector("#importButton").addEventListener("click", () => document.querySelector("#importInput").click());
+  document.querySelector("#importInput").addEventListener("change", (event) => {
+    const file = event.target.files?.[0];
+    if (file) importBackup(file);
+  });
   document.querySelector("#resetButton").addEventListener("click", resetState);
 }
 
 function renderAll() {
+  renderExamSplit();
   renderDeadline();
-  renderModeTabs();
+  renderModeButtons();
   renderModeSummary();
-  renderOutline();
   renderStepNav();
-  renderStage();
   renderTopicTool();
+  renderStage();
+  renderCurrentStep();
+  renderOutline();
   renderGaps();
   renderTensions();
   renderSources();
