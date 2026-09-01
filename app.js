@@ -98,10 +98,30 @@ function sectionForPhase(phase) {
 
 function stageDescription(phase) {
   if (phase === "start") {
-    return "Prüfe die formalen Mindestvorgaben und kläre Titel, Literatur und Hilfsmittel, bevor du tief in den Text gehst.";
+    return "Prüfe formale Vorgaben, verbindliche Gliederung, Literatur, Zitation und KI-Dokumentation, bevor du tief in den Text gehst.";
   }
   const section = sectionForPhase(phase);
   return section?.expectation || "Bearbeite die belegten Kriterien mit den zugeordneten Leitfragen.";
+}
+
+function renderDeadline() {
+  const deadline = model.planning_context?.submission_deadline;
+  const value = document.querySelector("#deadlineValue");
+  const note = document.querySelector("#deadlineNote");
+  if (!deadline) {
+    value.textContent = "nicht hinterlegt";
+    note.textContent = "Kein Planungsdatum im Modell.";
+    return;
+  }
+
+  value.textContent = deadline.display;
+  const now = new Date();
+  const [year, month, day] = deadline.date.split("-").map(Number);
+  const todayUtc = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  const dueUtc = Date.UTC(year, month - 1, day);
+  const days = Math.round((dueUtc - todayUtc) / 86400000);
+  const timeText = days > 1 ? `Noch ${days} Kalendertage.` : days === 1 ? "Noch 1 Kalendertag." : days === 0 ? "Abgabe heute." : `Termin seit ${Math.abs(days)} Tagen überschritten.`;
+  note.textContent = `${timeText} ${deadline.note}`;
 }
 
 function renderModeSummary() {
@@ -132,6 +152,32 @@ function renderModeTabs() {
     button.classList.toggle("active", active);
     button.setAttribute("aria-selected", String(active));
   });
+}
+
+function renderOutline() {
+  const section = document.querySelector("#outlineSection");
+  section.hidden = state.mode !== "facharbeit";
+  if (section.hidden) return;
+  const outline = model.facharbeit.required_outline;
+  document.querySelector("#outlineContent").innerHTML = `
+    <div class="outline-notice">
+      <p><strong>${outline.note}</strong></p>
+      <p>${outline.navigation_note}</p>
+      <div class="refs">${refsHtml(outline.refs)}</div>
+    </div>
+    <div class="outline-list">
+      ${outline.items
+        .map(
+          (item) => `
+            <div class="outline-row ${item.number.includes(".") ? "outline-sub" : ""}">
+              <span class="outline-number">${item.number}</span>
+              <span>${item.title}</span>
+            </div>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
 }
 
 function renderStepNav() {
@@ -201,12 +247,50 @@ function renderQuestions(phase) {
               <span class="question-number">Leitfrage ${index + 1}</span>
               <h5>${question.prompt}</h5>
               <p>${question.hint}</p>
+              ${question.refs?.length ? `<div class="refs question-refs">${refsHtml(question.refs)}</div>` : ""}
               <textarea data-question="${question.id}" aria-label="Antwort auf: ${question.prompt.replaceAll('"', "&quot;")}" placeholder="Gedanken, Stichpunkte oder Formulierungsentwurf …">${answer}</textarea>
             </article>
           `;
         })
         .join("")}
     </div>
+  `;
+}
+
+function renderGuidance(phase) {
+  const cards = (model.instructional_guidance || []).filter((item) => item.phase === phase);
+  if (!cards.length) return "";
+  return `
+    <section class="guidance-panel" aria-labelledby="guidance-heading">
+      <div class="guidance-heading">
+        <p class="eyebrow">Zusätzliche schulische Hilfen</p>
+        <h4 id="guidance-heading">So konkretisieren die neuen Dokumente diesen Schritt</h4>
+      </div>
+      <div class="guidance-grid">
+        ${cards
+          .map(
+            (card) => `
+              <article class="guidance-card ${card.importance === "critical" ? "critical" : ""}">
+                <span class="source-badge ${card.importance === "critical" ? "rule" : "help"}">${card.kind_label}</span>
+                <h5>${card.title}</h5>
+                <ul>
+                  ${card.items
+                    .map(
+                      (item) => `
+                        <li>
+                          ${item.label ? `<strong>${item.label}:</strong> ` : ""}${item.text}
+                          <span class="refs">${refsHtml(item.refs)}</span>
+                        </li>
+                      `,
+                    )
+                    .join("")}
+                </ul>
+              </article>
+            `,
+          )
+          .join("")}
+      </div>
+    </section>
   `;
 }
 
@@ -234,6 +318,7 @@ function renderStage() {
         ${renderQuestions(phase)}
       </section>
     </div>
+    ${renderGuidance(phase)}
   `;
 
   document.querySelectorAll("[data-requirement]").forEach((checkbox) => {
@@ -289,7 +374,7 @@ function renderTopicTool() {
         : `Noch ${200 - count} Zeichen bis zur dokumentierten Höchstgrenze.`;
   };
 
-  input.addEventListener("input", update);
+  input.oninput = update;
   update();
 }
 
@@ -298,8 +383,22 @@ function renderGaps() {
     .map(
       (gap) => `
         <article class="gap-card">
-          <strong>${gap.id.replace("gap-", "").replaceAll("-", " ")}</strong>
+          <strong>${gap.title || gap.id.replace("gap-", "").replaceAll("-", " ")}</strong>
           <p>${gap.text}</p>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function renderTensions() {
+  document.querySelector("#tensionsList").innerHTML = (model.documented_tensions || [])
+    .map(
+      (item) => `
+        <article class="gap-card tension-card">
+          <strong>${item.title}</strong>
+          <p>${item.text}</p>
+          <div class="refs">${refsHtml(item.refs)}</div>
         </article>
       `,
     )
@@ -311,9 +410,11 @@ function renderSources() {
     .map(
       (source) => `
         <article class="source-card">
+          <span class="source-badge status-${source.status}">${source.status_label}</span>
           <a href="${source.file}" target="_blank" rel="noopener">${source.title}</a>
           <p>${source.role}</p>
-          <p class="source-meta">Stand: ${source.date} · ${source.pages} Seiten</p>
+          <p class="source-meta">Stand: ${source.date} · ${source.pages} ${source.pages === 1 ? "Seite" : "Seiten"}</p>
+          ${source.date_note ? `<p class="source-note">${source.date_note}</p>` : ""}
         </article>
       `,
     )
@@ -324,6 +425,7 @@ function exportAnswers() {
   const payload = {
     exported_at: new Date().toISOString(),
     source_model: model.title,
+    planning_context: model.planning_context,
     mode: state.mode,
     topic: state.topic,
     answers: state.answers,
@@ -363,12 +465,15 @@ function wireGlobalActions() {
 }
 
 function renderAll() {
+  renderDeadline();
   renderModeTabs();
   renderModeSummary();
+  renderOutline();
   renderStepNav();
   renderStage();
   renderTopicTool();
   renderGaps();
+  renderTensions();
   renderSources();
   updateProgress();
 }

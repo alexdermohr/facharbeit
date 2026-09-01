@@ -15,7 +15,7 @@
       <div>
         <p class="eyebrow">Prüfungsteil III · Fachschule für Sozialpädagogik</p>
         <h1>Facharbeit Schritt für Schritt</h1>
-        <p class="lede">Schulische Anforderungen nachvollziehen, mit Leitfragen bearbeiten und den eigenen Stand lokal im Browser sichern.</p>
+        <p class="lede">Schulische Anforderungen, verbindliche Gliederung und Unterrichtshilfen nachvollziehen, mit Leitfragen bearbeiten und den eigenen Stand lokal im Browser sichern.</p>
       </div>
       <div class="header-actions">
         <button id="exportButton" class="button secondary" type="button">Antworten exportieren</button>
@@ -27,11 +27,11 @@
   <main id="main" class="shell">
     <section class="notice" aria-labelledby="notice-title">
       <div>
-        <p class="eyebrow">Wichtig</p>
-        <h2 id="notice-title">Quelle bleibt Quelle, Leitfrage bleibt Leitfrage</h2>
-        <p>Die Kriterien und formalen Vorgaben stammen aus den drei hinterlegten Schuldokumenten. Die Fragen dieser Website sind daraus abgeleitete Arbeitshilfen und keine zusätzlichen offiziellen Bewertungskriterien. Die Website berechnet keine Note.</p>
+        <p class="eyebrow">Quellenhierarchie</p>
+        <h2 id="notice-title">Nicht jedes Schuldokument hat dieselbe Funktion</h2>
+        <p>Prüfungs- und Bewertungsvorgaben, die ausdrücklich verbindliche Gliederung und die schulische Richtlinie zum wissenschaftlichen Arbeiten werden von Unterrichtshilfen getrennt. Die Leitfragen dieser Website sind weiterhin abgeleitete Arbeitshilfen und keine zusätzlichen Bewertungskriterien. Die Website berechnet keine Note.</p>
       </div>
-      <a class="text-link" href="#sources">Zu den Originalquellen</a>
+      <a class="text-link" href="#sources">Zu allen Schuldokumenten</a>
     </section>
 
     <section class="dashboard" aria-label="Arbeitsstand">
@@ -44,6 +44,11 @@
         <span class="stat-label">Geprüfte Anforderungen</span>
         <strong id="requirementProgress" class="stat-value">0 / 0</strong>
         <div class="progress-track" aria-hidden="true"><span id="requirementProgressBar"></span></div>
+      </div>
+      <div class="stat-card deadline-card">
+        <span class="stat-label">Mitgeteilter Abgabetermin</span>
+        <strong id="deadlineValue" class="stat-value small">–</strong>
+        <p id="deadlineNote" class="stat-note">Planungsangabe wird geladen.</p>
       </div>
       <div class="stat-card">
         <span class="stat-label">Speicherung</span>
@@ -64,6 +69,16 @@
         <button class="mode-tab" type="button" role="tab" aria-selected="false" data-mode="kolloquium">Kolloquium</button>
       </div>
       <div id="modeSummary" class="mode-summary"></div>
+    </section>
+
+    <section id="outlineSection" class="outline-section" aria-labelledby="outline-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Verbindliche Endstruktur</p>
+          <h2 id="outline-title">Gliederung der Facharbeit</h2>
+        </div>
+      </div>
+      <div id="outlineContent"></div>
     </section>
 
     <section class="topic-tool" aria-labelledby="topic-title">
@@ -94,17 +109,27 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">Dokumentierte Lücken</p>
-          <h2 id="gaps-title">Was die drei Quellen nicht beantworten</h2>
+          <h2 id="gaps-title">Was auch mit den zusätzlichen Dokumenten offen bleibt</h2>
         </div>
       </div>
       <div id="gapsList" class="gap-grid"></div>
     </section>
 
+    <section id="tensions" class="tensions-section" aria-labelledby="tensions-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Einordnung</p>
+          <h2 id="tensions-title">Wo Dokumente unterschiedlich gewichtet werden müssen</h2>
+        </div>
+      </div>
+      <div id="tensionsList" class="gap-grid"></div>
+    </section>
+
     <section id="sources" class="sources-section" aria-labelledby="sources-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Primärquellen</p>
-          <h2 id="sources-title">Originaldokumente</h2>
+          <p class="eyebrow">Quellenbasis</p>
+          <h2 id="sources-title">Alle schulischen Dokumente</h2>
         </div>
       </div>
       <div id="sourcesList" class="source-grid"></div>
@@ -113,7 +138,7 @@
 
   <footer class="site-footer">
     <div class="shell">
-      <p>Inoffizielle Arbeitshilfe auf Basis der im Repository abgelegten Schuldokumente. Bei Widersprüchen gelten die Originaldokumente und aktuelle Hinweise der Schule.</p>
+      <p>Inoffizielle Arbeitshilfe auf Basis der im Repository abgelegten Schuldokumente. Bei Widersprüchen gelten die jeweils einschlägigen Originaldokumente und aktuelle Hinweise der Schule.</p>
     </div>
   </footer>
 

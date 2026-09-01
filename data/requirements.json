@@ -2,8 +2,8 @@
   "schema_version": 1,
   "title": "Anforderungsmodell Prüfungsteil III – Facharbeit und Kolloquium",
   "school": "Anna-Warburg-Schule, Fachschule für Sozialpädagogik",
-  "source_basis": "Drei im Repository abgelegte schulische Dokumente (September bis November 2025).",
-  "separation_rule": "Felder unter Anforderungen bilden die Dokumente ab. Leitfragen sind als derived_guidance gekennzeichnet und keine wörtlichen Schulvorgaben.",
+  "source_basis": "Zwölf im Repository abgelegte schulische Dokumente: drei Prüfungs-/Bewertungsdokumente, eine ausdrücklich verbindliche Gliederung, eine schulische Richtlinie zum wissenschaftlichen Arbeiten und sieben Unterrichtshilfen.",
+  "separation_rule": "Prüfungs-/Bewertungsdokumente, verbindliche Vorgaben und schulische Richtlinien werden von Unterrichtshilfen getrennt ausgewiesen. Leitfragen bleiben als derived_guidance gekennzeichnet und sind keine zusätzlichen offiziellen Bewertungskriterien.",
   "sources": [
     {
       "id": "facharbeit-bewertung",
@@ -11,7 +11,10 @@
       "file": "quellen/250904-Bewertungshinweise-Facharbeit.pdf",
       "date": "2025-09-04",
       "pages": 7,
-      "role": "Bewertung und Leistungserwartungen der schriftlichen Facharbeit"
+      "role": "Bewertung und Leistungserwartungen der schriftlichen Facharbeit",
+      "status": "exam",
+      "status_label": "Prüfungs-/Bewertungsdokument",
+      "sha256": "04c7b988dfe9ea22c0dcebcf7d12feec5d76febf80cd2f185e09acbf4c0a6088"
     },
     {
       "id": "pt3-info",
@@ -19,7 +22,10 @@
       "file": "quellen/251016-Info_Der-Pruefungsteil-III.pdf",
       "date": "2025-10",
       "pages": 3,
-      "role": "Prüfungsaufbau, formale Vorgaben und Ablauf"
+      "role": "Prüfungsaufbau, formale Vorgaben und Ablauf",
+      "status": "exam",
+      "status_label": "Prüfungs-/Bewertungsdokument",
+      "sha256": "9a3a56d47521d8996b3fe8ae4b20ebf8fc434049645a97c7732a2371c66d799e"
     },
     {
       "id": "kolloquium-bewertung",
@@ -27,213 +33,2374 @@
       "file": "quellen/251124-Bewertungshinweise-Kolloquium_neu-Mi_Ot_Sti_Ree.pdf",
       "date": "2025-11-26",
       "pages": 4,
-      "role": "Bewertung und Leistungserwartungen des Kolloquiums"
+      "role": "Bewertung und Leistungserwartungen des Kolloquiums",
+      "status": "exam",
+      "status_label": "Prüfungs-/Bewertungsdokument",
+      "sha256": "8490613b2aa64fc0345f69f927e698cca2bc4354e980734ed794003cfa1cb058"
+    },
+    {
+      "id": "facharbeit-gliederung",
+      "title": "Verbindliche Gliederung für Facharbeiten",
+      "file": "quellen/260429-verbindliche-Gliederung-fuer-Facharbeiten.pdf",
+      "date": "Dokumentkopf: 2025",
+      "pages": 1,
+      "role": "Ausdrücklich verbindliche Gliederung der schriftlichen Facharbeit; zusätzliche Unterpunkte sind möglich.",
+      "status": "binding",
+      "status_label": "Verbindliche Vorgabe",
+      "date_note": "Der Dateiname beginnt mit 260429; der sichtbare Dokumentkopf nennt „Reemtsema 2025“. Ein eindeutiges Ausgabedatum ist im Blatt selbst nicht ausgewiesen.",
+      "sha256": "29843b893b9b54156a2e71a2ec01395757b22e45897ea9d82e7506709b88b7e8"
+    },
+    {
+      "id": "wissenschaftliches-arbeiten",
+      "title": "Facharbeit: Richtlinien zum wissenschaftlichen Arbeiten",
+      "file": "quellen/AB-Richtlinien-Wissenschaftliches-Arbeiten.pdf",
+      "date": "ohne eindeutige Datumsangabe",
+      "pages": 2,
+      "role": "Schulische Regeln zu Zitieren, Quellenangaben und KI-Nutzung einschließlich Kennzeichnung und Täuschungsfolgen.",
+      "status": "school_rule",
+      "status_label": "Schulische Richtlinie",
+      "sha256": "094faf0fea74037070cae624a8e3979b8192e2980e7f4dcbfe75658eafc70cae"
+    },
+    {
+      "id": "situationsbeschreibung-hilfe",
+      "title": "Kriterien gelungene Situationsbeschreibung",
+      "file": "quellen/AB-Kriterien-gelungene-Situationsbeschreibung.pdf",
+      "date": "ohne Datumsangabe",
+      "pages": 1,
+      "role": "Unterrichtscheckliste für Kontext, Verlauf, Beteiligte, Wechselwirkungen, Gefühle und Darstellungsform der Praxissituation.",
+      "status": "instructional",
+      "status_label": "Unterrichtshilfe",
+      "sha256": "ff14a127980ac69c080c459c3b8d032cd1f4ab19059b96a290968a1568010cec"
+    },
+    {
+      "id": "fachthemen-fragen",
+      "title": "Fragen zur Identifizierung der fachlichen Themen",
+      "file": "quellen/Fragen-zur-Identifizierung-der-fachlichen-Themen.pdf",
+      "date": "ohne Datumsangabe",
+      "pages": 1,
+      "role": "Unterrichtshilfe zum Erkennen fachlicher Kernthemen in einer Praxissituation.",
+      "status": "instructional",
+      "status_label": "Unterrichtshilfe",
+      "sha256": "595249962b311445d6950694397a5043a88dff5330af270c12da7acee87f7c74"
+    },
+    {
+      "id": "analysieren-verstehen",
+      "title": "Verstehen und Analysieren – Fünf Ebenen",
+      "file": "quellen/AB-Analysieren-und-Verstehen.pdf",
+      "date": "2024-11-27",
+      "pages": 3,
+      "role": "Unterrichtshilfe mit den fünf Analyseebenen nach Fröhlich-Gildhoff und ausgewählten Leitfragen.",
+      "status": "instructional",
+      "status_label": "Unterrichtshilfe",
+      "sha256": "ac43ab50a727bad77572ef016b02ad5d6e9feda39313ba74c7171c68ed30d316"
+    },
+    {
+      "id": "online-recherche",
+      "title": "Online recherchieren nach Fachartikeln",
+      "file": "quellen/Online-Recherchieren-nach-Fachartikeln.pdf",
+      "date": "ohne eindeutige Datumsangabe",
+      "pages": 25,
+      "role": "Unterrichtshilfe zur Themenfokussierung, Literaturrecherche, Fachportalen, Google Scholar und Suchoperatoren.",
+      "status": "instructional",
+      "status_label": "Unterrichtshilfe",
+      "sha256": "09058a97ec16848acc1169f23873de05fc2a155b3a6d954a1a22abbd1afd8798"
+    },
+    {
+      "id": "prompten-hilfe",
+      "title": "Richtig Prompten",
+      "file": "quellen/Richtig-Prompten.pdf",
+      "date": "ohne Datumsangabe",
+      "pages": 2,
+      "role": "Unterrichtshilfe zum Formulieren präziser KI-Prompts; keine Quelle für fachliche Aussagen.",
+      "status": "instructional",
+      "status_label": "Unterrichtshilfe",
+      "sha256": "748dd15e9447c8cf4dd9229bc47198b7bc8376d660204946c1fd73fbc7bb31b6"
+    },
+    {
+      "id": "verdichtung-hilfe",
+      "title": "Eine Verdichtung schreiben",
+      "file": "quellen/AA-Verdichtung-schreiben.pdf",
+      "date": "ohne eindeutige Datumsangabe",
+      "pages": 6,
+      "role": "Unterrichtshilfe zur eigenständigen, quellenbezogenen Verdichtung wissenschaftlicher Texte.",
+      "status": "instructional",
+      "status_label": "Unterrichtshilfe",
+      "sha256": "fd6b0ca8ed77875c78b0702091906e43d29d8b47f6d0b9e50abc2c6b2d66819d"
+    },
+    {
+      "id": "wissenschaftliches-schreiben",
+      "title": "Grundsätze wissenschaftlichen Schreibens",
+      "file": "quellen/Grundsaetze-wissenschaftlichen-Schreibens.pdf",
+      "date": "2025-06-06",
+      "pages": 1,
+      "role": "Allgemeine Unterrichtshilfe zu Präzision, Objektivität, Struktur, Belegen, formaler Sprache und Überarbeitung.",
+      "status": "instructional",
+      "status_label": "Unterrichtshilfe",
+      "sha256": "3dc278a52da7dcea21723c9fbe31c8628e68cd6528f2746e2107a37fbb0e4941"
     }
   ],
   "exam": {
     "name": "Prüfungsteil 3 (PT 3)",
-    "cycle": ["Wahrnehmen & Erleben", "Verstehen & Analysieren", "Entscheiden & Planen", "Umsetzen & Interagieren", "Reflektieren & Evaluieren"],
-    "written_phases": ["Wahrnehmen & Erleben", "Verstehen & Analysieren", "Entscheiden & Planen"],
-    "colloquium_phases": ["Umsetzen & Interagieren", "Reflektieren & Evaluieren"],
-    "grade_split_percent": {"facharbeit": 50, "kolloquium": 50},
+    "cycle": [
+      "Wahrnehmen & Erleben",
+      "Verstehen & Analysieren",
+      "Entscheiden & Planen",
+      "Umsetzen & Interagieren",
+      "Reflektieren & Evaluieren"
+    ],
+    "written_phases": [
+      "Wahrnehmen & Erleben",
+      "Verstehen & Analysieren",
+      "Entscheiden & Planen"
+    ],
+    "colloquium_phases": [
+      "Umsetzen & Interagieren",
+      "Reflektieren & Evaluieren"
+    ],
+    "grade_split_percent": {
+      "facharbeit": 50,
+      "kolloquium": 50
+    },
     "risk_note": "Eine mangelhafte Gesamtbewertung des PT 3 kann laut Informationspapier nicht ausgeglichen werden und führt zur Wiederholung der gesamten Prüfung und des 6. Semesters.",
-    "refs": [{"source_id": "pt3-info", "page": 1}]
+    "refs": [
+      {
+        "source_id": "pt3-info",
+        "page": 1
+      }
+    ]
   },
   "formal_requirements": [
-    {"id":"formal-pages","label":"Umfang","value":"12–15 Seiten","refs":[{"source_id":"pt3-info","page":2}]},
-    {"id":"formal-medium","label":"Erstellung","value":"maschinenschriftlich am PC","refs":[{"source_id":"pt3-info","page":2}]},
-    {"id":"formal-submission","label":"Abgabe","value":"eine ringgebundene Ausgabe mit durchsichtigem, flexiblem Umschlag und eine geheftete Ausgabe","refs":[{"source_id":"pt3-info","page":2}]},
-    {"id":"formal-font","label":"Schriftgröße","value":"12","refs":[{"source_id":"pt3-info","page":2}]},
-    {"id":"formal-lines","label":"Zeilenabstand","value":"1,5","refs":[{"source_id":"pt3-info","page":2}]},
-    {"id":"formal-margins","label":"Seitenränder","value":"links 3 cm, rechts 2 cm, oben 2,5 cm, unten 2 cm","refs":[{"source_id":"pt3-info","page":2}]},
-    {"id":"formal-topic-limit","label":"Themenformulierung","value":"höchstens 200 Zeichen inklusive Leerzeichen","refs":[{"source_id":"pt3-info","page":2}],"numeric":{"max_chars":200}},
-    {"id":"formal-sources","label":"Literatur","value":"mindestens zwei Quellen; Buch- und Internetquellen nach den im Seminar besprochenen Qualitätskriterien auswählen","refs":[{"source_id":"pt3-info","page":2}],"numeric":{"min_sources":2}},
-    {"id":"formal-scientific","label":"Wissenschaftliches Arbeiten","value":"Hinweise zum wissenschaftlichen Arbeiten beachten, ausdrücklich auch beim Umgang mit KI-Instrumenten","refs":[{"source_id":"pt3-info","page":2}]},
-    {"id":"formal-declaration","label":"Eidesstattliche Erklärung","value":"nach dem Literaturverzeichnis anfügen; nicht im Inhaltsverzeichnis aufführen","refs":[{"source_id":"pt3-info","page":2}]},
-    {"id":"formal-publication-consent","label":"Schulinterne Veröffentlichung","value":"Die Vorlage enthält zusätzlich eine Zustimmung zur schulinternen Zugänglichmachung.","refs":[{"source_id":"pt3-info","page":2}]}
+    {
+      "id": "formal-pages",
+      "label": "Umfang",
+      "value": "12–15 Seiten",
+      "refs": [
+        {
+          "source_id": "pt3-info",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "formal-outline",
+      "label": "Verbindliche Gliederung",
+      "value": "Die vorgegebene Gliederung 1/1.1/1.2, 2/2.1/2.2 und 3/3.1–3.4 einhalten; zusätzliche Unterpunkte sind möglich.",
+      "refs": [
+        {
+          "source_id": "facharbeit-gliederung",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "formal-medium",
+      "label": "Erstellung",
+      "value": "maschinenschriftlich am PC",
+      "refs": [
+        {
+          "source_id": "pt3-info",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "formal-submission",
+      "label": "Abgabe",
+      "value": "eine ringgebundene Ausgabe mit durchsichtigem, flexiblem Umschlag und eine geheftete Ausgabe",
+      "refs": [
+        {
+          "source_id": "pt3-info",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "formal-font",
+      "label": "Schriftgröße",
+      "value": "12",
+      "refs": [
+        {
+          "source_id": "pt3-info",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "formal-lines",
+      "label": "Zeilenabstand",
+      "value": "1,5",
+      "refs": [
+        {
+          "source_id": "pt3-info",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "formal-margins",
+      "label": "Seitenränder",
+      "value": "links 3 cm, rechts 2 cm, oben 2,5 cm, unten 2 cm",
+      "refs": [
+        {
+          "source_id": "pt3-info",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "formal-topic-limit",
+      "label": "Themenformulierung",
+      "value": "höchstens 200 Zeichen inklusive Leerzeichen",
+      "refs": [
+        {
+          "source_id": "pt3-info",
+          "page": 2
+        }
+      ],
+      "numeric": {
+        "max_chars": 200
+      }
+    },
+    {
+      "id": "formal-sources",
+      "label": "Literatur",
+      "value": "mindestens zwei Quellen; Buch- und Internetquellen nach den im Seminar besprochenen Qualitätskriterien auswählen",
+      "refs": [
+        {
+          "source_id": "pt3-info",
+          "page": 2
+        },
+        {
+          "source_id": "online-recherche",
+          "page": 5
+        },
+        {
+          "source_id": "online-recherche",
+          "page": 22
+        }
+      ],
+      "numeric": {
+        "min_sources": 2
+      }
+    },
+    {
+      "id": "formal-scientific",
+      "label": "Wissenschaftliches Arbeiten",
+      "value": "Hinweise zum wissenschaftlichen Arbeiten beachten, ausdrücklich auch beim Umgang mit KI-Instrumenten",
+      "refs": [
+        {
+          "source_id": "pt3-info",
+          "page": 2
+        },
+        {
+          "source_id": "wissenschaftliches-arbeiten",
+          "page": 1
+        },
+        {
+          "source_id": "wissenschaftliches-arbeiten",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "formal-citation-literature",
+      "label": "Literaturbelege",
+      "value": "Alle aus Literatur übernommenen Argumente im Fließtext mit Kurzbeleg nachweisen und die Quelle vollständig im Literaturverzeichnis aufführen.",
+      "refs": [
+        {
+          "source_id": "wissenschaftliches-arbeiten",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "formal-ai-source",
+      "label": "KI ist Hilfsmittel, nicht Quelle",
+      "value": "KI darf als Hilfsmittel genutzt werden, gilt aber nicht als Quelle; anerkannte Fachtexte bleiben erforderlich.",
+      "refs": [
+        {
+          "source_id": "wissenschaftliches-arbeiten",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "formal-ai-independent",
+      "label": "Eigenständige pädagogische Leistung bei KI-Nutzung",
+      "value": "Sprachliche KI-Unterstützung ersetzt nicht die eigene Aufgabe, schlüssige pädagogische Erklärungen und Handlungsalternativen für die Ausgangssituation zu entwickeln.",
+      "refs": [
+        {
+          "source_id": "wissenschaftliches-arbeiten",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "formal-ai-disclosure",
+      "label": "KI vollständig kennzeichnen",
+      "value": "Alle mit KI entstandenen Passagen vollständig kennzeichnen. Der vollständige Ausgabetext des KI-Modells bzw. ein Link dazu soll im Anhang angegeben werden; für jede Nutzung müssen der gesamte Prompt, Nutzername mit Datum und die URL des KI-Tools angegeben werden.",
+      "refs": [
+        {
+          "source_id": "wissenschaftliches-arbeiten",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "formal-ai-verification",
+      "label": "Klärung bei Täuschungsverdacht",
+      "value": "Bei Verdacht ist für die Klärung relevant, ob die fraglichen Passagen im Kolloquium schlüssig in eigenen Worten dargestellt und begründet werden können.",
+      "refs": [
+        {
+          "source_id": "wissenschaftliches-arbeiten",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "formal-declaration",
+      "label": "Eidesstattliche Erklärung",
+      "value": "nach dem Literaturverzeichnis anfügen; nicht im Inhaltsverzeichnis aufführen",
+      "refs": [
+        {
+          "source_id": "pt3-info",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "formal-publication-consent",
+      "label": "Schulinterne Veröffentlichung",
+      "value": "Die Vorlage enthält zusätzlich eine Zustimmung zur schulinternen Zugänglichmachung.",
+      "refs": [
+        {
+          "source_id": "pt3-info",
+          "page": 2
+        }
+      ]
+    }
   ],
   "facharbeit": {
     "competence": "Eine aktuelle, selbst erlebte Ausgangssituation aus dem Praktikum mehrperspektivisch analysieren und fachtheoretisch einordnen; daraus eine begründete Arbeitshypothese und fokussierte Planungsentscheidungen entwickeln und Gelingensbedingungen, Folgen und Stolpersteine antizipieren.",
-    "competence_refs": [{"source_id":"pt3-info","page":1}],
+    "competence_refs": [
+      {
+        "source_id": "pt3-info",
+        "page": 1
+      }
+    ],
     "sections": [
       {
-        "id":"einleitung","title":"Einleitung","weight_percent":null,"refs":[{"source_id":"facharbeit-bewertung","page":2}],
-        "expectation":"Die Auswahl der zugrunde liegenden Ausgangslage wird fokussiert begründet; der persönliche Bezug wird deutlich.",
-        "requirements":[
-          {"id":"fa-intro-selection","text":"Auswahl der Ausgangslage klar und fokussiert begründen.","refs":[{"source_id":"facharbeit-bewertung","page":2}]},
-          {"id":"fa-intro-personal","text":"Persönlichen Bezug zur Ausgangslage nachvollziehbar machen.","refs":[{"source_id":"facharbeit-bewertung","page":2}]},
-          {"id":"fa-intro-profession","text":"Bedeutung der Ausgangslage für den Beruf des Erziehers nachvollziehbar machen.","refs":[{"source_id":"facharbeit-bewertung","page":2}]}
+        "id": "einleitung",
+        "title": "Einleitung",
+        "weight_percent": null,
+        "refs": [
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 2
+          }
         ],
-        "good_performance":"Klar und fokussiert begründete Auswahl; persönlicher und beruflicher Bezug sind anschaulich und nachvollziehbar."
+        "expectation": "Die Auswahl der zugrunde liegenden Ausgangslage wird fokussiert begründet; der persönliche Bezug wird deutlich.",
+        "requirements": [
+          {
+            "id": "fa-intro-selection",
+            "text": "Auswahl der Ausgangslage klar und fokussiert begründen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 2
+              }
+            ]
+          },
+          {
+            "id": "fa-intro-personal",
+            "text": "Persönlichen Bezug zur Ausgangslage nachvollziehbar machen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 2
+              }
+            ]
+          },
+          {
+            "id": "fa-intro-profession",
+            "text": "Bedeutung der Ausgangslage für den Beruf des Erziehers nachvollziehbar machen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 2
+              }
+            ]
+          }
+        ],
+        "good_performance": "Klar und fokussiert begründete Auswahl; persönlicher und beruflicher Bezug sind anschaulich und nachvollziehbar."
       },
       {
-        "id":"wahrnehmen-erleben","title":"Wahrnehmen & Erleben","weight_percent":25,"refs":[{"source_id":"facharbeit-bewertung","page":1},{"source_id":"facharbeit-bewertung","page":2}],
-        "expectation":"Die selbst erlebte Ausgangslage aus der Praxis wird so beschrieben, dass ein anschließendes mehrperspektivisches Verstehen und Analysieren möglich ist.",
-        "requirements":[
-          {"id":"fa-we-situation","text":"Gewählte Ausgangslage aus dem Praktikum klar und präzise beschreiben.","refs":[{"source_id":"facharbeit-bewertung","page":2}]},
-          {"id":"fa-we-context","text":"Kontext, Rahmenbedingungen und relevante Faktoren der Ausgangslage darstellen.","refs":[{"source_id":"facharbeit-bewertung","page":2}]},
-          {"id":"fa-we-actors","text":"Verhalten aller Beteiligten konkret beschreiben.","refs":[{"source_id":"facharbeit-bewertung","page":2}]},
-          {"id":"fa-we-interaction","text":"Wechselwirkungen zwischen den Beteiligten sichtbar machen.","refs":[{"source_id":"facharbeit-bewertung","page":2}]},
-          {"id":"fa-we-subjectivity","text":"Eigene subjektive Wahrnehmung als solche kenntlich machen.","refs":[{"source_id":"facharbeit-bewertung","page":2}]},
-          {"id":"fa-we-analysis-hooks","text":"Genügend vielschichtige Anknüpfungspunkte für die spätere Analyse liefern.","refs":[{"source_id":"facharbeit-bewertung","page":2}]}
+        "id": "wahrnehmen-erleben",
+        "title": "Wahrnehmen & Erleben",
+        "weight_percent": 25,
+        "refs": [
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 1
+          },
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 2
+          }
         ],
-        "good_performance":"Umfassender Kontext, konkrete Interaktionen und erkennbares Bewusstsein für die eigene subjektive Wahrnehmung schaffen eine belastbare Grundlage für die Analyse."
+        "expectation": "Die selbst erlebte Ausgangslage aus der Praxis wird so beschrieben, dass ein anschließendes mehrperspektivisches Verstehen und Analysieren möglich ist.",
+        "requirements": [
+          {
+            "id": "fa-we-situation",
+            "text": "Gewählte Ausgangslage aus dem Praktikum klar und präzise beschreiben.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 2
+              }
+            ]
+          },
+          {
+            "id": "fa-we-context",
+            "text": "Kontext, Rahmenbedingungen und relevante Faktoren der Ausgangslage darstellen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 2
+              }
+            ]
+          },
+          {
+            "id": "fa-we-actors",
+            "text": "Verhalten aller Beteiligten konkret beschreiben.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 2
+              }
+            ]
+          },
+          {
+            "id": "fa-we-interaction",
+            "text": "Wechselwirkungen zwischen den Beteiligten sichtbar machen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 2
+              }
+            ]
+          },
+          {
+            "id": "fa-we-subjectivity",
+            "text": "Eigene subjektive Wahrnehmung als solche kenntlich machen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 2
+              }
+            ]
+          },
+          {
+            "id": "fa-we-analysis-hooks",
+            "text": "Genügend vielschichtige Anknüpfungspunkte für die spätere Analyse liefern.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 2
+              }
+            ]
+          }
+        ],
+        "good_performance": "Umfassender Kontext, konkrete Interaktionen und erkennbares Bewusstsein für die eigene subjektive Wahrnehmung schaffen eine belastbare Grundlage für die Analyse."
       },
       {
-        "id":"verstehen-analysieren","title":"Verstehen & Analysieren","weight_percent":40,"refs":[{"source_id":"facharbeit-bewertung","page":1},{"source_id":"facharbeit-bewertung","page":3}],
-        "expectation":"Die Ausgangslage wird empathisch und systemisch analysiert, mit passender Fachliteratur vertieft und in eine funktionale Arbeitshypothese überführt.",
-        "requirements":[
-          {"id":"fa-va-empathy","text":"Empathisches Verstehen an Bedürfnissen und Ressourcen der Beteiligten ausrichten.","refs":[{"source_id":"facharbeit-bewertung","page":3}]},
-          {"id":"fa-va-five-levels","text":"Das „Modell der Fünf Ebenen“ nach Fröhlich-Gildhoff anwenden.","refs":[{"source_id":"facharbeit-bewertung","page":3}]},
-          {"id":"fa-va-three-levels","text":"Die Ausgangslage auf mindestens drei Ebenen systemisch beleuchten.","refs":[{"source_id":"facharbeit-bewertung","page":3}],"numeric":{"min_levels":3}},
-          {"id":"fa-va-level-choice","text":"Auswahl der betrachteten Ebenen nachvollziehbar erläutern.","refs":[{"source_id":"facharbeit-bewertung","page":3}]},
-          {"id":"fa-va-literature","text":"Passend ausgewählte Fachliteratur zur Vertiefung des fachlichen Verständnisses einsetzen.","refs":[{"source_id":"facharbeit-bewertung","page":3}]},
-          {"id":"fa-va-case-link","text":"Fachwissen konkret auf ausgewählte Elemente der Ausgangslage beziehen.","refs":[{"source_id":"facharbeit-bewertung","page":3}]},
-          {"id":"fa-va-own-words","text":"Fachliche Grundlagen schlüssig in eigenen Worten darstellen.","refs":[{"source_id":"facharbeit-bewertung","page":3}]},
-          {"id":"fa-va-hypothesis","text":"Eine Arbeitshypothese mit klar erkennbarer Funktion formulieren.","refs":[{"source_id":"facharbeit-bewertung","page":3}]},
-          {"id":"fa-va-hypothesis-link","text":"Arbeitshypothese sinnstiftend mit der fachlichen Auseinandersetzung und dem späteren pädagogischen Handeln verknüpfen.","refs":[{"source_id":"facharbeit-bewertung","page":3}]}
+        "id": "verstehen-analysieren",
+        "title": "Verstehen & Analysieren",
+        "weight_percent": 40,
+        "refs": [
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 1
+          },
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 3
+          }
         ],
-        "good_performance":"Mindestens drei nachvollziehbar gewählte Ebenen, differenziertes empathisches Verstehen, passend angewandtes Fachwissen und eine pädagogisch funktionale Arbeitshypothese greifen ineinander."
+        "expectation": "Die Ausgangslage wird empathisch und systemisch analysiert, mit passender Fachliteratur vertieft und in eine funktionale Arbeitshypothese überführt.",
+        "requirements": [
+          {
+            "id": "fa-va-empathy",
+            "text": "Empathisches Verstehen an Bedürfnissen und Ressourcen der Beteiligten ausrichten.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 3
+              }
+            ]
+          },
+          {
+            "id": "fa-va-five-levels",
+            "text": "Das „Modell der Fünf Ebenen“ nach Fröhlich-Gildhoff anwenden.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 3
+              },
+              {
+                "source_id": "analysieren-verstehen",
+                "page": 1
+              },
+              {
+                "source_id": "analysieren-verstehen",
+                "page": 3
+              }
+            ]
+          },
+          {
+            "id": "fa-va-three-levels",
+            "text": "Die Ausgangslage auf mindestens drei Ebenen systemisch beleuchten.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 3
+              }
+            ],
+            "numeric": {
+              "min_levels": 3
+            }
+          },
+          {
+            "id": "fa-va-level-choice",
+            "text": "Auswahl der betrachteten Ebenen nachvollziehbar erläutern.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 3
+              }
+            ]
+          },
+          {
+            "id": "fa-va-literature",
+            "text": "Passend ausgewählte Fachliteratur zur Vertiefung des fachlichen Verständnisses einsetzen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 3
+              },
+              {
+                "source_id": "online-recherche",
+                "page": 5
+              },
+              {
+                "source_id": "online-recherche",
+                "page": 22
+              }
+            ]
+          },
+          {
+            "id": "fa-va-case-link",
+            "text": "Fachwissen konkret auf ausgewählte Elemente der Ausgangslage beziehen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 3
+              }
+            ]
+          },
+          {
+            "id": "fa-va-own-words",
+            "text": "Fachliche Grundlagen schlüssig in eigenen Worten darstellen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 3
+              },
+              {
+                "source_id": "verdichtung-hilfe",
+                "page": 1
+              }
+            ]
+          },
+          {
+            "id": "fa-va-hypothesis",
+            "text": "Eine Arbeitshypothese mit klar erkennbarer Funktion formulieren.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 3
+              }
+            ]
+          },
+          {
+            "id": "fa-va-hypothesis-link",
+            "text": "Arbeitshypothese sinnstiftend mit der fachlichen Auseinandersetzung und dem späteren pädagogischen Handeln verknüpfen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 3
+              }
+            ]
+          }
+        ],
+        "good_performance": "Mindestens drei nachvollziehbar gewählte Ebenen, differenziertes empathisches Verstehen, passend angewandtes Fachwissen und eine pädagogisch funktionale Arbeitshypothese greifen ineinander."
       },
       {
-        "id":"entscheiden-planen","title":"Entscheiden & Planen","weight_percent":35,"refs":[{"source_id":"facharbeit-bewertung","page":1},{"source_id":"facharbeit-bewertung","page":4}],
-        "expectation":"Aus den Analyseergebnissen werden ein angemessenes Ziel und ein konkreter, ressourcenorientierter, begründeter und anpassbarer Plan entwickelt.",
-        "requirements":[
-          {"id":"fa-ep-goal-hypothesis","text":"Ziel an der Arbeitshypothese ausrichten.","refs":[{"source_id":"facharbeit-bewertung","page":4}]},
-          {"id":"fa-ep-goal-influence","text":"Ziel so wählen, dass es im Einflussbereich des eigenen pädagogischen Handelns liegt.","refs":[{"source_id":"facharbeit-bewertung","page":4}]},
-          {"id":"fa-ep-resources","text":"Planungsschritte anhand von Stärken, Bedürfnissen und Ressourcen der Zielgruppe begründen.","refs":[{"source_id":"facharbeit-bewertung","page":4}]},
-          {"id":"fa-ep-thread","text":"Einen fokussierten roten Faden der Umsetzung darstellen.","refs":[{"source_id":"facharbeit-bewertung","page":4}]},
-          {"id":"fa-ep-examples","text":"Einzelne Elemente des Vorhabens exemplarisch konkret darstellen.","refs":[{"source_id":"facharbeit-bewertung","page":4}]},
-          {"id":"fa-ep-method-source","text":"Methodisches Vorgehen fachlich nachvollziehbar und quellenbezogen begründen.","refs":[{"source_id":"facharbeit-bewertung","page":4}]},
-          {"id":"fa-ep-anticipation","text":"Spätere Abläufe, Gelingensbedingungen und Stolpersteine antizipieren.","refs":[{"source_id":"facharbeit-bewertung","page":4}]},
-          {"id":"fa-ep-flexibility","text":"Flexibilität und Anpassbarkeit der Planung sichtbar machen.","refs":[{"source_id":"facharbeit-bewertung","page":4}]}
+        "id": "entscheiden-planen",
+        "title": "Entscheiden & Planen",
+        "weight_percent": 35,
+        "refs": [
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 1
+          },
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 4
+          }
         ],
-        "good_performance":"Ziel, Planung und methodische Begründung folgen der Arbeitshypothese; Ressourcen, konkrete Umsetzung, Gelingensbedingungen und mögliche Stolpersteine sind systematisch berücksichtigt."
+        "expectation": "Aus den Analyseergebnissen werden ein angemessenes Ziel und ein konkreter, ressourcenorientierter, begründeter und anpassbarer Plan entwickelt.",
+        "requirements": [
+          {
+            "id": "fa-ep-goal-hypothesis",
+            "text": "Ziel an der Arbeitshypothese ausrichten.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 4
+              }
+            ]
+          },
+          {
+            "id": "fa-ep-goal-influence",
+            "text": "Ziel so wählen, dass es im Einflussbereich des eigenen pädagogischen Handelns liegt.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 4
+              }
+            ]
+          },
+          {
+            "id": "fa-ep-resources",
+            "text": "Planungsschritte anhand von Stärken, Bedürfnissen und Ressourcen der Zielgruppe begründen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 4
+              }
+            ]
+          },
+          {
+            "id": "fa-ep-thread",
+            "text": "Einen fokussierten roten Faden der Umsetzung darstellen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 4
+              }
+            ]
+          },
+          {
+            "id": "fa-ep-examples",
+            "text": "Einzelne Elemente des Vorhabens exemplarisch konkret darstellen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 4
+              }
+            ]
+          },
+          {
+            "id": "fa-ep-method-source",
+            "text": "Methodisches Vorgehen fachlich nachvollziehbar und quellenbezogen begründen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 4
+              }
+            ]
+          },
+          {
+            "id": "fa-ep-anticipation",
+            "text": "Spätere Abläufe, Gelingensbedingungen und Stolpersteine antizipieren.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 4
+              }
+            ]
+          },
+          {
+            "id": "fa-ep-flexibility",
+            "text": "Flexibilität und Anpassbarkeit der Planung sichtbar machen.",
+            "refs": [
+              {
+                "source_id": "facharbeit-bewertung",
+                "page": 4
+              }
+            ]
+          }
+        ],
+        "good_performance": "Ziel, Planung und methodische Begründung folgen der Arbeitshypothese; Ressourcen, konkrete Umsetzung, Gelingensbedingungen und mögliche Stolpersteine sind systematisch berücksichtigt."
       }
     ],
     "writing_deduction": {
-      "id":"schreibkompetenz","title":"Schreibkompetenz","deduction_max_percent":10,"refs":[{"source_id":"facharbeit-bewertung","page":1},{"source_id":"facharbeit-bewertung","page":5}],
-      "expectation":"Eigenständige, sprachlich angemessene, strukturierte Facharbeit im korrekten wissenschaftlichen Stil.",
-      "requirements":[
-        {"id":"fa-write-structure","text":"Logische Struktur und Klarheit sichern; roten Faden erhalten und Dopplungen vermeiden.","refs":[{"source_id":"facharbeit-bewertung","page":5}]},
-        {"id":"fa-write-language","text":"Sprache und Ausdruck korrekt und fachlich angemessen gestalten.","refs":[{"source_id":"facharbeit-bewertung","page":5}]},
-        {"id":"fa-write-science","text":"Wissenschaftliche Schreibstandards einschließlich Zitation und Formatierung beachten.","refs":[{"source_id":"facharbeit-bewertung","page":5}]},
-        {"id":"fa-write-independent","text":"Verschriftlichung eigenständig leisten.","refs":[{"source_id":"facharbeit-bewertung","page":5}]}
+      "id": "schreibkompetenz",
+      "title": "Schreibkompetenz",
+      "deduction_max_percent": 10,
+      "refs": [
+        {
+          "source_id": "facharbeit-bewertung",
+          "page": 1
+        },
+        {
+          "source_id": "facharbeit-bewertung",
+          "page": 5
+        }
+      ],
+      "expectation": "Eigenständige, sprachlich angemessene, strukturierte Facharbeit im korrekten wissenschaftlichen Stil.",
+      "requirements": [
+        {
+          "id": "fa-write-structure",
+          "text": "Logische Struktur und Klarheit sichern; roten Faden erhalten und Dopplungen vermeiden.",
+          "refs": [
+            {
+              "source_id": "facharbeit-bewertung",
+              "page": 5
+            }
+          ]
+        },
+        {
+          "id": "fa-write-language",
+          "text": "Sprache und Ausdruck korrekt und fachlich angemessen gestalten.",
+          "refs": [
+            {
+              "source_id": "facharbeit-bewertung",
+              "page": 5
+            }
+          ]
+        },
+        {
+          "id": "fa-write-science",
+          "text": "Wissenschaftliche Schreibstandards einschließlich Zitation und Formatierung beachten.",
+          "refs": [
+            {
+              "source_id": "facharbeit-bewertung",
+              "page": 5
+            },
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 1
+            },
+            {
+              "source_id": "verdichtung-hilfe",
+              "page": 4
+            }
+          ]
+        },
+        {
+          "id": "fa-write-independent",
+          "text": "Verschriftlichung eigenständig leisten.",
+          "refs": [
+            {
+              "source_id": "facharbeit-bewertung",
+              "page": 5
+            },
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 2
+            },
+            {
+              "source_id": "verdichtung-hilfe",
+              "page": 1
+            }
+          ]
+        }
       ]
     },
     "global_grade_descriptors": [
-      {"grade":1,"summary":"Anforderungen in besonderem Maße erfüllt; sehr klar, fundiert, vollständig und überzeugend; Zusammenhänge sehr deutlich.","refs":[{"source_id":"facharbeit-bewertung","page":6}]},
-      {"grade":2,"summary":"Anforderungen voll erfüllt; mit wenigen Ausnahmen klar, fundiert, vollständig und überzeugend.","refs":[{"source_id":"facharbeit-bewertung","page":6}]},
-      {"grade":3,"summary":"Anforderungen im Allgemeinen erfüllt; Wesentliches richtig erkannt, Zusammenhänge im Allgemeinen deutlich.","refs":[{"source_id":"facharbeit-bewertung","page":6}]},
-      {"grade":4,"summary":"Trotz Schwächen im Ganzen noch ausreichend; nur teilweise klar, prägnant, vollständig oder fundiert.","refs":[{"source_id":"facharbeit-bewertung","page":6}]},
-      {"grade":5,"summary":"Erhebliche Mängel; Aufgabenbezug, Schlüssigkeit, Genauigkeit, Fundierung und Zusammenhänge kaum erkennbar.","refs":[{"source_id":"facharbeit-bewertung","page":6}]},
-      {"grade":6,"summary":"Anforderungen in allen Teilen nicht erfüllt; grundlegende Kenntnisse und Zusammenhänge fehlen erheblich.","refs":[{"source_id":"facharbeit-bewertung","page":7}]}
-    ]
+      {
+        "grade": 1,
+        "summary": "Anforderungen in besonderem Maße erfüllt; sehr klar, fundiert, vollständig und überzeugend; Zusammenhänge sehr deutlich.",
+        "refs": [
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "grade": 2,
+        "summary": "Anforderungen voll erfüllt; mit wenigen Ausnahmen klar, fundiert, vollständig und überzeugend.",
+        "refs": [
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "grade": 3,
+        "summary": "Anforderungen im Allgemeinen erfüllt; Wesentliches richtig erkannt, Zusammenhänge im Allgemeinen deutlich.",
+        "refs": [
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "grade": 4,
+        "summary": "Trotz Schwächen im Ganzen noch ausreichend; nur teilweise klar, prägnant, vollständig oder fundiert.",
+        "refs": [
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "grade": 5,
+        "summary": "Erhebliche Mängel; Aufgabenbezug, Schlüssigkeit, Genauigkeit, Fundierung und Zusammenhänge kaum erkennbar.",
+        "refs": [
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "grade": 6,
+        "summary": "Anforderungen in allen Teilen nicht erfüllt; grundlegende Kenntnisse und Zusammenhänge fehlen erheblich.",
+        "refs": [
+          {
+            "source_id": "facharbeit-bewertung",
+            "page": 7
+          }
+        ]
+      }
+    ],
+    "required_outline": {
+      "title": "Verbindliche Gliederung für die Endfassung",
+      "note": "Die Gliederung ist laut Dokument unabhängig vom Schwerpunkt verbindlich; weitere Unterpunkte dürfen ergänzt werden.",
+      "navigation_note": "Die Website behandelt die Einleitung weiterhin als eigenen Arbeitsschritt, weil der Bewertungsbogen sie separat beschreibt. In der Endfassung gehört sie gemäß verbindlicher Gliederung unter 1.1.",
+      "refs": [
+        {
+          "source_id": "facharbeit-gliederung",
+          "page": 1
+        }
+      ],
+      "items": [
+        {
+          "number": "1",
+          "title": "Wahrnehmen und Erleben – Beschreibung der Praxissituation",
+          "phase": "wahrnehmen-erleben"
+        },
+        {
+          "number": "1.1",
+          "title": "Einleitung und Kontext",
+          "phase": "einleitung"
+        },
+        {
+          "number": "1.2",
+          "title": "Detaillierte Beschreibung der Ausgangssituation",
+          "phase": "wahrnehmen-erleben"
+        },
+        {
+          "number": "2",
+          "title": "Verstehen und Analysieren",
+          "phase": "verstehen-analysieren"
+        },
+        {
+          "number": "2.1",
+          "title": "Empathisches Verstehen und Analysieren mit dem Fünf Ebenen Modell",
+          "phase": "verstehen-analysieren"
+        },
+        {
+          "number": "2.2",
+          "title": "Fachliche Auseinandersetzung und Arbeitshypothese",
+          "phase": "verstehen-analysieren"
+        },
+        {
+          "number": "3",
+          "title": "Entscheiden und Planen",
+          "phase": "entscheiden-planen"
+        },
+        {
+          "number": "3.1",
+          "title": "Ziel für das pädagogische Handeln",
+          "phase": "entscheiden-planen"
+        },
+        {
+          "number": "3.2",
+          "title": "Planungsentscheidungen",
+          "phase": "entscheiden-planen"
+        },
+        {
+          "number": "3.3",
+          "title": "Konkreter Plan für die Umsetzung",
+          "phase": "entscheiden-planen"
+        },
+        {
+          "number": "3.4",
+          "title": "Antizipieren",
+          "phase": "entscheiden-planen"
+        }
+      ]
+    }
   },
   "kolloquium": {
-    "competence":"Die Umsetzung der geplanten pädagogischen Interaktion als gemeinsamen Prozess nachvollziehbar darstellen und reflektieren, Handlungsalternativen entwerfen, ressourcenorientierte und wertegetragene Haltung zeigen und Erkenntnisse auf die Qualität von Bildungs- und Entwicklungsprozessen übertragen.",
-    "competence_refs":[{"source_id":"pt3-info","page":1}],
-    "format":[
-      {"id":"kol-timing","label":"Zeitpunkt","value":"zu Beginn des 6. Semesters","refs":[{"source_id":"pt3-info","page":3}]},
-      {"id":"kol-duration","label":"Dauer","value":"in der Regel 30 Minuten insgesamt","refs":[{"source_id":"pt3-info","page":3}]},
-      {"id":"kol-talk","label":"Vortrag","value":"ca. 10–13 Minuten, anschließend Fachgespräch","refs":[{"source_id":"pt3-info","page":3}]},
-      {"id":"kol-board","label":"Prüfungsausschuss","value":"die beiden Prüfer der Facharbeit plus ein Vorsitzender","refs":[{"source_id":"pt3-info","page":3}]},
-      {"id":"kol-medium","label":"Medium","value":"vorbereitetes Medium, z. B. Plakat oder digitales Medium","refs":[{"source_id":"pt3-info","page":3}]},
-      {"id":"kol-result","label":"Bekanntgabe","value":"Einzelbewertungen und Gesamtnote am Ende des Kolloquiums; bei exakt mittlerem Gesamtergebnis gibt das Kolloquium den Ausschlag","refs":[{"source_id":"pt3-info","page":3}]}
+    "competence": "Die Umsetzung der geplanten pädagogischen Interaktion als gemeinsamen Prozess nachvollziehbar darstellen und reflektieren, Handlungsalternativen entwerfen, ressourcenorientierte und wertegetragene Haltung zeigen und Erkenntnisse auf die Qualität von Bildungs- und Entwicklungsprozessen übertragen.",
+    "competence_refs": [
+      {
+        "source_id": "pt3-info",
+        "page": 1
+      }
     ],
-    "sections":[
+    "format": [
       {
-        "id":"umsetzen-interagieren","title":"Erläuterung und Rekonstruktion: Umsetzen & Interagieren","weight_percent":40,"refs":[{"source_id":"kolloquium-bewertung","page":1}],
-        "expectation":"Umsetzung des in der Facharbeit geplanten Vorhabens vor dem Hintergrund wesentlicher Analyse- und Planungsschritte erläutern.",
-        "requirements":[
-          {"id":"kol-ui-situations","text":"Sinnvolle Situationen aus der Umsetzung auswählen und klar strukturieren.","refs":[{"source_id":"kolloquium-bewertung","page":1}]},
-          {"id":"kol-ui-origin-link","text":"Ausgewählte Situationen auf die Ausgangslage beziehen.","refs":[{"source_id":"kolloquium-bewertung","page":1}]},
-          {"id":"kol-ui-plan-link","text":"Ausgewählte Situationen auf die Planungsschritte beziehen.","refs":[{"source_id":"kolloquium-bewertung","page":1}]},
-          {"id":"kol-ui-resources","text":"Beteiligte ressourcenorientiert und wohlwollend als handelnde Akteure eines gemeinsamen Prozesses darstellen.","refs":[{"source_id":"kolloquium-bewertung","page":1}]},
-          {"id":"kol-ui-dynamics","text":"Dynamiken und Wechselwirkungen erkennen und benennen.","refs":[{"source_id":"kolloquium-bewertung","page":1}]}
-        ],
-        "good_performance":"Sinnvoll ausgewählte Situationen werden klar mit Ausgangslage und Planung verknüpft; Beteiligte erscheinen als aktive Mitgestalter und Wechselwirkungen werden reflektiert."
+        "id": "kol-timing",
+        "label": "Zeitpunkt",
+        "value": "zu Beginn des 6. Semesters",
+        "refs": [
+          {
+            "source_id": "pt3-info",
+            "page": 3
+          }
+        ]
       },
       {
-        "id":"hypothesen-ziele","title":"Kritische Überprüfung von Hypothesen und Zielen","weight_percent":20,"refs":[{"source_id":"kolloquium-bewertung","page":2}],
-        "expectation":"Tragfähigkeit von Arbeitshypothesen und Zielen anhand ausgewählter Umsetzungssituationen beurteilen.",
-        "requirements":[
-          {"id":"kol-hz-deviation","text":"Abweichungen zwischen Planung und Realität erkennen.","refs":[{"source_id":"kolloquium-bewertung","page":2}]},
-          {"id":"kol-hz-goal","text":"Handlungsleitendes Ziel darstellen und überprüfen.","refs":[{"source_id":"kolloquium-bewertung","page":2}]},
-          {"id":"kol-hz-hypothesis","text":"Arbeitshypothese darstellen und kritisch beurteilen.","refs":[{"source_id":"kolloquium-bewertung","page":2}]},
-          {"id":"kol-hz-factors","text":"Förderliche und hinderliche Faktoren benennen und analysieren.","refs":[{"source_id":"kolloquium-bewertung","page":2}]},
-          {"id":"kol-hz-role","text":"Eigene Rolle in die Analyse der förderlichen und hinderlichen Faktoren einbeziehen.","refs":[{"source_id":"kolloquium-bewertung","page":2}]}
-        ],
-        "good_performance":"Plan-Realitäts-Abweichungen, Ziel und Hypothese werden differenziert geprüft; förderliche und hinderliche Faktoren werden systematisch mit der eigenen Rolle verknüpft."
+        "id": "kol-duration",
+        "label": "Dauer",
+        "value": "in der Regel 30 Minuten insgesamt",
+        "refs": [
+          {
+            "source_id": "pt3-info",
+            "page": 3
+          }
+        ]
       },
       {
-        "id":"konsequenzen-transfer","title":"Fachliche Konsequenzen, Handlungsalternativen und Transfer","weight_percent":40,"refs":[{"source_id":"kolloquium-bewertung","page":3}],
-        "expectation":"Aus den Ergebnissen fachlich fundierte Konsequenzen und Handlungsalternativen ableiten und eine professionelle, werteorientierte Haltung zeigen.",
-        "requirements":[
-          {"id":"kol-kt-focus","text":"Schwerpunkte für die weitere fachliche und handlungspraktische Rekonstruktion ableiten.","refs":[{"source_id":"kolloquium-bewertung","page":3}]},
-          {"id":"kol-kt-alternatives","text":"Begründete Handlungsalternativen entwickeln.","refs":[{"source_id":"kolloquium-bewertung","page":3}]},
-          {"id":"kol-kt-consequences","text":"Konkrete fachliche Konsequenzen für das eigene professionelle Handeln aufzeigen.","refs":[{"source_id":"kolloquium-bewertung","page":3}]},
-          {"id":"kol-kt-strengths","text":"Stärken und Schwächen der eigenen Arbeit differenziert benennen.","refs":[{"source_id":"kolloquium-bewertung","page":3}]},
-          {"id":"kol-kt-values","text":"Wertebezug deutlich machen, etwa humanistisches Menschenbild, Kinderrechte, Partizipation oder Inklusion.","refs":[{"source_id":"kolloquium-bewertung","page":3}]},
-          {"id":"kol-kt-transfer","text":"Ergebnisse für die Beurteilung und Weiterentwicklung von Bildungs- und Entwicklungsprozessen nutzen.","refs":[{"source_id":"kolloquium-bewertung","page":3}]},
-          {"id":"kol-kt-attitude","text":"Eigene professionelle Haltung im Spiegel der Arbeitsergebnisse reflektieren.","refs":[{"source_id":"kolloquium-bewertung","page":3}]}
+        "id": "kol-talk",
+        "label": "Vortrag",
+        "value": "ca. 10–13 Minuten, anschließend Fachgespräch",
+        "refs": [
+          {
+            "source_id": "pt3-info",
+            "page": 3
+          }
+        ]
+      },
+      {
+        "id": "kol-board",
+        "label": "Prüfungsausschuss",
+        "value": "die beiden Prüfer der Facharbeit plus ein Vorsitzender",
+        "refs": [
+          {
+            "source_id": "pt3-info",
+            "page": 3
+          }
+        ]
+      },
+      {
+        "id": "kol-medium",
+        "label": "Medium",
+        "value": "vorbereitetes Medium, z. B. Plakat oder digitales Medium",
+        "refs": [
+          {
+            "source_id": "pt3-info",
+            "page": 3
+          }
+        ]
+      },
+      {
+        "id": "kol-result",
+        "label": "Bekanntgabe",
+        "value": "Einzelbewertungen und Gesamtnote am Ende des Kolloquiums; bei exakt mittlerem Gesamtergebnis gibt das Kolloquium den Ausschlag",
+        "refs": [
+          {
+            "source_id": "pt3-info",
+            "page": 3
+          }
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "id": "umsetzen-interagieren",
+        "title": "Erläuterung und Rekonstruktion: Umsetzen & Interagieren",
+        "weight_percent": 40,
+        "refs": [
+          {
+            "source_id": "kolloquium-bewertung",
+            "page": 1
+          }
         ],
-        "good_performance":"Praxis, Theorie und Haltung werden sicher verbunden; Konsequenzen und Alternativen sind konkret begründet und führen zu einer reflektierten Transferleistung."
+        "expectation": "Umsetzung des in der Facharbeit geplanten Vorhabens vor dem Hintergrund wesentlicher Analyse- und Planungsschritte erläutern.",
+        "requirements": [
+          {
+            "id": "kol-ui-situations",
+            "text": "Sinnvolle Situationen aus der Umsetzung auswählen und klar strukturieren.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 1
+              }
+            ]
+          },
+          {
+            "id": "kol-ui-origin-link",
+            "text": "Ausgewählte Situationen auf die Ausgangslage beziehen.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 1
+              }
+            ]
+          },
+          {
+            "id": "kol-ui-plan-link",
+            "text": "Ausgewählte Situationen auf die Planungsschritte beziehen.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 1
+              }
+            ]
+          },
+          {
+            "id": "kol-ui-resources",
+            "text": "Beteiligte ressourcenorientiert und wohlwollend als handelnde Akteure eines gemeinsamen Prozesses darstellen.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 1
+              }
+            ]
+          },
+          {
+            "id": "kol-ui-dynamics",
+            "text": "Dynamiken und Wechselwirkungen erkennen und benennen.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 1
+              }
+            ]
+          }
+        ],
+        "good_performance": "Sinnvoll ausgewählte Situationen werden klar mit Ausgangslage und Planung verknüpft; Beteiligte erscheinen als aktive Mitgestalter und Wechselwirkungen werden reflektiert."
+      },
+      {
+        "id": "hypothesen-ziele",
+        "title": "Kritische Überprüfung von Hypothesen und Zielen",
+        "weight_percent": 20,
+        "refs": [
+          {
+            "source_id": "kolloquium-bewertung",
+            "page": 2
+          }
+        ],
+        "expectation": "Tragfähigkeit von Arbeitshypothesen und Zielen anhand ausgewählter Umsetzungssituationen beurteilen.",
+        "requirements": [
+          {
+            "id": "kol-hz-deviation",
+            "text": "Abweichungen zwischen Planung und Realität erkennen.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 2
+              }
+            ]
+          },
+          {
+            "id": "kol-hz-goal",
+            "text": "Handlungsleitendes Ziel darstellen und überprüfen.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 2
+              }
+            ]
+          },
+          {
+            "id": "kol-hz-hypothesis",
+            "text": "Arbeitshypothese darstellen und kritisch beurteilen.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 2
+              }
+            ]
+          },
+          {
+            "id": "kol-hz-factors",
+            "text": "Förderliche und hinderliche Faktoren benennen und analysieren.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 2
+              }
+            ]
+          },
+          {
+            "id": "kol-hz-role",
+            "text": "Eigene Rolle in die Analyse der förderlichen und hinderlichen Faktoren einbeziehen.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 2
+              }
+            ]
+          }
+        ],
+        "good_performance": "Plan-Realitäts-Abweichungen, Ziel und Hypothese werden differenziert geprüft; förderliche und hinderliche Faktoren werden systematisch mit der eigenen Rolle verknüpft."
+      },
+      {
+        "id": "konsequenzen-transfer",
+        "title": "Fachliche Konsequenzen, Handlungsalternativen und Transfer",
+        "weight_percent": 40,
+        "refs": [
+          {
+            "source_id": "kolloquium-bewertung",
+            "page": 3
+          }
+        ],
+        "expectation": "Aus den Ergebnissen fachlich fundierte Konsequenzen und Handlungsalternativen ableiten und eine professionelle, werteorientierte Haltung zeigen.",
+        "requirements": [
+          {
+            "id": "kol-kt-focus",
+            "text": "Schwerpunkte für die weitere fachliche und handlungspraktische Rekonstruktion ableiten.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 3
+              }
+            ]
+          },
+          {
+            "id": "kol-kt-alternatives",
+            "text": "Begründete Handlungsalternativen entwickeln.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 3
+              }
+            ]
+          },
+          {
+            "id": "kol-kt-consequences",
+            "text": "Konkrete fachliche Konsequenzen für das eigene professionelle Handeln aufzeigen.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 3
+              }
+            ]
+          },
+          {
+            "id": "kol-kt-strengths",
+            "text": "Stärken und Schwächen der eigenen Arbeit differenziert benennen.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 3
+              }
+            ]
+          },
+          {
+            "id": "kol-kt-values",
+            "text": "Wertebezug deutlich machen, etwa humanistisches Menschenbild, Kinderrechte, Partizipation oder Inklusion.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 3
+              }
+            ]
+          },
+          {
+            "id": "kol-kt-transfer",
+            "text": "Ergebnisse für die Beurteilung und Weiterentwicklung von Bildungs- und Entwicklungsprozessen nutzen.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 3
+              }
+            ]
+          },
+          {
+            "id": "kol-kt-attitude",
+            "text": "Eigene professionelle Haltung im Spiegel der Arbeitsergebnisse reflektieren.",
+            "refs": [
+              {
+                "source_id": "kolloquium-bewertung",
+                "page": 3
+              }
+            ]
+          }
+        ],
+        "good_performance": "Praxis, Theorie und Haltung werden sicher verbunden; Konsequenzen und Alternativen sind konkret begründet und führen zu einer reflektierten Transferleistung."
       }
     ],
     "presentation_deduction": {
-      "id":"praesentation-gespraech","title":"Präsentations- und Gesprächskompetenz","deduction_max_percent":10,"refs":[{"source_id":"kolloquium-bewertung","page":4}],
-      "requirements":[
-        {"id":"kol-pg-speaking","text":"Klar und weitgehend frei sprechen.","refs":[{"source_id":"kolloquium-bewertung","page":4}]},
-        {"id":"kol-pg-language","text":"Präzisen Sprachgebrauch zeigen.","refs":[{"source_id":"kolloquium-bewertung","page":4}]},
-        {"id":"kol-pg-thread","text":"Präsentationstechnik so einsetzen, dass der rote Faden sichtbar bleibt.","refs":[{"source_id":"kolloquium-bewertung","page":4}]},
-        {"id":"kol-pg-medium","text":"Passend gewähltes Medium zur Unterstützung des Vortrags einsetzen.","refs":[{"source_id":"kolloquium-bewertung","page":4}]},
-        {"id":"kol-pg-dialogue","text":"Anregungen der Prüfer im Fachgespräch aufnehmen.","refs":[{"source_id":"kolloquium-bewertung","page":4}]},
-        {"id":"kol-pg-transparency","text":"Quellen und Hilfsmittel einschließlich KI-Nutzung transparent machen.","refs":[{"source_id":"kolloquium-bewertung","page":4}]}
+      "id": "praesentation-gespraech",
+      "title": "Präsentations- und Gesprächskompetenz",
+      "deduction_max_percent": 10,
+      "refs": [
+        {
+          "source_id": "kolloquium-bewertung",
+          "page": 4
+        }
+      ],
+      "requirements": [
+        {
+          "id": "kol-pg-speaking",
+          "text": "Klar und weitgehend frei sprechen.",
+          "refs": [
+            {
+              "source_id": "kolloquium-bewertung",
+              "page": 4
+            }
+          ]
+        },
+        {
+          "id": "kol-pg-language",
+          "text": "Präzisen Sprachgebrauch zeigen.",
+          "refs": [
+            {
+              "source_id": "kolloquium-bewertung",
+              "page": 4
+            }
+          ]
+        },
+        {
+          "id": "kol-pg-thread",
+          "text": "Präsentationstechnik so einsetzen, dass der rote Faden sichtbar bleibt.",
+          "refs": [
+            {
+              "source_id": "kolloquium-bewertung",
+              "page": 4
+            }
+          ]
+        },
+        {
+          "id": "kol-pg-medium",
+          "text": "Passend gewähltes Medium zur Unterstützung des Vortrags einsetzen.",
+          "refs": [
+            {
+              "source_id": "kolloquium-bewertung",
+              "page": 4
+            }
+          ]
+        },
+        {
+          "id": "kol-pg-dialogue",
+          "text": "Anregungen der Prüfer im Fachgespräch aufnehmen.",
+          "refs": [
+            {
+              "source_id": "kolloquium-bewertung",
+              "page": 4
+            }
+          ]
+        },
+        {
+          "id": "kol-pg-transparency",
+          "text": "Quellen und Hilfsmittel einschließlich KI-Nutzung transparent machen.",
+          "refs": [
+            {
+              "source_id": "kolloquium-bewertung",
+              "page": 4
+            }
+          ]
+        }
       ]
     }
   },
   "derived_guidance": {
-    "purpose":"Leitfragen übersetzen die belegten Anforderungen in einen Arbeitsprozess. Sie dürfen nicht als zusätzliche offizielle Bewertungskriterien verstanden werden.",
-    "questions":[
-      {"id":"q-topic","phase":"start","prompt":"Wie lautet dein Arbeitstitel – und bleibt er inklusive Leerzeichen unter 200 Zeichen?","maps_to":["formal-topic-limit"],"hint":"Die Grenze stammt aus den formalen Vorgaben; die Website zählt Zeichen, bewertet aber nicht die Qualität des Titels.","origin":"derived_guidance"},
-      {"id":"q-sources","phase":"start","prompt":"Welche mindestens zwei belastbaren Quellen willst du verwenden – und warum passen sie fachlich zu deiner Ausgangslage?","maps_to":["formal-sources","fa-va-literature"],"hint":"Die konkreten Qualitätskriterien aus dem Seminar liegen in den drei Dokumenten nicht vor.","origin":"derived_guidance"},
-      {"id":"q-ai","phase":"start","prompt":"Welche KI- oder sonstigen Hilfsmittel nutzt du, und wie dokumentierst du diese transparent und regelkonform?","maps_to":["formal-scientific","kol-pg-transparency"],"hint":"Die Dokumente fordern Transparenz und verweisen auf Hinweise zum wissenschaftlichen Arbeiten, enthalten aber keine vollständige KI-Regel.","origin":"derived_guidance"},
-      {"id":"q-intro-choice","phase":"einleitung","prompt":"Welche konkrete, selbst erlebte Ausgangssituation aus deinem Praktikum wählst du – und warum gerade diese?","maps_to":["fa-intro-selection","fa-intro-personal"],"hint":"Begründe Fokus und persönlichen Bezug, ohne die spätere Analyse vorwegzunehmen.","origin":"derived_guidance"},
-      {"id":"q-intro-prof","phase":"einleitung","prompt":"Warum ist diese Ausgangslage für dein professionelles Handeln als Erzieher relevant?","maps_to":["fa-intro-profession"],"hint":"Der berufliche Bezug gehört zur starken Einleitung.","origin":"derived_guidance"},
-      {"id":"q-we-what","phase":"wahrnehmen-erleben","prompt":"Was ist konkret passiert – wer tat oder sagte was, in welcher Reihenfolge?","maps_to":["fa-we-situation","fa-we-actors"],"hint":"Beschreibe beobachtbares Verhalten präzise, bevor du deutest.","origin":"derived_guidance"},
-      {"id":"q-we-context","phase":"wahrnehmen-erleben","prompt":"Welche Rahmenbedingungen gehören zum Kontext: Ort, Zeit, Gruppe, institutionelle Situation, vorausgehende Ereignisse?","maps_to":["fa-we-context"],"hint":"Nur Faktoren aufnehmen, die für das Verstehen der Situation relevant sind.","origin":"derived_guidance"},
-      {"id":"q-we-interaction","phase":"wahrnehmen-erleben","prompt":"Wie beeinflussten sich die Beteiligten gegenseitig?","maps_to":["fa-we-interaction","fa-we-analysis-hooks"],"hint":"Suche Wechselwirkungen statt isolierter Einzelbeschreibungen.","origin":"derived_guidance"},
-      {"id":"q-we-self","phase":"wahrnehmen-erleben","prompt":"Was davon hast du beobachtet – und was ist bereits deine eigene Wahrnehmung, Bewertung oder Vermutung?","maps_to":["fa-we-subjectivity"],"hint":"Trenne Beobachtung und subjektive Deutung sichtbar.","origin":"derived_guidance"},
-      {"id":"q-va-needs","phase":"verstehen-analysieren","prompt":"Welche Bedürfnisse und Ressourcen könnten das Verhalten der Beteiligten verständlich machen?","maps_to":["fa-va-empathy"],"hint":"Formuliere Vermutungen als Vermutungen und bleibe ressourcenorientiert.","origin":"derived_guidance"},
-      {"id":"q-va-levels","phase":"verstehen-analysieren","prompt":"Welche mindestens drei Ebenen des Modells nach Fröhlich-Gildhoff sind für genau diese Situation am ergiebigsten – und warum?","maps_to":["fa-va-five-levels","fa-va-three-levels","fa-va-level-choice"],"hint":"Die drei Quelldokumente benennen das Modell, erklären die fünf Ebenen selbst aber nicht.","origin":"derived_guidance"},
-      {"id":"q-va-theory","phase":"verstehen-analysieren","prompt":"Welche fachtheoretischen Begriffe oder Modelle helfen, konkrete Elemente deiner Situation zu erklären?","maps_to":["fa-va-literature","fa-va-case-link","fa-va-own-words"],"hint":"Fachwissen nicht als separates Referat, sondern auf den Fall bezogen verwenden.","origin":"derived_guidance"},
-      {"id":"q-va-hypothesis","phase":"verstehen-analysieren","prompt":"Welche Arbeitshypothese bündelt deine Analyse so, dass sie dein weiteres pädagogisches Handeln sinnvoll fokussiert?","maps_to":["fa-va-hypothesis","fa-va-hypothesis-link"],"hint":"Die Hypothese soll eine erkennbare Funktion für Planung und spätere Umsetzung haben.","origin":"derived_guidance"},
-      {"id":"q-ep-goal","phase":"entscheiden-planen","prompt":"Welches Ziel folgt aus deiner Arbeitshypothese – und liegt es wirklich in deinem eigenen pädagogischen Einflussbereich?","maps_to":["fa-ep-goal-hypothesis","fa-ep-goal-influence"],"hint":"Formuliere kein Ziel, dessen Erreichen allein vom Verhalten anderer abhängt.","origin":"derived_guidance"},
-      {"id":"q-ep-resources","phase":"entscheiden-planen","prompt":"Wie nutzt deine Planung die Stärken, Bedürfnisse und Ressourcen der Zielgruppe?","maps_to":["fa-ep-resources"],"hint":"Begründe Planungsschritte nicht nur organisatorisch, sondern pädagogisch.","origin":"derived_guidance"},
-      {"id":"q-ep-flow","phase":"entscheiden-planen","prompt":"Was ist der rote Faden deines Vorhabens, und welche konkreten Elemente willst du exemplarisch darstellen?","maps_to":["fa-ep-thread","fa-ep-examples"],"hint":"Zeige genug Konkretion, ohne jede Kleinigkeit chronologisch auszuschreiben.","origin":"derived_guidance"},
-      {"id":"q-ep-method","phase":"entscheiden-planen","prompt":"Warum wählst du genau dieses methodische Vorgehen – und welche Quelle stützt diese Entscheidung?","maps_to":["fa-ep-method-source"],"hint":"Die Begründung soll fachlich und quellenbezogen sein.","origin":"derived_guidance"},
-      {"id":"q-ep-risk","phase":"entscheiden-planen","prompt":"Welche Gelingensbedingungen, möglichen Folgen und Stolpersteine erwartest du – und wie könntest du flexibel reagieren?","maps_to":["fa-ep-anticipation","fa-ep-flexibility"],"hint":"Antizipation soll echte Anpassungsoptionen sichtbar machen.","origin":"derived_guidance"},
-      {"id":"q-write-thread","phase":"schreibkompetenz","prompt":"Kann ein Leser den Gedankengang von Ausgangslage über Analyse und Hypothese bis zur Planung ohne Sprünge nachvollziehen?","maps_to":["fa-write-structure"],"hint":"Prüfe besonders Übergänge und Dopplungen.","origin":"derived_guidance"},
-      {"id":"q-write-standards","phase":"schreibkompetenz","prompt":"Sind Zitate, Quellenangaben, Formatierung und eigene Formulierungen durchgängig sauber getrennt?","maps_to":["fa-write-science","fa-write-independent"],"hint":"Die drei Dokumente nennen wissenschaftliche Standards, aber keinen vollständigen Zitierleitfaden.","origin":"derived_guidance"},
-      {"id":"q-final-formal","phase":"schreibkompetenz","prompt":"Erfüllt die fertige Fassung Umfang, Schriftgröße, Zeilenabstand, Ränder, Quellenminimum und die Position der eidesstattlichen Erklärung?","maps_to":["formal-pages","formal-font","formal-lines","formal-margins","formal-sources","formal-declaration"],"hint":"Das ist eine formale Schlusskontrolle, keine inhaltliche Bewertung.","origin":"derived_guidance"},
-      {"id":"q-kol-scenes","phase":"umsetzen-interagieren","prompt":"Welche zwei oder drei Umsetzungssituationen zeigen besonders gut, was zwischen Planung und tatsächlichem Prozess passiert ist?","maps_to":["kol-ui-situations","kol-ui-origin-link","kol-ui-plan-link"],"hint":"Wähle Situationen wegen ihrer Aussagekraft, nicht nur weil sie gut liefen.","origin":"derived_guidance"},
-      {"id":"q-kol-actors","phase":"umsetzen-interagieren","prompt":"Wie kannst du die Beteiligten als aktive Mitgestalter beschreiben und zugleich Dynamiken und Wechselwirkungen sichtbar machen?","maps_to":["kol-ui-resources","kol-ui-dynamics"],"hint":"Ressourcenorientierter, wohlwollender Blick und Prozessdynamik gehören zusammen.","origin":"derived_guidance"},
-      {"id":"q-kol-diff","phase":"hypothesen-ziele","prompt":"Wo wich die Realität von deiner Planung ab – und was sagt das über dein Ziel und deine Arbeitshypothese?","maps_to":["kol-hz-deviation","kol-hz-goal","kol-hz-hypothesis"],"hint":"Nicht nur Abweichung nennen, sondern Tragfähigkeit beurteilen.","origin":"derived_guidance"},
-      {"id":"q-kol-factors","phase":"hypothesen-ziele","prompt":"Welche förderlichen und hinderlichen Faktoren wirkten – einschließlich deiner eigenen Rolle?","maps_to":["kol-hz-factors","kol-hz-role"],"hint":"Die eigene Rolle ist ausdrücklich Teil der Analyse.","origin":"derived_guidance"},
-      {"id":"q-kol-alt","phase":"konsequenzen-transfer","prompt":"Welche fachlich begründeten Handlungsalternativen siehst du heute?","maps_to":["kol-kt-alternatives","kol-kt-consequences"],"hint":"Alternativen sollten aus den Ergebnissen folgen, nicht beliebig ergänzt werden.","origin":"derived_guidance"},
-      {"id":"q-kol-strengths","phase":"konsequenzen-transfer","prompt":"Was waren Stärken und Schwächen deiner Arbeit – und welche Konsequenz ziehst du daraus für dein professionelles Handeln?","maps_to":["kol-kt-strengths","kol-kt-consequences"],"hint":"Differenziert benennen und mit Weiterentwicklung verknüpfen.","origin":"derived_guidance"},
-      {"id":"q-kol-values","phase":"konsequenzen-transfer","prompt":"Welche Werte oder Rechte tragen deine pädagogische Entscheidung, etwa Partizipation, Kinderrechte, Inklusion oder ein humanistisches Menschenbild?","maps_to":["kol-kt-values","kol-kt-attitude"],"hint":"Wertebezug konkret an Entscheidungen oder Deutungen zeigen.","origin":"derived_guidance"},
-      {"id":"q-kol-transfer","phase":"konsequenzen-transfer","prompt":"Was lässt sich aus diesem Prozess für die Qualität weiterer Bildungs- und Entwicklungsprozesse ableiten?","maps_to":["kol-kt-transfer","kol-kt-focus"],"hint":"Transfer bedeutet mehr als eine Wiederholung des Einzelfalls.","origin":"derived_guidance"},
-      {"id":"q-kol-presentation","phase":"praesentation-gespraech","prompt":"Wie strukturierst du 10–13 Minuten Vortrag so, dass der rote Faden frei und präzise erkennbar bleibt und dein Medium wirklich unterstützt?","maps_to":["kol-talk","kol-pg-speaking","kol-pg-language","kol-pg-thread","kol-pg-medium"],"hint":"Das Medium soll den Vortrag stützen, nicht ersetzen.","origin":"derived_guidance"},
-      {"id":"q-kol-dialogue","phase":"praesentation-gespraech","prompt":"Wie reagierst du im Fachgespräch auf Rückfragen oder neue Perspektiven, ohne nur deine vorbereitete Linie zu wiederholen?","maps_to":["kol-pg-dialogue"],"hint":"Dialogbereitschaft ist ein eigenes Bewertungskriterium.","origin":"derived_guidance"}
+    "purpose": "Leitfragen übersetzen die belegten Anforderungen in einen Arbeitsprozess. Sie dürfen nicht als zusätzliche offizielle Bewertungskriterien verstanden werden.",
+    "questions": [
+      {
+        "id": "q-topic",
+        "phase": "start",
+        "prompt": "Wie lautet dein Arbeitstitel – und bleibt er inklusive Leerzeichen unter 200 Zeichen?",
+        "maps_to": [
+          "formal-topic-limit"
+        ],
+        "hint": "Die Grenze stammt aus den formalen Vorgaben; die Website zählt Zeichen, bewertet aber nicht die Qualität des Titels.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-sources",
+        "phase": "start",
+        "prompt": "Welche mindestens zwei belastbaren Quellen willst du verwenden – und warum passen sie fachlich zu deiner Ausgangslage?",
+        "maps_to": [
+          "formal-sources",
+          "fa-va-literature"
+        ],
+        "hint": "Die Recherchehilfe nennt Fachportale, Bibliothekswege und Google Scholar. Das separat erwähnte Papier mit vollständigen Qualitätskriterien für Textquellen liegt jedoch weiterhin nicht vor.",
+        "origin": "derived_guidance",
+        "refs": [
+          {
+            "source_id": "online-recherche",
+            "page": 5
+          },
+          {
+            "source_id": "online-recherche",
+            "page": 22
+          }
+        ]
+      },
+      {
+        "id": "q-ai",
+        "phase": "start",
+        "prompt": "Welche KI-Hilfen nutzt du – und sind die KI-Passagen sowie Output/Link und Promptdaten entsprechend der schulischen Richtlinie dokumentiert?",
+        "maps_to": [
+          "formal-scientific",
+          "formal-ai-source",
+          "formal-ai-independent",
+          "formal-ai-disclosure",
+          "kol-pg-transparency"
+        ],
+        "hint": "Die Richtlinie verlangt die vollständige Kennzeichnung aller mit KI entstandenen Passagen. Der vollständige Output bzw. ein Link dazu soll in den Anhang; gesamter Prompt, Nutzername mit Datum und Tool-URL müssen angegeben werden.",
+        "origin": "derived_guidance",
+        "refs": [
+          {
+            "source_id": "wissenschaftliches-arbeiten",
+            "page": 2
+          }
+        ]
+      },
+      {
+        "id": "q-intro-choice",
+        "phase": "einleitung",
+        "prompt": "Welche konkrete, selbst erlebte Ausgangssituation aus deinem Praktikum wählst du – und warum gerade diese?",
+        "maps_to": [
+          "fa-intro-selection",
+          "fa-intro-personal"
+        ],
+        "hint": "Begründe Fokus und persönlichen Bezug, ohne die spätere Analyse vorwegzunehmen.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-intro-prof",
+        "phase": "einleitung",
+        "prompt": "Warum ist diese Ausgangslage für dein professionelles Handeln als Erzieher relevant?",
+        "maps_to": [
+          "fa-intro-profession"
+        ],
+        "hint": "Der berufliche Bezug gehört zur starken Einleitung.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-we-what",
+        "phase": "wahrnehmen-erleben",
+        "prompt": "Was ist konkret passiert – wer tat oder sagte was, in welcher Reihenfolge?",
+        "maps_to": [
+          "fa-we-situation",
+          "fa-we-actors"
+        ],
+        "hint": "Beschreibe beobachtbares Verhalten präzise, bevor du deutest.",
+        "origin": "derived_guidance",
+        "refs": [
+          {
+            "source_id": "situationsbeschreibung-hilfe",
+            "page": 1
+          }
+        ]
+      },
+      {
+        "id": "q-we-context",
+        "phase": "wahrnehmen-erleben",
+        "prompt": "Welche Rahmenbedingungen gehören zum Kontext: Ort, Zeit, Gruppe, institutionelle Situation, vorausgehende Ereignisse?",
+        "maps_to": [
+          "fa-we-context"
+        ],
+        "hint": "Nur Faktoren aufnehmen, die für das Verstehen der Situation relevant sind.",
+        "origin": "derived_guidance",
+        "refs": [
+          {
+            "source_id": "situationsbeschreibung-hilfe",
+            "page": 1
+          }
+        ]
+      },
+      {
+        "id": "q-we-interaction",
+        "phase": "wahrnehmen-erleben",
+        "prompt": "Wie beeinflussten sich die Beteiligten gegenseitig?",
+        "maps_to": [
+          "fa-we-interaction",
+          "fa-we-analysis-hooks"
+        ],
+        "hint": "Suche Wechselwirkungen statt isolierter Einzelbeschreibungen.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-we-self",
+        "phase": "wahrnehmen-erleben",
+        "prompt": "Was davon hast du beobachtet – und was ist bereits deine eigene Wahrnehmung, Bewertung oder Vermutung?",
+        "maps_to": [
+          "fa-we-subjectivity"
+        ],
+        "hint": "Trenne Beobachtung und subjektive Deutung sichtbar.",
+        "origin": "derived_guidance",
+        "refs": [
+          {
+            "source_id": "situationsbeschreibung-hilfe",
+            "page": 1
+          }
+        ]
+      },
+      {
+        "id": "q-va-needs",
+        "phase": "verstehen-analysieren",
+        "prompt": "Welche Bedürfnisse und Ressourcen könnten das Verhalten der Beteiligten verständlich machen?",
+        "maps_to": [
+          "fa-va-empathy"
+        ],
+        "hint": "Formuliere Vermutungen als Vermutungen und bleibe ressourcenorientiert.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-va-levels",
+        "phase": "verstehen-analysieren",
+        "prompt": "Welche mindestens drei Ebenen des Modells nach Fröhlich-Gildhoff sind für genau diese Situation am ergiebigsten – und warum?",
+        "maps_to": [
+          "fa-va-five-levels",
+          "fa-va-three-levels",
+          "fa-va-level-choice"
+        ],
+        "hint": "Das zusätzliche Unterrichtsblatt erläutert jetzt alle fünf Ebenen. Für die Facharbeit fordert der Bewertungsbogen weiterhin mindestens drei passend begründete Ebenen.",
+        "origin": "derived_guidance",
+        "refs": [
+          {
+            "source_id": "analysieren-verstehen",
+            "page": 1
+          },
+          {
+            "source_id": "analysieren-verstehen",
+            "page": 3
+          }
+        ]
+      },
+      {
+        "id": "q-va-theory",
+        "phase": "verstehen-analysieren",
+        "prompt": "Welche fachtheoretischen Begriffe oder Modelle helfen, konkrete Elemente deiner Situation zu erklären?",
+        "maps_to": [
+          "fa-va-literature",
+          "fa-va-case-link",
+          "fa-va-own-words"
+        ],
+        "hint": "Fachwissen nicht als separates Referat, sondern auf den Fall bezogen verwenden.",
+        "origin": "derived_guidance",
+        "refs": [
+          {
+            "source_id": "fachthemen-fragen",
+            "page": 1
+          },
+          {
+            "source_id": "online-recherche",
+            "page": 5
+          }
+        ]
+      },
+      {
+        "id": "q-va-core-topics",
+        "phase": "verstehen-analysieren",
+        "prompt": "Welche ein bis zwei fachlichen Kernthemen erklären deine Situation am besten – und welche Suchbegriffe leitest du daraus ab?",
+        "maps_to": [
+          "fa-va-literature",
+          "fa-va-case-link"
+        ],
+        "hint": "Die Recherchehilfe empfiehlt, den fachlichen Fokus bewusst zu begrenzen und daraus Schlagworte für die Literatursuche abzuleiten.",
+        "refs": [
+          {
+            "source_id": "online-recherche",
+            "page": 1
+          },
+          {
+            "source_id": "online-recherche",
+            "page": 3
+          }
+        ],
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-va-hypothesis",
+        "phase": "verstehen-analysieren",
+        "prompt": "Welche Arbeitshypothese bündelt deine Analyse so, dass sie dein weiteres pädagogisches Handeln sinnvoll fokussiert?",
+        "maps_to": [
+          "fa-va-hypothesis",
+          "fa-va-hypothesis-link"
+        ],
+        "hint": "Die Hypothese soll eine erkennbare Funktion für Planung und spätere Umsetzung haben.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-ep-goal",
+        "phase": "entscheiden-planen",
+        "prompt": "Welches Ziel folgt aus deiner Arbeitshypothese – und liegt es wirklich in deinem eigenen pädagogischen Einflussbereich?",
+        "maps_to": [
+          "fa-ep-goal-hypothesis",
+          "fa-ep-goal-influence"
+        ],
+        "hint": "Formuliere kein Ziel, dessen Erreichen allein vom Verhalten anderer abhängt.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-ep-resources",
+        "phase": "entscheiden-planen",
+        "prompt": "Wie nutzt deine Planung die Stärken, Bedürfnisse und Ressourcen der Zielgruppe?",
+        "maps_to": [
+          "fa-ep-resources"
+        ],
+        "hint": "Begründe Planungsschritte nicht nur organisatorisch, sondern pädagogisch.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-ep-flow",
+        "phase": "entscheiden-planen",
+        "prompt": "Was ist der rote Faden deines Vorhabens, und welche konkreten Elemente willst du exemplarisch darstellen?",
+        "maps_to": [
+          "fa-ep-thread",
+          "fa-ep-examples"
+        ],
+        "hint": "Zeige genug Konkretion, ohne jede Kleinigkeit chronologisch auszuschreiben.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-ep-method",
+        "phase": "entscheiden-planen",
+        "prompt": "Warum wählst du genau dieses methodische Vorgehen – und welche Quelle stützt diese Entscheidung?",
+        "maps_to": [
+          "fa-ep-method-source"
+        ],
+        "hint": "Die Begründung soll fachlich und quellenbezogen sein.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-ep-risk",
+        "phase": "entscheiden-planen",
+        "prompt": "Welche Gelingensbedingungen, möglichen Folgen und Stolpersteine erwartest du – und wie könntest du flexibel reagieren?",
+        "maps_to": [
+          "fa-ep-anticipation",
+          "fa-ep-flexibility"
+        ],
+        "hint": "Antizipation soll echte Anpassungsoptionen sichtbar machen.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-write-thread",
+        "phase": "schreibkompetenz",
+        "prompt": "Kann ein Leser den Gedankengang von Ausgangslage über Analyse und Hypothese bis zur Planung ohne Sprünge nachvollziehen?",
+        "maps_to": [
+          "fa-write-structure"
+        ],
+        "hint": "Prüfe besonders Übergänge und Dopplungen.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-write-standards",
+        "phase": "schreibkompetenz",
+        "prompt": "Sind Zitate, Quellenangaben, Formatierung und eigene Formulierungen durchgängig sauber getrennt?",
+        "maps_to": [
+          "fa-write-science",
+          "fa-write-independent"
+        ],
+        "hint": "Die konkrete schulische Zitier-Richtlinie liegt nun vor: Kurzbelege im Text, vollständiges Literaturverzeichnis und klare Kennzeichnung fremder Gedanken.",
+        "origin": "derived_guidance",
+        "refs": [
+          {
+            "source_id": "wissenschaftliches-arbeiten",
+            "page": 1
+          },
+          {
+            "source_id": "wissenschaftliches-arbeiten",
+            "page": 2
+          }
+        ]
+      },
+      {
+        "id": "q-write-source-processing",
+        "phase": "schreibkompetenz",
+        "prompt": "Ist bei jedem fachlichen Abschnitt erkennbar, was die Quelle sagt, wie du sie in eigenen Worten verdichtest und welche Schlussfolgerung du für deine Situation ziehst?",
+        "maps_to": [
+          "fa-va-own-words",
+          "fa-write-science",
+          "fa-write-independent"
+        ],
+        "hint": "Die Verdichtungshilfe fordert eine eigenständige Textstruktur mit Autorenbezug, Belegen und klarer Trennung zwischen Fremdaussage und eigener Verarbeitung.",
+        "refs": [
+          {
+            "source_id": "verdichtung-hilfe",
+            "page": 1
+          },
+          {
+            "source_id": "verdichtung-hilfe",
+            "page": 2
+          }
+        ],
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-final-formal",
+        "phase": "schreibkompetenz",
+        "prompt": "Erfüllt die fertige Fassung Umfang, verbindliche Gliederung, Schriftgröße, Zeilenabstand, Ränder, Quellenminimum, KI-Dokumentation und die Position der eidesstattlichen Erklärung?",
+        "maps_to": [
+          "formal-pages",
+          "formal-font",
+          "formal-lines",
+          "formal-margins",
+          "formal-sources",
+          "formal-declaration",
+          "formal-outline",
+          "formal-ai-disclosure"
+        ],
+        "hint": "Das ist eine formale Schlusskontrolle, keine inhaltliche Bewertung.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-kol-scenes",
+        "phase": "umsetzen-interagieren",
+        "prompt": "Welche zwei oder drei Umsetzungssituationen zeigen besonders gut, was zwischen Planung und tatsächlichem Prozess passiert ist?",
+        "maps_to": [
+          "kol-ui-situations",
+          "kol-ui-origin-link",
+          "kol-ui-plan-link"
+        ],
+        "hint": "Wähle Situationen wegen ihrer Aussagekraft, nicht nur weil sie gut liefen.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-kol-actors",
+        "phase": "umsetzen-interagieren",
+        "prompt": "Wie kannst du die Beteiligten als aktive Mitgestalter beschreiben und zugleich Dynamiken und Wechselwirkungen sichtbar machen?",
+        "maps_to": [
+          "kol-ui-resources",
+          "kol-ui-dynamics"
+        ],
+        "hint": "Ressourcenorientierter, wohlwollender Blick und Prozessdynamik gehören zusammen.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-kol-diff",
+        "phase": "hypothesen-ziele",
+        "prompt": "Wo wich die Realität von deiner Planung ab – und was sagt das über dein Ziel und deine Arbeitshypothese?",
+        "maps_to": [
+          "kol-hz-deviation",
+          "kol-hz-goal",
+          "kol-hz-hypothesis"
+        ],
+        "hint": "Nicht nur Abweichung nennen, sondern Tragfähigkeit beurteilen.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-kol-factors",
+        "phase": "hypothesen-ziele",
+        "prompt": "Welche förderlichen und hinderlichen Faktoren wirkten – einschließlich deiner eigenen Rolle?",
+        "maps_to": [
+          "kol-hz-factors",
+          "kol-hz-role"
+        ],
+        "hint": "Die eigene Rolle ist ausdrücklich Teil der Analyse.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-kol-alt",
+        "phase": "konsequenzen-transfer",
+        "prompt": "Welche fachlich begründeten Handlungsalternativen siehst du heute?",
+        "maps_to": [
+          "kol-kt-alternatives",
+          "kol-kt-consequences"
+        ],
+        "hint": "Alternativen sollten aus den Ergebnissen folgen, nicht beliebig ergänzt werden.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-kol-strengths",
+        "phase": "konsequenzen-transfer",
+        "prompt": "Was waren Stärken und Schwächen deiner Arbeit – und welche Konsequenz ziehst du daraus für dein professionelles Handeln?",
+        "maps_to": [
+          "kol-kt-strengths",
+          "kol-kt-consequences"
+        ],
+        "hint": "Differenziert benennen und mit Weiterentwicklung verknüpfen.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-kol-values",
+        "phase": "konsequenzen-transfer",
+        "prompt": "Welche Werte oder Rechte tragen deine pädagogische Entscheidung, etwa Partizipation, Kinderrechte, Inklusion oder ein humanistisches Menschenbild?",
+        "maps_to": [
+          "kol-kt-values",
+          "kol-kt-attitude"
+        ],
+        "hint": "Wertebezug konkret an Entscheidungen oder Deutungen zeigen.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-kol-transfer",
+        "phase": "konsequenzen-transfer",
+        "prompt": "Was lässt sich aus diesem Prozess für die Qualität weiterer Bildungs- und Entwicklungsprozesse ableiten?",
+        "maps_to": [
+          "kol-kt-transfer",
+          "kol-kt-focus"
+        ],
+        "hint": "Transfer bedeutet mehr als eine Wiederholung des Einzelfalls.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-kol-presentation",
+        "phase": "praesentation-gespraech",
+        "prompt": "Wie strukturierst du 10–13 Minuten Vortrag so, dass der rote Faden frei und präzise erkennbar bleibt und dein Medium wirklich unterstützt?",
+        "maps_to": [
+          "kol-talk",
+          "kol-pg-speaking",
+          "kol-pg-language",
+          "kol-pg-thread",
+          "kol-pg-medium"
+        ],
+        "hint": "Das Medium soll den Vortrag stützen, nicht ersetzen.",
+        "origin": "derived_guidance"
+      },
+      {
+        "id": "q-kol-dialogue",
+        "phase": "praesentation-gespraech",
+        "prompt": "Wie reagierst du im Fachgespräch auf Rückfragen oder neue Perspektiven, ohne nur deine vorbereitete Linie zu wiederholen?",
+        "maps_to": [
+          "kol-pg-dialogue"
+        ],
+        "hint": "Dialogbereitschaft ist ein eigenes Bewertungskriterium.",
+        "origin": "derived_guidance"
+      }
     ]
   },
-  "documented_gaps":[
-    {"id":"gap-five-levels","text":"Die drei Dokumente nennen das „Modell der Fünf Ebenen“ nach Fröhlich-Gildhoff, erläutern die fünf Ebenen selbst jedoch nicht. Für inhaltliche Modellhilfe ist eine zusätzliche Quelle nötig."},
-    {"id":"gap-literature-quality","text":"Die Qualitätskriterien für Buch- und Internetquellen werden als im Seminar besprochen vorausgesetzt, aber in den drei Dokumenten nicht aufgelistet."},
-    {"id":"gap-scientific-ai","text":"Es wird auf Hinweise zum wissenschaftlichen Arbeiten und zum Umgang mit KI verwiesen; der vollständige Zitier- und KI-Leitfaden ist in den drei Dokumenten nicht enthalten."},
-    {"id":"gap-page-scope","text":"Die Dokumente nennen 12–15 Seiten, definieren aber nicht ausdrücklich, welche Bestandteile in diesen Seitenumfang eingerechnet werden."},
-    {"id":"gap-deadlines","text":"Konkrete individuelle Abgabe- und Prüfungstermine sind in den drei Dokumenten nicht enthalten."}
+  "documented_gaps": [
+    {
+      "id": "gap-literature-quality",
+      "title": "Vollständige Qualitätskriterien für Textquellen fehlen",
+      "text": "Die Recherchehilfe nennt Suchwege, Fachportale und Google Scholar. Die Verdichtungshilfe verweist zusätzlich auf ein Papier „Die Qualität von Textquellen“. Dieses Papier liegt im aktuellen Quellenordner nicht vor; deshalb werden keine vollständigen Qualitätskriterien erfunden."
+    },
+    {
+      "id": "gap-page-scope",
+      "title": "Was zählt in die 12–15 Seiten?",
+      "text": "Die Dokumente nennen 12–15 Seiten, definieren aber weiterhin nicht ausdrücklich, welche Bestandteile in diesen Seitenumfang eingerechnet werden."
+    },
+    {
+      "id": "gap-outline-examples",
+      "title": "Exemplarische Gliederungen aus dem Anhang fehlen",
+      "text": "Die verbindliche Gliederung verweist auf exemplarische Gliederungen im Anhang. Solche Beispielgliederungen sind im aktuellen Quellenordner nicht enthalten."
+    },
+    {
+      "id": "gap-deadline-source",
+      "title": "Abgabetermin ist Planungsangabe, nicht PDF-belegt",
+      "text": "Der Termin 13.11.2026 ist separat mitgeteilt und wird für die Arbeitsplanung angezeigt. In den derzeit hinterlegten PDF-Dokumenten ist dieser konkrete Termin nicht enthalten."
+    }
+  ],
+  "planning_context": {
+    "submission_deadline": {
+      "date": "2026-11-13",
+      "display": "13.11.2026",
+      "origin": "user_provided",
+      "provided_at": "2026-09-01",
+      "note": "Separat mitgeteilte Planungsangabe; der Termin ist in den derzeit hinterlegten PDF-Dokumenten nicht belegt."
+    }
+  },
+  "instructional_guidance": [
+    {
+      "id": "guide-ai-policy",
+      "phase": "start",
+      "title": "KI-Nutzung: erlaubt, aber vollständig transparent",
+      "kind_label": "Schulische Richtlinie",
+      "importance": "critical",
+      "items": [
+        {
+          "label": "Rolle der KI",
+          "text": "KI darf als Hilfsmittel genutzt werden, ist aber keine Quelle. Fachliche Aussagen brauchen weiterhin anerkannte Fachtexte.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 2
+            }
+          ]
+        },
+        {
+          "label": "Eigenleistung",
+          "text": "KI darf sprachlich unterstützen, ersetzt aber nicht die eigene pädagogische Erklärung der Situation und die Entwicklung von Handlungsalternativen.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 2
+            }
+          ]
+        },
+        {
+          "label": "Kennzeichnung",
+          "text": "Alle Passagen, die mit KI entstanden sind, müssen vollständig gekennzeichnet werden.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 2
+            }
+          ]
+        },
+        {
+          "label": "Anhang",
+          "text": "Der vollständige KI-Ausgabetext bzw. ein Link dazu soll im Anhang angegeben werden. Für jede Nutzung müssen der gesamte Prompt, Nutzername mit Datum und die URL des KI-Tools angegeben werden.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 2
+            }
+          ]
+        },
+        {
+          "label": "Prüfungsrisiko",
+          "text": "Nicht gekennzeichnete KI-Nutzung wird laut Richtlinie als Täuschungsversuch gewertet; mögliche Folgen reichen von Wiederholung oder „ungenügend“ bis zum Ausschluss aus der Abschlussprüfung.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 2
+            }
+          ]
+        },
+        {
+          "label": "Klärung bei Verdacht",
+          "text": "Bei Verdacht auf nicht eigenständig erbrachte Passagen wird laut Richtlinie darauf abgestellt, ob die betreffenden Teile im Kolloquium schlüssig in eigenen Worten dargestellt und begründet werden können.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guide-prompting",
+      "phase": "start",
+      "title": "KI sinnvoll prompten",
+      "kind_label": "Unterrichtshilfe",
+      "importance": "normal",
+      "items": [
+        {
+          "label": "Aufgabe",
+          "text": "Genau beschreiben, was die KI erledigen soll.",
+          "refs": [
+            {
+              "source_id": "prompten-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "Rolle",
+          "text": "Einen passenden fachlichen Rahmen bzw. eine Rolle vorgeben.",
+          "refs": [
+            {
+              "source_id": "prompten-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "Kontext",
+          "text": "Relevante Informationen zu Situation, Wissensstand und Ziel mitgeben.",
+          "refs": [
+            {
+              "source_id": "prompten-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "Präzision",
+          "text": "Spezifisch formulieren und Mehrdeutigkeiten vermeiden.",
+          "refs": [
+            {
+              "source_id": "prompten-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "Beispiele",
+          "text": "Beispiele oder Daten liefern, wenn sie die Erwartung verdeutlichen.",
+          "refs": [
+            {
+              "source_id": "prompten-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "Feedback",
+          "text": "Antworten kritisch prüfen und mit Feedback iterativ verbessern.",
+          "refs": [
+            {
+              "source_id": "prompten-hilfe",
+              "page": 1
+            },
+            {
+              "source_id": "online-recherche",
+              "page": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guide-situation-checklist",
+      "phase": "wahrnehmen-erleben",
+      "title": "Situationsbeschreibung: Unterrichtscheckliste",
+      "kind_label": "Unterrichtshilfe",
+      "importance": "normal",
+      "items": [
+        {
+          "label": "Kopf",
+          "text": "Datum, Namen und ggf. Alter der Beteiligten, Ort und Dauer vollständig angeben.",
+          "refs": [
+            {
+              "source_id": "situationsbeschreibung-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "Kontext",
+          "text": "Rahmenbedingungen, vorausgehende Interaktionen und relevante emotionale Zustände vor Beginn der Situation beschreiben.",
+          "refs": [
+            {
+              "source_id": "situationsbeschreibung-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "Handlungen",
+          "text": "Das Was und Wie der Handlungen aller Beteiligten sowie vermutete Gefühle beschreiben.",
+          "refs": [
+            {
+              "source_id": "situationsbeschreibung-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "Eigene Rolle",
+          "text": "Eigene Handlungen und Gefühle genau darstellen.",
+          "refs": [
+            {
+              "source_id": "situationsbeschreibung-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "Wechselwirkung",
+          "text": "Verhalten aller Beteiligten konkret in seiner gegenseitigen Wirkung darstellen.",
+          "refs": [
+            {
+              "source_id": "situationsbeschreibung-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "Verlauf",
+          "text": "Chronologisch, detailliert, anschaulich und nachvollziehbar schreiben.",
+          "refs": [
+            {
+              "source_id": "situationsbeschreibung-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "Sprache",
+          "text": "Die Situationsbeschreibung im Präsens verfassen; bei indirekter Rede den Konjunktiv verwenden.",
+          "refs": [
+            {
+              "source_id": "situationsbeschreibung-hilfe",
+              "page": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guide-topic-identification",
+      "phase": "verstehen-analysieren",
+      "title": "Fachliche Kernthemen identifizieren",
+      "kind_label": "Unterrichtshilfe",
+      "importance": "normal",
+      "items": [
+        {
+          "text": "Prüfe unter anderem Bildungs- und Entwicklungsthemen, Beziehungsgestaltung, Gruppenprozesse, Kommunikation und pädagogische Konzepte.",
+          "refs": [
+            {
+              "source_id": "fachthemen-fragen",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Prüfe mögliche Übergangsprozesse, Entwicklungsaufgaben, persönliche und gesellschaftliche Bedingungen sowie widersprüchliche Aufträge.",
+          "refs": [
+            {
+              "source_id": "fachthemen-fragen",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Prüfe Teamkooperation sowie möglichen Handlungsbedarf im Netzwerk oder Sozialraum.",
+          "refs": [
+            {
+              "source_id": "fachthemen-fragen",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Wenn eine Frage mit Ja beantwortet wird, konkretisiere: Inwiefern ist dieses Thema in genau deiner Situation relevant?",
+          "refs": [
+            {
+              "source_id": "fachthemen-fragen",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Bedürfnisse und Ressourcen der Adressaten sollen beim Blick auf die Situation durchgehend berücksichtigt werden.",
+          "refs": [
+            {
+              "source_id": "fachthemen-fragen",
+              "page": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guide-five-levels",
+      "phase": "verstehen-analysieren",
+      "title": "Die fünf Ebenen nach Fröhlich-Gildhoff",
+      "kind_label": "Unterrichtshilfe",
+      "importance": "normal",
+      "items": [
+        {
+          "label": "1 · Kind/Jugendlicher",
+          "text": "Perspektive, Beziehungserfahrungen, Selbstwirksamkeit, Stärken und mögliche Funktion des Verhaltens betrachten.",
+          "refs": [
+            {
+              "source_id": "analysieren-verstehen",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "2 · Fachkraft",
+          "text": "Eigene Wahrnehmung, Normen, Werte, Prägungen, strukturelle Einflüsse und eigene Haltung reflektieren.",
+          "refs": [
+            {
+              "source_id": "analysieren-verstehen",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "3 · Kind/Jugendlicher und Gruppe",
+          "text": "Einfluss der Gruppe, Folgen für Gruppenmitglieder, Motive und die Beziehung zwischen Einzelnen und Gruppe untersuchen.",
+          "refs": [
+            {
+              "source_id": "analysieren-verstehen",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "label": "4 · Kooperation mit Eltern und Familien",
+          "text": "Familienwissen, Beziehung zur Familie sowie Bildungs- und Beziehungserfahrungen im familiären Umfeld einbeziehen.",
+          "refs": [
+            {
+              "source_id": "analysieren-verstehen",
+              "page": 3
+            }
+          ]
+        },
+        {
+          "label": "5 · Institutioneller Kontext",
+          "text": "Strukturelle Kontextfaktoren, Einflussmöglichkeiten und notwendige Veränderungen betrachten; ab dem 5. Semester auch Sozialraum und Kooperationspartner.",
+          "refs": [
+            {
+              "source_id": "analysieren-verstehen",
+              "page": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guide-research",
+      "phase": "verstehen-analysieren",
+      "title": "Von Kernthemen zu belastbarer Fachliteratur",
+      "kind_label": "Unterrichtshilfe",
+      "importance": "normal",
+      "items": [
+        {
+          "text": "Entscheide dich für ein bis zwei Kernthemen, die du fachlich weiterverfolgst.",
+          "refs": [
+            {
+              "source_id": "online-recherche",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "KI kann zur Erweiterung von Schlagworten genutzt werden; gleiche Vorschläge mit deinen eigenen Ergebnissen ab und prüfe sie kritisch.",
+          "refs": [
+            {
+              "source_id": "online-recherche",
+              "page": 3
+            }
+          ]
+        },
+        {
+          "text": "Recherchiere in Fachzeitschriften, Bibliothekskatalogen und Google Scholar nach passenden Fachartikeln und lege früh ein Literaturverzeichnis an.",
+          "refs": [
+            {
+              "source_id": "online-recherche",
+              "page": 5
+            },
+            {
+              "source_id": "online-recherche",
+              "page": 22
+            }
+          ]
+        },
+        {
+          "text": "Nutze bei der Suche Anführungszeichen, AND/OR, Platzhalter * und Ausschlüsse mit -; prüfe automatisch erzeugte Literaturangaben gegen die schulische Zitier-Richtlinie.",
+          "refs": [
+            {
+              "source_id": "online-recherche",
+              "page": 23
+            },
+            {
+              "source_id": "online-recherche",
+              "page": 24
+            },
+            {
+              "source_id": "online-recherche",
+              "page": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guide-citation",
+      "phase": "schreibkompetenz",
+      "title": "Zitieren und Quellen angeben",
+      "kind_label": "Schulische Richtlinie",
+      "importance": "critical",
+      "items": [
+        {
+          "text": "Alle Argumente aus Literatur, die du wiedergibst, brauchen einen Kurzbeleg im Fließtext und einen vollständigen Eintrag im Literaturverzeichnis.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Wörtliche Zitate exakt in Anführungszeichen übernehmen; sinngemäße Übernahmen in eigenen Worten klar als Fremdgedanken kennzeichnen und mit „vgl.“ belegen.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Die Richtlinie enthält konkrete Muster für selbstständige Publikationen, Sammelbände, Fachzeitschriften und Internetquellen.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 1
+            },
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 2
+            }
+          ]
+        },
+        {
+          "text": "Die schulische Richtlinie zeigt als Kurzbeleg-Muster sinngemäß „(vgl. Leitz: 2015, S. 74)“ und wörtlich „(Leitz: 2015, S. 74)“.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guide-verdichtung",
+      "phase": "schreibkompetenz",
+      "title": "Fachtexte eigenständig verdichten",
+      "kind_label": "Unterrichtshilfe",
+      "importance": "normal",
+      "items": [
+        {
+          "text": "Zuerst Aufbau, Problemstellung, Kernthesen, Argumentationsgang und Schluss eines Textes verstehen; danach Aussagen auswählen und gewichten.",
+          "refs": [
+            {
+              "source_id": "verdichtung-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Zentrale Definitionen und Aussagen möglichst in eigenen Worten wiedergeben; direkte Zitate sparsam und gezielt verwenden.",
+          "refs": [
+            {
+              "source_id": "verdichtung-hilfe",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Durch Autorenverweise, redebegleitende Verben, indirekte Rede und Belege sichtbar machen, wessen Aussage wiedergegeben wird.",
+          "refs": [
+            {
+              "source_id": "verdichtung-hilfe",
+              "page": 1
+            },
+            {
+              "source_id": "verdichtung-hilfe",
+              "page": 2
+            }
+          ]
+        },
+        {
+          "text": "Die Argumentationsstruktur des Ausgangstextes nachvollziehen und mit sinnvollen Verknüpfungen einen eigenen kohärenten Text bauen.",
+          "refs": [
+            {
+              "source_id": "verdichtung-hilfe",
+              "page": 2
+            },
+            {
+              "source_id": "verdichtung-hilfe",
+              "page": 3
+            }
+          ]
+        },
+        {
+          "text": "Die Übungsvorgabe „höchstens eine halbe Seite“ gilt für die Verdichtungsübung, nicht als Seitenlimit der Facharbeit.",
+          "refs": [
+            {
+              "source_id": "verdichtung-hilfe",
+              "page": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guide-writing-principles",
+      "phase": "schreibkompetenz",
+      "title": "Grundsätze wissenschaftlichen Schreibens",
+      "kind_label": "Unterrichtshilfe",
+      "importance": "normal",
+      "items": [
+        {
+          "text": "Klar, präzise, sachlich und möglichst eindeutig formulieren; Umgangssprache und unnötige Füllwörter vermeiden.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-schreiben",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Argumentation logisch strukturieren, den roten Faden sichern und Aussagen mit Literatur oder eigenen Daten begründen.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-schreiben",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "text": "Grammatik, Rechtschreibung und Zeichensetzung prüfen sowie den Text mehrfach überarbeiten und Feedback einholen.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-schreiben",
+              "page": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "documented_tensions": [
+    {
+      "id": "tension-intro-outline",
+      "title": "Einleitung: Arbeitsschritt versus Endgliederung",
+      "text": "Der Bewertungsbogen behandelt die Einleitung als eigenen Abschnitt. Die ausdrücklich verbindliche Endgliederung ordnet „Einleitung und Kontext“ dagegen als 1.1 unter „Wahrnehmen und Erleben“ ein. Die Website behält die Einleitung als Arbeitsnavigation, zeigt für die Endfassung aber die verbindliche Struktur.",
+      "refs": [
+        {
+          "source_id": "facharbeit-bewertung",
+          "page": 2
+        },
+        {
+          "source_id": "facharbeit-gliederung",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "tension-citation-style",
+      "title": "Allgemeine Zitierstile versus konkrete Facharbeits-Richtlinie",
+      "text": "Das allgemeine Grundsatzblatt nennt APA, MLA oder Chicago beispielhaft. Die spezifische Richtlinie zur Facharbeit gibt dagegen konkrete schulische Kurzbeleg- und Literaturverzeichnis-Muster. Die Website stellt deshalb die Facharbeits-Richtlinie für die konkrete Umsetzung in den Vordergrund und das Grundsatzblatt als allgemeine Schreiborientierung daneben.",
+      "refs": [
+        {
+          "source_id": "wissenschaftliches-schreiben",
+          "page": 1
+        },
+        {
+          "source_id": "wissenschaftliches-arbeiten",
+          "page": 1
+        },
+        {
+          "source_id": "wissenschaftliches-arbeiten",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "tension-ai-research",
+      "title": "KI für Rechercheideen ja – KI als Quelle nein",
+      "text": "Prompt- und Rechercheblätter regen KI zur Themen- und Schlagwortsuche an. Die schulische Richtlinie begrenzt diese Nutzung klar: Ergebnisse kritisch prüfen, Fachtexte selbst heranziehen und KI nie als fachliche Quelle behandeln.",
+      "refs": [
+        {
+          "source_id": "prompten-hilfe",
+          "page": 2
+        },
+        {
+          "source_id": "online-recherche",
+          "page": 3
+        },
+        {
+          "source_id": "wissenschaftliches-arbeiten",
+          "page": 2
+        }
+      ]
+    }
   ]
 }
