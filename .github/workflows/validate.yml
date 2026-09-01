@@ -22,7 +22,7 @@ jobs:
       - name: Validate model
         run: python3 -m unittest discover -s tests
       - name: Check JavaScript syntax
-        run: node --check app.js
+        run: node --check app.js && node --check clarity.js
       - name: Validate backup import
         run: node --test tests/test_backup_import.js
       - name: Browser UI smoke (desktop + mobile)
