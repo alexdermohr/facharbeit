@@ -441,3 +441,88 @@ textarea:focus {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* Source-pack extension */
+.dashboard { grid-template-columns: repeat(4, 1fr); }
+.deadline-card { border-color: #d7c28f; background: #fffdf7; }
+.outline-section, .tensions-section {
+  padding: 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.outline-notice {
+  padding: 1rem;
+  border-left: 4px solid var(--warning);
+  background: var(--warning-soft);
+  border-radius: 0 12px 12px 0;
+}
+.outline-notice p { margin: .2rem 0; }
+.outline-list {
+  display: grid;
+  gap: .45rem;
+  margin-top: 1rem;
+}
+.outline-row {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr;
+  gap: .65rem;
+  padding: .7rem .8rem;
+  border-radius: 12px;
+  background: var(--surface-soft);
+  font-weight: 750;
+}
+.outline-row.outline-sub {
+  margin-left: 1.3rem;
+  font-weight: 600;
+}
+.outline-number { color: var(--accent-dark); font-variant-numeric: tabular-nums; }
+.guidance-panel {
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fbfcfb;
+}
+.guidance-heading h4 { margin: .15rem 0 1rem; font-size: 1.15rem; }
+.guidance-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; }
+.guidance-card {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+}
+.guidance-card.critical { border-color: #d7b96a; background: #fffdf7; }
+.guidance-card h5 { margin: .45rem 0 .65rem; font-size: 1rem; }
+.guidance-card ul { margin: 0; padding-left: 1.15rem; }
+.guidance-card li { margin: .45rem 0; }
+.guidance-card .refs { margin-top: .2rem; }
+.source-badge {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: .55rem;
+  border-radius: 999px;
+  padding: .25rem .5rem;
+  font-size: .7rem;
+  font-weight: 850;
+  letter-spacing: .025em;
+  background: #e8ece9;
+  color: #45534a;
+}
+.source-badge.status-exam { background: #e4f1e9; color: var(--accent-dark); }
+.source-badge.status-binding { background: #fff0c7; color: #70480c; }
+.source-badge.status-school_rule, .source-badge.rule { background: #fde9e7; color: #7d2924; }
+.source-badge.status-instructional, .source-badge.help { background: #e9eef8; color: #314e78; }
+.source-card { display: flex; flex-direction: column; align-items: flex-start; }
+.source-note { font-size: .78rem; font-style: italic; }
+.question-refs { margin: -.3rem 0 .75rem; }
+.tension-card { border-left: 4px solid #8b6d36; }
+
+@media (max-width: 1000px) {
+  .dashboard { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 820px) {
+  .dashboard { grid-template-columns: 1fr; }
+  .guidance-grid { grid-template-columns: 1fr; }
+  .outline-row.outline-sub { margin-left: .65rem; }
+}

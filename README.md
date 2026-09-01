@@ -2,23 +2,34 @@
 
 Fragengestützte, quellennah aufgebaute Arbeitshilfe für Prüfungsteil III der Erzieherausbildung an der Fachschule für Sozialpädagogik.
 
-## Was hier entsteht
+## Quellenmodell
 
-Das Repository trennt drei Ebenen bewusst:
+Das Repository trennt vier Ebenen:
 
-1. **Primärquellen** – die drei schulischen PDF-Dokumente unter [`quellen/`](quellen/).
-2. **Anforderungsmodell** – strukturierte, quellenbezogene Anforderungen in [`data/requirements.json`](data/requirements.json) und lesbar in [`docs/ANFORDERUNGSMODELL.md`](docs/ANFORDERUNGSMODELL.md).
-3. **Leitfragen** – daraus abgeleitete Fragen in der Website, die beim eigenen Denken und Schreiben helfen. Sie sind keine zusätzlichen offiziellen Bewertungskriterien.
+1. **Schuldokumente** – zwölf PDFs unter [`quellen/`](quellen/), jeweils als Prüfungs-/Bewertungsdokument, verbindliche Vorgabe, schulische Richtlinie oder Unterrichtshilfe klassifiziert.
+2. **Anforderungsmodell** – strukturierte, seitenbezogene Aussagen in [`data/requirements.json`](data/requirements.json) und lesbar in [`docs/ANFORDERUNGSMODELL.md`](docs/ANFORDERUNGSMODELL.md).
+3. **Leitfragen und Unterrichtshilfen** – navigieren durch die Arbeit, sind aber keine zusätzlichen offiziellen Bewertungskriterien.
+4. **Planungskontext** – der mitgeteilte Abgabetermin `13.11.2026` wird separat als nicht PDF-belegte Planungsangabe geführt.
 
-Die Website berechnet **keine Note**.
+Die detaillierte Quellenhierarchie steht in [`docs/QUELLENMATRIX.md`](docs/QUELLENMATRIX.md). Die Website berechnet **keine Note**.
+
+## Neu aus dem erweiterten Quellenpaket
+
+- verbindliche Endgliederung von `1` bis `3.4`,
+- vollständige fünf Analyseebenen nach dem Unterrichtsblatt,
+- konkrete Checkliste für die Situationsbeschreibung,
+- schulische Zitier- und KI-Richtlinie,
+- Rechercheworkflow und Suchoperatoren,
+- Anleitung zum eigenständigen Verdichten von Fachtexten,
+- allgemeine Grundsätze wissenschaftlichen Schreibens.
+
+Die früheren Lücken zum Fünf-Ebenen-Modell und zur KI-/Zitier-Richtlinie sind damit geschlossen. Offen bleiben unter anderem die vollständigen Qualitätskriterien für Textquellen, die genaue Einrechnung in die 12–15 Seiten und die im Gliederungsblatt erwähnten Beispielgliederungen im Anhang.
 
 ## Website
 
 `index.html`, `styles.css` und `app.js` bilden eine statische Website ohne Backend. Antworten und Häkchen werden ausschließlich per `localStorage` im eigenen Browser gespeichert. Der Arbeitsstand kann als JSON exportiert werden.
 
-Die Website ist als statische Seite vollständig im Repository enthalten. Für eine öffentliche GitHub-Pages-URL muss im Repository einmalig **Settings → Pages → Source: GitHub Actions** aktiviert werden. Danach kann der Workflow **Deploy GitHub Pages** manuell gestartet werden.
-
-Vorgesehene URL nach Aktivierung:
+Öffentliche Seite:
 
 **https://alexdermohr.github.io/facharbeit/**
 
@@ -34,31 +45,7 @@ Dann `http://localhost:8000/` öffnen.
 
 ```bash
 python3 -m unittest discover -s tests
+node --check app.js
 ```
 
-Die Tests prüfen unter anderem:
-
-- Facharbeit-Gewichte 25/40/35 = 100,
-- Kolloquium-Gewichte 40/20/40 = 100,
-- eindeutige IDs,
-- gültige Quellen- und Seitenverweise,
-- jede abgeleitete Leitfrage verweist auf bestehende Anforderungen,
-- die drei Primärquellen sind vorhanden.
-
-## Bekannte Lücken
-
-Die Schuldokumente nennen, aber erklären nicht vollständig:
-
-- das „Modell der Fünf Ebenen“ nach Fröhlich-Gildhoff,
-- die im Seminar besprochenen Qualitätskriterien für Literatur,
-- den vollständigen Zitier- und KI-Leitfaden,
-- die genaue Einrechnung einzelner Bestandteile in die 12–15 Seiten,
-- konkrete individuelle Termine.
-
-Diese Lücken werden nicht mit allgemeinem Modellwissen aufgefüllt.
-
-## Quellen
-
-- [`250904-Bewertungshinweise-Facharbeit.pdf`](quellen/250904-Bewertungshinweise-Facharbeit.pdf)
-- [`251016-Info_Der-Pruefungsteil-III.pdf`](quellen/251016-Info_Der-Pruefungsteil-III.pdf)
-- [`251124-Bewertungshinweise-Kolloquium_neu-Mi_Ot_Sti_Ree.pdf`](quellen/251124-Bewertungshinweise-Kolloquium_neu-Mi_Ot_Sti_Ree.pdf)
+Die Tests prüfen unter anderem Gewichte, eindeutige IDs, Quellen- und Seitenverweise, PDF-Dateien und SHA-256-Bindungen, die verbindliche Gliederung, die fünf Ebenen, KI-Regeln sowie die Trennung des mitgeteilten Termins von PDF-belegten Vorgaben.
