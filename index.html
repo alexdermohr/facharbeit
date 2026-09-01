@@ -15,60 +15,97 @@
       <div>
         <p class="eyebrow">Prüfungsteil III · Fachschule für Sozialpädagogik</p>
         <h1>Facharbeit Schritt für Schritt</h1>
-        <p class="lede">Schulische Anforderungen, verbindliche Gliederung und Unterrichtshilfen nachvollziehen, mit Leitfragen bearbeiten und den eigenen Stand lokal im Browser sichern.</p>
-      </div>
-      <div class="header-actions">
-        <button id="exportButton" class="button secondary" type="button">Antworten exportieren</button>
-        <button id="resetButton" class="button ghost danger" type="button">Lokale Daten löschen</button>
+        <p class="lede">Von der Praxissituation über Analyse und Planung bis zum Kolloquium: arbeite direkt an den belegten Anforderungen und sichere deinen Stand lokal im Browser.</p>
       </div>
     </div>
   </header>
 
   <main id="main" class="shell">
-    <section class="notice" aria-labelledby="notice-title">
-      <div>
-        <p class="eyebrow">Quellenhierarchie</p>
-        <h2 id="notice-title">Nicht jedes Schuldokument hat dieselbe Funktion</h2>
-        <p>Prüfungs- und Bewertungsvorgaben, die ausdrücklich verbindliche Gliederung und die schulische Richtlinie zum wissenschaftlichen Arbeiten werden von Unterrichtshilfen getrennt. Die Leitfragen dieser Website sind weiterhin abgeleitete Arbeitshilfen und keine zusätzlichen Bewertungskriterien. Die Website berechnet keine Note.</p>
-      </div>
-      <a class="text-link" href="#sources">Zu allen Schuldokumenten</a>
-    </section>
-
-    <section class="dashboard" aria-label="Arbeitsstand">
-      <div class="stat-card">
-        <span class="stat-label">Beantwortete Leitfragen</span>
-        <strong id="questionProgress" class="stat-value">0 / 0</strong>
-        <div class="progress-track" aria-hidden="true"><span id="questionProgressBar"></span></div>
-      </div>
-      <div class="stat-card">
-        <span class="stat-label">Geprüfte Anforderungen</span>
-        <strong id="requirementProgress" class="stat-value">0 / 0</strong>
-        <div class="progress-track" aria-hidden="true"><span id="requirementProgressBar"></span></div>
-      </div>
-      <div class="stat-card deadline-card">
-        <span class="stat-label">Mitgeteilter Abgabetermin</span>
-        <strong id="deadlineValue" class="stat-value small">–</strong>
-        <p id="deadlineNote" class="stat-note">Planungsangabe wird geladen.</p>
-      </div>
-      <div class="stat-card">
-        <span class="stat-label">Speicherung</span>
-        <strong class="stat-value small">nur lokal</strong>
-        <p class="stat-note">Antworten verlassen deinen Browser nicht.</p>
-      </div>
-    </section>
-
-    <section class="mode-section" aria-labelledby="mode-title">
-      <div class="section-heading">
+    <section class="workbench" aria-labelledby="workbench-title">
+      <div class="section-heading workbench-heading">
         <div>
-          <p class="eyebrow">1 · Prüfungsbereich wählen</p>
-          <h2 id="mode-title">Woran arbeitest du?</h2>
+          <p class="eyebrow">Prüfungsteil III</p>
+          <h2 id="workbench-title">Woran arbeitest du jetzt?</h2>
+          <p class="section-intro">Facharbeit und Kolloquium bilden gemeinsam den Prüfungsteil. Wähle den Bereich und arbeite anschließend am aktuellen Schritt weiter.</p>
         </div>
       </div>
-      <div class="mode-switch" role="tablist" aria-label="Prüfungsbereich">
-        <button class="mode-tab active" type="button" role="tab" aria-selected="true" data-mode="facharbeit">Facharbeit</button>
-        <button class="mode-tab" type="button" role="tab" aria-selected="false" data-mode="kolloquium">Kolloquium</button>
+
+      <div id="examSplit" class="exam-split" aria-label="Gewichtung des Prüfungsteils"></div>
+
+      <div class="mode-switch" role="group" aria-label="Prüfungsbereich wählen">
+        <button id="modeFacharbeit" class="mode-tab active" type="button" aria-pressed="true" data-mode="facharbeit">Facharbeit</button>
+        <button id="modeKolloquium" class="mode-tab" type="button" aria-pressed="false" data-mode="kolloquium">Kolloquium</button>
       </div>
       <div id="modeSummary" class="mode-summary"></div>
+
+      <div class="dashboard" aria-label="Arbeitsstand">
+        <div class="stat-card">
+          <span class="stat-label">Selbst geprüfte Leitfragen</span>
+          <strong id="questionProgress" class="stat-value">0 / 0</strong>
+          <div class="progress-track" aria-hidden="true"><span id="questionProgressBar"></span></div>
+          <p id="questionProgressNote" class="stat-note">Noch keine Leitfrage geprüft.</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Geprüfte Anforderungen</span>
+          <strong id="requirementProgress" class="stat-value">0 / 0</strong>
+          <div class="progress-track" aria-hidden="true"><span id="requirementProgressBar"></span></div>
+          <p id="requirementProgressNote" class="stat-note">Noch keine Anforderung abgehakt.</p>
+        </div>
+        <div class="stat-card deadline-card">
+          <span class="stat-label">Mitgeteilter Abgabetermin</span>
+          <strong id="deadlineValue" class="stat-value small">–</strong>
+          <p id="deadlineNote" class="stat-note">Planungsangabe wird geladen.</p>
+        </div>
+      </div>
+
+      <div class="current-step-card">
+        <div>
+          <p class="eyebrow">Aktueller Arbeitsschritt</p>
+          <strong id="currentStepLabel" class="current-step-title">–</strong>
+          <p id="currentStepMeta" class="current-step-meta"></p>
+        </div>
+        <button id="continueButton" class="button primary" type="button">Zum Arbeitsschritt</button>
+      </div>
+    </section>
+
+    <section id="workflow" aria-labelledby="path-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Arbeitsweg</p>
+          <h2 id="path-title">Schritt für Schritt</h2>
+        </div>
+      </div>
+      <nav id="stepNav" class="step-nav" aria-label="Arbeitsschritte"></nav>
+      <div class="step-controls" aria-label="Zwischen Arbeitsschritten wechseln">
+        <button id="previousStepButton" class="button compact secondary" type="button">← Zurück</button>
+        <span id="stepPosition" class="step-position">–</span>
+        <button id="nextStepButton" class="button compact secondary" type="button">Weiter →</button>
+      </div>
+
+      <section id="topicSection" class="topic-tool workflow-tool" aria-labelledby="topic-title">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">Formaler Schnellcheck</p>
+            <h2 id="topic-title">Themenformulierung</h2>
+          </div>
+          <span id="titleCount" class="counter">0 / 200</span>
+        </div>
+        <label for="topicInput">Arbeitstitel</label>
+        <textarea id="topicInput" rows="2" maxlength="260" placeholder="Deine Themenformulierung …"></textarea>
+        <p id="titleFeedback" class="field-hint">Maximal 200 Zeichen inklusive Leerzeichen laut Informationspapier.</p>
+      </section>
+
+      <div id="stageContent" class="stage-content"></div>
+      <div id="uiStatus" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    </section>
+
+    <section class="reference-intro" aria-labelledby="reference-title">
+      <div>
+        <p class="eyebrow">Nachschlagen & absichern</p>
+        <h2 id="reference-title">Referenzbereich</h2>
+        <p>Die folgenden Abschnitte belegen und ordnen die Arbeit. Du musst sie nicht jedes Mal durchscrollen, um am aktuellen Schritt weiterzuarbeiten.</p>
+      </div>
+      <a class="text-link" href="#sources">Direkt zu den Schuldokumenten</a>
     </section>
 
     <section id="outlineSection" class="outline-section" aria-labelledby="outline-title">
@@ -81,35 +118,20 @@
       <div id="outlineContent"></div>
     </section>
 
-    <section class="topic-tool" aria-labelledby="topic-title">
-      <div class="section-heading compact">
-        <div>
-          <p class="eyebrow">Formaler Schnellcheck</p>
-          <h2 id="topic-title">Themenformulierung</h2>
-        </div>
-        <span id="titleCount" class="counter">0 / 200</span>
+    <section class="notice" aria-labelledby="notice-title">
+      <div>
+        <p class="eyebrow">Quellenhierarchie</p>
+        <h2 id="notice-title">Nicht jedes Schuldokument hat dieselbe Funktion</h2>
+        <p>Prüfungs- und Bewertungsvorgaben, die ausdrücklich verbindliche Gliederung und die schulische Richtlinie zum wissenschaftlichen Arbeiten werden von Unterrichtshilfen getrennt. Die Leitfragen dieser Website sind abgeleitete Arbeitshilfen und keine zusätzlichen Bewertungskriterien. Die Website berechnet keine Note.</p>
       </div>
-      <label for="topicInput">Arbeitstitel</label>
-      <textarea id="topicInput" rows="2" maxlength="260" placeholder="Deine Themenformulierung …"></textarea>
-      <p id="titleFeedback" class="field-hint">Maximal 200 Zeichen inklusive Leerzeichen laut Informationspapier.</p>
-    </section>
-
-    <section aria-labelledby="path-title">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">2 · Arbeitsweg</p>
-          <h2 id="path-title">Schritt für Schritt</h2>
-        </div>
-      </div>
-      <nav id="stepNav" class="step-nav" aria-label="Arbeitsschritte"></nav>
-      <div id="stageContent" class="stage-content" aria-live="polite"></div>
+      <a class="text-link" href="#sources">Zu allen Schuldokumenten</a>
     </section>
 
     <section id="gaps" class="gaps-section" aria-labelledby="gaps-title">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Dokumentierte Lücken</p>
-          <h2 id="gaps-title">Was auch mit den zusätzlichen Dokumenten offen bleibt</h2>
+          <h2 id="gaps-title">Was in den Unterlagen offen bleibt</h2>
         </div>
       </div>
       <div id="gapsList" class="gap-grid"></div>
@@ -133,6 +155,21 @@
         </div>
       </div>
       <div id="sourcesList" class="source-grid"></div>
+    </section>
+
+    <section id="dataTools" class="data-tools" aria-labelledby="data-tools-title">
+      <div>
+        <p class="eyebrow">Daten & Backup</p>
+        <h2 id="data-tools-title">Arbeitsstand sichern oder wiederherstellen</h2>
+        <p>Antworten und Häkchen werden nur in diesem Browser gespeichert. Ein JSON-Backup kann später wieder importiert werden; der Markdown-Export ist zum Lesen und Weiterverwenden gedacht.</p>
+      </div>
+      <div class="data-actions">
+        <button id="exportButton" class="button secondary" type="button">Backup exportieren</button>
+        <button id="markdownButton" class="button secondary" type="button">Als Markdown exportieren</button>
+        <button id="importButton" class="button secondary" type="button">Backup importieren</button>
+        <button id="resetButton" class="button ghost danger" type="button">Lokale Daten löschen</button>
+        <input id="importInput" hidden type="file" accept="application/json,.json">
+      </div>
     </section>
   </main>
 
