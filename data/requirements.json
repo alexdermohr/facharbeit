@@ -347,6 +347,17 @@
       ]
     },
     {
+      "id": "formal-ai-verification",
+      "label": "Klärung bei Täuschungsverdacht",
+      "value": "Bei Verdacht ist für die Klärung relevant, ob die fraglichen Passagen im Kolloquium schlüssig in eigenen Worten dargestellt und begründet werden können.",
+      "refs": [
+        {
+          "source_id": "wissenschaftliches-arbeiten",
+          "page": 2
+        }
+      ]
+    },
+    {
       "id": "formal-declaration",
       "label": "Eidesstattliche Erklärung",
       "value": "nach dem Literaturverzeichnis anfügen; nicht im Inhaltsverzeichnis aufführen",
@@ -1854,6 +1865,16 @@
               "page": 2
             }
           ]
+        },
+        {
+          "label": "Klärung bei Verdacht",
+          "text": "Bei Verdacht auf nicht eigenständig erbrachte Passagen wird laut Richtlinie darauf abgestellt, ob die betreffenden Teile im Kolloquium schlüssig in eigenen Worten dargestellt und begründet werden können.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 2
+            }
+          ]
         }
       ]
     },
@@ -2214,6 +2235,15 @@
             {
               "source_id": "wissenschaftliches-arbeiten",
               "page": 2
+            }
+          ]
+        },
+        {
+          "text": "Die schulische Richtlinie zeigt als Kurzbeleg-Muster sinngemäß „(vgl. Leitz: 2015, S. 74)“ und wörtlich „(Leitz: 2015, S. 74)“.",
+          "refs": [
+            {
+              "source_id": "wissenschaftliches-arbeiten",
+              "page": 1
             }
           ]
         }

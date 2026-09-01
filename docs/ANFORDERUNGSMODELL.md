@@ -93,6 +93,7 @@ Die neue schulische Richtlinie schließt eine wesentliche frühere Lücke.
 - Die vollständige Quelle gehört zusätzlich ins Literaturverzeichnis.
 - Wörtliche Zitate werden exakt in Anführungszeichen übernommen und belegt.
 - Sinngemäße Übernahmen werden in eigenen Worten als Fremdgedanken kenntlich gemacht und mit `vgl.` belegt.
+- Die schulische Richtlinie zeigt als Kurzbeleg-Muster sinngemäß `(vgl. Leitz: 2015, S. 74)` und wörtlich `(Leitz: 2015, S. 74)`.
 - Die Richtlinie enthält konkrete Muster für Bücher, Sammelbände, Zeitschriftenartikel und Internetquellen.
 
 Das allgemeine Blatt „Grundsätze wissenschaftlichen Schreibens“ nennt APA, MLA und Chicago nur beispielhaft. Für die konkrete Umsetzung in dieser Facharbeit wird deshalb die **spezifische Facharbeits-Richtlinie** separat hervorgehoben; das allgemeine Blatt bleibt allgemeine Schreiborientierung.

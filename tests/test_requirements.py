@@ -79,10 +79,14 @@ class RequirementsModelTests(unittest.TestCase):
 
     def test_ai_rules_are_explicit_and_not_a_gap(self):
         formal = {item["id"]: item for item in self.model["formal_requirements"]}
-        for requirement_id in ("formal-ai-source", "formal-ai-independent", "formal-ai-disclosure"):
+        for requirement_id in ("formal-ai-source", "formal-ai-independent", "formal-ai-disclosure", "formal-ai-verification"):
             self.assertIn(requirement_id, formal)
         guide = next(item for item in self.model["instructional_guidance"] if item["id"] == "guide-ai-policy")
         self.assertEqual(guide["kind_label"], "Schulische Richtlinie")
+        self.assertTrue(any("Kolloquium" in item.get("text", "") for item in guide["items"]))
+        citation = next(item for item in self.model["instructional_guidance"] if item["id"] == "guide-citation")
+        self.assertTrue(any("(vgl. Leitz: 2015, S. 74)" in item.get("text", "") for item in citation["items"]))
+        self.assertTrue(any("(Leitz: 2015, S. 74)" in item.get("text", "") for item in citation["items"]))
         gap_ids = {gap["id"] for gap in self.model["documented_gaps"]}
         self.assertNotIn("gap-scientific-ai", gap_ids)
 

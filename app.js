@@ -116,8 +116,10 @@ function renderDeadline() {
 
   value.textContent = deadline.display;
   const now = new Date();
-  const due = new Date(`${deadline.date}T23:59:59`);
-  const days = Math.ceil((due - now) / 86400000);
+  const [year, month, day] = deadline.date.split("-").map(Number);
+  const todayUtc = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  const dueUtc = Date.UTC(year, month - 1, day);
+  const days = Math.round((dueUtc - todayUtc) / 86400000);
   const timeText = days > 1 ? `Noch ${days} Kalendertage.` : days === 1 ? "Noch 1 Kalendertag." : days === 0 ? "Abgabe heute." : `Termin seit ${Math.abs(days)} Tagen überschritten.`;
   note.textContent = `${timeText} ${deadline.note}`;
 }
