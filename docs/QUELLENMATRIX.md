@@ -12,7 +12,8 @@ Die Matrix trennt **Prüfungs-/Bewertungsvorgaben**, **verbindliche Struktur**, 
 | Kriterien gelungene Situationsbeschreibung | Unterrichtshilfe | Konkrete Checkliste für eine belastbare Situationsbeschreibung | Kein eigener neuer Prozentbereich der Bewertung |
 | Fragen zur Identifizierung der fachlichen Themen | Unterrichtshilfe | Suchachsen für Kernthemen und Ressourcen-/Bedürfnisbezug | Keine Pflicht, jedes genannte Thema abzuhandeln |
 | Verstehen und Analysieren – Fünf Ebenen | Unterrichtshilfe | Inhaltliche Erklärung der fünf Ebenen | Bewertet bleibt laut Bewertungsbogen die passende Anwendung von mindestens drei Ebenen |
-| Online recherchieren nach Fachartikeln | Unterrichtshilfe | Rechercheworkflow, Fachportale, Google Scholar und Suchoperatoren | Kein Ersatz für das fehlende Papier mit vollständigen Qualitätskriterien |
+| Online recherchieren nach Fachartikeln | Unterrichtshilfe | Rechercheworkflow, Fachportale, Google Scholar und Suchoperatoren | Suchwege allein entscheiden noch nicht über Zitierfähigkeit und Quellenqualität |
+| Die Qualität von Textquellen | Unterrichtshilfe | Kriterien für Internetseiten, Zitierfähigkeit sowie Herkunft und Qualität von Quellen | Keine zusätzliche Bewertungsrubrik; ersetzt nicht die spezifische schulische Zitier-Richtlinie |
 | Richtig Prompten | Unterrichtshilfe | Sechs Schritte für präzisere KI-Prompts | Keine Erlaubnis, KI-Antworten ungeprüft oder als Quelle zu verwenden |
 | Eine Verdichtung schreiben | Unterrichtshilfe | Eigenständige Verarbeitung von Fachtexten mit Autorenbezug und Belegen | Das Übungslimit „halbe Seite“ ist keine Facharbeits-Umfangsvorgabe |
 | Grundsätze wissenschaftlichen Schreibens | Unterrichtshilfe | Präzision, Objektivität, Struktur, Begründung, Sprache, Überarbeitung | Die beispielhafte Nennung von APA/MLA/Chicago ersetzt nicht die konkrete Facharbeits-Richtlinie |

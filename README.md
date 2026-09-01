@@ -6,7 +6,7 @@ Fragengestützte, quellennah aufgebaute Arbeitshilfe für Prüfungsteil III der 
 
 Das Repository trennt vier Ebenen:
 
-1. **Schuldokumente** – zwölf PDFs unter [`quellen/`](quellen/), jeweils als Prüfungs-/Bewertungsdokument, verbindliche Vorgabe, schulische Richtlinie oder Unterrichtshilfe klassifiziert.
+1. **Schuldokumente** – dreizehn PDFs unter [`quellen/`](quellen/), jeweils als Prüfungs-/Bewertungsdokument, verbindliche Vorgabe, schulische Richtlinie oder Unterrichtshilfe klassifiziert.
 2. **Anforderungsmodell** – strukturierte, seitenbezogene Aussagen in [`data/requirements.json`](data/requirements.json) und lesbar in [`docs/ANFORDERUNGSMODELL.md`](docs/ANFORDERUNGSMODELL.md).
 3. **Leitfragen und Unterrichtshilfen** – navigieren durch die Arbeit, sind aber keine zusätzlichen offiziellen Bewertungskriterien.
 4. **Planungskontext** – der mitgeteilte Abgabetermin `13.11.2026` wird separat als nicht PDF-belegte Planungsangabe geführt.
@@ -20,10 +20,11 @@ Die detaillierte Quellenhierarchie steht in [`docs/QUELLENMATRIX.md`](docs/QUELL
 - konkrete Checkliste für die Situationsbeschreibung,
 - schulische Zitier- und KI-Richtlinie,
 - Rechercheworkflow und Suchoperatoren,
+- Kriterien zur Prüfung von Internet- und Textquellen einschließlich Zitierfähigkeit und Herkunft,
 - Anleitung zum eigenständigen Verdichten von Fachtexten,
 - allgemeine Grundsätze wissenschaftlichen Schreibens.
 
-Die früheren Lücken zum Fünf-Ebenen-Modell und zur KI-/Zitier-Richtlinie sind damit geschlossen. Offen bleiben unter anderem die vollständigen Qualitätskriterien für Textquellen, die genaue Einrechnung in die 12–15 Seiten und die im Gliederungsblatt erwähnten Beispielgliederungen im Anhang.
+Die früheren Lücken zum Fünf-Ebenen-Modell, zur KI-/Zitier-Richtlinie und zu den Qualitätskriterien für Textquellen sind damit geschlossen. Offen bleiben unter anderem die genaue Einrechnung in die 12–15 Seiten und die im Gliederungsblatt erwähnten Beispielgliederungen im Anhang.
 
 ## Website
 
