@@ -1,0 +1,228 @@
+/* Issue #9: Formalia zeitlich ordnen und den Referenzbereich aus dem primären Arbeitsfluss nehmen. */
+.formal-timeline {
+  display: grid;
+  gap: .9rem;
+}
+
+.formal-timeline-group {
+  padding: .9rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fbfcfb;
+}
+
+.formal-timeline-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .7rem;
+}
+
+.formal-timeline-step {
+  display: block;
+  margin-bottom: .16rem;
+  color: var(--accent-dark);
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.formal-timeline-head h5 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.formal-timeline-head p {
+  margin: .24rem 0 0;
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+.formal-group-progress {
+  flex: none;
+  padding: .28rem .48rem;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 760;
+  white-space: nowrap;
+}
+
+.formal-group-items {
+  display: grid;
+  gap: .55rem;
+}
+
+.formal-group-items .requirement-item {
+  background: white;
+  border: 1px solid #e0e5e1;
+}
+
+.reference-intro {
+  align-items: flex-start;
+}
+
+.reference-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: .85rem;
+}
+
+.reference-shortcuts a {
+  display: inline-flex;
+  align-items: center;
+  padding: .42rem .62rem;
+  border: 1px solid #c8d2cb;
+  border-radius: 999px;
+  background: white;
+  color: var(--accent-dark);
+  font-size: .78rem;
+  font-weight: 760;
+  text-decoration: none;
+}
+
+.reference-shortcuts a:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.reference-shell {
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+.reference-shell + .reference-shell {
+  margin-top: -.95rem;
+}
+
+.reference-fold {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.reference-fold > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.reference-fold > summary::-webkit-details-marker {
+  display: none;
+}
+
+.reference-fold > summary:hover {
+  background: var(--surface-soft);
+}
+
+.reference-fold > summary:focus-visible {
+  outline: 3px solid rgba(23,107,73,.28);
+  outline-offset: -3px;
+}
+
+.reference-fold-label {
+  min-width: 0;
+}
+
+.reference-fold-eyebrow {
+  display: block;
+  margin-bottom: .12rem;
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.reference-fold-label strong {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.reference-fold-action {
+  flex: none;
+  color: var(--accent-dark);
+  font-size: .76rem;
+  font-weight: 780;
+}
+
+.reference-fold[open] > summary {
+  border-bottom: 1px solid var(--line);
+  background: #fbfcfb;
+}
+
+.reference-fold-content {
+  padding: 1.15rem;
+}
+
+.reference-fold-content > .section-heading:first-child,
+.reference-fold-content > div:first-child > .eyebrow:first-child {
+  margin-top: 0;
+}
+
+.reference-fold-content .section-heading:first-child {
+  margin-bottom: .85rem;
+}
+
+.reference-fold-content .section-heading:first-child .eyebrow,
+.reference-fold-content .section-heading:first-child h2,
+.reference-fold-content > div:first-child > .eyebrow,
+.reference-fold-content > div:first-child > h2 {
+  /* Der Inhalt behält seine semantischen Überschriften; der Summary-Text übernimmt die sichtbare Navigation. */
+}
+
+@media (max-width: 820px) {
+  .formal-timeline-head {
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .formal-group-progress {
+    align-self: flex-start;
+  }
+
+  .reference-shortcuts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .reference-shortcuts a {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .formal-timeline-group {
+    padding: .75rem;
+  }
+
+  .reference-shortcuts {
+    grid-template-columns: 1fr;
+  }
+
+  .reference-fold > summary {
+    padding: .9rem;
+  }
+
+  .reference-fold-content {
+    padding: .9rem;
+  }
+
+  .reference-fold-action {
+    font-size: .72rem;
+  }
+}
