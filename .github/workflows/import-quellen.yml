@@ -1,0 +1,53 @@
+name: Import original source PDFs
+
+on:
+  push:
+    paths:
+      - '.github/workflows/import-quellen.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download and verify original PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p quellen
+
+          curl --fail --location --retry 3 \
+            'https://sdmntprnortheu.oaiusercontent.com/files/00000000-fc94-81f4-b742-fd9076a8755a/raw?se=2026-09-01T13%3A26%3A45Z&sp=r&sv=2026-02-06&sr=b&scid=ccd6d1ef-a98d-535a-96a8-e2eb6361f92c&skoid=b971d227-1348-4524-8797-edb0fdf15147&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-01T06%3A26%3A02Z&ske=2026-09-02T06%3A26%3A02Z&sks=b&skv=2026-02-06&sig=LMS20ZU47kGjWgH%2B0xyIxzraDMwiAcbX6Vz62mKop3E%3D' \
+            --output 'quellen/250904-Bewertungshinweise-Facharbeit.pdf'
+
+          curl --fail --location --retry 3 \
+            'https://sdmntprcentralus.oaiusercontent.com/files/00000000-16a8-81f5-9e77-a7b3d768e9a3/raw?se=2026-09-01T13%3A27%3A00Z&sp=r&sv=2026-02-06&sr=b&scid=5a8551fd-29ec-5654-9812-abcb791d7247&skoid=b971d227-1348-4524-8797-edb0fdf15147&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-08-31T23%3A21%3A13Z&ske=2026-09-01T23%3A21%3A13Z&sks=b&skv=2026-02-06&sig=vuvX4L3DA0jXrxMdc2uGciWi2pPFPAQ2Q4kQuOkFCjY%3D' \
+            --output 'quellen/251016-Info_Der-Pruefungsteil-III.pdf'
+
+          curl --fail --location --retry 3 \
+            'https://sdmntprnortheu.oaiusercontent.com/files/00000000-e748-81f4-95ee-21744764e632/raw?se=2026-09-01T13%3A27%3A13Z&sp=r&sv=2026-02-06&sr=b&scid=4ee8c836-a7e9-5790-af17-c8aa6097d0d8&skoid=b971d227-1348-4524-8797-edb0fdf15147&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-01T06%3A26%3A02Z&ske=2026-09-02T06%3A26%3A02Z&sks=b&skv=2026-02-06&sig=fYKcAHsgS2FbUmaGv54JNvFWOdtELqzkf9tn1SSIVTo%3D' \
+            --output 'quellen/251124-Bewertungshinweise-Kolloquium_neu-Mi_Ot_Sti_Ree.pdf'
+
+          printf '%s  %s\n' \
+            '04c7b988dfe9ea22c0dcebcf7d12feec5d76febf80cd2f185e09acbf4c0a6088' \
+            'quellen/250904-Bewertungshinweise-Facharbeit.pdf' \
+            '9a3a56d47521d8996b3fe8ae4b20ebf8fc434049645a97c7732a2371c66d799e' \
+            'quellen/251016-Info_Der-Pruefungsteil-III.pdf' \
+            '8490613b2aa64fc0345f69f927e698cca2bc4354e980734ed794003cfa1cb058' \
+            'quellen/251124-Bewertungshinweise-Kolloquium_neu-Mi_Ot_Sti_Ree.pdf' \
+            | sha256sum --check --strict
+
+      - name: Commit verified PDFs and remove importer
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/import-quellen.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'docs: add Facharbeit source documents'
+          git push
