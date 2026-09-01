@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Rewrite transitional copy
+      - name: Rewrite remaining editorial copy
         shell: bash
         run: |
           python3 - <<'PY'
@@ -25,55 +25,36 @@ jobs:
 
           path = Path("data/requirements.json")
           text = path.read_text(encoding="utf-8")
-
           replacements = {
-              "Vierzehn im Repository abgelegte schulische Dateien: drei Prüfungs-/Bewertungsdokumente, zwei ausdrücklich verbindliche Gliederungsblätter (allgemein und Arbeitsfeld Heilpädagogik), eine schulische Richtlinie zum wissenschaftlichen Arbeiten und acht Unterrichtshilfen.":
-                  "Vierzehn zugrunde gelegte schulische Dateien: drei Prüfungs-/Bewertungsdokumente, zwei ausdrücklich verbindliche Gliederungsblätter (allgemein und Arbeitsfeld Heilpädagogik), eine schulische Richtlinie zum wissenschaftlichen Arbeiten und acht Unterrichtshilfen.",
-              "Für die ausgewählte Vertiefung zeigt die Website die ausdrücklich als verbindlich bezeichnete Gliederung für das Arbeitsfeld Heilpädagogik.":
-                  "Für Heilpädagogik wird die ausdrücklich als verbindlich bezeichnete vertiefungsspezifische Gliederung verwendet.",
-              "Die in eckigen Klammern formulierten Fragen des Blatts werden als Orientierung sichtbar gemacht. Sie werden nicht zu zusätzlichen offiziellen Bewertungskriterien erklärt.":
-                  "Die Fragen in eckigen Klammern dienen als Orientierung; sie sind keine zusätzlichen offiziellen Bewertungskriterien.",
-              "Zeigt die allgemeine verbindliche Gliederung als Basis. Vertiefungsspezifische Vorgaben für andere Vertiefungen sind im aktuellen Quellenordner nicht belegt.":
-                  "Verwendet die allgemeine verbindliche Gliederung als Basis. Für andere Vertiefungen sind in der zugrunde gelegten Quellenbasis keine vertiefungsspezifischen Vorgaben belegt.",
-              "Die konkrete schulische Zitier-Richtlinie liegt nun vor: Kurzbelege im Text, vollständiges Literaturverzeichnis und klare Kennzeichnung fremder Gedanken.":
-                  "Die schulische Facharbeits-Richtlinie konkretisiert die Zitation: Kurzbelege im Text, vollständiges Literaturverzeichnis und klare Kennzeichnung fremder Gedanken.",
-              "Das zusätzliche Unterrichtsblatt erläutert jetzt alle fünf Ebenen. Für die Facharbeit fordert der Bewertungsbogen weiterhin mindestens drei passend begründete Ebenen.":
-                  "Das Unterrichtsblatt erläutert alle fünf Ebenen. Der Bewertungsbogen verlangt für die Facharbeit mindestens drei passend ausgewählte und begründete Ebenen.",
-              "Die Dokumente nennen 12–15 Seiten, definieren aber weiterhin nicht ausdrücklich, welche Bestandteile in diesen Seitenumfang eingerechnet werden.":
-                  "Die Dokumente nennen einen Umfang von 12–15 Seiten, legen jedoch nicht ausdrücklich fest, welche Bestandteile in diesen Umfang einfließen.",
-              "Die verbindliche Gliederung verweist auf exemplarische Gliederungen im Anhang. Solche Beispielgliederungen sind im aktuellen Quellenordner nicht enthalten.":
-                  "Die verbindliche Gliederung verweist auf exemplarische Gliederungen im Anhang. Die zugrunde gelegten Unterlagen enthalten diese Beispielgliederungen nicht.",
-              "Der Termin 13.11.2026 ist separat mitgeteilt und wird für die Arbeitsplanung angezeigt. In den derzeit hinterlegten Schuldokumenten ist dieser konkrete Termin nicht enthalten.":
-                  "Der angezeigte Abgabetermin 13.11.2026 stammt aus einer separaten Planungsangabe; die verlinkten Schuldokumente nennen diesen Termin nicht.",
-              "Für Heilpädagogik liegt nun eine eigene verbindliche Gliederung vor. Für andere Vertiefungen enthält der aktuelle Quellenordner noch keine entsprechend bezeichneten verbindlichen Gliederungsblätter.":
-                  "Für Heilpädagogik ist eine verbindliche vertiefungsspezifische Gliederung belegt. Für andere Vertiefungen sind in der zugrunde gelegten Quellenbasis keine entsprechend bezeichneten verbindlichen Gliederungsblätter belegt.",
-              "Separat mitgeteilte Planungsangabe; der Termin ist in den derzeit hinterlegten Schuldokumenten (PDF/DOCX) nicht belegt.":
-                  "Planungsangabe außerhalb der verlinkten Schuldokumente; dort ist der Termin nicht belegt.",
-              "Die Website behandelt die Einleitung weiterhin als eigenen Arbeitsschritt, weil der Bewertungsbogen sie separat beschreibt. In der Endfassung gehört sie gemäß verbindlicher Gliederung unter 1.1.":
-                  "Bearbeite die Einleitung als eigenen Arbeitsschritt. In der Endfassung gehört sie gemäß allgemeiner verbindlicher Gliederung unter 1.1.",
-              "Die Website stellt deshalb die Facharbeits-Richtlinie für die konkrete Umsetzung in den Vordergrund und das Grundsatzblatt als allgemeine Schreiborientierung daneben.":
-                  "Für die konkrete Zitation ist die Facharbeits-Richtlinie maßgeblich; das Grundsatzblatt dient ergänzend als allgemeine Schreiborientierung.",
-              "Die Website zeigt bei Auswahl Heilpädagogik die speziellere Gliederung vorrangig und hält beide Quellen sichtbar.":
-                  "Bei Auswahl Heilpädagogik wird die speziellere Gliederung vorrangig verwendet; beide Quellen bleiben sichtbar.",
-              "KI darf als Hilfsmittel genutzt werden, ist aber keine Quelle. Fachliche Aussagen brauchen weiterhin anerkannte Fachtexte.":
-                  "KI darf als Hilfsmittel genutzt werden, ist aber keine Quelle. Fachliche Aussagen müssen durch anerkannte Fachtexte belegt werden.",
+              "Das Dokument bezeichnet die Gliederung als verbindlich. Die Fragen in eckigen Klammern werden hier als Orientierungshinweise wiedergegeben, nicht als zusätzliche Bewertungskriterien.":
+                  "Das Dokument bezeichnet die Gliederung als verbindlich. Die Fragen in eckigen Klammern dienen als Orientierungshinweise und sind keine zusätzlichen Bewertungskriterien.",
+              "Die allgemeine verbindliche Gliederung wird als Basis angezeigt. Daraus wird nicht abgeleitet, dass damit alle Vorgaben der gewählten anderen Vertiefung abgedeckt sind.":
+                  "Die allgemeine verbindliche Gliederung bildet die Basis. Daraus folgt nicht, dass damit alle Vorgaben der gewählten anderen Vertiefung abgedeckt sind.",
+              "Der Bewertungsbogen behandelt die Einleitung als eigenen Abschnitt. Die allgemeine verbindliche Endgliederung ordnet „Einleitung und Kontext“ als 1.1 unter „Wahrnehmen und Erleben“ ein; das heilpädagogische Gliederungsblatt führt die „Einleitung“ dagegen vor Abschnitt 1 und nennt „Kontext“ innerhalb von Abschnitt 1. Die Website behält die Einleitung als eigenen Arbeitsschritt und zeigt für die Endfassung die zur gewählten Vertiefung passende Struktur.":
+                  "Der Bewertungsbogen behandelt die Einleitung als eigenen Abschnitt. Die allgemeine verbindliche Endgliederung ordnet „Einleitung und Kontext“ als 1.1 unter „Wahrnehmen und Erleben“ ein; das heilpädagogische Gliederungsblatt führt die „Einleitung“ dagegen vor Abschnitt 1 und nennt „Kontext“ innerhalb von Abschnitt 1. Für den Arbeitsprozess bleibt die Einleitung ein eigener Schritt; für die Endfassung gilt die zur gewählten Vertiefung passende Struktur.",
           }
-
-          changed = []
-          missing = []
+          changed = 0
           for old, new in replacements.items():
               if old in text:
                   text = text.replace(old, new)
-                  changed.append(old)
-              else:
-                  missing.append(old)
-
-          if missing:
-              print("Nicht gefundene Zieltexte:")
-              for item in missing:
-                  print("-", item)
-          print(f"Ersetzte Formulierungen: {len(changed)} / {len(replacements)}")
+                  changed += 1
           path.write_text(text, encoding="utf-8")
+          print(f"Ersetzte Restformulierungen: {changed} / {len(replacements)}")
+
+          audit_tokens = [
+              "liegt nun vor",
+              "erläutert jetzt",
+              "aktuellen Quellenordner",
+              "derzeit hinterlegten",
+              "Die Website behält",
+              "Die Website zeigt",
+              "Die Website stellt",
+              "im Repository abgelegte",
+          ]
+          remaining = [token for token in audit_tokens if token in text]
+          if remaining:
+              raise SystemExit("Verbleibende Übergangsformulierungen: " + ", ".join(remaining))
+          print("Copy-Audit: keine bekannten Übergangsformulierungen mehr gefunden.")
           PY
 
       - name: Commit rewritten copy
@@ -86,5 +67,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/requirements.json
-          git commit -m "Copy als Endprodukt formulieren"
+          git commit -m "Copy-Bereinigung vervollständigen"
           git push origin HEAD:fix/endproduct-copy
