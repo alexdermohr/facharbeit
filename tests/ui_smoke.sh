@@ -13,6 +13,11 @@ for _ in $(seq 1 40); do
   sleep 0.1
 done
 curl --silent --fail "http://127.0.0.1:${PORT}/data/requirements.json" >/dev/null
+curl --silent --fail "http://127.0.0.1:${PORT}/clarity.js" >/dev/null
+curl --silent --fail "http://127.0.0.1:${PORT}/clarity.css" >/dev/null
+
+grep -q 'href="clarity.css"' index.html
+grep -q 'src="clarity.js"' index.html
 
 CHROME=""
 for candidate in google-chrome google-chrome-stable chromium chromium-browser; do
@@ -32,7 +37,7 @@ run_smoke() {
   dump="$($CHROME --headless=new --no-sandbox --disable-gpu --window-size="$size" --virtual-time-budget=2500 --dump-dom "http://127.0.0.1:${PORT}/" 2>/tmp/facharbeit-chrome.log)"
   grep -q "Vertiefung auswählen" <<<"$dump"
   grep -q "Heilpädagogik" <<<"$dump"
-  grep -q "Andere Vertiefung" <<<"$dump"
+  grep -q "Andere Vertiefung – nur allgemeine Vorgaben vorhanden" <<<"$dump"
   grep -q "Daten &amp; Backup" <<<"$dump"
   grep -q "Alle schulischen Dokumente" <<<"$dump"
   if grep -q "Die Daten konnten nicht geladen werden" <<<"$dump"; then
