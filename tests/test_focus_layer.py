@@ -22,11 +22,12 @@ class FocusLayerTests(unittest.TestCase):
 
     def test_every_formal_requirement_is_assigned_to_a_time_group(self):
         model_ids = {item["id"] for item in self.model["formal_requirements"]}
-        focus_ids = set(re.findall(r'"(formal-[a-z0-9-]+)"', self.focus_js))
+        group_config = self.focus_js.split("const focusFormalGroups = [", 1)[1].split("const focusReferenceSpecs", 1)[0]
+        focus_ids = set(re.findall(r'"(formal-[a-z0-9-]+)"', group_config))
         self.assertEqual(model_ids, focus_ids)
-        self.assertIn('title: "Vor dem Schreiben"', self.focus_js)
-        self.assertIn('title: "Beim Schreiben"', self.focus_js)
-        self.assertIn('title: "Vor der Abgabe"', self.focus_js)
+        self.assertIn('title: "Vor dem Schreiben"', group_config)
+        self.assertIn('title: "Beim Schreiben"', group_config)
+        self.assertIn('title: "Vor der Abgabe"', group_config)
 
     def test_requirements_are_moved_not_recreated(self):
         self.assertIn('body.appendChild(item)', self.focus_js)
