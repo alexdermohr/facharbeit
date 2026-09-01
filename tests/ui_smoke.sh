@@ -30,11 +30,11 @@ run_smoke() {
   local size="$1"
   local dump
   dump="$($CHROME --headless=new --no-sandbox --disable-gpu --window-size="$size" --virtual-time-budget=2500 --dump-dom "http://127.0.0.1:${PORT}/" 2>/tmp/facharbeit-chrome.log)"
-  grep -q "Woran arbeitest du jetzt?" <<<"$dump"
-  grep -q "Schritt 1" <<<"$dump"
-  grep -q "Selbst geprüfte Leitfragen" <<<"$dump"
+  grep -q "Vertiefung auswählen" <<<"$dump"
+  grep -q "Heilpädagogik" <<<"$dump"
+  grep -q "Andere Vertiefung" <<<"$dump"
   grep -q "Daten &amp; Backup" <<<"$dump"
-  grep -q "Belegte Anforderungen" <<<"$dump"
+  grep -q "Alle schulischen Dokumente" <<<"$dump"
   if grep -q "Die Daten konnten nicht geladen werden" <<<"$dump"; then
     echo "App-Daten konnten im Browser-Smoke nicht geladen werden." >&2
     exit 1

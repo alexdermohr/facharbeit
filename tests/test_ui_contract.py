@@ -18,6 +18,15 @@ class UiContractTests(unittest.TestCase):
         self.assertLess(self.html.index('id="workbench-title"'), self.html.index('id="sources"'))
         self.assertLess(self.html.index('id="workflow"'), self.html.index('id="outlineSection"'))
 
+    def test_specialization_gate_precedes_workflow(self):
+        self.assertIn('id="specializationGate"', self.html)
+        self.assertIn('id="specializationContent"', self.html)
+        self.assertLess(self.html.index('id="specializationGate"'), self.html.index('id="workbench"'))
+        self.assertIn('SPECIALIZATION_IDS', self.js)
+        self.assertIn('renderSpecializationGate', self.js)
+        self.assertIn('renderSpecializationGuidance', self.js)
+        self.assertIn('state.specialization', self.js)
+
     def test_mode_switch_uses_button_semantics(self):
         self.assertIn('role="group" aria-label="Prüfungsbereich wählen"', self.html)
         self.assertIn('aria-pressed="true" data-mode="facharbeit"', self.html)

@@ -16,8 +16,8 @@ class RequirementsModelTests(unittest.TestCase):
     def test_schema_version(self):
         self.assertEqual(self.model["schema_version"], 1)
 
-    def test_all_thirteen_sources_exist_and_match_hashes(self):
-        self.assertEqual(len(self.model["sources"]), 13)
+    def test_all_fourteen_sources_exist_and_match_hashes(self):
+        self.assertEqual(len(self.model["sources"]), 14)
         for source in self.model["sources"]:
             path = ROOT / source["file"]
             self.assertTrue(path.is_file(), source["file"])
@@ -28,7 +28,7 @@ class RequirementsModelTests(unittest.TestCase):
     def test_source_roles_are_explicit(self):
         statuses = [source["status"] for source in self.model["sources"]]
         self.assertEqual(statuses.count("exam"), 3)
-        self.assertEqual(statuses.count("binding"), 1)
+        self.assertEqual(statuses.count("binding"), 2)
         self.assertEqual(statuses.count("school_rule"), 1)
         self.assertEqual(statuses.count("instructional"), 8)
 
@@ -68,6 +68,28 @@ class RequirementsModelTests(unittest.TestCase):
         formal = {item["id"] for item in self.model["formal_requirements"]}
         self.assertIn("formal-outline", formal)
 
+    def test_heilpaedagogik_specialization_is_source_bound(self):
+        source = next(item for item in self.model["sources"] if item["id"] == "heilpaedagogik-gliederung")
+        self.assertEqual(source["status"], "binding")
+        self.assertEqual(source["file"], "quellen/Gliederung-FA-AF-HP.docx")
+
+        hp = next(item for item in self.model["specializations"] if item["id"] == "heilpaedagogik")
+        self.assertEqual(hp["refs"], [{"source_id": "heilpaedagogik-gliederung", "page": 1}])
+        outline_titles = [item["title"] for item in hp["required_outline"]["items"]]
+        self.assertIn("Einleitung", outline_titles)
+        self.assertIn("Beschreibung des Menschen", outline_titles)
+        self.assertIn("Antizipieren", outline_titles)
+        guidance_text = " ".join(
+            detail["text"]
+            for section in hp["phase_guidance"]
+            for detail in section["items"]
+        )
+        for term in ("ICF-CY", "Förderplanung", "SMART", "Empowerment", "Teilhabebarrieren"):
+            self.assertIn(term, guidance_text)
+
+        other = next(item for item in self.model["specializations"] if item["id"] == "other")
+        self.assertNotIn("source_id", other)
+
     def test_five_levels_are_now_explicit(self):
         guide = next(item for item in self.model["instructional_guidance"] if item["id"] == "guide-five-levels")
         self.assertEqual(len(guide["items"]), 5)
@@ -106,7 +128,7 @@ class RequirementsModelTests(unittest.TestCase):
         self.assertEqual(deadline["date"], "2026-11-13")
         self.assertEqual(deadline["origin"], "user_provided")
         self.assertIn("nicht", deadline["note"].lower())
-        self.assertIn("pdf", deadline["note"].lower())
+        self.assertIn("schuldokument", deadline["note"].lower())
 
     def test_requirement_ids_are_unique_and_questions_resolve(self):
         ids = []
@@ -154,7 +176,7 @@ class RequirementsModelTests(unittest.TestCase):
         gap_ids = {gap["id"] for gap in self.model["documented_gaps"]}
         self.assertEqual(
             gap_ids,
-            {"gap-page-scope", "gap-outline-examples", "gap-deadline-source"},
+            {"gap-page-scope", "gap-outline-examples", "gap-deadline-source", "gap-specialization-outlines"},
         )
 
 
