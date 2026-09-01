@@ -230,20 +230,20 @@
             "phase": "wahrnehmen-erleben"
           },
           {
-            "number": "",
+            "number": "1.1",
             "title": "Kontext",
             "phase": "wahrnehmen-erleben",
             "level": "sub"
           },
           {
-            "number": "",
+            "number": "1.2",
             "title": "Beschreibung des Menschen",
             "phase": "wahrnehmen-erleben",
             "level": "sub",
             "guidance": "Welche Informationen werden benötigt, um die nachfolgende Ausgangslage zu verstehen?"
           },
           {
-            "number": "",
+            "number": "1.3",
             "title": "Detaillierte Beschreibung der Ausgangssituation",
             "phase": "wahrnehmen-erleben",
             "level": "sub"

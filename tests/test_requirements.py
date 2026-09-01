@@ -76,6 +76,10 @@ class RequirementsModelTests(unittest.TestCase):
         hp = next(item for item in self.model["specializations"] if item["id"] == "heilpaedagogik")
         self.assertEqual(hp["refs"], [{"source_id": "heilpaedagogik-gliederung", "page": 1}])
         outline_titles = [item["title"] for item in hp["required_outline"]["items"]]
+        outline_numbers = {item["title"]: item["number"] for item in hp["required_outline"]["items"]}
+        self.assertEqual(outline_numbers["Kontext"], "1.1")
+        self.assertEqual(outline_numbers["Beschreibung des Menschen"], "1.2")
+        self.assertEqual(outline_numbers["Detaillierte Beschreibung der Ausgangssituation"], "1.3")
         self.assertIn("Einleitung", outline_titles)
         self.assertIn("Beschreibung des Menschen", outline_titles)
         self.assertIn("Antizipieren", outline_titles)

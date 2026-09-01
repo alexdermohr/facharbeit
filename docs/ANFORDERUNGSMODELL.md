@@ -50,9 +50,9 @@ Zusätzlich liegt ein eigenes Blatt mit dem Titel **„Verbindliche Gliederung f
 
 - **Einleitung** – mit der Orientierungsfrage, worum und um wen es geht und inwiefern die Arbeit heilpädagogisch relevant ist.
 - **1 Wahrnehmen und Erleben – Beschreibung der Praxissituation**
-  - Kontext
-  - Beschreibung des Menschen – mit der Orientierungsfrage, welche Informationen zum Verständnis der anschließenden Ausgangslage benötigt werden
-  - Detaillierte Beschreibung der Ausgangssituation
+  - **1.1 Kontext**
+  - **1.2 Beschreibung des Menschen** – mit der Orientierungsfrage, welche Informationen zum Verständnis der anschließenden Ausgangslage benötigt werden
+  - **1.3 Detaillierte Beschreibung der Ausgangssituation**
 - **2 Verstehen und Analysieren**
   - **2.1** Empathisches Verstehen und Analysieren mit dem Fünf Ebenen Modell – ergänzt um die Frage, inwiefern das **ICF-CY** bei der Analyse hilft
   - **2.2** Fachliche Auseinandersetzung und Arbeitshypothese
