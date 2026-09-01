@@ -206,7 +206,7 @@
           "page": 1
         }
       ],
-      "guidance_note": "Das Dokument bezeichnet die Gliederung als verbindlich. Die Fragen in eckigen Klammern werden hier als Orientierungshinweise wiedergegeben, nicht als zusätzliche Bewertungskriterien.",
+      "guidance_note": "Das Dokument bezeichnet die Gliederung als verbindlich. Die Fragen in eckigen Klammern dienen als Orientierungshinweise und sind keine zusätzlichen Bewertungskriterien.",
       "required_outline": {
         "title": "Verbindliche Gliederung – Heilpädagogik",
         "note": "Für Heilpädagogik wird die ausdrücklich als verbindlich bezeichnete vertiefungsspezifische Gliederung verwendet.",
@@ -398,7 +398,7 @@
       "id": "other",
       "label": "Andere Vertiefung",
       "description": "Verwendet die allgemeine verbindliche Gliederung als Basis. Für andere Vertiefungen sind in der zugrunde gelegten Quellenbasis keine vertiefungsspezifischen Vorgaben belegt.",
-      "selected_note": "Die allgemeine verbindliche Gliederung wird als Basis angezeigt. Daraus wird nicht abgeleitet, dass damit alle Vorgaben der gewählten anderen Vertiefung abgedeckt sind.",
+      "selected_note": "Die allgemeine verbindliche Gliederung bildet die Basis. Daraus folgt nicht, dass damit alle Vorgaben der gewählten anderen Vertiefung abgedeckt sind.",
       "refs": [
         {
           "source_id": "facharbeit-gliederung",
@@ -2691,7 +2691,7 @@
     {
       "id": "tension-intro-outline",
       "title": "Einleitung: Arbeitsschritt versus Endgliederung",
-      "text": "Der Bewertungsbogen behandelt die Einleitung als eigenen Abschnitt. Die allgemeine verbindliche Endgliederung ordnet „Einleitung und Kontext“ als 1.1 unter „Wahrnehmen und Erleben“ ein; das heilpädagogische Gliederungsblatt führt die „Einleitung“ dagegen vor Abschnitt 1 und nennt „Kontext“ innerhalb von Abschnitt 1. Die Website behält die Einleitung als eigenen Arbeitsschritt und zeigt für die Endfassung die zur gewählten Vertiefung passende Struktur.",
+      "text": "Der Bewertungsbogen behandelt die Einleitung als eigenen Abschnitt. Die allgemeine verbindliche Endgliederung ordnet „Einleitung und Kontext“ als 1.1 unter „Wahrnehmen und Erleben“ ein; das heilpädagogische Gliederungsblatt führt die „Einleitung“ dagegen vor Abschnitt 1 und nennt „Kontext“ innerhalb von Abschnitt 1. Für den Arbeitsprozess bleibt die Einleitung ein eigener Schritt; für die Endfassung gilt die zur gewählten Vertiefung passende Struktur.",
       "refs": [
         {
           "source_id": "facharbeit-bewertung",
