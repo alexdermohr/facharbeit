@@ -1,6 +1,7 @@
 const STORAGE_KEY = "facharbeit-pt3-guide-v1";
 const DATA_URL = "data/requirements.json";
 const STATE_VERSION = 2;
+const BACKUP_SCHEMA = "facharbeit-workspace-backup";
 
 const phaseTitles = {
   start: "Start & Formalia",
@@ -47,8 +48,60 @@ function createEmptyState() {
   };
 }
 
+function isObjectRecord(value) {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
 function safeObject(value) {
-  return value && typeof value === "object" && !Array.isArray(value) ? value : {};
+  return isObjectRecord(value) ? value : {};
+}
+
+function hasOwn(value, key) {
+  return Object.prototype.hasOwnProperty.call(value, key);
+}
+
+function isImportableState(value, { requireVersion = false, requireActivePhase = false } = {}) {
+  if (!isObjectRecord(value)) return false;
+  if (!modePhases[value.mode]) return false;
+  if (typeof value.topic !== "string") return false;
+  if (!isObjectRecord(value.answers) || !isObjectRecord(value.checks)) return false;
+  if (requireVersion && value.version !== STATE_VERSION) return false;
+  if (requireActivePhase && !modePhases[value.mode].includes(value.activePhase)) return false;
+  if (value.answerStatus !== undefined && !isObjectRecord(value.answerStatus)) return false;
+  return true;
+}
+
+function isLegacyBackupPayload(payload) {
+  return (
+    isObjectRecord(payload) &&
+    !hasOwn(payload, "schema") &&
+    !hasOwn(payload, "state") &&
+    typeof payload.exported_at === "string" &&
+    typeof payload.source_model === "string" &&
+    isImportableState(payload)
+  );
+}
+
+function extractBackupState(payload) {
+  if (!isObjectRecord(payload)) {
+    throw new Error("Kein gültiges Backup-Objekt gefunden.");
+  }
+
+  if (hasOwn(payload, "schema")) {
+    if (payload.schema !== BACKUP_SCHEMA) {
+      throw new Error("Unbekanntes Backup-Schema.");
+    }
+    if (payload.version !== STATE_VERSION) {
+      throw new Error("Nicht unterstützte Backup-Version.");
+    }
+    if (!isImportableState(payload.state, { requireVersion: true, requireActivePhase: true })) {
+      throw new Error("Das Backup enthält keinen gültigen Arbeitsstand.");
+    }
+    return payload.state;
+  }
+
+  if (isLegacyBackupPayload(payload)) return payload;
+  throw new Error("Kein unterstützter Facharbeits-Arbeitsstand gefunden.");
 }
 
 function normalizeState(candidate = {}) {
@@ -605,7 +658,7 @@ function downloadText(filename, content, type) {
 
 function exportBackup() {
   const payload = {
-    schema: "facharbeit-workspace-backup",
+    schema: BACKUP_SCHEMA,
     version: STATE_VERSION,
     exported_at: new Date().toISOString(),
     source_model: model.title,
@@ -657,8 +710,7 @@ function exportMarkdown() {
 async function importBackup(file) {
   try {
     const payload = JSON.parse(await file.text());
-    const candidate = payload?.state || payload;
-    if (!candidate || typeof candidate !== "object") throw new Error("Kein gültiger Arbeitsstand gefunden.");
+    const candidate = extractBackupState(payload);
     const imported = normalizeState(candidate);
     const confirmed = window.confirm("Der Import ersetzt den aktuell lokal gespeicherten Arbeitsstand. Fortfahren?");
     if (!confirmed) return;
@@ -743,14 +795,20 @@ async function init() {
   renderAll();
 }
 
-init().catch((error) => {
-  console.error(error);
-  document.querySelector("#stageContent").innerHTML = `
-    <div class="notice">
-      <div>
-        <h2>Die Daten konnten nicht geladen werden.</h2>
-        <p>Starte die Website über einen lokalen Webserver oder öffne die veröffentlichte GitHub-Pages-Version.</p>
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { BACKUP_SCHEMA, STATE_VERSION, extractBackupState, isLegacyBackupPayload, normalizeState };
+}
+
+if (typeof document !== "undefined") {
+  init().catch((error) => {
+    console.error(error);
+    document.querySelector("#stageContent").innerHTML = `
+      <div class="notice">
+        <div>
+          <h2>Die Daten konnten nicht geladen werden.</h2>
+          <p>Starte die Website über einen lokalen Webserver oder öffne die veröffentlichte GitHub-Pages-Version.</p>
+        </div>
       </div>
-    </div>
-  `;
-});
+    `;
+  });
+}

@@ -38,6 +38,9 @@ class UiContractTests(unittest.TestCase):
             self.assertIn(f'id="{element_id}"', self.html)
         self.assertIn("importBackup", self.js)
         self.assertIn("facharbeit-workspace-backup", self.js)
+        self.assertIn("extractBackupState", self.js)
+        self.assertIn("isLegacyBackupPayload", self.js)
+        self.assertNotIn("const candidate = payload?.state || payload;", self.js)
 
     def test_step_navigation_has_previous_next_and_weights(self):
         self.assertIn('id="previousStepButton"', self.html)
