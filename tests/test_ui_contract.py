@@ -62,6 +62,7 @@ class UiContractTests(unittest.TestCase):
         self.assertIn('aria-live="polite"', self.html)
         self.assertIn('id="stage-title" tabindex="-1"', self.js)
         self.assertIn(":focus-visible", self.css)
+        self.assertIn(".stage-head h3:focus { outline: none; }", self.css)
         self.assertNotIn('class="stage-content" aria-live=', self.html)
 
     def test_mobile_step_navigation_does_not_require_horizontal_scroll(self):
