@@ -1,101 +1,192 @@
-# Nutzertest zu Issue #9
+# Realer Nutzertest zu Issue #11 (Folgetest zu Issue #9)
 
-Dieser Testplan dient der **realen Erprobung mit mehreren Schülern**. Er dokumentiert noch keine Testergebnisse. Automatisierte Browser-Smokes prüfen zusätzlich die technische Funktion auf Desktop und Mobil, ersetzen aber keine Beobachtung echter Nutzer.
+Dieses Protokoll dient der **realen Erprobung mit mehreren Schülern**. Es enthält **keine menschlichen Testergebnisse**. Automatisierte Browser-Smokes und technische DOM-, Viewport- oder Accessibility-Prüfungen können Fehler finden, sind aber **kein menschlicher Nutzertest** und ersetzen keine Beobachtung echter Nutzer.
+
+**Statusregel:** Issue #11 bleibt offen, bis der Nutzertest tatsächlich mit Menschen durchgeführt, dokumentiert und ausgewertet wurde. Technische Prüfungen allein sind kein Abschlusskriterium.
 
 ## Ziel
 
-Prüfen, ob die Website ohne zusätzliche Erklärung erkennen lässt,
-
-1. welche Vertiefung gewählt werden muss,
-2. welcher Arbeitsschritt aktuell relevant ist,
-3. welche Gliederungspunkte dazugehören,
-4. wie Leitfragen mit belegten Anforderungen zusammenhängen,
-5. wo Originalquellen und Backup-Funktionen zu finden sind.
+Geprüft wird, ob ein Schüler die Website ohne zusätzliche Einweisung als Arbeitswerkzeug für die Facharbeit nutzen kann. Im Mittelpunkt stehen Arbeitsführung, Navigation, Quellenzugriff, Backup und das Risiko fachlicher Fehlinterpretationen. Subjektive Aussagen wie „gefällt mir“ können ergänzend notiert werden, ersetzen aber keine beobachtbaren Aufgaben.
 
 ## Testpersonen und Geräte
 
-Mindestens drei Schüler aus dem relevanten Ausbildungskontext. Nach Möglichkeit:
+Der Test gilt nur dann als durchgeführt, wenn mindestens folgende Abdeckung erreicht ist:
 
-- mindestens ein Desktop-/Notebook-Test,
-- mindestens zwei Smartphone-Tests mit unterschiedlichen Displaygrößen,
-- mindestens eine Person, die die Website vorher nicht benutzt hat.
+- mindestens **3 Schüler** aus dem relevanten Ausbildungskontext,
+- mindestens **1 Person ohne vorherige Nutzung** der Website,
+- mindestens **1 Desktop- oder Notebook-Test**,
+- mindestens **2 Smartphone-Tests**,
+- die beiden Smartphones haben nach Möglichkeit **unterschiedliche Displaygrößen**.
+
+Vor jedem Test werden anonymisiert notiert: Tester-Kürzel, vorherige Nutzung der Website (ja/nein), Gerät, Betriebssystem, Browser und ungefährer Viewport bzw. Displaygröße.
+
+## Regeln für den Beobachter
+
+1. Die Testperson erhält nur die URL und die jeweilige Aufgabe. Nicht erklären, wo geklickt werden soll.
+2. Erst helfen, wenn die Testperson ausdrücklich Hilfe verlangt oder die Aufgabe andernfalls abgebrochen würde. Jede Hilfe wird als **„mit Hilfe“** dokumentiert.
+3. Keine suggestiven Fragen stellen und keine richtige Bedienung vormachen.
+4. Zögern, Suchscrollen, Zurückspringen, Fehlklicks, Umwege und übersehene Elemente beobachtbar notieren.
+5. Rückfragen und Fehlinterpretationen möglichst wörtlich festhalten; Interpretation und Beobachtung getrennt notieren.
+6. Technische Fehler reproduzieren, wenn dies ohne Veränderung der Beobachtung möglich ist. Ein reproduzierbarer Fehler wird als technischer Befund gekennzeichnet.
+7. Keine Notenprognose, keine neuen vermeintlich offiziellen Bewertungskriterien und keine fachlichen Vorgaben aus Nutzermeinungen ableiten.
 
 ## Aufgaben
 
-Die Testperson erhält nur die URL und folgende Aufgaben. Es wird nicht erklärt, wo sie klicken soll.
+Die Aufgaben werden in dieser Reihenfolge gestellt. Eine Aufgabe ist bewusst klein gehalten, damit erkennbar bleibt, **wo** ein Problem entsteht.
 
-### Aufgabe 1 – Vertiefung und Einstieg
+### Aufgabe 1 – Heilpädagogik auswählen
 
-> Du schreibst deine Facharbeit im Arbeitsfeld Heilpädagogik. Stelle die Seite darauf ein und finde heraus, woran du als Nächstes arbeiten kannst.
+> Stelle die Website auf die Vertiefung Heilpädagogik ein.
 
-Beobachten:
+Beobachten: Wird die Auswahl ohne Erklärung gefunden und eindeutig verstanden?
 
-- Wird „Heilpädagogik“ sicher gewählt?
-- Wird „Hier weitermachen“ verstanden?
-- Wird der aktuelle Schritt ohne Suchscrollen gefunden?
+### Aufgabe 2 – Nächsten Arbeitsschritt finden
 
-### Aufgabe 2 – Gliederung und Analyse
+> Finde heraus, woran du als Nächstes sinnvoll arbeiten kannst.
 
-> Öffne „Verstehen & Analysieren“. Finde heraus, an welchen Gliederungspunkten du in diesem Schritt arbeitest.
+Beobachten: Wird „Hier weitermachen“ bzw. die aktuelle Arbeitsführung gefunden? Ist Suchscrollen nötig?
 
-Beobachten:
+### Aufgabe 3 – Verstehen & Analysieren öffnen
 
-- Werden die eingeblendeten Gliederungspunkte gefunden?
-- Wird der Hinweis „Hier geht es um / Noch nicht“ verstanden?
-- Wird der 40-%-Schwerpunkt wahrgenommen, ohne als Notenprognose missverstanden zu werden?
+> Öffne den Arbeitsschritt „Verstehen & Analysieren“.
 
-### Aufgabe 3 – Leitfrage und Anforderung
+Beobachten: Wird der richtige Abschnitt direkt erkannt oder werden andere Bereiche ausprobiert?
 
-> Wähle eine Leitfrage aus und erkläre, woran du erkennst, welche schulischen Anforderungen sie abdeckt.
+### Aufgabe 4 – Gliederungsbezug erkennen
 
-Beobachten:
+> Finde heraus, an welchem Gliederungspunkt du in diesem Arbeitsschritt arbeitest.
 
-- Werden die Anforderungs-Chips gefunden?
-- Wird „Für mich geklärt“ als Selbstcheck und nicht als schulische Prüfung verstanden?
-- Ist die Quelle erreichbar?
+Beobachten: Werden die eingeblendeten Gliederungspunkte sowie „Hier geht es um / Noch nicht“ verstanden? Wird ein Bewertungsanteil fälschlich als Notenprognose verstanden?
 
-### Aufgabe 4 – Formalia
+### Aufgabe 5 – Eine Leitfrage bearbeiten
 
-> Gehe zu „Start & Formalia“ und finde heraus, was du vor dem Schreiben, beim Schreiben und vor der Abgabe beachten musst.
+> Wähle eine Leitfrage aus und bearbeite sie so, wie du es beim Schreiben deiner Facharbeit tun würdest.
 
-Beobachten:
+Beobachten: Ist klar, wo die eigene Antwort hingehört und was „Für mich geklärt“ bedeutet?
 
-- Werden die drei Zeitgruppen ohne Erklärung verstanden?
-- Wirkt eine Vorgabe an der falschen Stelle einsortiert?
-- Bleiben Quellenlinks sichtbar und verständlich?
+### Aufgabe 6 – Belegte Anforderung erkennen
 
-### Aufgabe 5 – Nachschlagen und Backup
+> Zeige, welche belegte schulische Anforderung diese Leitfrage abdeckt.
 
-> Öffne die verbindliche Gliederung, danach die Schuldokumente. Finde anschließend heraus, wie du deinen Arbeitsstand sichern kannst.
+Beobachten: Werden die Anforderungs-Hinweise gefunden? Werden Selbstcheck und schulische Bewertung auseinandergehalten?
 
-Beobachten:
+### Aufgabe 7 – Zugehörige Quelle öffnen
 
-- Wird der kompakte Referenzbereich verstanden?
-- Öffnet ein Direktlink den passenden eingeklappten Bereich?
-- Wird „Daten & Backup“ gefunden, obwohl der Referenzbereich eingeklappt ist?
+> Öffne die Quelle, auf die sich diese Anforderung stützt.
 
-## Protokoll
+Beobachten: Ist der Quellenzugriff auffindbar, verständlich und technisch funktionsfähig?
 
-Für jede Aufgabe festhalten:
+### Aufgabe 8 – Formale Vorgaben finden
+
+> Finde unter „Start & Formalia“ je eine Vorgabe für „Vor dem Schreiben“, „Beim Schreiben“ und „Vor der Abgabe“.
+
+Beobachten: Werden alle drei Zeitgruppen verstanden? Bleiben Quellenlinks sichtbar? Wirkt eine Vorgabe falsch einsortiert?
+
+### Aufgabe 9 – Verbindliche Gliederung nachschlagen
+
+> Öffne die verbindliche Gliederung für Heilpädagogik.
+
+Beobachten: Wird der gezielt aufklappbare Referenzbereich gefunden und die Heilpädagogik-spezifische Gliederung als solche erkannt?
+
+### Aufgabe 10 – Schuldokumente finden
+
+> Finde die hinterlegten Schuldokumente.
+
+Beobachten: Werden die Originalquellen gefunden, ohne den primären Arbeitsfluss dauerhaft zu verlieren?
+
+### Aufgabe 11 – Zum Arbeitsfluss zurückkehren
+
+> Kehre von den Schuldokumenten oder dem Referenzbereich zu deinem aktuellen Arbeitsschritt zurück.
+
+Beobachten: Ist der Rückweg klar oder entstehen Suchwege, Zurückspringen bzw. Orientierungsverlust?
+
+### Aufgabe 12 – Backup oder Export finden
+
+> Finde heraus, wie du deinen Arbeitsstand sichern oder exportieren kannst.
+
+Beobachten: Wird „Daten & Backup“ unabhängig vom eingeklappten Referenzbereich gefunden? Ist die Funktion verständlich bezeichnet?
+
+## Protokoll pro Aufgabe
+
+Für **jede** Aufgabe wird mindestens Folgendes festgehalten:
 
 | Feld | Eintrag |
 | --- | --- |
-| Gerät / Display | |
-| Aufgabe abgeschlossen | ja / mit Hilfe / nein |
+| Tester-Kürzel | |
+| Vorherige Nutzung | ja / nein |
+| Gerät / Betriebssystem | |
+| Browser | |
+| Viewport / Displaygröße | |
+| Aufgabe | 1–12 |
+| Ergebnis | ohne Hilfe / mit Hilfe / nicht geschafft |
 | Zeit bis zum Ziel | |
+| Hilfe nötig | nein / ja; wenn ja: welche? |
 | Fehlklicks / Umwege | |
-| Stelle mit Unsicherheit | |
-| Wörtliche Rückfrage der Testperson | |
+| Zögern / Suchscrollen / Zurückspringen | |
+| Übersehenes Element | |
+| Wörtliche Rückfrage | |
 | Beobachtete Fehlinterpretation | |
+| Technischer Fehler reproduzierbar | nein / ja; Schritte notieren |
+| Kategorie | Verständnis / Navigation / Mobil / Desktop / Fachlichkeit / Quelle / Backup / Accessibility / Technik |
 
-## Auswertung
+## Auswertung: Beobachtung und Deutung trennen
 
-Ein Problem wird als prioritätswürdig behandelt, wenn mindestens eines gilt:
+### Belegt
 
-- zwei oder mehr Testpersonen scheitern an derselben Aufgabe,
-- eine Testperson interpretiert eine Arbeitshilfe als offizielles Bewertungskriterium,
+Nur direkt beobachtetes Verhalten, eine wörtliche Aussage oder ein reproduzierbarer technischer Fehler. Beispiele: „Tester 2 klickt dreimal auf den Referenzbereich, bevor er die Schuldokumente findet“ oder „der Direktlink öffnet den Bereich im reproduzierbaren Browserlauf nicht“.
+
+### Plausibel
+
+Eine begründete Interpretation der Beobachtung, zum Beispiel: „Die Beschriftung könnte mit dem Arbeitsbereich verwechselt worden sein.“ Plausible Deutungen werden nicht als Tatsache formuliert.
+
+### Spekulativ
+
+Eine Hypothese ohne ausreichende Beobachtung. Spekulative Annahmen werden **nicht** als Grundlage für einen UI-Umbau behandelt, solange keine weitere Evidenz hinzukommt.
+
+## Problemklassifikation
+
+Jeder zusammengefasste Befund erhält mindestens diese Angaben:
+
+| Kriterium | Einordnung |
+| --- | --- |
+| Evidenzstatus | belegt / plausibel / spekulativ |
+| Betroffene Aufgabe(n) | 1–12 |
+| Kategorie | Verständnis / Navigation / Mobil / Desktop / Fachlichkeit / Quelle / Backup / Accessibility / Technik |
+| Häufigkeit | Anzahl betroffener Tester / Anzahl getesteter Personen |
+| Schwere | niedrig / mittel / hoch |
+| Einfluss auf das Erreichen der Aufgabe | gering / merklich / blockierend |
+| Risiko fachlicher Fehlinterpretation | keines / gering / mittel / hoch |
+| Behebungsaufwand | klein / mittel / groß |
+| Reproduzierbarkeit | ja / nein / nicht anwendbar |
+| Empfohlene Aktion | ändern / weiter beobachten / technisches Issue / keine Änderung |
+
+Bei Zielkonflikten hat das Risiko einer **fachlichen Fehlinterpretation** Vorrang vor kosmetischen Präferenzen. Danach werden blockierende Aufgabenprobleme, wiederkehrende Befunde und mobile Zugänglichkeit priorisiert. Einzelmeinungen ohne beobachtbare Auswirkung führen nicht automatisch zu UI-Änderungen.
+
+Ein Problem ist insbesondere prioritätswürdig, wenn mindestens eines gilt:
+
+- zwei oder mehr Testpersonen scheitern oder stocken am selben Punkt,
+- eine Testperson interpretiert eine Arbeitshilfe als offizielles Bewertungskriterium oder als Notenprognose,
 - eine verbindliche Vorgabe oder Originalquelle wird nicht gefunden,
-- der aktuelle Arbeitsschritt erfordert auf einem Smartphone Suchscrollen,
-- eine zentrale Handlung benötigt eine Erklärung durch den Beobachter.
+- eine zentrale Aufgabe ist auf einem Smartphone wesentlich schlechter lösbar,
+- eine zentrale Handlung benötigt eine Erklärung durch den Beobachter,
+- ein Accessibility- oder Bedienproblem verhindert die Aufgabe,
+- ein technischer Fehler ist reproduzierbar.
 
-Ergebnisse werden als eigenes Issue oder als Kommentar zu einem bestehenden UX-Issue dokumentiert. Fachliche Vorgaben werden nur geändert, wenn dafür eine einschlägige schulische Quelle vorliegt.
+## Technische Prüfungen – was sie leisten und was nicht
+
+Die vorhandenen automatisierten Browser-Smokes prüfen unter anderem Desktop- und Mobil-Viewport, Vertiefungsauswahl, Arbeitsführung, Formalia-Gruppen, Referenzbereiche, Hash-/Direktlinks und Backup-Hinweise. Automatisierte Tests können zusätzlich DOM-Struktur, Accessibility-Merkmale oder Reload-/localStorage-Verhalten prüfen.
+
+**Grenze:** Ein automatisierter Browser-Smoke prüft, ob erwartete Elemente und Zustände technisch vorhanden sind. Er kann nicht beobachten, ob ein Schüler zögert, eine Formulierung missversteht, ein Element übersieht oder einen falschen fachlichen Schluss zieht. Deshalb gilt: **Browser-Smoke ≠ menschlicher Nutzertest.**
+
+## Abschluss von Issue #11
+
+Issue #11 darf erst geschlossen werden, wenn:
+
+1. der reale Test mit mindestens drei Schülern durchgeführt wurde, darunter mindestens eine Person ohne vorherige Nutzung der Website,
+2. mindestens ein Desktop-/Notebook-Test und mindestens zwei Smartphone-Tests durchgeführt wurden; unterschiedliche Smartphone-Displaygrößen werden nach Möglichkeit verwendet und eine Abweichung davon dokumentiert,
+3. die Beobachtungen pro Aufgabe dokumentiert sind,
+4. Befunde in **belegt / plausibel / spekulativ** getrennt wurden,
+5. relevante Probleme nach Häufigkeit, Schwere, Aufgabeneinfluss, fachlichem Fehlinterpretationsrisiko und Behebungsaufwand bewertet wurden,
+6. umsetzbare wiederkehrende oder kritische Probleme als konkrete Änderungen bzw. Folgetasks erfasst wurden.
+
+Bis dahin bleibt Issue #11 offen. Technische Tests dürfen im Issue als Vorbereitung dokumentiert werden, aber **nicht** als menschliche Testergebnisse.
