@@ -348,7 +348,8 @@ textarea:focus { border-color: var(--accent); }
   background: linear-gradient(135deg, #193c2d, #275940);
 }
 .stage-head h3 { margin: .2rem 0 .35rem; font-size: clamp(1.4rem, 3vw, 2rem); }
-.stage-head h3:focus { outline: 2px solid rgba(255,255,255,.78); outline-offset: 4px; }
+.stage-head h3:focus { outline: none; }
+.stage-head h3:focus-visible { outline: 2px solid rgba(255,255,255,.78); outline-offset: 4px; }
 .stage-head p { margin: 0; color: rgba(255,255,255,.84); }
 .stage-label-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .stage-weight { padding: .25rem .55rem; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; font-size: .78rem; font-weight: 750; }
