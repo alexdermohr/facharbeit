@@ -138,7 +138,7 @@ test("wrong schemas and unsupported versions are rejected", () => {
 
 test("current schema requires the expected state fields", () => {
   assert.throws(
-    () => extractBackupState({ schema: BACKUP_SCHEMA, version: STATE_VERSION, state: { mode: "facharbeit" } }),
+    () => extractBackupState({ schema: BACKUP_SCHEMA, version: STATE_VERSION, state: { version: STATE_VERSION, mode: "facharbeit" } }),
     /keinen gültigen Arbeitsstand/,
   );
 });
