@@ -2032,15 +2032,10 @@
     {
       "id": "guide-ai-policy",
       "phase": "start",
-      "title": "KI-Nutzung: Richtlinie unter Vorbehalt",
-      "kind_label": "Schulische Richtlinie · vorläufig",
+      "title": "KI-Nutzung: transparent und eigenständig",
+      "kind_label": "Schulische Richtlinie",
       "importance": "critical",
       "items": [
-        {
-          "label": "Vorbehalt",
-          "text": "Die schulische KI-Richtlinie ist noch nicht abschließend festgelegt. Bei Unsicherheit Rücksprache mit der Lehrkraft halten.",
-          "origin": "user_provided"
-        },
         {
           "label": "Rolle der KI",
           "text": "KI darf als Hilfsmittel genutzt werden, ist aber keine Quelle. Fachliche Aussagen müssen durch anerkannte Fachtexte belegt werden.",
@@ -2101,7 +2096,13 @@
             }
           ]
         }
-      ]
+      ],
+      "context_note": {
+        "label": "Vorbehalt",
+        "text": "Die schulische KI-Richtlinie ist noch nicht abschließend festgelegt. Bei Unsicherheit Rücksprache mit der Lehrkraft halten.",
+        "origin": "user_provided",
+        "date": "2026-09-22"
+      }
     },
     {
       "id": "guide-prompting",
@@ -2432,11 +2433,6 @@
       "kind_label": "Unterrichtshilfe",
       "importance": "critical",
       "items": [
-        {
-          "label": "Gültige Mindestquellen",
-          "text": "Für diese Facharbeit gelten Bücher und Aufsätze aus Fachzeitschriften als valide Quellen. Andere Quellen können der Recherche oder Einordnung dienen, zählen aber nicht als valide Mindestquelle.",
-          "origin": "user_provided"
-        },
         {
           "text": "Prüfe bei Internetseiten, ob Autor und Kontakt benannt sind und ob fachliche Referenzen oder Expertise erkennbar sind.",
           "refs": [
