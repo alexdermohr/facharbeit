@@ -260,7 +260,7 @@ function questionStatus(questionId) {
 }
 
 function questionStatusLabel(status) {
-  if (status === "checked") return "Selbst geprüft";
+  if (status === "checked") return "Geklärt";
   if (status === "draft") return "Entwurf";
   return "Offen";
 }
@@ -511,7 +511,7 @@ function renderQuestions(phase) {
         .map((question, index) => {
           const answer = state.answers[question.id] || "";
           const status = questionStatus(question.id);
-          const actionLabel = status === "checked" ? "Prüfung zurücknehmen" : "Als selbst geprüft markieren";
+          const actionLabel = status === "checked" ? "Als offen markieren" : "Als geklärt markieren";
           return `
             <article class="question-card status-${status}" data-question-card="${escapeHtml(question.id)}">
               <div class="question-topline">
@@ -524,7 +524,7 @@ function renderQuestions(phase) {
               <textarea data-question="${escapeHtml(question.id)}" aria-label="Antwort auf: ${escapeHtml(question.prompt)}" placeholder="Gedanken, Stichpunkte oder Formulierungsentwurf …">${escapeHtml(answer)}</textarea>
               <div class="question-actions">
                 <button class="button compact question-check" type="button" data-question-status="${escapeHtml(question.id)}" ${status === "open" ? "disabled" : ""}>${actionLabel}</button>
-                <span class="question-status-hint">${status === "checked" ? "Bei einer Änderung wird der Status wieder zum Entwurf." : "Markiere erst nach eigener inhaltlicher Prüfung."}</span>
+                <span class="question-status-hint">${status === "checked" ? "Bei einer Änderung wird die Leitfrage wieder zum Entwurf." : "Markiere erst, wenn du deine Antwort selbst an den Anforderungen geprüft hast."}</span>
               </div>
             </article>
           `;
@@ -620,13 +620,13 @@ function renderStage() {
     ${renderSpecializationGuidance(phase)}
     <div class="two-column">
       <section class="panel" aria-labelledby="requirements-heading">
-        <h4 id="requirements-heading">Belegte Anforderungen</h4>
+        <h4 id="requirements-heading">Anforderungen</h4>
         ${renderRequirements(phase)}
         ${good}
       </section>
       <section class="panel" aria-labelledby="questions-heading">
-        <h4 id="questions-heading">Abgeleitete Leitfragen</h4>
-        <p class="panel-intro">Text eingeben erzeugt einen Entwurf. Erst deine bewusste Markierung zählt als selbst geprüft.</p>
+        <h4 id="questions-heading">Leitfragen für deinen Entwurf</h4>
+        <p class="panel-intro">Halte deine Gedanken fest und markiere eine Leitfrage als geklärt, wenn du sie selbst geprüft hast.</p>
         ${renderQuestions(phase)}
       </section>
     </div>
@@ -658,8 +658,8 @@ function renderStage() {
       card.querySelector(".question-status").textContent = questionStatusLabel(status);
       const button = card.querySelector("[data-question-status]");
       button.disabled = status === "open";
-      button.textContent = "Als selbst geprüft markieren";
-      card.querySelector(".question-status-hint").textContent = "Markiere erst nach eigener inhaltlicher Prüfung.";
+      button.textContent = "Als geklärt markieren";
+      card.querySelector(".question-status-hint").textContent = "Markiere erst, wenn du deine Antwort selbst an den Anforderungen geprüft hast.";
       updateProgress();
     });
   });
@@ -673,7 +673,7 @@ function renderStage() {
       saveState();
       renderStage();
       updateProgress();
-      announce(state.answerStatus[id] === "checked" ? "Leitfrage als selbst geprüft markiert." : "Leitfrage wieder als Entwurf markiert.");
+      announce(state.answerStatus[id] === "checked" ? "Leitfrage als geklärt markiert." : "Leitfrage wieder als Entwurf markiert.");
     });
   });
 }
