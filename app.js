@@ -525,6 +525,7 @@ function renderGuidance(phase) {
               <article class="guidance-card ${card.importance === "critical" ? "critical" : ""}">
                 <span class="source-badge ${card.importance === "critical" ? "rule" : "help"}">${escapeHtml(card.kind_label)}</span>
                 <h5>${escapeHtml(card.title)}</h5>
+                ${card.context_note ? `<div class="guidance-context-note"><strong>${escapeHtml(card.context_note.label || "Hinweis")}:</strong> ${escapeHtml(card.context_note.text)}</div>` : ""}
                 <ul>
                   ${card.items
                     .map(
