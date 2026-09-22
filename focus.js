@@ -63,7 +63,7 @@ function focusFormalGroupElement(group, itemsById) {
         <h5 id="formal-group-${group.id}">${escapeHtml(group.title)}</h5>
         <p>${escapeHtml(group.note)}</p>
       </div>
-      <span class="formal-group-progress">${checked} / ${groupItems.length} abgeglichen</span>
+      <span class="formal-group-progress">${checked} / ${groupItems.length} geprüft</span>
     </div>
     <div class="formal-group-items"></div>
   `;
@@ -102,10 +102,10 @@ function focusGroupFormalRequirements() {
       <div class="formal-timeline-head">
         <div>
           <span class="formal-timeline-step">Formalia</span>
-          <h5 id="formal-group-additional">Weitere Vorgaben</h5>
-          <p>Zusätzliche belegte Vorgaben, die keiner Zeitgruppe eindeutig zugeordnet sind.</p>
+          <h5 id="formal-group-additional">Weitere Anforderungen</h5>
+          <p>Weitere Anforderungen, die keiner Zeitgruppe eindeutig zugeordnet sind.</p>
         </div>
-        <span class="formal-group-progress">${leftovers.filter((item) => item.querySelector("[data-requirement]")?.checked).length} / ${leftovers.length} abgeglichen</span>
+        <span class="formal-group-progress">${leftovers.filter((item) => item.querySelector("[data-requirement]")?.checked).length} / ${leftovers.length} geprüft</span>
       </div>
       <div class="formal-group-items"></div>
     `;
@@ -162,7 +162,7 @@ function focusReferenceShortcuts() {
   if (heading) heading.textContent = "Nachschlagen, wenn du es brauchst";
   const paragraph = intro.querySelector("p:not(.eyebrow)");
   if (paragraph) {
-    paragraph.textContent = "Der Arbeitsweg bleibt oben kurz. Gliederung, Quellenhierarchie, offene Punkte und Originaldokumente kannst du hier gezielt öffnen.";
+    paragraph.textContent = "Gliederung, offene Punkte und Originalunterlagen kannst du hier gezielt öffnen, ohne den Arbeitsweg zu unterbrechen.";
   }
 
   let shortcuts = intro.querySelector("#referenceShortcuts");
@@ -173,10 +173,10 @@ function focusReferenceShortcuts() {
     shortcuts.setAttribute("aria-label", "Referenzbereich direkt öffnen");
     shortcuts.innerHTML = `
       <a href="#outlineSection" data-reference-target="outlineSection">Gliederung</a>
-      <a href="#referenceHierarchy" data-reference-target="referenceHierarchy">Quellenhierarchie</a>
+      <a href="#referenceHierarchy" data-reference-target="referenceHierarchy">Verbindlichkeit</a>
       <a href="#gaps" data-reference-target="gaps">Offene Punkte</a>
-      <a href="#tensions" data-reference-target="tensions">Einordnung</a>
-      <a href="#sources" data-reference-target="sources">Schuldokumente</a>
+      <a href="#tensions" data-reference-target="tensions">Unterschiedliche Vorgaben</a>
+      <a href="#sources" data-reference-target="sources">Originalunterlagen</a>
     `;
     intro.querySelector("div")?.appendChild(shortcuts);
 
@@ -189,7 +189,7 @@ function focusReferenceShortcuts() {
   if (outlineLink) outlineLink.hidden = state.mode !== "facharbeit";
 
   const directSourceLink = intro.querySelector(":scope > .text-link");
-  if (directSourceLink) directSourceLink.textContent = "Schuldokumente öffnen";
+  if (directSourceLink) directSourceLink.textContent = "Originalunterlagen öffnen";
 }
 
 function focusOpenReferenceDetails(id) {

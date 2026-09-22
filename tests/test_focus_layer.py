@@ -32,7 +32,7 @@ class FocusLayerTests(unittest.TestCase):
     def test_requirements_are_moved_not_recreated(self):
         self.assertIn('body.appendChild(item)', self.focus_js)
         self.assertIn('leftovers.forEach((item) => body.appendChild(item))', self.focus_js)
-        self.assertIn('Weitere Vorgaben', self.focus_js)
+        self.assertIn('Weitere Anforderungen', self.focus_js)
 
     def test_reference_sections_are_folded_but_hash_addressable(self):
         for target in ["outlineSection", "referenceHierarchy", "gaps", "tensions", "sources"]:
@@ -43,7 +43,7 @@ class FocusLayerTests(unittest.TestCase):
 
     def test_reference_shortcuts_and_mobile_layout_exist(self):
         self.assertIn('id = "referenceShortcuts"', self.focus_js)
-        self.assertIn('Schuldokumente', self.focus_js)
+        self.assertIn('Originalunterlagen', self.focus_js)
         self.assertIn('.reference-shortcuts', self.focus_css)
         self.assertIn('@media (max-width: 620px)', self.focus_css)
 

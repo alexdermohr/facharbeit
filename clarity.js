@@ -46,7 +46,7 @@ const clarityPhaseBoundaries = {
 
 const clarityBaseQuestionStatusLabel = questionStatusLabel;
 questionStatusLabel = function clarityQuestionStatusLabel(status) {
-  if (status === "checked") return "Für mich geklärt";
+  if (status === "checked") return "Geklärt";
   return clarityBaseQuestionStatusLabel(status);
 };
 
@@ -58,12 +58,7 @@ phaseWeightLabel = function clarityPhaseWeightLabel(phase) {
 
 const clarityBaseAnnounce = announce;
 announce = function clarityAnnounce(message) {
-  const clearer = String(message)
-    .replace("Anforderung als geprüft markiert.", "Anforderung als von dir abgeglichen markiert.")
-    .replace("Prüfmarkierung entfernt.", "Abgleich-Markierung entfernt.")
-    .replace("Leitfrage als selbst geprüft markiert.", "Leitfrage als für dich geklärt markiert.")
-    .replace("Leitfrage wieder als Entwurf markiert.", "Leitfrage wieder als Entwurf markiert.");
-  clarityBaseAnnounce(clearer);
+  clarityBaseAnnounce(message);
 };
 
 const clarityBaseSaveState = saveState;
@@ -134,8 +129,8 @@ function clarityEnhanceStage() {
   context.innerHTML = `
     ${outlineItems.length ? `<p class="clarity-outline-position"><strong>Du arbeitest in der Gliederung an:</strong> ${outlineItems.map((item) => `<span>${escapeHtml(clarityOutlineLabel(item))}</span>`).join("<span aria-hidden=\"true\">·</span>")}</p>` : ""}
     ${boundary ? `
-      <div class="clarity-boundary" aria-label="Arbeitsorientierung">
-        <span class="clarity-boundary-label">Arbeitsorientierung · keine zusätzliche Bewertungsvorgabe</span>
+      <div class="clarity-boundary" aria-label="Arbeitsfokus">
+        <span class="clarity-boundary-label">Arbeitsfokus</span>
         <p><strong>Hier geht es um:</strong> ${escapeHtml(boundary.focus)}</p>
         <p><strong>${escapeHtml(boundary.notYet.split(":")[0])}:</strong>${escapeHtml(boundary.notYet.slice(boundary.notYet.indexOf(":") + 1))}</p>
       </div>
@@ -155,23 +150,23 @@ function clarityEnhanceStage() {
 
 function clarityEnhanceRequirementHeading() {
   const heading = document.querySelector("#requirements-heading");
-  if (heading) heading.textContent = "Belegte Anforderungen zum Abgleichen";
+  if (heading) heading.textContent = "Anforderungen";
   const questionHeading = document.querySelector("#questions-heading");
-  if (questionHeading) questionHeading.textContent = "Leitfragen für deinen Arbeitsentwurf";
+  if (questionHeading) questionHeading.textContent = "Leitfragen für deinen Entwurf";
   const intro = document.querySelector(".panel-intro");
-  if (intro) intro.textContent = "Text eingeben erzeugt einen Entwurf. Erst deine bewusste Markierung zählt als für dich geklärt.";
+  if (intro) intro.textContent = "Halte deine Gedanken fest und markiere eine Leitfrage als geklärt, wenn du sie selbst geprüft hast.";
 }
 
 function clarityEnhanceQuestionCopy() {
   document.querySelectorAll("[data-question-status]").forEach((button) => {
     const card = button.closest(".question-card");
     const checked = card?.classList.contains("status-checked");
-    button.textContent = checked ? "Klärung zurücknehmen" : "Als für mich geklärt markieren";
+    button.textContent = checked ? "Als offen markieren" : "Als geklärt markieren";
   });
 
   document.querySelectorAll(".question-status-hint").forEach((hint) => {
     if (hint.textContent.includes("eigener inhaltlicher Prüfung")) {
-      hint.textContent = "Markiere erst, wenn du die Antwort selbst mit den Anforderungen abgeglichen hast.";
+      hint.textContent = "Markiere erst, wenn du deine Antwort selbst an den Anforderungen geprüft hast.";
     }
   });
 }
@@ -191,7 +186,7 @@ function clarityAddQuestionMappings() {
     block.className = "question-maps";
     const shown = requirements.slice(0, 3);
     block.innerHTML = `
-      <span class="question-maps-label">Deckt diese belegten Anforderungen ab:</span>
+      <span class="question-maps-label">Bezug zu diesen Anforderungen:</span>
       <div class="question-map-chips">
         ${shown.map((requirement) => `<span class="question-map-chip" title="${escapeHtml(requirement.text || requirement.value || requirement.label || "")}">${escapeHtml(clarityRequirementText(requirement))}</span>`).join("")}
         ${requirements.length > shown.length ? `<span class="question-map-more">+${requirements.length - shown.length} weitere</span>` : ""}
@@ -251,8 +246,8 @@ function clarityEnhanceWorkbench() {
   if (continueButton) continueButton.textContent = "Schritt öffnen";
 
   const labels = document.querySelectorAll(".dashboard .stat-label");
-  if (labels[0]) labels[0].textContent = "Für mich geklärte Leitfragen";
-  if (labels[1]) labels[1].textContent = "Von mir abgeglichene Anforderungen";
+  if (labels[0]) labels[0].textContent = "Geklärte Leitfragen";
+  if (labels[1]) labels[1].textContent = "Geprüfte Anforderungen";
 
   const pathTitle = document.querySelector("#path-title");
   if (pathTitle) pathTitle.textContent = "Alle Arbeitsschritte";
@@ -265,13 +260,13 @@ function clarityEnhanceSpecializationCopy() {
   if (otherButton) {
     const strong = otherButton.querySelector("strong");
     const description = otherButton.querySelector("span");
-    if (strong) strong.textContent = "Andere Vertiefung – nur allgemeine Vorgaben vorhanden";
-    if (description) description.textContent = "Die allgemeine verbindliche Gliederung ist verfügbar; vertiefungsspezifische Vorgaben sind in der Quellenbasis nicht belegt.";
+    if (strong) strong.textContent = "Andere Vertiefung";
+    if (description) description.textContent = "Die allgemeine verbindliche Gliederung wird angezeigt. Kläre zusätzliche Vorgaben für deine Vertiefung mit deiner Lehrkraft.";
   }
 
   if (state.specialization === "other") {
     const selectedStrong = document.querySelector(".specialization-selected strong");
-    if (selectedStrong) selectedStrong.textContent = "Andere Vertiefung – nur allgemeine Vorgaben vorhanden";
+    if (selectedStrong) selectedStrong.textContent = "Andere Vertiefung";
   }
 }
 
