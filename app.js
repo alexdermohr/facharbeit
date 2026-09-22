@@ -287,7 +287,7 @@ function renderDeadline() {
   const note = document.querySelector("#deadlineNote");
   if (!deadline) {
     value.textContent = "nicht hinterlegt";
-    note.textContent = "Kein Planungsdatum im Modell.";
+    note.textContent = "Kein Abgabetermin hinterlegt.";
     return;
   }
 
@@ -298,7 +298,7 @@ function renderDeadline() {
   const dueUtc = Date.UTC(year, month - 1, day);
   const days = Math.round((dueUtc - todayUtc) / 86400000);
   const timeText = days > 1 ? `Noch ${days} Kalendertage.` : days === 1 ? "Noch 1 Kalendertag." : days === 0 ? "Abgabe heute." : `Termin seit ${Math.abs(days)} Tagen überschritten.`;
-  note.textContent = `${timeText} ${deadline.note}`;
+  note.textContent = timeText;
 }
 
 function renderModeSummary() {
@@ -478,7 +478,7 @@ function renderRequirements(phase) {
           const checked = Boolean(state.checks[requirement.id]);
           const text = requirement.text || `${requirement.label}: ${requirement.value}`;
           const clarification = requirement.clarification
-            ? `<div class="requirement-context clarification"><strong>${escapeHtml(requirement.clarification.label || "Konkretisierung")}:</strong> ${escapeHtml(requirement.clarification.text)}</div>`
+            ? `<div class="requirement-context clarification">${escapeHtml(requirement.clarification.text)}</div>`
             : "";
           const provisionalNote = requirement.provisional_note
             ? `<div class="requirement-context provisional"><strong>${escapeHtml(requirement.provisional_note.label || "Hinweis")}:</strong> ${escapeHtml(requirement.provisional_note.text)}</div>`
@@ -721,8 +721,8 @@ function renderTopicTool() {
     feedback.classList.toggle("error", count > 200);
     feedback.textContent =
       count > 200
-        ? `Zu lang: ${count - 200} Zeichen über der dokumentierten Grenze.`
-        : `Noch ${200 - count} Zeichen bis zur dokumentierten Höchstgrenze.`;
+        ? `Zu lang: ${count - 200} Zeichen über der 200-Zeichen-Grenze.`
+        : `Noch ${200 - count} Zeichen bis zur Höchstgrenze.`;
   };
 
   input.oninput = update;
