@@ -112,8 +112,10 @@ class RequirementsModelTests(unittest.TestCase):
         self.assertEqual(note["origin"], "user_provided")
         self.assertIn("nicht abschließend", note["text"])
         guide = next(item for item in self.model["instructional_guidance"] if item["id"] == "guide-ai-policy")
-        self.assertIn("vorläufig", guide["kind_label"])
-        self.assertTrue(any(item.get("label") == "Vorbehalt" for item in guide["items"]))
+        self.assertEqual(guide["kind_label"], "Schulische Richtlinie")
+        self.assertEqual(guide["context_note"]["origin"], "user_provided")
+        self.assertIn("nicht abschließend", guide["context_note"]["text"])
+        self.assertFalse(any(item.get("label") == "Vorbehalt" for item in guide["items"]))
         self.assertTrue(any("Kolloquium" in item.get("text", "") for item in guide["items"]))
         citation = next(item for item in self.model["instructional_guidance"] if item["id"] == "guide-citation")
         self.assertTrue(any("(vgl. Leitz: 2015, S. 74)" in item.get("text", "") for item in citation["items"]))
@@ -188,6 +190,8 @@ class RequirementsModelTests(unittest.TestCase):
         self.assertIn("reine Fließtext", formal["formal-pages"]["clarification"]["text"])
         self.assertIn("digitale Version als PDF", formal["formal-submission"]["clarification"]["text"])
         self.assertIn("Bücher und Aufsätze aus Fachzeitschriften", formal["formal-sources"]["clarification"]["text"])
+        source_quality = next(item for item in self.model["instructional_guidance"] if item["id"] == "guide-source-quality")
+        self.assertFalse(any(item.get("label") == "Gültige Mindestquellen" for item in source_quality["items"]))
 
     def test_five_level_requirements_are_consolidated(self):
         section = next(item for item in self.model["facharbeit"]["sections"] if item["id"] == "verstehen-analysieren")
