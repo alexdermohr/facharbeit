@@ -146,6 +146,10 @@ run_formal_smoke() {
   grep -q "Schuldokumente" <<<"$dump"
   grep -q 'class="reference-fold"' <<<"$dump"
   grep -q "Arbeitsstand sichern oder wiederherstellen" <<<"$dump"
+  grep -q "Bücher und Aufsätze aus Fachzeitschriften" <<<"$dump"
+  grep -q "digitale Version als PDF" <<<"$dump"
+  grep -q "reine Fließtext" <<<"$dump"
+  grep -q "schulische KI-Richtlinie ist noch nicht abschließend festgelegt" <<<"$dump"
   if grep -Eq '<details class="reference-fold"[^>]* open' <<<"$dump"; then
     echo "Referenzbereiche sollen ohne Direktlink zunächst eingeklappt sein." >&2
     exit 1

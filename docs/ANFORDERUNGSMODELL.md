@@ -105,13 +105,15 @@ Für die Zitierfähigkeit führt das Blatt unter anderem wissenschaftliche Fach-
 
 Zur Herkunft und Qualität empfiehlt das Blatt anerkannte wissenschaftliche Quellen, rät von Quellen mit unklarer Herkunft oder Urheberschaft ab, empfiehlt möglichst die neueste Auflage und bei fremdsprachigen Quellen das Zitieren in der Originalsprache. Das Blatt bleibt eine **Unterrichtshilfe** und wird nicht zu einer zusätzlichen Bewertungsrubrik gemacht.
 
+**Mitgeteilte Konkretisierung für diese Facharbeit:** Als valide Mindestquellen gelten Bücher und Aufsätze aus Fachzeitschriften. Diese Einschränkung wird im Modell als `user_provided` geführt und nicht dem Unterrichtsblatt zur Quellenqualität zugeschrieben.
+
 ### Entscheiden & Planen
 
 Die bisherigen Anforderungen bleiben bestehen: Ziel aus der Arbeitshypothese, eigener pädagogischer Einflussbereich, ressourcen- und bedürfnisbezogene Begründung, roter Faden, konkrete Elemente, quellenbezogenes methodisches Vorgehen, Antizipation und Flexibilität.
 
 ## 5. Wissenschaftliches Arbeiten und KI
 
-Die neue schulische Richtlinie schließt eine wesentliche frühere Lücke.
+Es liegt eine schulische Richtlinie zu Zitation und KI-Nutzung vor. Zugleich wurde für die aktuelle Arbeitsfassung mitgeteilt, dass die schulische KI-Regelung noch nicht abschließend festgelegt ist. Die Website zeigt die Inhalte des Richtlinienblatts deshalb weiterhin quellennah, versieht die KI-Anforderung aber mit einem ausdrücklichen Vorbehalt und empfiehlt bei Unsicherheit Rücksprache mit der Lehrkraft.
 
 ### Zitieren
 
@@ -137,6 +139,8 @@ Die Richtlinie erlaubt KI als Hilfsmittel, setzt aber klare Grenzen:
 
 Die Prompt- und Rechercheblätter ermuntern zur KI-Nutzung bei Themen- und Schlagwortsuche. Das ist kein Widerspruch zur Richtlinie, solange Ergebnisse kritisch geprüft, Fachtexte selbst herangezogen und KI-Einsatz transparent dokumentiert werden.
 
+**Vorbehalt:** Die vorstehenden Punkte geben das derzeit hinterlegte Richtlinienblatt wieder. Sie werden auf der Website nicht als abschließend geklärte endgültige Schulregel ausgegeben; der Vorbehalt selbst ist eine separat mitgeteilte Planungs-/Arbeitsinformation.
+
 ## 6. Quellen eigenständig verarbeiten
 
 Die Verdichtungshilfe beschreibt einen Arbeitsweg, der unmittelbar zur verlangten Eigenständigkeit passt:
@@ -152,7 +156,7 @@ Die dort genannte „höchstens eine halbe Seite“ ist ausdrücklich Teil einer
 
 ## 7. Formale Vorgaben
 
-Weiterhin belegt sind:
+Durch die Schuldokumente belegt sind:
 
 - 12–15 Seiten
 - maschinenschriftlich am PC
@@ -163,9 +167,17 @@ Weiterhin belegt sind:
 - mindestens zwei Quellen
 - verbindliche Gliederung gemäß Abschnitt 3
 - wissenschaftliche Quellen- und Zitierregeln gemäß Richtlinienblatt
-- vollständige KI-Kennzeichnung gemäß Richtlinienblatt
 - eidesstattliche Erklärung nach dem Literaturverzeichnis, nicht im Inhaltsverzeichnis
 - Abgabe als ringgebundene Ausgabe mit durchsichtigem, flexiblem Umschlag plus geheftete Ausgabe
+
+Zusätzlich wurden für die aktuelle Arbeitsfassung folgende **Konkretisierungen separat mitgeteilt** und deshalb im Modell als `user_provided` gekennzeichnet:
+
+- Für die 12–15 Seiten zählt nur der reine Fließtext; Deckblatt, Inhaltsverzeichnis, Quellenangaben und Anhang zählen nicht mit.
+- Als valide Mindestquellen gelten Bücher und Aufsätze aus Fachzeitschriften.
+- Zusätzlich ist eine digitale Version als PDF abzugeben.
+- Die schulische KI-Richtlinie ist noch nicht abschließend festgelegt; bei Unsicherheit soll Rücksprache mit der Lehrkraft gehalten werden.
+
+Die 200-Zeichen-Grenze wird im Eingabefeld technisch hart erzwungen.
 
 ## 8. Planungsdatum
 
@@ -184,10 +196,9 @@ Die drei bisherigen Prüfungsdokumente bleiben unverändert maßgeblich. Bewertu
 
 ## 10. Verbleibende Lücken
 
-1. Es ist nicht ausdrücklich definiert, welche Bestandteile in die **12–15 Seiten** eingerechnet werden.
-2. Die verbindliche Gliederung verweist auf **exemplarische Gliederungen im Anhang**; diese Beispiele liegen nicht vor.
-3. Der konkrete Abgabetermin **13.11.2026** ist als Planungsangabe vorhanden, aber in den Schuldokumenten nicht belegt.
-4. Für andere Vertiefungen als Heilpädagogik liegen derzeit **keine entsprechend bezeichneten vertiefungsspezifischen verbindlichen Gliederungsblätter** im Quellenordner.
+1. Die verbindliche Gliederung verweist auf **exemplarische Gliederungen im Anhang**; diese Beispiele liegen nicht vor.
+2. Der konkrete Abgabetermin **13.11.2026** ist als Planungsangabe vorhanden, aber in den Schuldokumenten nicht belegt.
+3. Für andere Vertiefungen als Heilpädagogik liegen derzeit **keine entsprechend bezeichneten vertiefungsspezifischen verbindlichen Gliederungsblätter** im Quellenordner.
 
 ## 11. Quellen
 

@@ -1,6 +1,7 @@
 const STORAGE_KEY = "facharbeit-pt3-guide-v1";
 const DATA_URL = "data/requirements.json";
-const STATE_VERSION = 2;
+const STATE_VERSION = 3;
+const SUPPORTED_STATE_VERSIONS = new Set([2, STATE_VERSION]);
 const BACKUP_SCHEMA = "facharbeit-workspace-backup";
 const SPECIALIZATION_IDS = new Set(["heilpaedagogik", "other"]);
 
@@ -67,7 +68,7 @@ function isImportableState(value, { requireVersion = false, requireActivePhase =
   if (!modePhases[value.mode]) return false;
   if (typeof value.topic !== "string") return false;
   if (!isObjectRecord(value.answers) || !isObjectRecord(value.checks)) return false;
-  if (requireVersion && value.version !== STATE_VERSION) return false;
+  if (requireVersion && !SUPPORTED_STATE_VERSIONS.has(value.version)) return false;
   if (requireActivePhase && !modePhases[value.mode].includes(value.activePhase)) return false;
   if (value.answerStatus !== undefined && !isObjectRecord(value.answerStatus)) return false;
   if (value.specialization !== undefined && value.specialization !== "" && !SPECIALIZATION_IDS.has(value.specialization)) return false;
@@ -94,8 +95,11 @@ function extractBackupState(payload) {
     if (payload.schema !== BACKUP_SCHEMA) {
       throw new Error("Unbekanntes Backup-Schema.");
     }
-    if (payload.version !== STATE_VERSION) {
+    if (!SUPPORTED_STATE_VERSIONS.has(payload.version)) {
       throw new Error("Nicht unterstützte Backup-Version.");
+    }
+    if (payload.state?.version !== payload.version) {
+      throw new Error("Backup-Version und Arbeitsstand passen nicht zusammen.");
     }
     if (!isImportableState(payload.state, { requireVersion: true, requireActivePhase: true })) {
       throw new Error("Das Backup enthält keinen gültigen Arbeitsstand.");
@@ -113,13 +117,34 @@ function normalizeState(candidate = {}) {
   next.mode = modePhases[source.mode] ? source.mode : next.mode;
   next.activePhase = modePhases[next.mode].includes(source.activePhase) ? source.activePhase : modePhases[next.mode][0];
   next.specialization = SPECIALIZATION_IDS.has(source.specialization) ? source.specialization : "";
-  next.topic = typeof source.topic === "string" ? source.topic.slice(0, 260) : "";
+  next.topic = typeof source.topic === "string" ? source.topic.slice(0, 200) : "";
 
   for (const [id, value] of Object.entries(safeObject(source.answers))) {
     if (typeof value === "string") next.answers[id] = value;
   }
-  for (const [id, value] of Object.entries(safeObject(source.checks))) {
+  const sourceChecks = safeObject(source.checks);
+  for (const [id, value] of Object.entries(sourceChecks)) {
     if (value === true) next.checks[id] = true;
+  }
+
+  // Version 3 fasst mehrere frühere Checkboxen zusammen. Alte Arbeitsstände werden
+  // nur dann als erledigt übernommen, wenn alle Teilanforderungen zuvor abgehakt waren.
+  const sourceVersion = Number.isInteger(source.version) ? source.version : 0;
+  if (sourceVersion < 3) {
+    const legacyAiIds = ["formal-ai-source", "formal-ai-independent", "formal-ai-disclosure", "formal-ai-verification"];
+    if (legacyAiIds.every((id) => sourceChecks[id] === true)) {
+      next.checks["formal-ai-use"] = true;
+    }
+    legacyAiIds.forEach((id) => delete next.checks[id]);
+
+    const legacyLevelIds = ["fa-va-five-levels", "fa-va-three-levels", "fa-va-level-choice"];
+    if (legacyLevelIds.every((id) => sourceChecks[id] === true)) {
+      next.checks["fa-va-five-levels"] = true;
+    } else {
+      delete next.checks["fa-va-five-levels"];
+    }
+    delete next.checks["fa-va-three-levels"];
+    delete next.checks["fa-va-level-choice"];
   }
   for (const [id, value] of Object.entries(safeObject(source.answerStatus))) {
     if (value === "draft" || value === "checked") next.answerStatus[id] = value;
@@ -452,13 +477,23 @@ function renderRequirements(phase) {
         .map((requirement) => {
           const checked = Boolean(state.checks[requirement.id]);
           const text = requirement.text || `${requirement.label}: ${requirement.value}`;
+          const clarification = requirement.clarification
+            ? `<div class="requirement-context clarification"><strong>${escapeHtml(requirement.clarification.label || "Konkretisierung")}:</strong> ${escapeHtml(requirement.clarification.text)}</div>`
+            : "";
+          const provisionalNote = requirement.provisional_note
+            ? `<div class="requirement-context provisional"><strong>${escapeHtml(requirement.provisional_note.label || "Hinweis")}:</strong> ${escapeHtml(requirement.provisional_note.text)}</div>`
+            : "";
           return `
             <div class="requirement-item ${checked ? "checked" : ""}">
               <input id="check-${escapeHtml(requirement.id)}" type="checkbox" data-requirement="${escapeHtml(requirement.id)}" ${checked ? "checked" : ""}>
-              <label for="check-${escapeHtml(requirement.id)}">
-                ${escapeHtml(text)}
-                <span class="refs">${refsHtml(requirement.refs)}</span>
-              </label>
+              <div class="requirement-copy">
+                <label for="check-${escapeHtml(requirement.id)}">
+                  ${escapeHtml(text)}
+                  <span class="refs">${refsHtml(requirement.refs)}</span>
+                </label>
+                ${clarification}
+                ${provisionalNote}
+              </div>
             </div>
           `;
         })
@@ -515,6 +550,7 @@ function renderGuidance(phase) {
               <article class="guidance-card ${card.importance === "critical" ? "critical" : ""}">
                 <span class="source-badge ${card.importance === "critical" ? "rule" : "help"}">${escapeHtml(card.kind_label)}</span>
                 <h5>${escapeHtml(card.title)}</h5>
+                ${card.context_note ? `<div class="guidance-context-note"><strong>${escapeHtml(card.context_note.label || "Hinweis")}:</strong> ${escapeHtml(card.context_note.text)}</div>` : ""}
                 <ul>
                   ${card.items
                     .map(
@@ -671,6 +707,7 @@ function renderTopicTool() {
   const section = document.querySelector("#topicSection");
   section.hidden = state.mode !== "facharbeit" || state.activePhase !== "start";
   const input = document.querySelector("#topicInput");
+  input.maxLength = 200;
   input.value = state.topic || "";
 
   const update = () => {

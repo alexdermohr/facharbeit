@@ -42,6 +42,17 @@ class UiContractTests(unittest.TestCase):
     def test_facharbeit_only_topic_tool_is_scoped_to_start(self):
         self.assertIn('section.hidden = state.mode !== "facharbeit" || state.activePhase !== "start";', self.js)
 
+    def test_topic_limit_is_hard_coded_to_200(self):
+        self.assertIn('maxlength="200"', self.html)
+        self.assertNotIn('maxlength="260"', self.html)
+        self.assertIn('source.topic.slice(0, 200)', self.js)
+        self.assertIn('input.maxLength = 200;', self.js)
+
+    def test_requirement_clarifications_render_separately(self):
+        self.assertIn('requirement-context clarification', self.js)
+        self.assertIn('requirement-context provisional', self.js)
+        self.assertIn('guidance-context-note', self.js)
+
     def test_backup_roundtrip_controls_exist(self):
         for element_id in ("exportButton", "markdownButton", "importButton", "importInput", "resetButton"):
             self.assertIn(f'id="{element_id}"', self.html)
