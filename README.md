@@ -2,6 +2,20 @@
 
 Fragengestützte, quellennah aufgebaute Arbeitshilfe für Prüfungsteil III der Erzieherausbildung an der Fachschule für Sozialpädagogik.
 
+## Eigene Facharbeit
+
+Der persönliche Arbeitsbereich zur konkreten eigenen Facharbeit liegt unter [`eigene_facharbeit/`](eigene_facharbeit/README.md).
+
+Dort werden getrennt von der allgemeinen Leitfaden-Website dokumentiert:
+
+- die gewählte **Fanta-Kuchen-Situation** als Ausgangslage,
+- die Rekonstruktion von Beobachtung vs. Interpretation,
+- die Analyse der eigenen Verstrickung und damaligen Konsequenz,
+- die Hypothese zu Sicherung/„Loslassen“, verzögertem Return und sozialer Reziprozität,
+- vorläufige Bezüge zu den Fröhlich-Gildhoff-Ebenen,
+- offene Rekonstruktionsfragen und Literaturbedarf,
+- ein commitgebundener Quellenindex mit direkten Links in das PrepP-Repository.
+
 ## Quellenmodell
 
 Das Repository trennt vier Ebenen:
