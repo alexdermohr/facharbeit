@@ -29,16 +29,16 @@ Das Heilpädagogik-DOCX enthält im sichtbaren Text ebenfalls kein Ausgabedatum.
 
 Das allgemeine PDF nennt seine Struktur unabhängig vom Schwerpunkt verbindlich. Gleichzeitig liegt ein eigenes Dokument mit dem Titel **„Verbindliche Gliederung für Facharbeiten im Arbeitsfeld Heilpädagogik“** vor. Eine ausdrückliche Vorrangregel ist in den beiden Blättern nicht enthalten. Die Website behandelt deshalb die speziellere Heilpädagogik-Fassung bei gewählter Vertiefung als vorrangige Endstruktur, lässt aber beide Quellen sichtbar.
 
-## Mitgeteilte Konkretisierungen
+## Zusätzliche Arbeitsregeln
 
-Vier Punkte der aktuellen Arbeitsfassung stammen **nicht** aus den hinterlegten Schuldokumenten und werden deshalb separat als `user_provided` gekennzeichnet:
+Für die Nutzung gelten vier zusätzliche Arbeitsregeln, die nicht in den verlinkten Originaldokumenten stehen:
 
 - Für die 12–15 Seiten zählt nur der reine Fließtext; Deckblatt, Inhaltsverzeichnis, Quellenangaben und Anhang zählen nicht mit.
 - Als valide Mindestquellen gelten Bücher und Aufsätze aus Fachzeitschriften.
 - Zusätzlich ist eine digitale Version als PDF abzugeben.
 - Die schulische KI-Richtlinie ist noch nicht abschließend festgelegt; bei Unsicherheit soll Rücksprache mit der Lehrkraft gehalten werden.
 
-Diese Konkretisierungen dürfen in der Website nicht so dargestellt werden, als stünden sie in einem der verlinkten Originaldokumente.
-## Separater Planungsbezug
+Im Datenmodell bleiben diese Regeln von den Originaldokumenten getrennt, damit ihre Herkunft nicht verwechselt wird.
+## Abgabetermin
 
-Der Abgabetermin **13.11.2026** wurde separat mitgeteilt. Er wird im JSON unter `planning_context` geführt und auf der Website als Planungsdatum angezeigt; er ist **keine aus den hinterlegten Schuldokumenten abgeleitete Behauptung**.
+Der Abgabetermin ist **13.11.2026**. Im JSON wird er unter `planning_context` als Kontextangabe geführt und keinem der verlinkten Originaldokumente zugeschrieben.
