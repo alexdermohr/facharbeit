@@ -478,7 +478,7 @@ function renderRequirements(phase) {
           const checked = Boolean(state.checks[requirement.id]);
           const text = requirement.text || `${requirement.label}: ${requirement.value}`;
           const clarification = requirement.clarification
-            ? `<div class="requirement-context clarification">${escapeHtml(requirement.clarification.text)}</div>`
+            ? `<div class="requirement-context clarification">${requirement.clarification.label ? `<strong>${escapeHtml(requirement.clarification.label)}:</strong> ` : ""}${escapeHtml(requirement.clarification.text)}</div>`
             : "";
           const provisionalNote = requirement.provisional_note
             ? `<div class="requirement-context provisional"><strong>${escapeHtml(requirement.provisional_note.label || "Hinweis")}:</strong> ${escapeHtml(requirement.provisional_note.text)}</div>`
