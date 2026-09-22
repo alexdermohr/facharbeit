@@ -36,7 +36,7 @@ class UiContractTests(unittest.TestCase):
     def test_question_progress_is_explicit_not_length_heuristic(self):
         self.assertIn("answerStatus", self.js)
         self.assertIn('value === "draft" || value === "checked"', self.js)
-        self.assertIn("Als selbst geprüft markieren", self.js)
+        self.assertIn("Als geklärt markieren", self.js)
         self.assertNotIn("trim().length >= 20", self.js)
 
     def test_facharbeit_only_topic_tool_is_scoped_to_start(self):
@@ -52,6 +52,23 @@ class UiContractTests(unittest.TestCase):
         self.assertIn('requirement-context clarification', self.js)
         self.assertIn('requirement-context provisional', self.js)
         self.assertIn('guidance-context-note', self.js)
+
+    def test_public_copy_has_no_project_history_labels(self):
+        clarity = (ROOT / "clarity.js").read_text(encoding="utf-8")
+        focus = (ROOT / "focus.js").read_text(encoding="utf-8")
+        public_copy = "\n".join((self.html, self.js, clarity, focus))
+        for phrase in (
+            "Mitgeteilte Konkretisierung",
+            "Mitgeteilte Ergänzung",
+            "Mitgeteilter Abgabetermin",
+            "Planungsangabe wird geladen",
+            "Dokumentierte Lücken",
+            "Schuldokumente",
+        ):
+            self.assertNotIn(phrase, public_copy)
+        self.assertNotIn("deadline.note", self.js)
+        self.assertIn("Originalunterlagen", public_copy)
+        self.assertIn("Abgabetermin", self.html)
 
     def test_backup_roundtrip_controls_exist(self):
         for element_id in ("exportButton", "markdownButton", "importButton", "importInput", "resetButton"):
