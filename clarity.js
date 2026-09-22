@@ -58,12 +58,7 @@ phaseWeightLabel = function clarityPhaseWeightLabel(phase) {
 
 const clarityBaseAnnounce = announce;
 announce = function clarityAnnounce(message) {
-  const clearer = String(message)
-    .replace("Anforderung als geprüft markiert.", "Anforderung als von dir abgeglichen markiert.")
-    .replace("Prüfmarkierung entfernt.", "Abgleich-Markierung entfernt.")
-    .replace("Leitfrage als selbst geprüft markiert.", "Leitfrage als für dich geklärt markiert.")
-    .replace("Leitfrage wieder als Entwurf markiert.", "Leitfrage wieder als Entwurf markiert.");
-  clarityBaseAnnounce(clearer);
+  clarityBaseAnnounce(message);
 };
 
 const clarityBaseSaveState = saveState;
@@ -134,7 +129,7 @@ function clarityEnhanceStage() {
   context.innerHTML = `
     ${outlineItems.length ? `<p class="clarity-outline-position"><strong>Du arbeitest in der Gliederung an:</strong> ${outlineItems.map((item) => `<span>${escapeHtml(clarityOutlineLabel(item))}</span>`).join("<span aria-hidden=\"true\">·</span>")}</p>` : ""}
     ${boundary ? `
-      <div class="clarity-boundary" aria-label="Arbeitsorientierung">
+      <div class="clarity-boundary" aria-label="Arbeitsfokus">
         <span class="clarity-boundary-label">Arbeitsfokus</span>
         <p><strong>Hier geht es um:</strong> ${escapeHtml(boundary.focus)}</p>
         <p><strong>${escapeHtml(boundary.notYet.split(":")[0])}:</strong>${escapeHtml(boundary.notYet.slice(boundary.notYet.indexOf(":") + 1))}</p>
