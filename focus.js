@@ -63,7 +63,7 @@ function focusFormalGroupElement(group, itemsById) {
         <h5 id="formal-group-${group.id}">${escapeHtml(group.title)}</h5>
         <p>${escapeHtml(group.note)}</p>
       </div>
-      <span class="formal-group-progress">${checked} / ${groupItems.length} abgeglichen</span>
+      <span class="formal-group-progress">${checked} / ${groupItems.length} geprüft</span>
     </div>
     <div class="formal-group-items"></div>
   `;
@@ -105,7 +105,7 @@ function focusGroupFormalRequirements() {
           <h5 id="formal-group-additional">Weitere Anforderungen</h5>
           <p>Weitere Anforderungen, die keiner Zeitgruppe eindeutig zugeordnet sind.</p>
         </div>
-        <span class="formal-group-progress">${leftovers.filter((item) => item.querySelector("[data-requirement]")?.checked).length} / ${leftovers.length} abgeglichen</span>
+        <span class="formal-group-progress">${leftovers.filter((item) => item.querySelector("[data-requirement]")?.checked).length} / ${leftovers.length} geprüft</span>
       </div>
       <div class="formal-group-items"></div>
     `;
