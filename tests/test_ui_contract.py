@@ -64,6 +64,9 @@ class UiContractTests(unittest.TestCase):
             "Planungsangabe wird geladen",
             "Dokumentierte Lücken",
             "Schuldokumente",
+            "Quellenbasis",
+            "abgeglichen",
+            "belegten Kriterien",
         ):
             self.assertNotIn(phrase, public_copy)
         self.assertNotIn("deadline.note", self.js)
