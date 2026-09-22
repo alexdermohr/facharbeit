@@ -192,6 +192,9 @@ class RequirementsModelTests(unittest.TestCase):
         self.assertIn("Bücher und Aufsätze aus Fachzeitschriften", formal["formal-sources"]["clarification"]["text"])
         source_quality = next(item for item in self.model["instructional_guidance"] if item["id"] == "guide-source-quality")
         self.assertFalse(any(item.get("label") == "Gültige Mindestquellen" for item in source_quality["items"]))
+        self.assertEqual(source_quality["context_note"]["origin"], "user_provided")
+        self.assertIn("Bücher und Aufsätze aus Fachzeitschriften", source_quality["context_note"]["text"])
+        self.assertTrue(any(item.get("text", "").startswith("Als zitierfähig führt das Blatt") for item in source_quality["items"]))
 
     def test_five_level_requirements_are_consolidated(self):
         section = next(item for item in self.model["facharbeit"]["sections"] if item["id"] == "verstehen-analysieren")
