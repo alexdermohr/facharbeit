@@ -99,9 +99,9 @@ run_gate_smoke() {
   dump="$($CHROME --headless=new --no-sandbox --disable-gpu --window-size="$size" --virtual-time-budget=3000 --dump-dom "http://127.0.0.1:${PORT}/" 2>/tmp/facharbeit-chrome.log)"
   grep -q "Vertiefung auswählen" <<<"$dump"
   grep -q "Heilpädagogik" <<<"$dump"
-  grep -q "Andere Vertiefung – nur allgemeine Vorgaben vorhanden" <<<"$dump"
+  grep -q "Andere Vertiefung" <<<"$dump"
   grep -q "Daten &amp; Backup" <<<"$dump"
-  grep -q "Alle schulischen Dokumente" <<<"$dump"
+  grep -q "Schulische Dokumente" <<<"$dump"
   if grep -q "Die Daten konnten nicht geladen werden" <<<"$dump"; then
     echo "App-Daten konnten im Browser-Smoke nicht geladen werden." >&2
     exit 1
@@ -114,13 +114,13 @@ run_guided_smoke() {
   dump="$($CHROME --headless=new --no-sandbox --disable-gpu --window-size="$size" --virtual-time-budget=4000 --dump-dom "http://127.0.0.1:${PORT}/${GUIDED_SEED}" 2>/tmp/facharbeit-chrome-guided.log)"
   grep -q "Bereich wählen &amp; weiterarbeiten" <<<"$dump"
   grep -q "Hier weitermachen" <<<"$dump"
-  grep -q "Von mir abgeglichene Anforderungen" <<<"$dump"
+  grep -q "Geprüfte Anforderungen" <<<"$dump"
   grep -q "Du arbeitest in der Gliederung an:" <<<"$dump"
   grep -q "2.1 Empathisches Verstehen und Analysieren mit dem Fünf Ebenen Modell" <<<"$dump"
-  grep -q "Arbeitsorientierung · keine zusätzliche Bewertungsvorgabe" <<<"$dump"
+  grep -q "Arbeitsfokus" <<<"$dump"
   grep -q "Hier geht es um:" <<<"$dump"
   grep -q "Noch nicht:" <<<"$dump"
-  grep -q "Deckt diese belegten Anforderungen ab:" <<<"$dump"
+  grep -q "Bezug zu diesen Anforderungen:" <<<"$dump"
   grep -q "größter Bewertungsanteil" <<<"$dump"
   grep -q "Arbeitsstand wird lokal im Browser gespeichert" <<<"$dump"
   grep -q "Nachschlagen, wenn du es brauchst" <<<"$dump"
@@ -140,16 +140,16 @@ run_formal_smoke() {
   grep -q "Rahmen, Gliederung, Umfang, Arbeitstitel und Literaturbasis klären" <<<"$dump"
   grep -q "Referenzbereich direkt öffnen" <<<"$dump"
   grep -q "Gliederung" <<<"$dump"
-  grep -q "Quellenhierarchie" <<<"$dump"
+  grep -q "Verbindlichkeit" <<<"$dump"
   grep -q "Offene Punkte" <<<"$dump"
-  grep -q "Einordnung" <<<"$dump"
-  grep -q "Schuldokumente" <<<"$dump"
+  grep -q "Unterschiedliche Vorgaben" <<<"$dump"
+  grep -q "Originalunterlagen" <<<"$dump"
   grep -q 'class="reference-fold"' <<<"$dump"
   grep -q "Arbeitsstand sichern oder wiederherstellen" <<<"$dump"
   grep -q "Bücher und Aufsätze aus Fachzeitschriften" <<<"$dump"
   grep -q "digitale Version als PDF" <<<"$dump"
   grep -q "reine Fließtext" <<<"$dump"
-  grep -q "schulische KI-Richtlinie ist noch nicht abschließend festgelegt" <<<"$dump"
+  grep -q "schulische KI-Regelung ist noch nicht abschließend festgelegt" <<<"$dump"
   if grep -Eq '<details class="reference-fold"[^>]* open' <<<"$dump"; then
     echo "Referenzbereiche sollen ohne Direktlink zunächst eingeklappt sein." >&2
     exit 1
@@ -165,7 +165,7 @@ run_reference_hash_smoke() {
   local dump
   dump="$($CHROME --headless=new --no-sandbox --disable-gpu --window-size="$size" --virtual-time-budget=4000 --dump-dom "http://127.0.0.1:${PORT}/${REFERENCE_SEED}" 2>/tmp/facharbeit-chrome-reference.log)"
   grep -Eq '<details class="reference-fold"[^>]*data-reference-id="sources"[^>]*open' <<<"$dump"
-  grep -q "Alle schulischen Dokumente" <<<"$dump"
+  grep -q "Schulische Dokumente" <<<"$dump"
 }
 
 run_gate_smoke "1440,1200"
