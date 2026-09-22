@@ -421,7 +421,8 @@
       "clarification": {
         "text": "Es zählt nur der reine Fließtext. Deckblatt, Inhaltsverzeichnis, Quellenangaben und Anhang zählen nicht mit.",
         "origin": "user_provided",
-        "date": "2026-09-22"
+        "date": "2026-09-22",
+        "label": "Für deine Facharbeit"
       }
     },
     {
@@ -463,7 +464,8 @@
       "clarification": {
         "text": "Zusätzlich ist eine digitale Version als PDF abzugeben.",
         "origin": "user_provided",
-        "date": "2026-09-22"
+        "date": "2026-09-22",
+        "label": "Für deine Facharbeit"
       }
     },
     {
@@ -545,7 +547,8 @@
       "clarification": {
         "text": "Als valide Quellen gelten Bücher und Aufsätze aus Fachzeitschriften.",
         "origin": "user_provided",
-        "date": "2026-09-22"
+        "date": "2026-09-22",
+        "label": "Für deine Facharbeit"
       }
     },
     {
