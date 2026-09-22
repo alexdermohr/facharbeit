@@ -15,20 +15,20 @@ class ClarityLayerTests(unittest.TestCase):
     def test_question_guidance_maps_back_to_requirements(self):
         script = (ROOT / "clarity.js").read_text(encoding="utf-8")
         self.assertIn("question.maps_to", script)
-        self.assertIn("Deckt diese belegten Anforderungen ab", script)
-        self.assertIn("Belegte Anforderungen zum Abgleichen", script)
+        self.assertIn("Bezug zu diesen Anforderungen:", script)
+        self.assertIn('heading.textContent = "Anforderungen"', script)
 
     def test_phase_boundaries_are_explicitly_non_binding(self):
         script = (ROOT / "clarity.js").read_text(encoding="utf-8")
-        self.assertIn("Arbeitsorientierung · keine zusätzliche Bewertungsvorgabe", script)
+        self.assertIn("Arbeitsfokus", script)
         self.assertIn("Hier geht es um:", script)
         self.assertIn("Noch nicht:", script)
 
     def test_self_check_copy_does_not_claim_school_validation(self):
         script = (ROOT / "clarity.js").read_text(encoding="utf-8")
-        self.assertIn("Für mich geklärt", script)
-        self.assertIn("Von mir abgeglichene Anforderungen", script)
-        self.assertIn("Als für mich geklärt markieren", script)
+        self.assertIn('return "Geklärt"', script)
+        self.assertIn("Geprüfte Anforderungen", script)
+        self.assertIn("Als geklärt markieren", script)
 
     def test_outline_position_and_largest_weight_are_visible(self):
         script = (ROOT / "clarity.js").read_text(encoding="utf-8")
