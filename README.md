@@ -16,34 +16,40 @@ Dort werden getrennt von der allgemeinen Leitfaden-Website dokumentiert:
 - offene Rekonstruktionsfragen und Literaturbedarf,
 - ein commitgebundener Quellenindex mit direkten Links in das PrepP-Repository.
 
-## Quellenmodell
+## Was die Website abbildet
 
-Das Repository trennt vier Ebenen:
+Die Website führt durch Facharbeit und Kolloquium und verbindet die Arbeitsschritte direkt mit den einschlägigen Anforderungen und Schulunterlagen. Enthalten sind insbesondere:
 
-1. **Schuldokumente** – vierzehn Dateien unter [`quellen/`](quellen/) (dreizehn PDFs und ein DOCX), jeweils als Prüfungs-/Bewertungsdokument, verbindliche Vorgabe, schulische Richtlinie oder Unterrichtshilfe klassifiziert.
-2. **Anforderungsmodell** – strukturierte, seitenbezogene Aussagen in [`data/requirements.json`](data/requirements.json) und lesbar in [`docs/ANFORDERUNGSMODELL.md`](docs/ANFORDERUNGSMODELL.md).
-3. **Leitfragen und Unterrichtshilfen** – navigieren durch die Arbeit, sind aber keine zusätzlichen offiziellen Bewertungskriterien.
-4. **Planungskontext** – der mitgeteilte Abgabetermin `13.11.2026` wird separat als nicht PDF-belegte Planungsangabe geführt.
+- die Bewertungslogik von Facharbeit und Kolloquium,
+- die verbindliche allgemeine Gliederung und die eigene Gliederung für Heilpädagogik,
+- das Fünf-Ebenen-Modell nach Fröhlich-Gildhoff,
+- Leitfragen für Situationsbeschreibung, Analyse, Planung und Reflexion,
+- Regeln zu wissenschaftlichem Schreiben und Zitieren,
+- Recherchehilfen und Kriterien zur Quellenqualität,
+- Hinweise zur KI-Nutzung,
+- Formalia und Abgabeanforderungen,
+- lokale Speicherung sowie JSON- und Markdown-Export.
 
-Die detaillierte Quellenhierarchie steht in [`docs/QUELLENMATRIX.md`](docs/QUELLENMATRIX.md). Die Website berechnet **keine Note**.
+Für die Facharbeit gelten außerdem: 12–15 Seiten reiner Fließtext, mindestens zwei valide Quellen aus Büchern oder Fachzeitschriftenaufsätzen, zusätzlich eine digitale PDF-Abgabe und eine noch nicht abschließend festgelegte schulische KI-Regelung, bei der offene Fragen mit der Lehrkraft geklärt werden sollen.
 
-## Neu aus dem erweiterten Quellenpaket
+## Quellen und Verbindlichkeit
 
-- verbindliche allgemeine Endgliederung von `1` bis `3.4`,
-- eigene verbindliche Gliederung für die Vertiefung Heilpädagogik mit Hinweisen zu ICF-CY, Förderplanung/SMART, Empowerment, kleinschrittiger Planung und Teilhabebarrieren,
-- vollständige fünf Analyseebenen nach dem Unterrichtsblatt,
-- konkrete Checkliste für die Situationsbeschreibung,
-- schulische Zitier- und KI-Richtlinie,
-- Rechercheworkflow und Suchoperatoren,
-- Kriterien zur Prüfung von Internet- und Textquellen einschließlich Zitierfähigkeit und Herkunft,
-- Anleitung zum eigenständigen Verdichten von Fachtexten,
-- allgemeine Grundsätze wissenschaftlichen Schreibens.
+Das Repository unterscheidet vier Rollen:
 
-Die frühere Quellenlücke zum Fünf-Ebenen-Modell und zu den Qualitätskriterien für Textquellen ist geschlossen; auch ein schulisches Richtlinienblatt zu Zitation und KI liegt vor. Für die aktuelle Arbeitsfassung sind zusätzlich mitgeteilte Konkretisierungen hinterlegt: Für die 12–15 Seiten zählt nur der reine Fließtext, als valide Mindestquellen gelten Bücher und Aufsätze aus Fachzeitschriften, zusätzlich ist eine digitale PDF-Fassung abzugeben und die schulische KI-Regelung wird ausdrücklich als noch nicht abschließend geklärt behandelt. Diese Punkte werden auf der Website von den belegten Schuldokument-Aussagen getrennt kenntlich gemacht. Offen bleiben unter anderem die im Gliederungsblatt erwähnten Beispielgliederungen im Anhang.
+1. **Prüfungs-/Bewertungsdokumente** – Prüfungsaufbau, Gewichte und Leistungserwartungen.
+2. **Verbindliche Vorgaben** – allgemeine und heilpädagogische Endgliederung.
+3. **Schulische Richtlinie** – wissenschaftliches Arbeiten, Zitation und KI-Nutzung.
+4. **Unterrichtshilfen** – zusätzliche Orientierung für die Bearbeitung; keine eigenen Bewertungskriterien.
+
+Die Originalunterlagen liegen unter [`quellen/`](quellen/). Das strukturierte Anforderungsmodell steht in [`data/requirements.json`](data/requirements.json) und wird in [`docs/ANFORDERUNGSMODELL.md`](docs/ANFORDERUNGSMODELL.md) erläutert. Die Quellenrollen sind in [`docs/QUELLENMATRIX.md`](docs/QUELLENMATRIX.md) dokumentiert.
+
+Kursbezogene Angaben, die nicht aus einem verlinkten Originaldokument stammen, werden im Datenmodell getrennt gespeichert. Die Website berechnet **keine Note**.
 
 ## Website
 
-`index.html`, `styles.css` und `app.js` bilden eine statische Website ohne Backend. Zu Beginn wird die Vertiefung ausgewählt. Für **Heilpädagogik** schaltet die Website auf die vertiefungsspezifische verbindliche Gliederung und zeigt die dort enthaltenen Orientierungsfragen im passenden Arbeitsschritt; für andere Vertiefungen zeigt sie die allgemeine verbindliche Gliederung nur als Basis und kennzeichnet die fehlende vertiefungsspezifische Quelle. Antworten, Auswahl und Häkchen werden ausschließlich per `localStorage` im eigenen Browser gespeichert. Der Arbeitsstand kann als JSON exportiert werden.
+`index.html`, `styles.css` und `app.js` bilden eine statische Website ohne Backend. Zu Beginn wird die Vertiefung ausgewählt. Für **Heilpädagogik** zeigt die Website die vertiefungsspezifische Gliederung und die zugehörigen Hinweise; für andere Vertiefungen dient die allgemeine verbindliche Gliederung als Grundlage.
+
+Antworten, Auswahl und Häkchen werden ausschließlich per `localStorage` im eigenen Browser gespeichert. Der Arbeitsstand kann als JSON gesichert und als Markdown exportiert werden.
 
 Öffentliche Seite:
 
@@ -64,4 +70,4 @@ python3 -m unittest discover -s tests
 node --check app.js
 ```
 
-Die Tests prüfen unter anderem Gewichte, eindeutige IDs, Quellen- und Seitenverweise, Quelldateien und SHA-256-Bindungen, die verbindlichen Gliederungen einschließlich Heilpädagogik, die fünf Ebenen, KI-Regeln sowie die Trennung des mitgeteilten Termins von PDF-belegten Vorgaben.
+Die Tests prüfen unter anderem Gewichte, eindeutige IDs, Quellen- und Seitenverweise, Quelldateien und SHA-256-Bindungen, die verbindlichen Gliederungen, das Fünf-Ebenen-Modell, KI-Regeln, Backup-Migration und die Browser-Oberfläche auf Desktop und Mobil.
