@@ -51,6 +51,7 @@ class UiContractTests(unittest.TestCase):
     def test_requirement_clarifications_render_separately(self):
         self.assertIn('requirement-context clarification', self.js)
         self.assertIn('requirement-context provisional', self.js)
+        self.assertIn('guidance-context-note', self.js)
 
     def test_backup_roundtrip_controls_exist(self):
         for element_id in ("exportButton", "markdownButton", "importButton", "importInput", "resetButton"):
