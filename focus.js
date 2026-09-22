@@ -21,10 +21,7 @@ const focusFormalGroups = [
     requirementIds: [
       "formal-scientific",
       "formal-citation-literature",
-      "formal-ai-source",
-      "formal-ai-independent",
-      "formal-ai-disclosure",
-      "formal-ai-verification",
+      "formal-ai-use",
     ],
   },
   {
