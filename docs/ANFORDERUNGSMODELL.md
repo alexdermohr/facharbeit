@@ -1,6 +1,6 @@
 # Anforderungsmodell für Prüfungsteil III
 
-Dieses Dokument strukturiert die **vierzehn derzeit im Repository abgelegten Schuldokumente** (dreizehn PDFs und ein DOCX). Es ergänzt sie nicht stillschweigend um allgemeines Wissen. Die maschinenlesbare Fassung liegt in [`data/requirements.json`](../data/requirements.json).
+Dieses Dokument beschreibt das Anforderungsmodell für Facharbeit und Kolloquium. Grundlage sind vierzehn schulische Dateien (dreizehn PDFs und ein DOCX). Die maschinenlesbare Fassung liegt in [`data/requirements.json`](../data/requirements.json).
 
 ## 1. Quellenhierarchie
 
@@ -64,7 +64,7 @@ Zusätzlich liegt ein eigenes Blatt mit dem Titel **„Verbindliche Gliederung f
 
 Die Fragen stehen im Heilpädagogik-Blatt in eckigen Klammern. Das Modell behandelt sie deshalb als **Orientierungshinweise innerhalb einer verbindlichen Gliederung**, nicht als neue offizielle Bewertungskriterien.
 
-**Einzuordnende Spannung:** Der Bewertungsbogen behandelt die Einleitung als eigenen Abschnitt. Die allgemeine Gliederung ordnet „Einleitung und Kontext“ als 1.1 ein, während das Heilpädagogik-Blatt „Einleitung“ vor Abschnitt 1 führt und „Kontext“ innerhalb von Abschnitt 1 nennt. Zudem enthält keines der beiden Gliederungsblätter eine ausdrückliche Vorrangregel. Die Website löst das transparent: Die Vertiefung wird zuerst gewählt; bei Heilpädagogik wird die speziellere Gliederung vorrangig angezeigt, beide Quellen bleiben sichtbar.
+**Wichtig für die Endfassung:** Der Bewertungsbogen behandelt die Einleitung als eigenen Abschnitt. Die allgemeine Gliederung ordnet „Einleitung und Kontext“ als 1.1 ein, während das Heilpädagogik-Blatt „Einleitung“ vor Abschnitt 1 führt und „Kontext“ innerhalb von Abschnitt 1 nennt. Eine ausdrückliche Vorrangregel zwischen beiden Gliederungsblättern fehlt. Für Heilpädagogik zeigt die Website die spezielle Gliederung; beide Originalquellen bleiben verlinkt.
 
 ## 4. Facharbeit: Bewertung und Konkretisierung
 
@@ -81,9 +81,9 @@ Die Fragen stehen im Heilpädagogik-Blatt in eckigen Klammern. Das Modell behand
 
 Der Bewertungsbogen verlangt eine fokussiert begründete Auswahl, persönlichen Bezug und berufliche Bedeutung. Die zusätzliche Situations-Checkliste konkretisiert die Beschreibung als Unterrichtshilfe: vollständiger Situationskopf, relevanter Kontext und Vorgeschichte, konkrete Handlungen und vermutete Gefühle, eigene Handlungen und Gefühle, Wechselwirkungen, chronologischer und anschaulicher Verlauf, Präsens sowie Konjunktiv bei indirekter Rede.
 
-### Verstehen & Analysieren: die fünf Ebenen sind jetzt belegt
+### Verstehen & Analysieren: die fünf Ebenen
 
-Die frühere Quellenlücke zum Fünf-Ebenen-Modell ist geschlossen. Das Unterrichtsblatt nennt:
+Das Unterrichtsblatt nennt:
 
 1. **Kind/Jugendlicher** – Beziehungserfahrungen, Selbstwirksamkeit, Stärken, Funktion des Verhaltens.
 2. **Fachkraft** – eigene Wahrnehmung, Normen, Werte, Prägungen, Strukturen und Haltung.
@@ -99,13 +99,13 @@ Das Blatt zur Identifizierung fachlicher Themen ergänzt die Analyse um Prüffra
 
 Die Recherchehilfe empfiehlt, den Fokus auf ein bis zwei Kernthemen zu verdichten, passende Schlagworte zu bilden und in Fachzeitschriften, Bibliothekskatalogen sowie Google Scholar zu recherchieren. KI kann Schlagwortideen liefern, deren Ergebnisse aber kritisch mit der eigenen Analyse abgeglichen werden müssen. Suchoperatoren wie Anführungszeichen, AND/OR, `*` und `-` werden als Hilfen genannt.
 
-**Qualität und Zitierfähigkeit von Textquellen:** Das nun vorliegende Unterrichtsblatt konkretisiert die im Informationspapier erwähnten Qualitätskriterien. Für Internetseiten nennt es Autor und Expertise, Betreiber/Server, Zielgruppe und kommerzielle Ausrichtung, Quellenangaben, inhaltliche und formale Qualität, Aktualität, den Zweck von Grafiken sowie eine seiteninterne Suchfunktion.
+**Qualität und Zitierfähigkeit von Textquellen:** Das Unterrichtsblatt konkretisiert die im Informationspapier erwähnten Qualitätskriterien. Für Internetseiten nennt es Autor und Expertise, Betreiber/Server, Zielgruppe und kommerzielle Ausrichtung, Quellenangaben, inhaltliche und formale Qualität, Aktualität, den Zweck von Grafiken sowie eine seiteninterne Suchfunktion.
 
 Für die Zitierfähigkeit führt das Blatt unter anderem wissenschaftliche Fach- und Lehrbücher, wissenschaftliche Veröffentlichungen, Forschungsberichte, Geschäftsberichte, Archivalien und valide Internetquellen an. Auch schriftlich dokumentierte Expertengespräche, eigene Umfragen bzw. Interviews, systematische Beobachtungen, eigene Versuchsergebnisse und E-Mails werden genannt. Als nicht zitierfähig ordnet das Blatt Populärliteratur, Boulevardmedien, Vorlesungsskripte, allgemeine Lexika, private Webpräsenzen und Wikipedia ein.
 
 Zur Herkunft und Qualität empfiehlt das Blatt anerkannte wissenschaftliche Quellen, rät von Quellen mit unklarer Herkunft oder Urheberschaft ab, empfiehlt möglichst die neueste Auflage und bei fremdsprachigen Quellen das Zitieren in der Originalsprache. Das Blatt bleibt eine **Unterrichtshilfe** und wird nicht zu einer zusätzlichen Bewertungsrubrik gemacht.
 
-**Mitgeteilte Konkretisierung für diese Facharbeit:** Als valide Mindestquellen gelten Bücher und Aufsätze aus Fachzeitschriften. Diese Einschränkung wird im Modell als `user_provided` geführt und nicht dem Unterrichtsblatt zur Quellenqualität zugeschrieben.
+**Für diese Facharbeit gilt:** Als valide Mindestquellen zählen Bücher und Aufsätze aus Fachzeitschriften. Diese engere Regel wird im Datenmodell getrennt von der allgemeineren Unterrichtshilfe gespeichert.
 
 ### Entscheiden & Planen
 
@@ -113,7 +113,7 @@ Die bisherigen Anforderungen bleiben bestehen: Ziel aus der Arbeitshypothese, ei
 
 ## 5. Wissenschaftliches Arbeiten und KI
 
-Es liegt eine schulische Richtlinie zu Zitation und KI-Nutzung vor. Zugleich wurde für die aktuelle Arbeitsfassung mitgeteilt, dass die schulische KI-Regelung noch nicht abschließend festgelegt ist. Die Website zeigt die Inhalte des Richtlinienblatts deshalb weiterhin quellennah, versieht die KI-Anforderung aber mit einem ausdrücklichen Vorbehalt und empfiehlt bei Unsicherheit Rücksprache mit der Lehrkraft.
+Es liegt eine schulische Richtlinie zu Zitation und KI-Nutzung vor. Die schulische KI-Regelung ist jedoch noch nicht abschließend festgelegt. Die Website zeigt deshalb die Inhalte des Richtlinienblatts und weist zugleich darauf hin, offene Fragen mit der Lehrkraft zu klären.
 
 ### Zitieren
 
@@ -139,7 +139,7 @@ Die Richtlinie erlaubt KI als Hilfsmittel, setzt aber klare Grenzen:
 
 Die Prompt- und Rechercheblätter ermuntern zur KI-Nutzung bei Themen- und Schlagwortsuche. Das ist kein Widerspruch zur Richtlinie, solange Ergebnisse kritisch geprüft, Fachtexte selbst herangezogen und KI-Einsatz transparent dokumentiert werden.
 
-**Vorbehalt:** Die vorstehenden Punkte geben das derzeit hinterlegte Richtlinienblatt wieder. Sie werden auf der Website nicht als abschließend geklärte endgültige Schulregel ausgegeben; der Vorbehalt selbst ist eine separat mitgeteilte Planungs-/Arbeitsinformation.
+**Hinweis:** Die vorstehenden Punkte geben das hinterlegte Richtlinienblatt wieder. Da die schulische KI-Regelung noch nicht abschließend festgelegt ist, sollen offene Fragen mit der Lehrkraft geklärt werden.
 
 ## 6. Quellen eigenständig verarbeiten
 
@@ -170,7 +170,7 @@ Durch die Schuldokumente belegt sind:
 - eidesstattliche Erklärung nach dem Literaturverzeichnis, nicht im Inhaltsverzeichnis
 - Abgabe als ringgebundene Ausgabe mit durchsichtigem, flexiblem Umschlag plus geheftete Ausgabe
 
-Zusätzlich wurden für die aktuelle Arbeitsfassung folgende **Konkretisierungen separat mitgeteilt** und deshalb im Modell als `user_provided` gekennzeichnet:
+Zusätzlich gelten für diese Facharbeit:
 
 - Für die 12–15 Seiten zählt nur der reine Fließtext; Deckblatt, Inhaltsverzeichnis, Quellenangaben und Anhang zählen nicht mit.
 - Als valide Mindestquellen gelten Bücher und Aufsätze aus Fachzeitschriften.
@@ -181,7 +181,7 @@ Die 200-Zeichen-Grenze wird im Eingabefeld technisch hart erzwungen.
 
 ## 8. Planungsdatum
 
-Für die Website ist **13.11.2026** als mitgeteilter Abgabetermin hinterlegt. Diese Angabe ist bewusst als `user_provided` markiert. **Sie stammt nicht aus den hinterlegten Schuldokumenten.** Das Modell macht daraus deshalb keine PDF-belegte Prüfungsanforderung.
+Der Abgabetermin ist **13.11.2026**. Im Datenmodell wird der Termin als Kontextangabe geführt und nicht einem der verlinkten Originaldokumente zugeschrieben.
 
 ## 9. Kolloquium
 
@@ -197,8 +197,7 @@ Die drei bisherigen Prüfungsdokumente bleiben unverändert maßgeblich. Bewertu
 ## 10. Verbleibende Lücken
 
 1. Die verbindliche Gliederung verweist auf **exemplarische Gliederungen im Anhang**; diese Beispiele liegen nicht vor.
-2. Der konkrete Abgabetermin **13.11.2026** ist als Planungsangabe vorhanden, aber in den Schuldokumenten nicht belegt.
-3. Für andere Vertiefungen als Heilpädagogik liegen derzeit **keine entsprechend bezeichneten vertiefungsspezifischen verbindlichen Gliederungsblätter** im Quellenordner.
+2. Für andere Vertiefungen als Heilpädagogik liegen **keine entsprechend bezeichneten vertiefungsspezifischen verbindlichen Gliederungsblätter** im Quellenordner.
 
 ## 11. Quellen
 
