@@ -241,7 +241,7 @@ function stageDescription(phase) {
     return "Prüfe formale Vorgaben, verbindliche Gliederung, Literatur, Zitation und KI-Dokumentation, bevor du tief in den Text gehst.";
   }
   const section = sectionForPhase(phase);
-  return section?.expectation || "Bearbeite die belegten Kriterien mit den zugeordneten Leitfragen.";
+  return section?.expectation || "Bearbeite die Anforderungen mit den zugeordneten Leitfragen.";
 }
 
 function phaseWeightLabel(phase) {
