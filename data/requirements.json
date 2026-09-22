@@ -417,7 +417,13 @@
           "source_id": "pt3-info",
           "page": 2
         }
-      ]
+      ],
+      "clarification": {
+        "label": "Mitgeteilte Konkretisierung",
+        "text": "Für die 12–15 Seiten zählt nur der reine Fließtext. Deckblatt, Inhaltsverzeichnis, Quellenangaben und Anhang zählen nicht mit.",
+        "origin": "user_provided",
+        "date": "2026-09-22"
+      }
     },
     {
       "id": "formal-outline",
@@ -454,7 +460,13 @@
           "source_id": "pt3-info",
           "page": 2
         }
-      ]
+      ],
+      "clarification": {
+        "label": "Mitgeteilte Ergänzung",
+        "text": "Zusätzlich ist eine digitale Version als PDF abzugeben.",
+        "origin": "user_provided",
+        "date": "2026-09-22"
+      }
     },
     {
       "id": "formal-font",
@@ -506,7 +518,7 @@
     {
       "id": "formal-sources",
       "label": "Literatur",
-      "value": "mindestens zwei Quellen; Buch- und Internetquellen nach den im Seminar besprochenen Qualitätskriterien auswählen",
+      "value": "mindestens zwei Quellen",
       "refs": [
         {
           "source_id": "pt3-info",
@@ -531,6 +543,12 @@
       ],
       "numeric": {
         "min_sources": 2
+      },
+      "clarification": {
+        "label": "Mitgeteilte Konkretisierung",
+        "text": "Für diese Facharbeit gelten Bücher und Aufsätze aus Fachzeitschriften als valide Quellen.",
+        "origin": "user_provided",
+        "date": "2026-09-22"
       }
     },
     {
@@ -553,6 +571,23 @@
       ]
     },
     {
+      "id": "formal-ai-use",
+      "label": "KI-Nutzung",
+      "value": "KI nur als Hilfsmittel und transparent nutzen; fachliche Aussagen auf Fachquellen stützen, Eigenleistung sichern und die KI-Nutzung nachvollziehbar dokumentieren.",
+      "refs": [
+        {
+          "source_id": "wissenschaftliches-arbeiten",
+          "page": 2
+        }
+      ],
+      "provisional_note": {
+        "label": "Vorbehalt",
+        "text": "Die schulische KI-Richtlinie ist noch nicht abschließend festgelegt. Bei Unsicherheit Rücksprache mit der Lehrkraft halten.",
+        "origin": "user_provided",
+        "date": "2026-09-22"
+      }
+    },
+    {
       "id": "formal-citation-literature",
       "label": "Literaturbelege",
       "value": "Alle aus Literatur übernommenen Argumente im Fließtext mit Kurzbeleg nachweisen und die Quelle vollständig im Literaturverzeichnis aufführen.",
@@ -560,50 +595,6 @@
         {
           "source_id": "wissenschaftliches-arbeiten",
           "page": 1
-        }
-      ]
-    },
-    {
-      "id": "formal-ai-source",
-      "label": "KI ist Hilfsmittel, nicht Quelle",
-      "value": "KI darf als Hilfsmittel genutzt werden, gilt aber nicht als Quelle; anerkannte Fachtexte bleiben erforderlich.",
-      "refs": [
-        {
-          "source_id": "wissenschaftliches-arbeiten",
-          "page": 2
-        }
-      ]
-    },
-    {
-      "id": "formal-ai-independent",
-      "label": "Eigenständige pädagogische Leistung bei KI-Nutzung",
-      "value": "Sprachliche KI-Unterstützung ersetzt nicht die eigene Aufgabe, schlüssige pädagogische Erklärungen und Handlungsalternativen für die Ausgangssituation zu entwickeln.",
-      "refs": [
-        {
-          "source_id": "wissenschaftliches-arbeiten",
-          "page": 2
-        }
-      ]
-    },
-    {
-      "id": "formal-ai-disclosure",
-      "label": "KI vollständig kennzeichnen",
-      "value": "Alle mit KI entstandenen Passagen vollständig kennzeichnen. Der vollständige Ausgabetext des KI-Modells bzw. ein Link dazu soll im Anhang angegeben werden; für jede Nutzung müssen der gesamte Prompt, Nutzername mit Datum und die URL des KI-Tools angegeben werden.",
-      "refs": [
-        {
-          "source_id": "wissenschaftliches-arbeiten",
-          "page": 2
-        }
-      ]
-    },
-    {
-      "id": "formal-ai-verification",
-      "label": "Klärung bei Täuschungsverdacht",
-      "value": "Bei Verdacht ist für die Klärung relevant, ob die fraglichen Passagen im Kolloquium schlüssig in eigenen Worten dargestellt und begründet werden können.",
-      "refs": [
-        {
-          "source_id": "wissenschaftliches-arbeiten",
-          "page": 2
         }
       ]
     },
@@ -791,7 +782,7 @@
           },
           {
             "id": "fa-va-five-levels",
-            "text": "Das „Modell der Fünf Ebenen“ nach Fröhlich-Gildhoff anwenden.",
+            "text": "Das Modell der Fünf Ebenen nach Fröhlich-Gildhoff anwenden: mindestens drei für die Ausgangslage passende Ebenen auswählen, systemisch bearbeiten und die Auswahl nachvollziehbar begründen.",
             "refs": [
               {
                 "source_id": "facharbeit-bewertung",
@@ -805,30 +796,10 @@
                 "source_id": "analysieren-verstehen",
                 "page": 3
               }
-            ]
-          },
-          {
-            "id": "fa-va-three-levels",
-            "text": "Die Ausgangslage auf mindestens drei Ebenen systemisch beleuchten.",
-            "refs": [
-              {
-                "source_id": "facharbeit-bewertung",
-                "page": 3
-              }
             ],
             "numeric": {
               "min_levels": 3
             }
-          },
-          {
-            "id": "fa-va-level-choice",
-            "text": "Auswahl der betrachteten Ebenen nachvollziehbar erläutern.",
-            "refs": [
-              {
-                "source_id": "facharbeit-bewertung",
-                "page": 3
-              }
-            ]
           },
           {
             "id": "fa-va-literature",
@@ -1583,12 +1554,12 @@
       {
         "id": "q-sources",
         "phase": "start",
-        "prompt": "Welche mindestens zwei belastbaren Quellen willst du verwenden – und wie prüfst du Autor, Herkunft, Aktualität, Quellenangaben und fachliche Eignung?",
+        "prompt": "Welche mindestens zwei validen Quellen nutzt du – konkret Bücher oder Aufsätze aus Fachzeitschriften – und warum passen sie fachlich zu deinem Thema?",
         "maps_to": [
           "formal-sources",
           "fa-va-literature"
         ],
-        "hint": "Das Qualitätsblatt konkretisiert die im Seminar verlangte Prüfung: Bei Internetseiten unter anderem Autor/Expertise, Betreiber, Zielgruppe, Quellenangaben, inhaltliche und formale Qualität sowie Aktualität prüfen. Bei unklarer Herkunft oder Urheberschaft soll die Quelle nicht verwendet werden.",
+        "hint": "Für diese Facharbeit gelten Bücher und Aufsätze aus Fachzeitschriften als valide Quellen. Prüfe zusätzlich fachliche Passung, Aktualität und Herkunft.",
         "origin": "derived_guidance",
         "refs": [
           {
@@ -1612,15 +1583,13 @@
       {
         "id": "q-ai",
         "phase": "start",
-        "prompt": "Welche KI-Hilfen nutzt du – und sind die KI-Passagen sowie Output/Link und Promptdaten entsprechend der schulischen Richtlinie dokumentiert?",
+        "prompt": "Welche KI-Hilfen nutzt du – und wie dokumentierst du die Nutzung transparent und nachvollziehbar?",
         "maps_to": [
           "formal-scientific",
-          "formal-ai-source",
-          "formal-ai-independent",
-          "formal-ai-disclosure",
+          "formal-ai-use",
           "kol-pg-transparency"
         ],
-        "hint": "Die Richtlinie verlangt die vollständige Kennzeichnung aller mit KI entstandenen Passagen. Der vollständige Output bzw. ein Link dazu soll in den Anhang; gesamter Prompt, Nutzername mit Datum und Tool-URL müssen angegeben werden.",
+        "hint": "Die schulische KI-Richtlinie ist noch nicht abschließend festgelegt. Nutze KI nur als Hilfsmittel, sichere deine Eigenleistung und halte bei Unklarheiten Rücksprache mit der Lehrkraft.",
         "origin": "derived_guidance",
         "refs": [
           {
@@ -1653,12 +1622,12 @@
       {
         "id": "q-we-what",
         "phase": "wahrnehmen-erleben",
-        "prompt": "Was ist konkret passiert – wer tat oder sagte was, in welcher Reihenfolge?",
+        "prompt": "Welche Ausgangslage steht im Zentrum – welche konkrete Situation und welche weiteren Eindrücke aus anderen Situationen oder Gesprächen mit Fachpersonen gehören erkennbar zu demselben Thema?",
         "maps_to": [
           "fa-we-situation",
           "fa-we-actors"
         ],
-        "hint": "Beschreibe beobachtbares Verhalten präzise, bevor du deutest.",
+        "hint": "Die Ausgangslage muss nicht auf eine einzelne Situation beschränkt sein. Weitere Eindrücke oder Gespräche können einbezogen werden, wenn ihr Zusammenhang zum Thema klar ist.",
         "origin": "derived_guidance",
         "refs": [
           {
@@ -1697,16 +1666,36 @@
       {
         "id": "q-we-self",
         "phase": "wahrnehmen-erleben",
-        "prompt": "Was davon hast du beobachtet – und was ist bereits deine eigene Wahrnehmung, Bewertung oder Vermutung?",
+        "prompt": "Welche Aussagen beruhen auf unmittelbar Beobachtetem – und wo kennzeichnest du deine subjektive Wahrnehmung oder Vermutung?",
         "maps_to": [
           "fa-we-subjectivity"
         ],
-        "hint": "Trenne Beobachtung und subjektive Deutung sichtbar.",
+        "hint": "Hier nur Beobachtung und subjektive Wahrnehmung sauber trennen. Eine vertiefte Perspektivübernahme folgt später im Analyseschritt, insbesondere wenn du die Fachkraftperspektive nach Fröhlich-Gildhoff auswählst.",
         "origin": "derived_guidance",
         "refs": [
           {
             "source_id": "situationsbeschreibung-hilfe",
             "page": 1
+          }
+        ]
+      },
+      {
+        "id": "q-va-levels",
+        "phase": "verstehen-analysieren",
+        "prompt": "Welche mindestens drei Ebenen des Modells nach Fröhlich-Gildhoff sind für genau diese Situation am ergiebigsten – und warum?",
+        "maps_to": [
+          "fa-va-five-levels"
+        ],
+        "hint": "Wähle mindestens drei für deine Ausgangslage passende Ebenen aus, bearbeite sie systemisch und begründe, warum gerade diese Ebenen relevant sind.",
+        "origin": "derived_guidance",
+        "refs": [
+          {
+            "source_id": "analysieren-verstehen",
+            "page": 1
+          },
+          {
+            "source_id": "analysieren-verstehen",
+            "page": 3
           }
         ]
       },
@@ -1719,28 +1708,6 @@
         ],
         "hint": "Formuliere Vermutungen als Vermutungen und bleibe ressourcenorientiert.",
         "origin": "derived_guidance"
-      },
-      {
-        "id": "q-va-levels",
-        "phase": "verstehen-analysieren",
-        "prompt": "Welche mindestens drei Ebenen des Modells nach Fröhlich-Gildhoff sind für genau diese Situation am ergiebigsten – und warum?",
-        "maps_to": [
-          "fa-va-five-levels",
-          "fa-va-three-levels",
-          "fa-va-level-choice"
-        ],
-        "hint": "Das Unterrichtsblatt erläutert alle fünf Ebenen. Der Bewertungsbogen verlangt für die Facharbeit mindestens drei passend ausgewählte und begründete Ebenen.",
-        "origin": "derived_guidance",
-        "refs": [
-          {
-            "source_id": "analysieren-verstehen",
-            "page": 1
-          },
-          {
-            "source_id": "analysieren-verstehen",
-            "page": 3
-          }
-        ]
       },
       {
         "id": "q-va-theory",
@@ -1820,12 +1787,12 @@
       {
         "id": "q-ep-flow",
         "phase": "entscheiden-planen",
-        "prompt": "Was ist der rote Faden deines Vorhabens, und welche konkreten Elemente willst du exemplarisch darstellen?",
+        "prompt": "Was ist der rote Faden deines Vorhabens, welche Progression ist zwischen den einzelnen Planungspunkten erkennbar und welche konkreten Elemente willst du exemplarisch darstellen?",
         "maps_to": [
           "fa-ep-thread",
           "fa-ep-examples"
         ],
-        "hint": "Zeige genug Konkretion, ohne jede Kleinigkeit chronologisch auszuschreiben.",
+        "hint": "Die Planung soll nicht nur aus Einzelpunkten bestehen: Zeige, wie die Schritte aufeinander aufbauen und sich nachvollziehbar weiterentwickeln.",
         "origin": "derived_guidance"
       },
       {
@@ -1905,7 +1872,7 @@
       {
         "id": "q-final-formal",
         "phase": "schreibkompetenz",
-        "prompt": "Erfüllt die fertige Fassung Umfang, verbindliche Gliederung, Schriftgröße, Zeilenabstand, Ränder, Quellenminimum, KI-Dokumentation und die Position der eidesstattlichen Erklärung?",
+        "prompt": "Erfüllt die fertige Fassung Umfang, verbindliche Gliederung, Schriftgröße, Zeilenabstand, Ränder, Quellenminimum, KI-Dokumentation und die eidesstattliche Erklärung?",
         "maps_to": [
           "formal-pages",
           "formal-font",
@@ -1914,7 +1881,7 @@
           "formal-sources",
           "formal-declaration",
           "formal-outline",
-          "formal-ai-disclosure"
+          "formal-ai-use"
         ],
         "hint": "Das ist eine formale Schlusskontrolle, keine inhaltliche Bewertung.",
         "origin": "derived_guidance"
@@ -2037,11 +2004,6 @@
   },
   "documented_gaps": [
     {
-      "id": "gap-page-scope",
-      "title": "Was zählt in die 12–15 Seiten?",
-      "text": "Die Dokumente nennen einen Umfang von 12–15 Seiten, legen jedoch nicht ausdrücklich fest, welche Bestandteile in diesen Umfang einfließen."
-    },
-    {
       "id": "gap-outline-examples",
       "title": "Exemplarische Gliederungen aus dem Anhang fehlen",
       "text": "Die verbindliche Gliederung verweist auf exemplarische Gliederungen im Anhang. Die zugrunde gelegten Unterlagen enthalten diese Beispielgliederungen nicht."
@@ -2070,10 +2032,15 @@
     {
       "id": "guide-ai-policy",
       "phase": "start",
-      "title": "KI-Nutzung: erlaubt, aber vollständig transparent",
-      "kind_label": "Schulische Richtlinie",
+      "title": "KI-Nutzung: Richtlinie unter Vorbehalt",
+      "kind_label": "Schulische Richtlinie · vorläufig",
       "importance": "critical",
       "items": [
+        {
+          "label": "Vorbehalt",
+          "text": "Die schulische KI-Richtlinie ist noch nicht abschließend festgelegt. Bei Unsicherheit Rücksprache mit der Lehrkraft halten.",
+          "origin": "user_provided"
+        },
         {
           "label": "Rolle der KI",
           "text": "KI darf als Hilfsmittel genutzt werden, ist aber keine Quelle. Fachliche Aussagen müssen durch anerkannte Fachtexte belegt werden.",
@@ -2466,6 +2433,11 @@
       "importance": "critical",
       "items": [
         {
+          "label": "Gültige Mindestquellen",
+          "text": "Für diese Facharbeit gelten Bücher und Aufsätze aus Fachzeitschriften als valide Quellen. Andere Quellen können der Recherche oder Einordnung dienen, zählen aber nicht als valide Mindestquelle.",
+          "origin": "user_provided"
+        },
+        {
           "text": "Prüfe bei Internetseiten, ob Autor und Kontakt benannt sind und ob fachliche Referenzen oder Expertise erkennbar sind.",
           "refs": [
             {
@@ -2507,15 +2479,6 @@
             {
               "source_id": "textquellen-qualitaet",
               "page": 1
-            }
-          ]
-        },
-        {
-          "text": "Als zitierfähig führt das Blatt unter anderem wissenschaftliche Fach- und Lehrbücher, wissenschaftliche Veröffentlichungen, Forschungsberichte, Archivalien und valide Internetquellen auf; außerdem dokumentierte Expertengespräche und eigene Erhebungen.",
-          "refs": [
-            {
-              "source_id": "textquellen-qualitaet",
-              "page": 2
             }
           ]
         },
