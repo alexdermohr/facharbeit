@@ -113,7 +113,7 @@ function normalizeState(candidate = {}) {
   next.mode = modePhases[source.mode] ? source.mode : next.mode;
   next.activePhase = modePhases[next.mode].includes(source.activePhase) ? source.activePhase : modePhases[next.mode][0];
   next.specialization = SPECIALIZATION_IDS.has(source.specialization) ? source.specialization : "";
-  next.topic = typeof source.topic === "string" ? source.topic.slice(0, 260) : "";
+  next.topic = typeof source.topic === "string" ? source.topic.slice(0, 200) : "";
 
   for (const [id, value] of Object.entries(safeObject(source.answers))) {
     if (typeof value === "string") next.answers[id] = value;
@@ -452,13 +452,23 @@ function renderRequirements(phase) {
         .map((requirement) => {
           const checked = Boolean(state.checks[requirement.id]);
           const text = requirement.text || `${requirement.label}: ${requirement.value}`;
+          const clarification = requirement.clarification
+            ? `<div class="requirement-context clarification"><strong>${escapeHtml(requirement.clarification.label || "Konkretisierung")}:</strong> ${escapeHtml(requirement.clarification.text)}</div>`
+            : "";
+          const provisionalNote = requirement.provisional_note
+            ? `<div class="requirement-context provisional"><strong>${escapeHtml(requirement.provisional_note.label || "Hinweis")}:</strong> ${escapeHtml(requirement.provisional_note.text)}</div>`
+            : "";
           return `
             <div class="requirement-item ${checked ? "checked" : ""}">
               <input id="check-${escapeHtml(requirement.id)}" type="checkbox" data-requirement="${escapeHtml(requirement.id)}" ${checked ? "checked" : ""}>
-              <label for="check-${escapeHtml(requirement.id)}">
-                ${escapeHtml(text)}
-                <span class="refs">${refsHtml(requirement.refs)}</span>
-              </label>
+              <div class="requirement-copy">
+                <label for="check-${escapeHtml(requirement.id)}">
+                  ${escapeHtml(text)}
+                  <span class="refs">${refsHtml(requirement.refs)}</span>
+                </label>
+                ${clarification}
+                ${provisionalNote}
+              </div>
             </div>
           `;
         })
@@ -671,6 +681,7 @@ function renderTopicTool() {
   const section = document.querySelector("#topicSection");
   section.hidden = state.mode !== "facharbeit" || state.activePhase !== "start";
   const input = document.querySelector("#topicInput");
+  input.maxLength = 200;
   input.value = state.topic || "";
 
   const update = () => {
