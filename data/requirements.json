@@ -42,24 +42,24 @@
       "id": "facharbeit-gliederung",
       "title": "Verbindliche Gliederung für Facharbeiten",
       "file": "quellen/260429-verbindliche-Gliederung-fuer-Facharbeiten.pdf",
-      "date": "Dokumentkopf: 2025",
+      "date": "2025",
       "pages": 1,
       "role": "Ausdrücklich verbindliche Gliederung der schriftlichen Facharbeit; zusätzliche Unterpunkte sind möglich.",
       "status": "binding",
       "status_label": "Verbindliche Vorgabe",
-      "date_note": "Der Dateiname beginnt mit 260429; der sichtbare Dokumentkopf nennt „Reemtsema 2025“. Ein eindeutiges Ausgabedatum ist im Blatt selbst nicht ausgewiesen.",
+      "date_note": "Ausgabedatum im Dokument nicht eindeutig angegeben.",
       "sha256": "29843b893b9b54156a2e71a2ec01395757b22e45897ea9d82e7506709b88b7e8"
     },
     {
       "id": "heilpaedagogik-gliederung",
       "title": "Verbindliche Gliederung für Facharbeiten im Arbeitsfeld Heilpädagogik",
       "file": "quellen/Gliederung-FA-AF-HP.docx",
-      "date": "2025-09-03 (Dateimetadaten)",
+      "date": "ohne Datumsangabe",
       "pages": 1,
       "role": "Vertiefungsspezifisch verbindliche Gliederung für das Arbeitsfeld Heilpädagogik mit ergänzenden Orientierungsfragen zu heilpädagogischer Relevanz, ICF-CY, Förderplanung/SMART, Empowerment, kleinschrittiger Planung und Teilhabebarrieren.",
       "status": "binding",
       "status_label": "Verbindliche Vorgabe",
-      "date_note": "Im sichtbaren Dokumenttext ist kein Ausgabedatum genannt; die DOCX-Kernmetadaten nennen den 03.09.2025 als Erstellungs- und Änderungsdatum.",
+      "date_note": "Im Dokument selbst ist kein Ausgabedatum angegeben.",
       "sha256": "e58f206295ec7a8c08544946be67eeec3fe320005b9f114ee757b170b8fd3a27"
     },
     {
@@ -126,7 +126,7 @@
       "role": "Unterrichtshilfe zur Bewertung von Internetquellen, zur Zitierfähigkeit sowie zu Herkunft und Qualität verwendeter Quellen.",
       "status": "instructional",
       "status_label": "Unterrichtshilfe",
-      "date_note": "Im Blatt selbst ist kein Ausgabedatum angegeben; beide Fußnoten nennen den 20.11.2012 als Abrufdatum der zugrunde liegenden Webquellen.",
+      "date_note": "Im Dokument selbst ist kein Ausgabedatum angegeben.",
       "sha256": "5342996342192ad746c583dad6cfd3e30cfdab8874301792da91984a4d8d11c5"
     },
     {
@@ -397,8 +397,8 @@
     {
       "id": "other",
       "label": "Andere Vertiefung",
-      "description": "Verwendet die allgemeine verbindliche Gliederung als Basis. Für andere Vertiefungen sind in der zugrunde gelegten Quellenbasis keine vertiefungsspezifischen Vorgaben belegt.",
-      "selected_note": "Die allgemeine verbindliche Gliederung bildet die Basis. Daraus folgt nicht, dass damit alle Vorgaben der gewählten anderen Vertiefung abgedeckt sind.",
+      "description": "Für andere Vertiefungen zeigt die Seite die allgemeine verbindliche Gliederung. Kläre zusätzliche vertiefungsspezifische Vorgaben mit deiner Lehrkraft.",
+      "selected_note": "Die allgemeine verbindliche Gliederung ist aktiv. Prüfe mit deiner Lehrkraft, ob für deine Vertiefung zusätzliche Vorgaben gelten.",
       "refs": [
         {
           "source_id": "facharbeit-gliederung",
@@ -419,10 +419,10 @@
         }
       ],
       "clarification": {
-        "label": "Mitgeteilte Konkretisierung",
-        "text": "Für die 12–15 Seiten zählt nur der reine Fließtext. Deckblatt, Inhaltsverzeichnis, Quellenangaben und Anhang zählen nicht mit.",
+        "text": "Es zählt nur der reine Fließtext. Deckblatt, Inhaltsverzeichnis, Quellenangaben und Anhang zählen nicht mit.",
         "origin": "user_provided",
-        "date": "2026-09-22"
+        "date": "2026-09-22",
+        "label": "Für deine Facharbeit"
       }
     },
     {
@@ -462,10 +462,10 @@
         }
       ],
       "clarification": {
-        "label": "Mitgeteilte Ergänzung",
         "text": "Zusätzlich ist eine digitale Version als PDF abzugeben.",
         "origin": "user_provided",
-        "date": "2026-09-22"
+        "date": "2026-09-22",
+        "label": "Für deine Facharbeit"
       }
     },
     {
@@ -545,10 +545,10 @@
         "min_sources": 2
       },
       "clarification": {
-        "label": "Mitgeteilte Konkretisierung",
-        "text": "Für diese Facharbeit gelten Bücher und Aufsätze aus Fachzeitschriften als valide Quellen.",
+        "text": "Als valide Quellen gelten Bücher und Aufsätze aus Fachzeitschriften.",
         "origin": "user_provided",
-        "date": "2026-09-22"
+        "date": "2026-09-22",
+        "label": "Für deine Facharbeit"
       }
     },
     {
@@ -581,8 +581,8 @@
         }
       ],
       "provisional_note": {
-        "label": "Vorbehalt",
-        "text": "Die schulische KI-Richtlinie ist noch nicht abschließend festgelegt. Bei Unsicherheit Rücksprache mit der Lehrkraft halten.",
+        "label": "Hinweis",
+        "text": "Die schulische KI-Regelung ist noch nicht abschließend festgelegt. Kläre offene Fragen mit deiner Lehrkraft.",
         "origin": "user_provided",
         "date": "2026-09-22"
       }
@@ -1559,7 +1559,7 @@
           "formal-sources",
           "fa-va-literature"
         ],
-        "hint": "Mitgeteilte Konkretisierung: Für diese Facharbeit gelten Bücher und Aufsätze aus Fachzeitschriften als valide Quellen. Die Unterrichtshilfen helfen ergänzend, fachliche Passung, Aktualität und Herkunft zu prüfen.",
+        "hint": "Als valide Quellen gelten Bücher und Aufsätze aus Fachzeitschriften. Prüfe zusätzlich fachliche Passung, Aktualität und Herkunft.",
         "origin": "derived_guidance",
         "refs": [
           {
@@ -1589,7 +1589,7 @@
           "formal-ai-use",
           "kol-pg-transparency"
         ],
-        "hint": "Vorbehalt (mitgeteilt): Die schulische KI-Richtlinie ist noch nicht abschließend festgelegt. Nutze KI nur als Hilfsmittel, sichere deine Eigenleistung und halte bei Unklarheiten Rücksprache mit der Lehrkraft.",
+        "hint": "Die schulische KI-Regelung ist noch nicht abschließend festgelegt. Nutze KI nur als Hilfsmittel, sichere deine Eigenleistung und kläre offene Fragen mit deiner Lehrkraft.",
         "origin": "derived_guidance"
       },
       {
@@ -1621,7 +1621,7 @@
           "fa-we-situation",
           "fa-we-actors"
         ],
-        "hint": "Mitgeteilte Konkretisierung: Die Ausgangslage muss nicht auf eine einzelne Situation beschränkt sein. Weitere Eindrücke oder Gespräche können einbezogen werden, wenn ihr Zusammenhang zum Thema klar ist.",
+        "hint": "Die Ausgangslage muss nicht auf eine einzelne Situation beschränkt sein. Weitere Eindrücke oder Gespräche können einbezogen werden, wenn ihr Zusammenhang zum Thema klar ist.",
         "origin": "derived_guidance"
       },
       {
@@ -1993,18 +1993,13 @@
   "documented_gaps": [
     {
       "id": "gap-outline-examples",
-      "title": "Exemplarische Gliederungen aus dem Anhang fehlen",
-      "text": "Die verbindliche Gliederung verweist auf exemplarische Gliederungen im Anhang. Die zugrunde gelegten Unterlagen enthalten diese Beispielgliederungen nicht."
-    },
-    {
-      "id": "gap-deadline-source",
-      "title": "Abgabetermin ist Planungsangabe, nicht durch Schuldokument belegt",
-      "text": "Der angezeigte Abgabetermin 13.11.2026 stammt aus einer separaten Planungsangabe; die verlinkten Schuldokumente nennen diesen Termin nicht."
+      "title": "Beispielgliederungen im Anhang",
+      "text": "Das allgemeine Gliederungsblatt verweist auf Beispielgliederungen im Anhang. Sie sind in den verfügbaren Unterlagen nicht enthalten. Nutze die verbindliche Gliederung auf dieser Seite und frage bei Bedarf deine Lehrkraft."
     },
     {
       "id": "gap-specialization-outlines",
-      "title": "Weitere vertiefungsspezifische Gliederungen fehlen",
-      "text": "Für Heilpädagogik ist eine verbindliche vertiefungsspezifische Gliederung belegt. Für andere Vertiefungen sind in der zugrunde gelegten Quellenbasis keine entsprechend bezeichneten verbindlichen Gliederungsblätter belegt."
+      "title": "Andere Vertiefungen",
+      "text": "Für andere Vertiefungen liegt hier keine eigene verbindliche Gliederung vor. Nutze die allgemeine Gliederung und kläre zusätzliche Vorgaben mit deiner Lehrkraft."
     }
   ],
   "planning_context": {
@@ -2086,8 +2081,8 @@
         }
       ],
       "context_note": {
-        "label": "Vorbehalt",
-        "text": "Die schulische KI-Richtlinie ist noch nicht abschließend festgelegt. Bei Unsicherheit Rücksprache mit der Lehrkraft halten.",
+        "label": "Hinweis",
+        "text": "Die schulische KI-Regelung ist noch nicht abschließend festgelegt. Kläre offene Fragen mit deiner Lehrkraft.",
         "origin": "user_provided",
         "date": "2026-09-22"
       }
@@ -2495,8 +2490,8 @@
         }
       ],
       "context_note": {
-        "label": "Für diese Facharbeit enger gefasst",
-        "text": "Als valide Quellen gelten nach der separat mitgeteilten Konkretisierung Bücher und Aufsätze aus Fachzeitschriften. Das Unterrichtsblatt selbst nennt allgemein weitere zitierfähige Formen.",
+        "label": "Für deine Facharbeit",
+        "text": "Als valide Quellen gelten Bücher und Aufsätze aus Fachzeitschriften. Das Unterrichtsblatt nennt darüber hinaus weitere zitierfähige Formen.",
         "origin": "user_provided",
         "date": "2026-09-22"
       }
@@ -2652,8 +2647,8 @@
   "documented_tensions": [
     {
       "id": "tension-intro-outline",
-      "title": "Einleitung: Arbeitsschritt versus Endgliederung",
-      "text": "Der Bewertungsbogen behandelt die Einleitung als eigenen Abschnitt. Die allgemeine verbindliche Endgliederung ordnet „Einleitung und Kontext“ als 1.1 unter „Wahrnehmen und Erleben“ ein; das heilpädagogische Gliederungsblatt führt die „Einleitung“ dagegen vor Abschnitt 1 und nennt „Kontext“ innerhalb von Abschnitt 1. Für den Arbeitsprozess bleibt die Einleitung ein eigener Schritt; für die Endfassung gilt die zur gewählten Vertiefung passende Struktur.",
+      "title": "Einleitung im Arbeitsweg und in der Endfassung",
+      "text": "Bearbeite die Einleitung hier als eigenen Arbeitsschritt. In der allgemeinen Endgliederung gehört „Einleitung und Kontext“ zu 1.1 unter „Wahrnehmen und Erleben“. In der Heilpädagogik-Gliederung steht die Einleitung vor Abschnitt 1 und der Kontext unter 1.1.",
       "refs": [
         {
           "source_id": "facharbeit-bewertung",
@@ -2671,8 +2666,8 @@
     },
     {
       "id": "tension-general-hp-outline",
-      "title": "Allgemeine Gliederung versus spezielle Heilpädagogik-Gliederung",
-      "text": "Das allgemeine PDF bezeichnet seine Gliederung als unabhängig vom Schwerpunkt verbindlich. Daneben liegt ein eigenes Blatt „Verbindliche Gliederung für Facharbeiten im Arbeitsfeld Heilpädagogik“ vor, das die Struktur für Heilpädagogik konkretisiert. Eine ausdrückliche Vorrangregel zwischen beiden Dokumenten ist nicht enthalten. Bei Auswahl Heilpädagogik wird die speziellere Gliederung vorrangig verwendet; beide Quellen bleiben sichtbar.",
+      "title": "Welche Gliederung gilt bei Heilpädagogik?",
+      "text": "Für Heilpädagogik zeigt die Seite die spezielle Heilpädagogik-Gliederung. Das allgemeine Gliederungsblatt bezeichnet seine Struktur ebenfalls als verbindlich; eine ausdrückliche Vorrangregel fehlt. Kläre bei Unsicherheit die endgültige Gliederung mit deiner Lehrkraft.",
       "refs": [
         {
           "source_id": "facharbeit-gliederung",
@@ -2686,8 +2681,8 @@
     },
     {
       "id": "tension-citation-style",
-      "title": "Allgemeine Zitierstile versus konkrete Facharbeits-Richtlinie",
-      "text": "Das allgemeine Grundsatzblatt nennt APA, MLA oder Chicago beispielhaft. Die spezifische Richtlinie zur Facharbeit gibt dagegen konkrete schulische Kurzbeleg- und Literaturverzeichnis-Muster. Für die konkrete Zitation ist die Facharbeits-Richtlinie maßgeblich; das Grundsatzblatt dient ergänzend als allgemeine Schreiborientierung.",
+      "title": "Welche Zitierregeln gelten?",
+      "text": "Für die Facharbeit gelten die konkreten Kurzbeleg- und Literaturverzeichnis-Muster der Facharbeits-Richtlinie. APA, MLA und Chicago werden im allgemeinen Schreibblatt nur beispielhaft genannt.",
       "refs": [
         {
           "source_id": "wissenschaftliches-schreiben",
@@ -2705,8 +2700,8 @@
     },
     {
       "id": "tension-ai-research",
-      "title": "KI für Rechercheideen ja – KI als Quelle nein",
-      "text": "Prompt- und Rechercheblätter regen KI zur Themen- und Schlagwortsuche an. Die schulische Richtlinie begrenzt diese Nutzung klar: Ergebnisse kritisch prüfen, Fachtexte selbst heranziehen und KI nie als fachliche Quelle behandeln.",
+      "title": "KI zur Recherche, nicht als Fachquelle",
+      "text": "KI kann bei Themen- und Schlagwortsuche helfen. Prüfe die Ergebnisse kritisch und belege fachliche Aussagen mit Fachquellen. Die schulische KI-Regelung ist noch nicht abschließend festgelegt; kläre offene Fragen mit deiner Lehrkraft.",
       "refs": [
         {
           "source_id": "prompten-hilfe",
