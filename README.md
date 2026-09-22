@@ -25,7 +25,7 @@ Die detaillierte Quellenhierarchie steht in [`docs/QUELLENMATRIX.md`](docs/QUELL
 - Anleitung zum eigenständigen Verdichten von Fachtexten,
 - allgemeine Grundsätze wissenschaftlichen Schreibens.
 
-Die früheren Lücken zum Fünf-Ebenen-Modell, zur KI-/Zitier-Richtlinie und zu den Qualitätskriterien für Textquellen sind damit geschlossen. Offen bleiben unter anderem die genaue Einrechnung in die 12–15 Seiten und die im Gliederungsblatt erwähnten Beispielgliederungen im Anhang.
+Die früheren Lücken zum Fünf-Ebenen-Modell, zur KI-/Zitier-Richtlinie und zu den Qualitätskriterien für Textquellen sind damit geschlossen. Für die aktuelle Arbeitsfassung sind zusätzlich mitgeteilte Konkretisierungen hinterlegt: Für die 12–15 Seiten zählt nur der reine Fließtext, als valide Mindestquellen gelten Bücher und Aufsätze aus Fachzeitschriften, zusätzlich ist eine digitale PDF-Fassung abzugeben und die schulische KI-Regelung wird ausdrücklich als noch nicht abschließend geklärt behandelt. Diese Punkte werden auf der Website von den belegten Schuldokument-Aussagen getrennt kenntlich gemacht. Offen bleiben unter anderem die im Gliederungsblatt erwähnten Beispielgliederungen im Anhang.
 
 ## Website
 
