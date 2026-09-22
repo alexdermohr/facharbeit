@@ -56,7 +56,7 @@ class RequirementsModelTests(unittest.TestCase):
             if section["id"] == "verstehen-analysieren"
         )
         requirements = {item["id"]: item for item in va["requirements"]}
-        self.assertEqual(requirements["fa-va-three-levels"]["numeric"]["min_levels"], 3)
+        self.assertEqual(requirements["fa-va-five-levels"]["numeric"]["min_levels"], 3)
 
     def test_binding_outline_is_exact_and_source_backed(self):
         outline = self.model["facharbeit"]["required_outline"]
@@ -103,12 +103,17 @@ class RequirementsModelTests(unittest.TestCase):
         gap_ids = {gap["id"] for gap in self.model["documented_gaps"]}
         self.assertNotIn("gap-five-levels", gap_ids)
 
-    def test_ai_rules_are_explicit_and_not_a_gap(self):
+    def test_ai_rules_are_consolidated_and_provisional(self):
         formal = {item["id"]: item for item in self.model["formal_requirements"]}
-        for requirement_id in ("formal-ai-source", "formal-ai-independent", "formal-ai-disclosure", "formal-ai-verification"):
-            self.assertIn(requirement_id, formal)
+        self.assertIn("formal-ai-use", formal)
+        for legacy_id in ("formal-ai-source", "formal-ai-independent", "formal-ai-disclosure", "formal-ai-verification"):
+            self.assertNotIn(legacy_id, formal)
+        note = formal["formal-ai-use"]["provisional_note"]
+        self.assertEqual(note["origin"], "user_provided")
+        self.assertIn("nicht abschließend", note["text"])
         guide = next(item for item in self.model["instructional_guidance"] if item["id"] == "guide-ai-policy")
-        self.assertEqual(guide["kind_label"], "Schulische Richtlinie")
+        self.assertIn("vorläufig", guide["kind_label"])
+        self.assertTrue(any(item.get("label") == "Vorbehalt" for item in guide["items"]))
         self.assertTrue(any("Kolloquium" in item.get("text", "") for item in guide["items"]))
         citation = next(item for item in self.model["instructional_guidance"] if item["id"] == "guide-citation")
         self.assertTrue(any("(vgl. Leitz: 2015, S. 74)" in item.get("text", "") for item in citation["items"]))
@@ -176,11 +181,41 @@ class RequirementsModelTests(unittest.TestCase):
 
         visit(self.model)
 
+    def test_course_clarifications_are_explicit(self):
+        formal = {item["id"]: item for item in self.model["formal_requirements"]}
+
+        self.assertEqual(formal["formal-pages"]["clarification"]["origin"], "user_provided")
+        self.assertIn("reine Fließtext", formal["formal-pages"]["clarification"]["text"])
+        self.assertIn("digitale Version als PDF", formal["formal-submission"]["clarification"]["text"])
+        self.assertIn("Bücher und Aufsätze aus Fachzeitschriften", formal["formal-sources"]["clarification"]["text"])
+
+    def test_five_level_requirements_are_consolidated(self):
+        section = next(item for item in self.model["facharbeit"]["sections"] if item["id"] == "verstehen-analysieren")
+        ids = {item["id"] for item in section["requirements"]}
+        self.assertIn("fa-va-five-levels", ids)
+        self.assertNotIn("fa-va-three-levels", ids)
+        self.assertNotIn("fa-va-level-choice", ids)
+        text = next(item["text"] for item in section["requirements"] if item["id"] == "fa-va-five-levels")
+        self.assertIn("mindestens drei", text)
+        self.assertIn("Auswahl nachvollziehbar begründen", text)
+
+    def test_requested_question_refinements_are_present(self):
+        questions = self.model["derived_guidance"]["questions"]
+        by_id = {item["id"]: item for item in questions}
+
+        phase_ids = [item["id"] for item in questions if item["phase"] == "verstehen-analysieren"]
+        self.assertLess(phase_ids.index("q-va-levels"), phase_ids.index("q-va-needs"))
+        self.assertIn("weiteren Eindrücke", by_id["q-we-what"]["prompt"])
+        self.assertIn("Perspektivübernahme", by_id["q-we-self"]["hint"])
+        self.assertIn("Progression", by_id["q-ep-flow"]["prompt"])
+        self.assertNotIn("Position der eidesstattlichen Erklärung", by_id["q-final-formal"]["prompt"])
+        self.assertIn("eidesstattliche Erklärung", by_id["q-final-formal"]["prompt"])
+
     def test_remaining_gaps_are_explicit(self):
         gap_ids = {gap["id"] for gap in self.model["documented_gaps"]}
         self.assertEqual(
             gap_ids,
-            {"gap-page-scope", "gap-outline-examples", "gap-deadline-source", "gap-specialization-outlines"},
+            {"gap-outline-examples", "gap-deadline-source", "gap-specialization-outlines"},
         )
 
 
