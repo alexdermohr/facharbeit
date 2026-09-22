@@ -1559,7 +1559,7 @@
           "formal-sources",
           "fa-va-literature"
         ],
-        "hint": "Für diese Facharbeit gelten Bücher und Aufsätze aus Fachzeitschriften als valide Quellen. Prüfe zusätzlich fachliche Passung, Aktualität und Herkunft.",
+        "hint": "Mitgeteilte Konkretisierung: Für diese Facharbeit gelten Bücher und Aufsätze aus Fachzeitschriften als valide Quellen. Die Unterrichtshilfen helfen ergänzend, fachliche Passung, Aktualität und Herkunft zu prüfen.",
         "origin": "derived_guidance",
         "refs": [
           {
@@ -1589,14 +1589,8 @@
           "formal-ai-use",
           "kol-pg-transparency"
         ],
-        "hint": "Die schulische KI-Richtlinie ist noch nicht abschließend festgelegt. Nutze KI nur als Hilfsmittel, sichere deine Eigenleistung und halte bei Unklarheiten Rücksprache mit der Lehrkraft.",
-        "origin": "derived_guidance",
-        "refs": [
-          {
-            "source_id": "wissenschaftliches-arbeiten",
-            "page": 2
-          }
-        ]
+        "hint": "Vorbehalt (mitgeteilt): Die schulische KI-Richtlinie ist noch nicht abschließend festgelegt. Nutze KI nur als Hilfsmittel, sichere deine Eigenleistung und halte bei Unklarheiten Rücksprache mit der Lehrkraft.",
+        "origin": "derived_guidance"
       },
       {
         "id": "q-intro-choice",
@@ -1627,14 +1621,8 @@
           "fa-we-situation",
           "fa-we-actors"
         ],
-        "hint": "Die Ausgangslage muss nicht auf eine einzelne Situation beschränkt sein. Weitere Eindrücke oder Gespräche können einbezogen werden, wenn ihr Zusammenhang zum Thema klar ist.",
-        "origin": "derived_guidance",
-        "refs": [
-          {
-            "source_id": "situationsbeschreibung-hilfe",
-            "page": 1
-          }
-        ]
+        "hint": "Mitgeteilte Konkretisierung: Die Ausgangslage muss nicht auf eine einzelne Situation beschränkt sein. Weitere Eindrücke oder Gespräche können einbezogen werden, wenn ihr Zusammenhang zum Thema klar ist.",
+        "origin": "derived_guidance"
       },
       {
         "id": "q-we-context",
@@ -2479,6 +2467,15 @@
           ]
         },
         {
+          "text": "Als zitierfähig führt das Blatt unter anderem wissenschaftliche Fach- und Lehrbücher, wissenschaftliche Veröffentlichungen, Forschungsberichte, Archivalien und valide Internetquellen auf; außerdem dokumentierte Expertengespräche und eigene Erhebungen.",
+          "refs": [
+            {
+              "source_id": "textquellen-qualitaet",
+              "page": 2
+            }
+          ]
+        },
+        {
           "text": "Als nicht zitierfähig führt das Blatt unter anderem Populärliteratur, Boulevardmedien, Vorlesungsskripte, allgemeine Lexika, private Webpräsenzen und Wikipedia auf.",
           "refs": [
             {
@@ -2496,7 +2493,13 @@
             }
           ]
         }
-      ]
+      ],
+      "context_note": {
+        "label": "Für diese Facharbeit enger gefasst",
+        "text": "Als valide Quellen gelten nach der separat mitgeteilten Konkretisierung Bücher und Aufsätze aus Fachzeitschriften. Das Unterrichtsblatt selbst nennt allgemein weitere zitierfähige Formen.",
+        "origin": "user_provided",
+        "date": "2026-09-22"
+      }
     },
     {
       "id": "guide-citation",
