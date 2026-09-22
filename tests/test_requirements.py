@@ -222,7 +222,7 @@ class RequirementsModelTests(unittest.TestCase):
         gap_ids = {gap["id"] for gap in self.model["documented_gaps"]}
         self.assertEqual(
             gap_ids,
-            {"gap-outline-examples", "gap-deadline-source", "gap-specialization-outlines"},
+            {"gap-outline-examples", "gap-specialization-outlines"},
         )
 
 
