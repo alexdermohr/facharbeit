@@ -420,6 +420,17 @@ textarea:focus { border-color: var(--accent); }
 .guidance-card { padding: 1rem; border: 1px solid var(--line); border-radius: 14px; background: white; }
 .guidance-card.critical { border-color: #d7b96a; background: #fffdf7; }
 .guidance-card h5 { margin: .45rem 0 .65rem; font-size: 1rem; }
+.guidance-context-note {
+  margin: 0 0 .75rem;
+  padding: .55rem .65rem;
+  border-left: 3px solid #d7b96a;
+  border-radius: 0 9px 9px 0;
+  background: #fffdf7;
+  color: var(--muted);
+  font-size: .8rem;
+  line-height: 1.45;
+}
+.guidance-context-note strong { color: var(--ink); }
 .guidance-card ul { margin: 0; padding-left: 1.15rem; }
 .guidance-card li { margin: .45rem 0; }
 .guidance-card .refs { margin-top: .2rem; }
