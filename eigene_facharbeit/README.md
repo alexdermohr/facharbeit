@@ -22,6 +22,8 @@ Siehe zum schulischen Anforderungsrahmen:
 - [02 – Analyseachsen und Arbeitshypothesen](02_analyseachsen.md)
 - [03 – PrepP-Quellenindex](03_prepp_quellen.md)
 - [04 – Offene Fragen und nächste Schritte](04_offene_fragen.md)
+- [05 – Theoriematrix für die fachliche Vertiefung](05_theoriematrix.md)
+- [06 – Wissenschaftliche Literaturkandidaten](06_literaturkandidaten.md)
 
 ## Arbeitsprinzipien
 
@@ -48,3 +50,15 @@ Kernsatz zur eigenen Rolle:
 Kernsatz zur zweiten Analyseachse:
 
 > **Zu prüfen ist, ob X das Aufgeben bereits verfügbarer Ressourcen besonders dann schwerfällt, wenn der mögliche Gegenwert erst später, unsicher oder abstrakt erfahrbar wird.**
+
+## Vorläufiges Theorie-Commitment
+
+Nach Gegenprüfung wird die theoretische Vertiefung bewusst begrenzt:
+
+- **Mentalisierung** als tragende Perspektive auf eigene Verstrickung, Deutung und Perspektivoffenheit,
+- **Scaffolding / sozialer Konstruktivismus** als tragende Perspektive für die Lernbrücke zwischen Grenze und Kompetenzaufbau,
+- **exekutive Funktionen** nur als bedingte, zu prüfende Erklärungsperspektive für mehrschrittige, verzögerte und abstrakte Anforderungen,
+- **Selbstbestimmung** und **Selbstwirksamkeit** ergänzend zur Prüfung konkreter Planungsentscheidungen,
+- **Fünf-Ebenen-Modell** und **ICF-CY** als Ordnungsrahmen, nicht als Kausalerklärungen.
+
+Piaget, Theory of Mind, Bindungstheorie, Prospect Theory und Rogers bleiben vorerst Kontrast- bzw. Reserveperspektiven. Eine Theorie wird später nur übernommen, wenn sie eine konkrete Beobachtung erschließt, eine Gegenhypothese zulässt, eine pädagogische Entscheidung verändert und durch eine zitierfähige Fachquelle gestützt ist.
