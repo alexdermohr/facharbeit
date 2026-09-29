@@ -217,6 +217,30 @@ class RequirementsModelTests(unittest.TestCase):
         self.assertIn("Progression", by_id["q-ep-flow"]["prompt"])
         self.assertNotIn("Position der eidesstattlichen Erklärung", by_id["q-final-formal"]["prompt"])
         self.assertIn("eidesstattliche Erklärung", by_id["q-final-formal"]["prompt"])
+        self.assertEqual(
+            by_id["q-kol-scenes"]["prompt"],
+            "Welche zwei oder drei Umsetzungssituationen zeigen besonders gut, was ausgehend von Zielsetzung und Planung im tatsächlichem Prozess passiert ist?",
+        )
+        self.assertEqual(
+            by_id["q-kol-alt"]["hint"],
+            "Alternativen sollten aus den konkreten Erfahrungen und Ergebnissen folgen, nicht beliebig ergänzt werden.",
+        )
+        self.assertEqual(
+            by_id["q-kol-strengths"]["hint"],
+            "Differenziert benennen und mit Weiterentwicklung von Bildungs- und Entwicklungsprozessen verknüpfen.",
+        )
+        self.assertIn("kol-kt-transfer", by_id["q-kol-strengths"]["maps_to"])
+        self.assertEqual(
+            by_id["q-kol-values"]["prompt"],
+            "Welche Werte oder Rechte tragen deine pädagogischen Schlussfolgerungen, etwa Partizipation, Kinderrechte, Inklusion oder ein humanistisches Menschenbild?",
+        )
+        self.assertNotIn("q-kol-transfer", by_id)
+        self.assertEqual(
+            by_id["q-kol-attitude-change"]["prompt"],
+            "Inwiefern hat der Prozess deine pädagogische Haltung verändert?",
+        )
+        self.assertEqual(by_id["q-kol-attitude-change"]["maps_to"], ["kol-kt-attitude"])
+        self.assertNotIn("hint", by_id["q-kol-attitude-change"])
 
     def test_remaining_gaps_are_explicit(self):
         gap_ids = {gap["id"] for gap in self.model["documented_gaps"]}
