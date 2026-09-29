@@ -325,6 +325,7 @@ Eine Quelle wird erst endgültig verwendet, wenn:
 
 ## Noch offen
 
+- zitierfähige und tatsächlich geprüfte Fachliteratur für den sozial-konstruktivistischen Anschluss von Scaffolding; bis dahin wird dieser Anschluss nicht als eigenständig belegte Kernperspektive behandelt,
 - deutsche bzw. schulisch anschlussfähige Literatur zu Mentalisierung im pädagogischen Kontext,
 - Originalquelle des schulisch verwendeten Fünf-Ebenen-Modells,
 - schulisch erwartete ICF-CY-Quelle,

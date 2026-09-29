@@ -121,7 +121,7 @@ Der Kinderperspektivenansatz ist besonders nützlich als Erinnerung:
 
 ---
 
-# 3. Kernperspektive 2 – Scaffolding und sozialer Konstruktivismus
+# 3. Kernperspektive 2 – Scaffolding; sozial-konstruktivistischer Anschluss vorläufig
 
 ## Warum sie zum Fall passen
 
@@ -136,9 +136,11 @@ Genau hier setzt Scaffolding an:
 - relevante Schritte sichtbar machen,
 - Unterstützung nicht dauerhaft übernehmen, sondern schrittweise zurücknehmen.
 
-Der soziale Konstruktivismus ergänzt:
+Ein sozial-konstruktivistischer Anschluss würde ergänzen:
 
 > Lernen findet nicht nur im Kopf des Einzelnen statt, sondern in gemeinsamer Tätigkeit, Sprache, Aushandlung und passender Unterstützung.
+
+Dieser Anschluss ist fachlich plausibel, wird aber erst als tragende Theorie übernommen, wenn eine zitierfähige Fachquelle tatsächlich geprüft wurde.
 
 ## Anwendung auf die damalige Konsequenz
 
@@ -356,8 +358,8 @@ Professionelles Fallverstehen muss **Person und Situation** zusammenhalten.
 |---|---|---|---|---|---|
 | X gibt Kuchen zunächst nicht ab; Tag 7 zeigt später selektiv großzügiges Geben | Mentalisierung / Verhalten als Kommunikation | unterschiedliche Bedeutungen von Besitz, Teilen, Beziehung und Situation | Verhalten folgt schlicht aktuellem Wunsch oder konkreter Peer-Ablehnung | Perspektive von X; vergleichbare Situationen | Bedeutung und Erwartungen vorab klären; Perspektive aktiv erheben |
 | Eigene schnelle Deutung als Regel-/Verbindlichkeitsproblem | Mentalisierung + Attribution | eigene Verstrickung, Zuschreibungen und ausgeblendete Alternativen | die damalige Grenze war trotz enger Deutung für Gruppenschutz erforderlich | eigene Erinnerung, Wortlaut, emotionaler Zustand, Ablauf | Reflexionsschritt vor Sanktion; Grenze und Lernziel trennen |
-| Wiederholtes Sichern vorhandener Ressourcen; Ablehnung unsicheren späteren Returns | exekutive Funktionen **als Prüfhypothese** | Inhibition, Arbeitsgedächtnis, Flexibilität, mehrschrittige Zielrepräsentation | rationales Sparziel, Sicherheit, Vertrauen oder Beziehung erklären das Verhalten besser | mehrere vergleichbare Situationen und Gegenbeispiele | Zwischenschritte sichtbar machen; Unsicherheit reduzieren; nicht pathologisieren |
-| Sonderaktivitäten werden entzogen | Scaffolding / sozialer Konstruktivismus | fehlende Lernbrücke zwischen Grenze und geforderter Kompetenz | zeitweiser Entzug war zum Schutz oder zur Deeskalation notwendig | genaue Funktion und Wirkung der Konsequenz | Grenze erhalten, aber Kompetenz in überschaubaren Schritten üben |
+| **Noch nicht primär dokumentierte Gesprächsbeobachtungen:** wiederholtes Sichern vorhandener Ressourcen; Ablehnung unsicheren späteren Returns | exekutive Funktionen **als Prüfhypothese** | Inhibition, Arbeitsgedächtnis, Flexibilität, mehrschrittige Zielrepräsentation | rationales Sparziel, Sicherheit, Vertrauen oder Beziehung erklären das Verhalten besser | Primärnotizen mit Datum, Kontext, Wortlaut und eigener Anwesenheit/Quelle; danach vergleichbare Situationen und Gegenbeispiele | Zwischenschritte sichtbar machen; Unsicherheit reduzieren; nicht pathologisieren |
+| Sonderaktivitäten werden entzogen | Scaffolding; sozial-konstruktivistischer Anschluss **vorläufig** | fehlende Lernbrücke zwischen Grenze und geforderter Kompetenz | zeitweiser Entzug war zum Schutz oder zur Deeskalation notwendig | genaue Funktion und Wirkung der Konsequenz; für den sozial-konstruktivistischen Anschluss zusätzlich eine tatsächlich geprüfte Fachquelle | Grenze erhalten, aber Kompetenz in überschaubaren Schritten üben |
 | praktische Aufgaben gelingen häufig besser | Selbstwirksamkeit | vorhandene Ressourcen als Ausgangspunkt für Lernen | Erfolg liegt nur an einfacherer Struktur oder intensiver Begleitung | Vergleich verschiedener Settings | bewältigbare Handlungsspielräume mit sichtbarem Eigenanteil |
 | Planung soll nicht nur Compliance erzeugen | Selbstbestimmungstheorie | Autonomie, Kompetenz und Zugehörigkeit in der Grenzgestaltung | Theorie bleibt zu allgemein oder romantisiert Autonomie | konkrete Wahlräume und nicht verhandelbare Grenzen | echte Wahl innerhalb klarer Struktur |
 | Gesamtfall droht personenbezogen erklärt zu werden | Fünf Ebenen + ICF-CY | Wechselwirkungen, Aktivität, Teilhabe und Umweltfaktoren | Strukturierung ersetzt keine Erklärung | Ebenenauswahl begründen und empirisch füllen | Ziele auf Person-Umwelt-Passung beziehen |
@@ -371,7 +373,7 @@ Für die nächste Arbeitsphase gilt folgende **bewusste Begrenzung**:
 ## Tragende Theorieperspektiven
 
 1. **Mentalisierung** – für eigene Verstrickung, Hypothesenbildung und Perspektivoffenheit.
-2. **Scaffolding / sozialer Konstruktivismus** – für die Verbindung von Analyse und ressourcenorientierter Planung.
+2. **Scaffolding** – für die Verbindung von Analyse und ressourcenorientierter Planung. Der sozial-konstruktivistische Anschluss bleibt bis zur tatsächlichen Prüfung einer zitierfähigen Fachquelle vorläufig.
 
 ## Bedingte Erklärungsperspektive
 

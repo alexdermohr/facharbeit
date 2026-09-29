@@ -20,6 +20,23 @@ Vor der eigentlichen Verschriftlichung fehlen noch konkrete Details:
 - Welche Deutung war damals handlungsleitend?
 - Wie reagierte X unmittelbar auf die Konsequenz?
 
+### A.1 Rekonstruktionsprotokoll: belegt vs. offen
+
+Die Primärquelle [PrepP – Tag 2](https://github.com/alexdermohr/PrepP/blob/41b0b5dd06eae8bbb60f49512a93141a6f44e01b/docs/tagebuch/02_tag_2.md) trägt nur einen Teil des genauen Ablaufs. Für die weitere Arbeit gilt deshalb:
+
+| Rekonstruktionspunkt | Aus der Primärquelle belegt | Noch offen / aus eigener Erinnerung zu dokumentieren |
+|---|---|---|
+| Beteiligte | X; die Projektleitung backte mit X; J war anderweitig gebunden; weitere Kinder waren anwesend | Wer genau war beim Backen bzw. beim späteren Konflikt anwesend? Welche Rollen hatten die Personen? |
+| Zweck des Kuchens | Vereinbarung: Kuchen zur Werbung für das Projekt | Wie wurde das erklärt? Was sagte X dazu? War die Vereinbarung gemeinsam formuliert oder vorgegeben? |
+| Abwertende Äußerungen | X äußerte sich lautstark abwertend gegenüber anderen anwesenden Kindern | Genauer Wortlaut; unmittelbarer Auslöser; Reaktionen der anderen Kinder und Fachkräfte |
+| Kuchen abgeben | X wollte zunächst keinen Kuchen abgeben, bevor er selbst gegessen hatte | Was war unmittelbar davor vereinbart oder gesagt worden? Wie wurde darauf reagiert? |
+| Verabredung mit J | Später wurde bekannt, dass J von der genannten Back-Verabredung nichts wusste | Wann und durch wen wurde das bekannt? Wurde X darauf angesprochen? Falls ja: Wortlaut und Reaktion |
+| Fanta | X wollte Fanta zunächst für den Zuckerguss aufsparen und kurz darauf unmittelbar konsumieren | Wer hatte die Fanta? Was geschah zwischen beiden Äußerungen? Wie wurde der Zweck des Aufsparens besprochen? |
+| Konsequenz | Die Projektleitung teilte X mit, dass vorerst keine Sonderaktionen wie Einkaufen oder Backen stattfinden und das Projekt zunächst mit anderen Kindern fortgeführt wird | Ort, Beteiligte, genauer/sinngemäßer Wortlaut, unmittelbare Reaktion von X |
+| Eigene Verstrickung | in Tag 2 nicht dokumentiert | Eigene Gedanken, Gefühle, Körperreaktionen, Werteverletzung und damalige handlungsleitende Deutung |
+
+**Regel:** Aus einer Lücke in der Primärquelle wird keine Tatsache abgeleitet. Erinnerungen werden als nachträgliche Rekonstruktion mit Datum der Niederschrift gekennzeichnet; unsichere Wortlaute werden als sinngemäß markiert.
+
 ## B. Eigene subjektive Wahrnehmung
 
 Für die Bewertung ist relevant, die eigene Wahrnehmung nicht unsichtbar zu machen.

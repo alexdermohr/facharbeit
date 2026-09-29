@@ -56,7 +56,7 @@ Kernsatz zur zweiten Analyseachse:
 Nach Gegenprüfung wird die theoretische Vertiefung bewusst begrenzt:
 
 - **Mentalisierung** als tragende Perspektive auf eigene Verstrickung, Deutung und Perspektivoffenheit,
-- **Scaffolding / sozialer Konstruktivismus** als tragende Perspektive für die Lernbrücke zwischen Grenze und Kompetenzaufbau,
+- **Scaffolding** als tragende Perspektive für die Lernbrücke zwischen Grenze und Kompetenzaufbau; ein **sozial-konstruktivistischer Anschluss** bleibt bis zur tatsächlichen Prüfung einer zitierfähigen Fachquelle vorläufig,
 - **exekutive Funktionen** nur als bedingte, zu prüfende Erklärungsperspektive für mehrschrittige, verzögerte und abstrakte Anforderungen,
 - **Selbstbestimmung** und **Selbstwirksamkeit** ergänzend zur Prüfung konkreter Planungsentscheidungen,
 - **Fünf-Ebenen-Modell** und **ICF-CY** als Ordnungsrahmen, nicht als Kausalerklärungen.
