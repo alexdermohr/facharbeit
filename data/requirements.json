@@ -1877,7 +1877,7 @@
       {
         "id": "q-kol-scenes",
         "phase": "umsetzen-interagieren",
-        "prompt": "Welche zwei oder drei Umsetzungssituationen zeigen besonders gut, was zwischen Planung und tatsächlichem Prozess passiert ist?",
+        "prompt": "Welche zwei oder drei Umsetzungssituationen zeigen besonders gut, was ausgehend von Zielsetzung und Planung im tatsächlichem Prozess passiert ist?",
         "maps_to": [
           "kol-ui-situations",
           "kol-ui-origin-link",
@@ -1928,7 +1928,7 @@
           "kol-kt-alternatives",
           "kol-kt-consequences"
         ],
-        "hint": "Alternativen sollten aus den Ergebnissen folgen, nicht beliebig ergänzt werden.",
+        "hint": "Alternativen sollten aus den konkreten Erfahrungen und Ergebnissen folgen, nicht beliebig ergänzt werden.",
         "origin": "derived_guidance"
       },
       {
@@ -1937,15 +1937,16 @@
         "prompt": "Was waren Stärken und Schwächen deiner Arbeit – und welche Konsequenz ziehst du daraus für dein professionelles Handeln?",
         "maps_to": [
           "kol-kt-strengths",
-          "kol-kt-consequences"
+          "kol-kt-consequences",
+          "kol-kt-transfer"
         ],
-        "hint": "Differenziert benennen und mit Weiterentwicklung verknüpfen.",
+        "hint": "Differenziert benennen und mit Weiterentwicklung von Bildungs- und Entwicklungsprozessen verknüpfen.",
         "origin": "derived_guidance"
       },
       {
         "id": "q-kol-values",
         "phase": "konsequenzen-transfer",
-        "prompt": "Welche Werte oder Rechte tragen deine pädagogische Entscheidung, etwa Partizipation, Kinderrechte, Inklusion oder ein humanistisches Menschenbild?",
+        "prompt": "Welche Werte oder Rechte tragen deine pädagogischen Schlussfolgerungen, etwa Partizipation, Kinderrechte, Inklusion oder ein humanistisches Menschenbild?",
         "maps_to": [
           "kol-kt-values",
           "kol-kt-attitude"
@@ -1954,14 +1955,12 @@
         "origin": "derived_guidance"
       },
       {
-        "id": "q-kol-transfer",
+        "id": "q-kol-attitude-change",
         "phase": "konsequenzen-transfer",
-        "prompt": "Was lässt sich aus diesem Prozess für die Qualität weiterer Bildungs- und Entwicklungsprozesse ableiten?",
+        "prompt": "Inwiefern hat der Prozess deine pädagogische Haltung verändert?",
         "maps_to": [
-          "kol-kt-transfer",
-          "kol-kt-focus"
+          "kol-kt-attitude"
         ],
-        "hint": "Transfer bedeutet mehr als eine Wiederholung des Einzelfalls.",
         "origin": "derived_guidance"
       },
       {

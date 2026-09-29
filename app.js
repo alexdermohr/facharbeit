@@ -519,7 +519,7 @@ function renderQuestions(phase) {
                 <span class="question-status status-${status}">${questionStatusLabel(status)}</span>
               </div>
               <h5>${escapeHtml(question.prompt)}</h5>
-              <p>${escapeHtml(question.hint)}</p>
+              ${question.hint ? `<p>${escapeHtml(question.hint)}</p>` : ""}
               ${question.refs?.length ? `<div class="refs question-refs">${refsHtml(question.refs)}</div>` : ""}
               <textarea data-question="${escapeHtml(question.id)}" aria-label="Antwort auf: ${escapeHtml(question.prompt)}" placeholder="Gedanken, Stichpunkte oder Formulierungsentwurf …">${escapeHtml(answer)}</textarea>
               <div class="question-actions">
