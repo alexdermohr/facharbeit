@@ -1877,7 +1877,7 @@
       {
         "id": "q-kol-scenes",
         "phase": "umsetzen-interagieren",
-        "prompt": "Welche zwei oder drei Umsetzungssituationen zeigen besonders gut, was ausgehend von Zielsetzung und Planung im tatsächlichem Prozess passiert ist?",
+        "prompt": "Welche zwei oder drei Umsetzungssituationen zeigen besonders gut, was ausgehend von Zielsetzung und Planung im tatsächlichen Prozess passiert ist?",
         "maps_to": [
           "kol-ui-situations",
           "kol-ui-origin-link",
