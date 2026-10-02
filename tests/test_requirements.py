@@ -219,7 +219,7 @@ class RequirementsModelTests(unittest.TestCase):
         self.assertIn("eidesstattliche Erklärung", by_id["q-final-formal"]["prompt"])
         self.assertEqual(
             by_id["q-kol-scenes"]["prompt"],
-            "Welche zwei oder drei Umsetzungssituationen zeigen besonders gut, was ausgehend von Zielsetzung und Planung im tatsächlichem Prozess passiert ist?",
+            "Welche zwei oder drei Umsetzungssituationen zeigen besonders gut, was ausgehend von Zielsetzung und Planung im tatsächlichen Prozess passiert ist?",
         )
         self.assertEqual(
             by_id["q-kol-alt"]["hint"],
