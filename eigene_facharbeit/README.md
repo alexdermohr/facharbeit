@@ -2,7 +2,7 @@
 
 Dieser Bereich bündelt den **persönlichen Arbeitsstand zur eigenen Facharbeit**. Er ist von der allgemeinen Website- und Quellenlogik des Repositories getrennt.
 
-## Gewählte Ausgangslage
+## Bisher bearbeitete Ausgangslage
 
 **Fanta-Kuchen-Situation aus dem PrepP-Projekt (Tag 2).**
 
@@ -16,6 +16,10 @@ Siehe zum schulischen Anforderungsrahmen:
 - [Anforderungsmodell](../docs/ANFORDERUNGSMODELL.md)
 - [Quellenmatrix](../docs/QUELLENMATRIX.md)
 
+## Neuer alternativer Schwerpunkt
+
+Zusätzlich wird für das bevorstehende zweiwöchige Praktikum ein **alternativer, noch nicht festgelegter Facharbeitsfokus** erprobt: Anerkennung, Selbstwirksamkeit und soziale Teilhabe unter belastenden schulischen Anforderungen. Die neue Datei 07 enthält quellenkritische Arbeitshypothesen, eine kleinschrittige Planung, Gegenhypothesen, Auswertungskriterien und Schutzgrenzen. Sie ersetzt nicht die historische Fanta-Kuchen-Analyse; eine konkrete datierte Ausgangssituation und die Entscheidung für einen Schwerpunkt stehen noch aus.
+
 ## Arbeitsdateien
 
 - [01 – Ausgangslage: Fanta-Kuchen-Situation](01_ausgangslage_fanta_kuchen.md)
@@ -24,6 +28,7 @@ Siehe zum schulischen Anforderungsrahmen:
 - [04 – Offene Fragen und nächste Schritte](04_offene_fragen.md)
 - [05 – Theoriematrix für die fachliche Vertiefung](05_theoriematrix.md)
 - [06 – Wissenschaftliche Literaturkandidaten](06_literaturkandidaten.md)
+- [07 – Alternativer Praxisentwurf: Anerkennung, Selbstwirksamkeit und Teilhabe](07_anerkennung_teilhabe_praxisentwurf.md)
 
 ## Arbeitsprinzipien
 
