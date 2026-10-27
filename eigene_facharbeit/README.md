@@ -2,6 +2,14 @@
 
 Dieser Bereich bündelt den **persönlichen Arbeitsstand zur eigenen Facharbeit**. Er ist von der allgemeinen Website- und Quellenlogik des Repositories getrennt.
 
+## Aktueller Gesprächs- und Arbeitsstand (27.10.2026)
+
+Die [Arbeitsnotiz 08](08_arbeitsnotiz_soziale_wahrnehmung_teilhabe.md) hält eine anonymisierte Unterrichtsbeobachtung, den ergänzten Verlauf (X beruhigte sich, arbeitete weiter und ging erst danach wie zuvor vereinbart hinaus), das offene pädagogische Erkenntnisinteresse an sozialer Wahrnehmung, Selbstwert und sinnhaft erlebter Zugehörigkeit sowie die weitere Arbeitsweise fest.
+
+**Autorenschaft und Vorgehen:** Der Verfasser schreibt alle Facharbeitsabschnitte selbst. Der Assistent gibt **vor jedem Abschnitt** ein an den schulischen Anforderungen orientiertes Briefing und unterstützt anschließend kritisch bei Struktur, Theorie, Belegen und Eigenformulierungen. Mehrere reale Beobachtungen werden zunächst verglichen; die Auswahl einer geeigneten aktuellen, selbst erlebten Ausgangssituation bleibt offen. Die Notizen sind **keine** fertigen Facharbeitspassagen. Persönlich identifizierende Falldetails und Schutznotizen gehören nicht in das öffentliche Repository.
+
+Die weiter unten dokumentierte Fanta-Kuchen-Analyse bleibt ein **älterer alternativer Arbeitszweig** und ist nicht als bereits getroffene Schwerpunktentscheidung zu lesen.
+
 ## Bisher bearbeitete Ausgangslage
 
 **Fanta-Kuchen-Situation aus dem PrepP-Projekt (Tag 2).**
@@ -29,6 +37,7 @@ Zusätzlich wird für das bevorstehende zweiwöchige Praktikum ein **alternative
 - [05 – Theoriematrix für die fachliche Vertiefung](05_theoriematrix.md)
 - [06 – Wissenschaftliche Literaturkandidaten](06_literaturkandidaten.md)
 - [07 – Alternativer Praxisentwurf: Anerkennung, Selbstwirksamkeit und Teilhabe](07_anerkennung_teilhabe_praxisentwurf.md)
+- [08 – Anonymisierte Arbeitsnotiz: soziale Wahrnehmung, Selbstwert und Teilhabe](08_arbeitsnotiz_soziale_wahrnehmung_teilhabe.md)
 
 ## Arbeitsprinzipien
 
