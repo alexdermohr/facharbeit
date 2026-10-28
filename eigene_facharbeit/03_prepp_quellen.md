@@ -13,7 +13,7 @@ Die Links sind auf den PrepP-Stand **41b0b5dd06eae8bbb60f49512a93141a6f44e01b** 
 - [Tag 5 – handlungsorientierte Ressourcen](https://github.com/alexdermohr/PrepP/blob/41b0b5dd06eae8bbb60f49512a93141a6f44e01b/docs/tagebuch/05_tag_5.md)
 - [Tag 6 – Gestaltung und selbstständige Projektarbeit](https://github.com/alexdermohr/PrepP/blob/41b0b5dd06eae8bbb60f49512a93141a6f44e01b/docs/tagebuch/06_tag_6.md)
 - [Tag 7 – selektives Teilen und weitere soziale Beobachtungen](https://github.com/alexdermohr/PrepP/blob/41b0b5dd06eae8bbb60f49512a93141a6f44e01b/docs/tagebuch/07_tag_7.md)
-- [Abschlussfeedback X](https://github.com/alexdermohr/PrepP/blob/41b0b5dd06eae8bbb60f49512a93141a6f44e01b/docs/feedback/03_feedback_x.md)
+- [Abschlussfeedback Ali](https://github.com/alexdermohr/PrepP/blob/41b0b5dd06eae8bbb60f49512a93141a6f44e01b/docs/feedback/03_feedback_x.md)
 
 ## Verdichtete Beobachtungen
 
@@ -32,7 +32,7 @@ Die Links sind auf den PrepP-Stand **41b0b5dd06eae8bbb60f49512a93141a6f44e01b** 
 
 ## Projekt- und Nachweisstruktur
 
-- [Projektplan „Schulhof verschönern mit X“](https://github.com/alexdermohr/PrepP/blob/41b0b5dd06eae8bbb60f49512a93141a6f44e01b/docs/projektplan.md)
+- [Projektplan „Schulhof verschönern mit Ali“](https://github.com/alexdermohr/PrepP/blob/41b0b5dd06eae8bbb60f49512a93141a6f44e01b/docs/projektplan.md)
 - [Gruppennachweis – Kapitel 3 Menschen und ICF](https://github.com/alexdermohr/PrepP/blob/41b0b5dd06eae8bbb60f49512a93141a6f44e01b/docs/gruppennachweis/kapitel/03_menschen_und_icf.md)
 - [Gruppennachweis – Kapitel 4 Zielsetzung und pädagogisches Handeln](https://github.com/alexdermohr/PrepP/blob/41b0b5dd06eae8bbb60f49512a93141a6f44e01b/docs/gruppennachweis/kapitel/04_zielsetzung_und_paedagogisches_handeln.md)
 - [Gruppennachweis – Kapitel 5 Reflexion](https://github.com/alexdermohr/PrepP/blob/41b0b5dd06eae8bbb60f49512a93141a6f44e01b/docs/gruppennachweis/kapitel/05_reflexion.md)

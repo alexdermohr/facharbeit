@@ -12,9 +12,9 @@ Quelle: [PrepP – Entscheidung Konsequenzen](https://github.com/alexdermohr/Pre
 
 ### Möglicher damaliger Deutungsweg
 
-1. X hält eine Absprache nicht ein.
-2. X wertet andere Kinder ab.
-3. X stellt unmittelbare eigene Wünsche über den gemeinsam vereinbarten Zweck.
+1. Ali hält eine Absprache nicht ein.
+2. Ali wertet andere Kinder ab.
+3. Ali stellt unmittelbare eigene Wünsche über den gemeinsam vereinbarten Zweck.
 4. Daraus entsteht eine Deutung mangelnder Verbindlichkeit / Rücksichtnahme.
 5. Reaktion: attraktive Sonderaktionen werden gestrichen.
 
@@ -27,7 +27,7 @@ Quelle: [PrepP – Entscheidung Konsequenzen](https://github.com/alexdermohr/Pre
 - die Fachkraft musste in der Situation handlungsfähig bleiben.
 
 **Gegen die Konsequenz in dieser Form spricht:**
-- Backen und Einkaufen sind handlungsorientierte Situationen, in denen X im PrepP-Material häufig Initiative und Selbstständigkeit zeigt.
+- Backen und Einkaufen sind handlungsorientierte Situationen, in denen Ali im PrepP-Material häufig Initiative und Selbstständigkeit zeigt.
 - Mit der Sanktion wurde daher nicht nur begrenzt, sondern auch ein möglicher Lern- und Teilhaberaum entzogen.
 - Wenn eine Kompetenz noch nicht ausreichend verfügbar war, wurde ihr Fehlen sanktioniert, ohne gleichzeitig eine passende Lernbrücke anzubieten.
 
@@ -50,16 +50,16 @@ Die Reflexion des PrepP-Repos stellt die Wirkung der damaligen Grenzsetzung selb
 
 Aus dem Facharbeitsgespräch stammen zusätzlich folgende Beobachtungen:
 
-- X kontrolliert beim Packen seinen Rucksack wiederholt.
-- Beim Pfandsammeln löst X den Pfandbon zuerst ein, sodass das Geld bereits gesichert ist, bevor er erneut einkaufen geht.
-- Auf den Vorschlag, einen Teil seines Pfandgeldes in Zutaten für Kuchen zu investieren und durch Verkauf einen höheren Betrag zu erzielen, reagiert X sinngemäß: Er wolle das Geld nicht ausgeben, sondern sammeln.
-- X verfolgt dabei ein konkretes Sparziel.
+- Ali kontrolliert beim Packen seinen Rucksack wiederholt.
+- Beim Pfandsammeln löst Ali den Pfandbon zuerst ein, sodass das Geld bereits gesichert ist, bevor er erneut einkaufen geht.
+- Auf den Vorschlag, einen Teil seines Pfandgeldes in Zutaten für Kuchen zu investieren und durch Verkauf einen höheren Betrag zu erzielen, reagiert Ali sinngemäß: Er wolle das Geld nicht ausgeben, sondern sammeln.
+- Ali verfolgt dabei ein konkretes Sparziel.
 
 Diese Punkte benötigen vor einer Verwendung in der Facharbeit noch Datum, Kontext, möglichst genaue Formulierung und Bestätigung der eigenen Anwesenheit.
 
-### Präzisere Hypothese statt „X kann nicht loslassen“
+### Präzisere Hypothese statt „Ali kann nicht loslassen“
 
-> **X scheint in Situationen, in denen bereits verfügbare Ressourcen gegen einen erst zukünftigen, unsicheren oder abstrakteren Ertrag eingetauscht werden müssten, das unmittelbare Sichern des Vorhandenen häufig zu bevorzugen.**
+> **Ali scheint in Situationen, in denen bereits verfügbare Ressourcen gegen einen erst zukünftigen, unsicheren oder abstrakteren Ertrag eingetauscht werden müssten, das unmittelbare Sichern des Vorhandenen häufig zu bevorzugen.**
 
 ### Gegenprüfung
 
@@ -69,11 +69,11 @@ Wenn das erklärte Ziel lautet, Geld **zu sammeln**, ist „Ich will es nicht au
 
 Die Frage lautet daher nicht:
 
-> Versteht X Investitionen?
+> Versteht Ali Investitionen?
 
 sondern eher:
 
-> Unter welchen Bedingungen wird ein späterer oder sozial vermittelter Gegenwert für X überhaupt handlungsleitend?
+> Unter welchen Bedingungen wird ein späterer oder sozial vermittelter Gegenwert für Ali überhaupt handlungsleitend?
 
 ### Drei Formen von Return
 
@@ -106,7 +106,7 @@ Etwas abgeben → andere Person erlebt dies positiv → mögliche Anerkennung, K
 
 ### Kognitive Erklärung nur als Teilhypothese
 
-Zu prüfen ist, ob abstrakte, mehrschrittige und zeitlich verzögerte Ursache-Wirkungs-Zusammenhänge für X schwerer zugänglich sind.
+Zu prüfen ist, ob abstrakte, mehrschrittige und zeitlich verzögerte Ursache-Wirkungs-Zusammenhänge für Ali schwerer zugänglich sind.
 
 Nicht zulässig wäre ein Kurzschluss:
 
@@ -129,7 +129,7 @@ Andere mögliche Erklärungen:
 
 Mögliche damalige Erwachsenenlogik:
 
-> X hält Absprachen nicht ein, berücksichtigt andere zu wenig und muss Konsequenzen erleben.
+> Ali hält Absprachen nicht ein, berücksichtigt andere zu wenig und muss Konsequenzen erleben.
 
 Alternative Lesart:
 
@@ -143,7 +143,7 @@ Pädagogischer Hebel:
 
 ## Vorläufige Fröhlich-Gildhoff-Zuordnung
 
-### Ebene 1 – X
+### Ebene 1 – Ali
 
 Zu prüfen:
 
@@ -163,7 +163,7 @@ Zu prüfen:
 - eigene emotionale Verstrickung,
 - damalige Zuschreibungen,
 - Sprache und Grenzsetzung,
-- Wechselwirkung von X' Verhalten und eigener Reaktion,
+- Wechselwirkung von Alis Verhalten und eigener Reaktion,
 - Verhältnis von Schutz, Grenze, Beziehung und Lerngelegenheit.
 
 ### Ebene 3 – Kind, Gruppe und institutioneller Kontext
@@ -186,14 +186,14 @@ Ebene 4/5 nur bei belastbaren Informationen; keine biografischen oder familiäre
 
 ### Variante A – Regulation und Gegenseitigkeit
 
-> Es ist anzunehmen, dass X das Aufgeben unmittelbar verfügbarer Ressourcen insbesondere dann schwerfällt, wenn der daraus entstehende Nutzen zeitlich verzögert, unsicher oder abstrakt ist. Konkrete und zeitnahe Erfahrungen von Gegenseitigkeit könnten ihn dabei unterstützen, Austausch nicht ausschließlich als Verlust vorhandener Ressourcen, sondern zunehmend als Möglichkeit eigener und gemeinsamer Wirksamkeit zu erfahren.
+> Es ist anzunehmen, dass Ali das Aufgeben unmittelbar verfügbarer Ressourcen insbesondere dann schwerfällt, wenn der daraus entstehende Nutzen zeitlich verzögert, unsicher oder abstrakt ist. Konkrete und zeitnahe Erfahrungen von Gegenseitigkeit könnten ihn dabei unterstützen, Austausch nicht ausschließlich als Verlust vorhandener Ressourcen, sondern zunehmend als Möglichkeit eigener und gemeinsamer Wirksamkeit zu erfahren.
 
 ### Variante B – soziale Teilhabe
 
-> X scheint in konkreten Handlungssituationen vorhandene Ressourcen und unmittelbare Folgen gut zu erfassen, während längerfristige oder sozial vermittelte Gegenseitigkeit für ihn möglicherweise weniger unmittelbar zugänglich ist. Pädagogisch könnte es deshalb sinnvoll sein, soziale Reziprozität zunächst über konkrete, überschaubare und unmittelbar erfahrbare Austauschprozesse aufzubauen.
+> Ali scheint in konkreten Handlungssituationen vorhandene Ressourcen und unmittelbare Folgen gut zu erfassen, während längerfristige oder sozial vermittelte Gegenseitigkeit für ihn möglicherweise weniger unmittelbar zugänglich ist. Pädagogisch könnte es deshalb sinnvoll sein, soziale Reziprozität zunächst über konkrete, überschaubare und unmittelbar erfahrbare Austauschprozesse aufzubauen.
 
 ### Variante C – Fachkraftrolle und Lernbrücke
 
-> Wenn Grenzen, gemeinsame Ziele und eigene Handlungsspielräume für X konkret, vorhersehbar und partizipativ gestaltet werden, könnte er eigene Bedürfnisse eher einbringen, ohne aus dem gemeinsamen Handlungsprozess herauszufallen. Dafür muss die Fachkraft zwischen notwendiger Grenzsetzung und dem Erhalt ressourcenorientierter Lerngelegenheiten abwägen.
+> Wenn Grenzen, gemeinsame Ziele und eigene Handlungsspielräume für Ali konkret, vorhersehbar und partizipativ gestaltet werden, könnte er eigene Bedürfnisse eher einbringen, ohne aus dem gemeinsamen Handlungsprozess herauszufallen. Dafür muss die Fachkraft zwischen notwendiger Grenzsetzung und dem Erhalt ressourcenorientierter Lerngelegenheiten abwägen.
 
 **Noch keine Variante festlegen.** Die endgültige Arbeitshypothese folgt erst nach Rekonstruktion und Fachanalyse.

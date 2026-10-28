@@ -1,8 +1,8 @@
 # 08 – Arbeitsnotiz: soziale Wahrnehmung, Selbstwert und sinnvolle Teilhabe
 
-**Dokumentationsstand:** 27.10.2026 · **Status:** vorläufige, KI-unterstützte Beratungs- und Materialnotiz, **kein Abschnitt der Facharbeit**, keine Diagnose, keine abgeschlossene Fallanalyse.
+**Status:** vorläufige, KI-unterstützte Beratungs- und Materialnotiz, **kein Abschnitt der Facharbeit**, keine Diagnose, keine abgeschlossene Fallanalyse.
 
-**Quellenstatus und Datenschutz:** Grundlage sind rückblickende Schilderungen des Verfassers im Beratungsgespräch. Ein datiertes Original-Situationsprotokoll liegt hier nicht vor; insbesondere das Beobachtungsdatum ist noch zu klären. Das Repository ist öffentlich. Deshalb werden nur anonymisierte, verallgemeinerte Fallmerkmale festgehalten: X statt Name, keine wörtlichen sensiblen Äußerungen, keine näheren Angaben zu anderen Jugendlichen und keine besonderen Details zur außerhalb des Unterrichts vereinbarten Aktivität. Genauere Beobachtungs-, Schutz- oder Gesprächsnotizen gehören ausschließlich in den dafür autorisierten geschützten Kontext.
+**Quellenstatus und Datenschutz:** Grundlage sind rückblickende Schilderungen des Verfassers im Beratungsgespräch. Ein datiertes Original-Situationsprotokoll liegt hier nicht vor; insbesondere das Beobachtungsdatum ist noch zu klären. Das Repository ist öffentlich. Ali wird mit seinem Vornamen bezeichnet; weitere Fallmerkmale werden datensparsam und verallgemeinert dargestellt: keine wörtlichen sensiblen Äußerungen, keine näheren Angaben zu anderen Jugendlichen und keine besonderen Details zur außerhalb des Unterrichts vereinbarten Aktivität. Genauere Beobachtungs-, Schutz- oder Gesprächsnotizen gehören ausschließlich in den dafür autorisierten geschützten Kontext.
 
 ## 1. Verbindliche Zusammenarbeit / Autorenschaft
 
@@ -14,51 +14,51 @@
 
 ## 2. Persönliches pädagogisches Erkenntnisinteresse (Selbstauskunft)
 
-Den Verfasser beschäftigen besonders die **psychologischen Hintergründe** wiederkehrender Konflikte und die Frage, was diese für ein besseres, nicht voreingenommenes **Verständnis von X' subjektivem Erleben** bedeuten könnten. Sein pädagogisches Anliegen ist es, Bedingungen zu erkennen und mitzugestalten, unter denen X einen **tragfähigeren Selbstwert** entwickeln kann – unter anderem durch **erlebte Sinnhaftigkeit und Zugehörigkeit** in der Klasse, in der Schule und perspektivisch in weiteren sozialen Lebenszusammenhängen.
+Den Verfasser beschäftigen besonders die **psychologischen Hintergründe** wiederkehrender Konflikte und die Frage, was diese für ein besseres, nicht voreingenommenes **Verständnis von Alis subjektivem Erleben** bedeuten könnten. Sein pädagogisches Anliegen ist es, Bedingungen zu erkennen und mitzugestalten, unter denen Ali einen **tragfähigeren Selbstwert** entwickeln kann – unter anderem durch **erlebte Sinnhaftigkeit und Zugehörigkeit** in der Klasse, in der Schule und perspektivisch in weiteren sozialen Lebenszusammenhängen.
 
 **Wichtige Begrenzung:** Ein aktuell „instabiler Selbstwert“, konkrete Selbstwertdefizite oder bestimmte innere Konflikte sind **nicht beobachtet oder diagnostisch belegt**. Das Anliegen ist eine pädagogische Zielrichtung und offene Forschungsfrage, kein feststehender Befund. Ebenso kann weder ein einzelnes Unterrichtsprojekt einen stabilen Selbstwert nachweisen noch die Zugehörigkeit zur „ganzen Welt“ unmittelbar herstellen.
 
 ## 3. Wiederkehrendes Muster – bisher ausschließlich berichteter Eindruck
 
-Der Verfasser berichtet mehrere Situationen, in denen X sich von anderen abgewertet oder beleidigt fühlt und seinerseits abwertende Äußerungen gegenüber anderen macht. Nach Wahrnehmung des Verfassers und teils weiterer Beteiligter wurden die von X berichteten Angriffe nicht wahrgenommen bzw. von Angesprochenen bestritten.
+Der Verfasser berichtet mehrere Situationen, in denen Ali sich von anderen abgewertet oder beleidigt fühlt und seinerseits abwertende Äußerungen gegenüber anderen macht. Nach Wahrnehmung des Verfassers und teils weiterer Beteiligter wurden die von Ali berichteten Angriffe nicht wahrgenommen bzw. von Angesprochenen bestritten.
 
-**Nicht gesichert:** Dass die behaupteten Äußerungen objektiv nie fielen, X sie absichtlich falsch wiedergibt oder sie sich „einbildet“. Zu prüfen bleiben Wahrnehmung mehrdeutiger Signale, mögliche vorherige Kränkungen, konkrete Wechselwirkungen, Belastungen und die Sicht der jeweils Beteiligten. Die Beleidigungen durch X sind pädagogisch zu begrenzen, ohne sein erlebtes Angegriffensein pauschal zu entwerten oder Dritte ohne Beleg zu beschuldigen.
+**Nicht gesichert:** Dass die behaupteten Äußerungen objektiv nie fielen, Ali sie absichtlich falsch wiedergibt oder sie sich „einbildet“. Zu prüfen bleiben Wahrnehmung mehrdeutiger Signale, mögliche vorherige Kränkungen, konkrete Wechselwirkungen, Belastungen und die Sicht der jeweils Beteiligten. Die Beleidigungen durch Ali sind pädagogisch zu begrenzen, ohne sein erlebtes Angegriffensein pauschal zu entwerten oder Dritte ohne Beleg zu beschuldigen.
 
-## 4. Eine exemplarische, anonymisiert zusammengefasste Unterrichtsszene
+## 4. Eine exemplarisch zusammengefasste Unterrichtsszene
 
 **Kontext / selbst berichteter Verlauf:**
 
-1. Während schriftlicher Einzelarbeit im Klassenraum arbeitet X nach Überredung durch den Verfasser an schulischen Aufgaben. Nach dessen Wahrnehmung bemüht sich X um Lösungen, kommt aber nur begrenzt voran.
+1. Während schriftlicher Einzelarbeit im Klassenraum arbeitet Ali nach Überredung durch den Verfasser an schulischen Aufgaben. Nach dessen Wahrnehmung bemüht sich Ali um Lösungen, kommt aber nur begrenzt voran.
 2. Andere Lernende sprechen in unmittelbarer Nähe leise miteinander. Der Verfasser nimmt davor und danach überwiegend auf deren eigene Aufgaben bezogene Gespräche wahr.
-3. X reagiert plötzlich erregt, beleidigt andere und berichtet, diese hätten ihn abwertend bezeichnet. Der Verfasser hat die behauptete Äußerung nicht wahrgenommen. Die Angesprochenen wirken überrascht, bestreiten den Vorwurf und wenden sich wieder ihrer Arbeit zu.
-4. Der Verfasser sagt, er habe das nicht gehört; Missverstehen oder Verhören sei möglich. Er äußert auch, dass er eine solche Äußerung nicht vermute. X bleibt zunächst aufgebracht und möchte die Aufgaben nicht fortsetzen.
-5. **Wichtiger Nachtrag:** X beruhigt sich wieder, beide arbeiten **noch eine Weile gemeinsam weiter**, und erst anschließend findet wie **bereits vorher vereinbart** eine Aktivität außerhalb des Unterrichts statt. Das spätere Hinausgehen ist damit **kein Beleg**, dass X durch eine Eskalation spontan den Unterricht verlassen konnte.
+3. Ali reagiert plötzlich erregt, beleidigt andere und berichtet, diese hätten ihn abwertend bezeichnet. Der Verfasser hat die behauptete Äußerung nicht wahrgenommen. Die Angesprochenen wirken überrascht, bestreiten den Vorwurf und wenden sich wieder ihrer Arbeit zu.
+4. Der Verfasser sagt, er habe das nicht gehört; Missverstehen oder Verhören sei möglich. Er äußert auch, dass er eine solche Äußerung nicht vermute. Ali bleibt zunächst aufgebracht und möchte die Aufgaben nicht fortsetzen.
+5. Ali beruhigt sich wieder, beide arbeiten **noch eine Weile gemeinsam weiter**, und erst anschließend findet wie **bereits vorher vereinbart** eine Aktivität außerhalb des Unterrichts statt. Das spätere Hinausgehen ist damit **kein Beleg**, dass Ali durch eine Eskalation spontan den Unterricht verlassen konnte.
 
-**Reflexionsbedarf zur eigenen Rolle:** Überredung zur Aufgabenbearbeitung (Autonomie und Passung), Reaktion auf einen unbestätigten Vorwurf (Schutz aller Beteiligten und Anerkennung subjektiver Betroffenheit), Art der Beruhigung und Unterstützung beim erneuten Arbeitsbeginn. Wie X diese Schritte erlebte, wurde nicht erhoben.
+**Reflexionsbedarf zur eigenen Rolle:** Überredung zur Aufgabenbearbeitung (Autonomie und Passung), Reaktion auf einen unbestätigten Vorwurf (Schutz aller Beteiligten und Anerkennung subjektiver Betroffenheit), Art der Beruhigung und Unterstützung beim erneuten Arbeitsbeginn. Wie Ali diese Schritte erlebte, wurde nicht erhoben.
 
-**Unbekannt / noch zu prüfen:** Datum, wörtlicher Ablauf, vorausgehende Beziehungserfahrungen, genaue Anforderungen und Unterstützungen, mögliche nicht bemerkte soziale Signale, X' eigene Erklärung, Sicht der übrigen Beteiligten und Rolle der institutionellen Lernbedingungen. Keine rückwirkenden Ergänzungen erfinden.
+**Unbekannt / noch zu prüfen:** Datum, wörtlicher Ablauf, vorausgehende Beziehungserfahrungen, genaue Anforderungen und Unterstützungen, mögliche nicht bemerkte soziale Signale, Alis eigene Erklärung, Sicht der übrigen Beteiligten und Rolle der institutionellen Lernbedingungen. Keine rückwirkenden Ergänzungen erfinden.
 
 ## 5. Vorläufige Deutungsrichtungen und Gegenhypothesen
 
 | Offene Hypothese | Wesentliche Gegenprobe |
 | --- | --- |
 | Schwierigkeiten bei Aufgaben könnten Anspannung auslösen und soziale Deutungen beeinflussen. | Ähnliche Konflikte könnten auch ohne Aufgabenüberforderung auftreten; Reihenfolge allein belegt keine Kausalität. |
-| X könnte in mehrdeutigen Äußerungen eine Kränkung vermuten. | Eine unbemerkte tatsächliche Kränkung oder ein vorausgehender Konflikt ist ebenso möglich. |
-| Rückzug könnte zeitweise der Selbstregulation dienen. | Die Aktivität außerhalb war vorher geplant; X beruhigte sich und arbeitete zuvor noch weiter. |
-| Erlebte Kompetenz, echte Mitbestimmung und Zugehörigkeit könnten Schutzfaktoren darstellen. | X' subjektive Bedeutung, Interesse und tatsächliche Erfahrung sind erst zu erfragen; ein angeordnetes Sonderamt kann Zugehörigkeit sogar erschweren. |
+| Ali könnte in mehrdeutigen Äußerungen eine Kränkung vermuten. | Eine unbemerkte tatsächliche Kränkung oder ein vorausgehender Konflikt ist ebenso möglich. |
+| Rückzug könnte zeitweise der Selbstregulation dienen. | Die Aktivität außerhalb war vorher geplant; Ali beruhigte sich und arbeitete zuvor noch weiter. |
+| Erlebte Kompetenz, echte Mitbestimmung und Zugehörigkeit könnten Schutzfaktoren darstellen. | Alis subjektive Bedeutung, Interesse und tatsächliche Erfahrung sind erst zu erfragen; ein angeordnetes Sonderamt kann Zugehörigkeit sogar erschweren. |
 | Antworten von Fachkräften und Peers könnten Konfliktdynamiken verstärken oder entschärfen. | Dafür braucht es Verlauf, mehrere Perspektiven und die Prüfung von Alternativerklärungen. |
 
-**Pädagogische Kernspannung:** X' Betroffenheit anerkennen, ohne nicht bestätigte Vorwürfe zur Tatsache zu erklären; gleichzeitig betroffene Mitschülerinnen und Mitschüler schützen, Grenzen bei Beleidigungen setzen und Rückkehr in Zusammenarbeit ermöglichen.
+**Pädagogische Kernspannung:** Alis Betroffenheit anerkennen, ohne nicht bestätigte Vorwürfe zur Tatsache zu erklären; gleichzeitig betroffene Mitschülerinnen und Mitschüler schützen, Grenzen bei Beleidigungen setzen und Rückkehr in Zusammenarbeit ermöglichen.
 
 ## 6. Theorie- und Planungskontext (keine vorgezogenen Ergebnisse)
 
-- **Antonovsky / Salutogenese:** mögliche Prüffragen nach Verstehbarkeit, Handhabbarkeit und Bedeutsamkeit; für den Verfasser besonders die Frage, ob X sein Handeln als sinnvollen Beitrag in einem größeren schulischen Zusammenhang erlebt.
+- **Antonovsky / Salutogenese:** mögliche Prüffragen nach Verstehbarkeit, Handhabbarkeit und Bedeutsamkeit; für den Verfasser besonders die Frage, ob Ali sein Handeln als sinnvollen Beitrag in einem größeren schulischen Zusammenhang erlebt.
 - **Deci/Ryan / Selbstbestimmungstheorie:** Autonomie, Kompetenzerleben und soziale Eingebundenheit als mögliche Bedingungen pädagogischer Angebote.
 - **Bandura / Selbstwirksamkeit:** tatsächliche selbst bewältigte Anforderungen und die davon zu unterscheidende subjektive Überzeugung, Anforderungen bewältigen zu können.
-- **Fröhlich-Gildhoff / systemische Perspektive:** mindestens drei begründet ausgewählte Ebenen, insbesondere X, die eigene Fachkraftrolle, Peers/Gruppe und institutionelle Bedingungen.
+- **Fröhlich-Gildhoff / systemische Perspektive:** mindestens drei begründet ausgewählte Ebenen, insbesondere Ali, die eigene Fachkraftrolle, Peers/Gruppe und institutionelle Bedingungen.
 - **Erikson:** nur bei konkretem Zusatznutzen für Entwicklungs- und Identitätsfragen, nicht als Diagnose.
 
-Die geplante freiwillige Gestaltung tatsächlich verwendbarer Unterrichtsmaterialien bleibt **eine mögliche Folge** der noch ausstehenden Analyse, nicht deren Ausgangspunkt. Eine positive erste Rückmeldung zuständiger Fachkräfte liegt nach Bericht des Verfassers vor; das Vorhaben wurde am Dokumentationsdatum nicht als umgesetzt berichtet. Zustimmung und Sicht von X, Klassenbedarf sowie Risiken von Überforderung, Scheinpartizipation und Sonderrollen müssen vor Entscheidungen geklärt werden.
+Die geplante freiwillige Gestaltung tatsächlich verwendbarer Unterrichtsmaterialien bleibt **eine mögliche Folge** der noch ausstehenden Analyse, nicht deren Ausgangspunkt. Eine positive erste Rückmeldung zuständiger Fachkräfte liegt nach Bericht des Verfassers vor; das Vorhaben wurde am Dokumentationsdatum nicht als umgesetzt berichtet. Zustimmung und Sicht von Ali, Klassenbedarf sowie Risiken von Überforderung, Scheinpartizipation und Sonderrollen müssen vor Entscheidungen geklärt werden.
 
 ## 7. Briefing-Raster nach schulischen Kriterien – vor **jedem** Abschnitt anwenden
 
@@ -79,6 +79,6 @@ Die geplante freiwillige Gestaltung tatsächlich verwendbarer Unterrichtsmateria
 
 ## 8. Vereinbarter Wiedereinstieg
 
-**Nächster Arbeitsabschnitt: Einleitung.** Zuerst gibt der Assistent ein auf die tatsächlichen schulischen Bewertungskriterien gestütztes Briefing mit notwendigen Eigenentscheidungen und offenen Faktenfragen. Danach formuliert **der Verfasser selbst**. Der Assistent begleitet durch Kritik, Quellenprüfung und begrenzte Rückfragen. Die Fallnotizen sind kein Beleg für einen bestimmten inneren Zustand von X und dürfen nicht ungeprüft in die Facharbeit übernommen werden.
+**Nächster Arbeitsabschnitt: Einleitung.** Zuerst gibt der Assistent ein auf die tatsächlichen schulischen Bewertungskriterien gestütztes Briefing mit notwendigen Eigenentscheidungen und offenen Faktenfragen. Danach formuliert **der Verfasser selbst**. Der Assistent begleitet durch Kritik, Quellenprüfung und begrenzte Rückfragen. Die Fallnotizen sind kein Beleg für einen bestimmten inneren Zustand von Ali und dürfen nicht ungeprüft in die Facharbeit übernommen werden.
 
 **Status:** Keine Durchführung, Evaluation oder endgültige Leitfrage behauptet. Keine Veränderungen an Facharbeitstexten ohne konkreten Auftrag.

@@ -2,9 +2,9 @@
 
 Dieser Bereich bündelt den **persönlichen Arbeitsstand zur eigenen Facharbeit**. Er ist von der allgemeinen Website- und Quellenlogik des Repositories getrennt.
 
-## Aktueller Gesprächs- und Arbeitsstand (27.10.2026)
+## Aktueller Schwerpunkt und Vorgehen
 
-Die [Arbeitsnotiz 08](08_arbeitsnotiz_soziale_wahrnehmung_teilhabe.md) hält eine anonymisierte Unterrichtsbeobachtung, den ergänzten Verlauf (X beruhigte sich, arbeitete weiter und ging erst danach wie zuvor vereinbart hinaus), das offene pädagogische Erkenntnisinteresse an sozialer Wahrnehmung, Selbstwert und sinnhaft erlebter Zugehörigkeit sowie die weitere Arbeitsweise fest.
+Die [Arbeitsnotiz 08](08_arbeitsnotiz_soziale_wahrnehmung_teilhabe.md) hält eine exemplarisch zusammengefasste Unterrichtsbeobachtung, ihren Verlauf (Ali beruhigte sich, arbeitete weiter und ging erst danach wie zuvor vereinbart hinaus), das offene pädagogische Erkenntnisinteresse an sozialer Wahrnehmung, Selbstwert und sinnhaft erlebter Zugehörigkeit sowie die weitere Arbeitsweise fest.
 
 **Autorenschaft und Vorgehen:** Der Verfasser schreibt alle Facharbeitsabschnitte selbst. Der Assistent gibt **vor jedem Abschnitt** ein an den schulischen Anforderungen orientiertes Briefing und unterstützt anschließend kritisch bei Struktur, Theorie, Belegen und Eigenformulierungen. Mehrere reale Beobachtungen werden zunächst verglichen; die Auswahl einer geeigneten aktuellen, selbst erlebten Ausgangssituation bleibt offen. Die Notizen sind **keine** fertigen Facharbeitspassagen. Persönlich identifizierende Falldetails und Schutznotizen gehören nicht in das öffentliche Repository.
 
@@ -37,14 +37,14 @@ Zusätzlich wird für das bevorstehende zweiwöchige Praktikum ein **alternative
 - [05 – Theoriematrix für die fachliche Vertiefung](05_theoriematrix.md)
 - [06 – Wissenschaftliche Literaturkandidaten](06_literaturkandidaten.md)
 - [07 – Alternativer Praxisentwurf: Anerkennung, Selbstwirksamkeit und Teilhabe](07_anerkennung_teilhabe_praxisentwurf.md)
-- [08 – Anonymisierte Arbeitsnotiz: soziale Wahrnehmung, Selbstwert und Teilhabe](08_arbeitsnotiz_soziale_wahrnehmung_teilhabe.md)
+- [08 – Arbeitsnotiz: soziale Wahrnehmung, Selbstwert und Teilhabe](08_arbeitsnotiz_soziale_wahrnehmung_teilhabe.md)
 
 ## Arbeitsprinzipien
 
 - **Beobachtung ≠ Interpretation.**
-- Motive von X werden nicht als Tatsachen behauptet.
+- Motive von Ali werden nicht als Tatsachen behauptet.
 - Jede zentrale Interpretation erhält mindestens eine Gegenhypothese.
-- Ressourcen von X werden ausdrücklich mitgeführt.
+- Ressourcen von Ali werden ausdrücklich mitgeführt.
 - Die eigene Rolle und mögliche Verstrickung werden mitanalysiert.
 - Kognitive Voraussetzungen dürfen als möglicher Kontext geprüft werden, aber nicht monokausal als Erklärung dienen.
 - Konkrete sensible Diagnostik- oder Testwerte werden in diesem öffentlichen Repository nicht dokumentiert.
@@ -55,7 +55,7 @@ Zusätzlich wird für das bevorstehende zweiwöchige Praktikum ein **alternative
 Zwei Analyseachsen sind derzeit besonders tragfähig:
 
 1. **Eigene Verstrickung und Konsequenz:** Die damalige Deutung könnte zu eng gewesen sein; die Konsequenz setzte zwar eine Grenze, entzog aber zugleich handlungsorientierte Lern- und Teilhabemöglichkeiten.
-2. **Sicherung / „Loslassen“ / Return:** X könnte vorhandene, sichere Ressourcen stärker gewichten als verzögerten, unsicheren oder sozial vermittelten Gegenwert. Diese Deutung ist eine Hypothese und muss gegen Alternativen geprüft werden.
+2. **Sicherung / „Loslassen“ / Return:** Ali könnte vorhandene, sichere Ressourcen stärker gewichten als verzögerten, unsicheren oder sozial vermittelten Gegenwert. Diese Deutung ist eine Hypothese und muss gegen Alternativen geprüft werden.
 
 Kernsatz zur eigenen Rolle:
 
@@ -63,7 +63,7 @@ Kernsatz zur eigenen Rolle:
 
 Kernsatz zur zweiten Analyseachse:
 
-> **Zu prüfen ist, ob X das Aufgeben bereits verfügbarer Ressourcen besonders dann schwerfällt, wenn der mögliche Gegenwert erst später, unsicher oder abstrakt erfahrbar wird.**
+> **Zu prüfen ist, ob Ali das Aufgeben bereits verfügbarer Ressourcen besonders dann schwerfällt, wenn der mögliche Gegenwert erst später, unsicher oder abstrakt erfahrbar wird.**
 
 ## Vorläufiges Theorie-Commitment
 
