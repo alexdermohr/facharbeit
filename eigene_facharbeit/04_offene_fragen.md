@@ -6,19 +6,19 @@ Vor der eigentlichen Verschriftlichung fehlen noch konkrete Details:
 
 - Wer war beim Backen genau anwesend?
 - Wer sagte wann was?
-- Was wurde vor Beginn ausdrücklich mit X vereinbart?
+- Was wurde vor Beginn ausdrücklich mit Ali vereinbart?
 - Wie wurde der Zweck des Kuchens erklärt?
 - Welche Rolle spielte die Fanta genau?
 - Was geschah unmittelbar vor den abwertenden Äußerungen?
 - Wie reagierten die anderen Kinder?
 - Wie reagierten die beteiligten Fachkräfte jeweils?
 - Wann wurde bekannt, dass J nichts von der genannten Verabredung wusste?
-- Wurde X damit konfrontiert? Falls ja: wie reagierte er?
+- Wurde Ali damit konfrontiert? Falls ja: wie reagierte er?
 - Wer sprach die Konsequenz aus?
 - In welchem Setting wurde sie ausgesprochen?
 - Was dachte und fühlte die eigene Fachkraft in diesem Moment?
 - Welche Deutung war damals handlungsleitend?
-- Wie reagierte X unmittelbar auf die Konsequenz?
+- Wie reagierte Ali unmittelbar auf die Konsequenz?
 
 ## B. Eigene subjektive Wahrnehmung
 
@@ -29,9 +29,9 @@ Noch zu dokumentieren:
 - Was hat mich in der Situation am stärksten irritiert oder geärgert?
 - Habe ich mich getäuscht, ausgenutzt, nicht ernst genommen oder verantwortlich für die Gruppe gefühlt?
 - Welche Werte wurden aus meiner Sicht verletzt?
-- Welche Erwartungen an X hatte ich in diesem Moment?
+- Welche Erwartungen an Ali hatte ich in diesem Moment?
 - Welche Alternativdeutungen waren mir damals nicht zugänglich?
-- Welche Rolle spielte die Beziehung zu X in meiner Entscheidung?
+- Welche Rolle spielte die Beziehung zu Ali in meiner Entscheidung?
 
 ## C. Zusatzbeobachtungen zur Sicherungs-/Return-Hypothese
 
@@ -40,9 +40,9 @@ Noch als Primärnotizen nachtragen:
 - wiederholtes Kontrollieren des gepackten Rucksacks,
 - Ablauf beim Einlösen des Pfandbons,
 - Situation und Wortlaut des Investitionsvorschlags,
-- Sparziel von X,
-- weitere Situationen, in denen X sichere Ressourcen aufgibt oder gerade nicht aufgibt,
-- Gegenbeispiele, in denen X teilt oder etwas investiert.
+- Sparziel von Ali,
+- weitere Situationen, in denen Ali sichere Ressourcen aufgibt oder gerade nicht aufgibt,
+- Gegenbeispiele, in denen Ali teilt oder etwas investiert.
 
 Für jeden Punkt möglichst:
 
@@ -76,7 +76,7 @@ Derzeit noch **nicht** endgültig festlegen:
 - Arbeitshypothese,
 - endgültiges Ziel,
 - konkrete Intervention,
-- kausale Erklärung für X' Verhalten.
+- kausale Erklärung für Alis Verhalten.
 
 Erst nach der Rekonstruktion und der Fachanalyse.
 
@@ -90,7 +90,7 @@ Noch als Arbeitsidee, nicht als fertige Methode:
    - Was ist gemeinschaftlich?
    - Was gehört einzelnen Personen?
    - Wofür sind Ressourcen vorgesehen?
-   - Was entscheidet X?
+   - Was entscheidet Ali?
    - Was ist nicht verhandelbar?
 3. echte Wahlmöglichkeiten anbieten,
 4. Weg für veränderte Wünsche vereinbaren,

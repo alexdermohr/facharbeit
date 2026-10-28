@@ -28,9 +28,9 @@ Siehe zum schulischen Anforderungsrahmen:
 ## Arbeitsprinzipien
 
 - **Beobachtung ≠ Interpretation.**
-- Motive von X werden nicht als Tatsachen behauptet.
+- Motive von Ali werden nicht als Tatsachen behauptet.
 - Jede zentrale Interpretation erhält mindestens eine Gegenhypothese.
-- Ressourcen von X werden ausdrücklich mitgeführt.
+- Ressourcen von Ali werden ausdrücklich mitgeführt.
 - Die eigene Rolle und mögliche Verstrickung werden mitanalysiert.
 - Kognitive Voraussetzungen dürfen als möglicher Kontext geprüft werden, aber nicht monokausal als Erklärung dienen.
 - Konkrete sensible Diagnostik- oder Testwerte werden in diesem öffentlichen Repository nicht dokumentiert.
@@ -41,7 +41,7 @@ Siehe zum schulischen Anforderungsrahmen:
 Zwei Analyseachsen sind derzeit besonders tragfähig:
 
 1. **Eigene Verstrickung und Konsequenz:** Die damalige Deutung könnte zu eng gewesen sein; die Konsequenz setzte zwar eine Grenze, entzog aber zugleich handlungsorientierte Lern- und Teilhabemöglichkeiten.
-2. **Sicherung / „Loslassen“ / Return:** X könnte vorhandene, sichere Ressourcen stärker gewichten als verzögerten, unsicheren oder sozial vermittelten Gegenwert. Diese Deutung ist eine Hypothese und muss gegen Alternativen geprüft werden.
+2. **Sicherung / „Loslassen“ / Return:** Ali könnte vorhandene, sichere Ressourcen stärker gewichten als verzögerten, unsicheren oder sozial vermittelten Gegenwert. Diese Deutung ist eine Hypothese und muss gegen Alternativen geprüft werden.
 
 Kernsatz zur eigenen Rolle:
 
@@ -49,7 +49,7 @@ Kernsatz zur eigenen Rolle:
 
 Kernsatz zur zweiten Analyseachse:
 
-> **Zu prüfen ist, ob X das Aufgeben bereits verfügbarer Ressourcen besonders dann schwerfällt, wenn der mögliche Gegenwert erst später, unsicher oder abstrakt erfahrbar wird.**
+> **Zu prüfen ist, ob Ali das Aufgeben bereits verfügbarer Ressourcen besonders dann schwerfällt, wenn der mögliche Gegenwert erst später, unsicher oder abstrakt erfahrbar wird.**
 
 ## Vorläufiges Theorie-Commitment
 
