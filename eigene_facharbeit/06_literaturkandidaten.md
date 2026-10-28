@@ -111,7 +111,7 @@ Nutzen:
 
 Besondere Vorsicht:
 
-Diese Quelle kann die **Anforderungen einer Situation** beschreiben. Sie belegt nicht, dass X eine Störung oder ein Defizit der exekutiven Funktionen hat.
+Diese Quelle kann die **Anforderungen einer Situation** beschreiben. Sie belegt nicht, dass Ali eine Störung oder ein Defizit der exekutiven Funktionen hat.
 
 Formulierungsregel:
 
@@ -119,7 +119,7 @@ Formulierungsregel:
 
 statt:
 
-> „X hat eine Störung von …“
+> „Ali hat eine Störung von …“
 
 ---
 
@@ -193,7 +193,7 @@ Weiners Theorie ist stark auf Leistung, Motivation und Emotion ausgerichtet. Sie
 
 In der Facharbeit eher als Reflexionslinse:
 
-> Welche Ursachen habe ich X zugeschrieben, und welche situativen Alternativen habe ich damals zu wenig berücksichtigt?
+> Welche Ursachen habe ich Ali zugeschrieben, und welche situativen Alternativen habe ich damals zu wenig berücksichtigt?
 
 ---
 

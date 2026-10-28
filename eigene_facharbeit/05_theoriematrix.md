@@ -36,7 +36,7 @@ Das Modell beantwortet vor allem:
 
 Es beantwortet nicht automatisch:
 
-> **Warum verhält X sich so?**
+> **Warum verhält Ali sich so?**
 
 ### ICF-CY
 
@@ -55,7 +55,7 @@ Auch die ICF-CY ist hier **keine Kausaltheorie**. Sie strukturiert relevante Fun
 
 ## Warum sie zum Fall passt
 
-Der zentrale professionelle Konflikt lautet nicht nur, was X getan hat, sondern **wie ich sein Verhalten im Moment verstanden und bewertet habe**.
+Der zentrale professionelle Konflikt lautet nicht nur, was Ali getan hat, sondern **wie ich sein Verhalten im Moment verstanden und bewertet habe**.
 
 Mentalisierung hilft, zwischen beobachtbarem Verhalten und nur erschließbaren inneren Zuständen zu unterscheiden:
 
@@ -70,9 +70,9 @@ Mentalisierung hilft, zwischen beobachtbarem Verhalten und nur erschließbaren i
 
 **Beobachtung:**
 
-- X wollte zunächst selbst essen, bevor Kuchen abgegeben wurde.
-- X änderte seine Position zur Verwendung der Fanta.
-- X äußerte sich abwertend gegenüber anderen Kindern.
+- Ali wollte zunächst selbst essen, bevor Kuchen abgegeben wurde.
+- Ali änderte seine Position zur Verwendung der Fanta.
+- Ali äußerte sich abwertend gegenüber anderen Kindern.
 
 **Damals mögliche Deutung:**
 
@@ -82,7 +82,7 @@ Mentalisierung hilft, zwischen beobachtbarem Verhalten und nur erschließbaren i
 
 **Mentalisierende Gegenfrage:**
 
-> Welche verschiedenen inneren Bedeutungen könnten die Situation und der Kuchen für X gehabt haben, ohne dass ich eine davon vorschnell zur Wahrheit erkläre?
+> Welche verschiedenen inneren Bedeutungen könnten die Situation und der Kuchen für Ali gehabt haben, ohne dass ich eine davon vorschnell zur Wahrheit erkläre?
 
 Mögliche Hypothesen:
 
@@ -90,11 +90,11 @@ Mögliche Hypothesen:
 - der gemeinsame spätere Zweck war weniger präsent,
 - Besitz/Verfügbarkeit hatte eine besondere Bedeutung,
 - Peer-Beziehungen beeinflussten die Bereitschaft zum Teilen,
-- die Absprache war aus X' Sicht anders verstanden worden.
+- die Absprache war aus Alis Sicht anders verstanden worden.
 
 ### Professioneller Nutzen
 
-Mentalisierung ist hier **zuerst eine Anforderung an die Fachkraft**, nicht eine Diagnose über X:
+Mentalisierung ist hier **zuerst eine Anforderung an die Fachkraft**, nicht eine Diagnose über Ali:
 
 > Unter Belastung neugierig auf mögliche Bedeutungen bleiben, ohne Gedanken oder Motive des Gegenübers zu behaupten.
 
@@ -117,7 +117,7 @@ Jede Deutung muss:
 
 Der Kinderperspektivenansatz ist besonders nützlich als Erinnerung:
 
-> Erwachsene können die Bedeutung des Kuchens, des Geldes oder des Teilens für X nicht allein aus seinem Verhalten ableiten; seine Perspektive muss, soweit möglich, aktiv erhoben werden.
+> Erwachsene können die Bedeutung des Kuchens, des Geldes oder des Teilens für Ali nicht allein aus seinem Verhalten ableiten; seine Perspektive muss, soweit möglich, aktiv erhoben werden.
 
 ---
 
@@ -148,7 +148,7 @@ Damals:
 
 Mögliche fachliche Neubewertung:
 
-> Die Grenze kann notwendig gewesen sein; zugleich wurden damit gerade handlungsorientierte Situationen entzogen, in denen X Ressourcen zeigt und neue Kompetenzen hätte erproben können.
+> Die Grenze kann notwendig gewesen sein; zugleich wurden damit gerade handlungsorientierte Situationen entzogen, in denen Ali Ressourcen zeigt und neue Kompetenzen hätte erproben können.
 
 Scaffolding fragt deshalb:
 
@@ -158,18 +158,18 @@ Scaffolding fragt deshalb:
 
 Noch keine fertige Intervention, sondern Beispiele für die Planungslogik:
 
-- vor einer Aktivität sichtbar festlegen, was X gehört und was gemeinschaftlich verwendet wird,
+- vor einer Aktivität sichtbar festlegen, was Ali gehört und was gemeinschaftlich verwendet wird,
 - nur wenige, konkrete Regeln gleichzeitig,
 - reale Wahlmöglichkeiten innerhalb klarer Grenzen,
-- einen Weg vereinbaren, wie X einen veränderten Wunsch äußern kann,
+- einen Weg vereinbaren, wie Ali einen veränderten Wunsch äußern kann,
 - den gemeinsamen Zweck während der Tätigkeit sichtbar halten,
-- Unterstützung zurücknehmen, wenn X Schritte zunehmend selbstständig bewältigt.
+- Unterstützung zurücknehmen, wenn Ali Schritte zunehmend selbstständig bewältigt.
 
 ### Gegenprobe
 
 Scaffolding kann selbst problematisch werden, wenn es:
 
-- X unnötig abhängig macht,
+- Ali unnötig abhängig macht,
 - zu viel übernimmt,
 - echte Autonomie durch scheinbare Wahl ersetzt,
 - jeden Konflikt als „fehlende Kompetenz“ erklärt.
@@ -243,7 +243,7 @@ Das gleiche Verhalten kann auch entstehen durch:
 
 Nicht schreiben:
 
-> „X hat eine exekutive Funktionsstörung.“
+> „Ali hat eine exekutive Funktionsstörung.“
 
 Ohne geeignete Diagnostik und deutlich breitere Evidenz wäre das nicht belegt.
 
@@ -281,7 +281,7 @@ Die Begriffe sind sehr allgemein. Ohne konkrete Beobachtungs- und Planungsmerkma
 
 Deshalb nur verwenden, wenn im Planungsteil konkret beschrieben wird:
 
-- **wo** X entscheiden kann,
+- **wo** Ali entscheiden kann,
 - **welche** Kompetenz er selbst ausübt,
 - **wie** Zugehörigkeit erhalten bleibt,
 - **welche** Grenze nicht verhandelbar ist.
@@ -292,7 +292,7 @@ Deshalb nur verwenden, wenn im Planungsteil konkret beschrieben wird:
 
 ## Funktion
 
-PrepP dokumentiert mehrere handlungsorientierte Ressourcen von X:
+PrepP dokumentiert mehrere handlungsorientierte Ressourcen von Ali:
 
 - Initiative bei praktischen Aufgaben,
 - selbstständiges Vorgehen,
@@ -307,7 +307,7 @@ Selbstwirksamkeit hilft, daraus eine Planungsregel abzuleiten:
 
 ### Verbindung zu Punkt 1
 
-Wenn Backen und Einkaufen gerade Felder sind, in denen X praktisch handeln kann, ist das pauschale Streichen dieser Aktivitäten doppeldeutig:
+Wenn Backen und Einkaufen gerade Felder sind, in denen Ali praktisch handeln kann, ist das pauschale Streichen dieser Aktivitäten doppeldeutig:
 
 - als Grenze nachvollziehbar,
 - möglicherweise aber gleichzeitig Entzug eines Feldes für Kompetenz- und Selbstwirksamkeitserfahrungen.
@@ -322,21 +322,21 @@ Erfolg in einer Aktivität beweist nicht automatisch gestiegene Selbstwirksamkei
 
 ## Funktion
 
-Attribution ist hier **kein Hauptmodell zur Erklärung von X**, sondern eine Linse auf die eigene professionelle Deutung.
+Attribution ist hier **kein Hauptmodell zur Erklärung von Ali**, sondern eine Linse auf die eigene professionelle Deutung.
 
 Prüffrage:
 
-> Habe ich situative und relationale Bedingungen zu wenig gewichtet und das Verhalten zu schnell als stabile Eigenschaft von X gelesen?
+> Habe ich situative und relationale Bedingungen zu wenig gewichtet und das Verhalten zu schnell als stabile Eigenschaft von Ali gelesen?
 
 Beispiele problematischer Verkürzungen:
 
-- „X ist rücksichtslos.“
-- „X ist unzuverlässig.“
-- „X kann nicht teilen.“
+- „Ali ist rücksichtslos.“
+- „Ali ist unzuverlässig.“
+- „Ali kann nicht teilen.“
 
 Beobachtungsnäher:
 
-- „In dieser Situation gab X den Kuchen zunächst nicht ab.“
+- „In dieser Situation gab Ali den Kuchen zunächst nicht ab.“
 - „In dieser Situation wich seine aktuelle Forderung von der vorherigen Verwendung der Fanta ab.“
 - „An Tag 7 verteilte er dagegen selbstinitiiert Kuchen an Erwachsene.“
 
@@ -344,7 +344,7 @@ Beobachtungsnäher:
 
 Auch die gegenteilige Verzerrung wäre problematisch:
 
-> Aus Angst vor Zuschreibungen darf nicht jede Verantwortung von X ausschließlich dem Kontext zugeschrieben werden.
+> Aus Angst vor Zuschreibungen darf nicht jede Verantwortung von Ali ausschließlich dem Kontext zugeschrieben werden.
 
 Professionelles Fallverstehen muss **Person und Situation** zusammenhalten.
 
@@ -354,7 +354,7 @@ Professionelles Fallverstehen muss **Person und Situation** zusammenhalten.
 
 | Beobachtung / Problem | Theorie / Modell | Was sie erschließen kann | Zentrale Gegenhypothese | Was noch belegt werden müsste | Mögliche Planungsfolge |
 |---|---|---|---|---|---|
-| X gibt Kuchen zunächst nicht ab; Tag 7 zeigt später selektiv großzügiges Geben | Mentalisierung / Verhalten als Kommunikation | unterschiedliche Bedeutungen von Besitz, Teilen, Beziehung und Situation | Verhalten folgt schlicht aktuellem Wunsch oder konkreter Peer-Ablehnung | Perspektive von X; vergleichbare Situationen | Bedeutung und Erwartungen vorab klären; Perspektive aktiv erheben |
+| Ali gibt Kuchen zunächst nicht ab; Tag 7 zeigt später selektiv großzügiges Geben | Mentalisierung / Verhalten als Kommunikation | unterschiedliche Bedeutungen von Besitz, Teilen, Beziehung und Situation | Verhalten folgt schlicht aktuellem Wunsch oder konkreter Peer-Ablehnung | Perspektive von Ali; vergleichbare Situationen | Bedeutung und Erwartungen vorab klären; Perspektive aktiv erheben |
 | Eigene schnelle Deutung als Regel-/Verbindlichkeitsproblem | Mentalisierung + Attribution | eigene Verstrickung, Zuschreibungen und ausgeblendete Alternativen | die damalige Grenze war trotz enger Deutung für Gruppenschutz erforderlich | eigene Erinnerung, Wortlaut, emotionaler Zustand, Ablauf | Reflexionsschritt vor Sanktion; Grenze und Lernziel trennen |
 | Wiederholtes Sichern vorhandener Ressourcen; Ablehnung unsicheren späteren Returns | exekutive Funktionen **als Prüfhypothese** | Inhibition, Arbeitsgedächtnis, Flexibilität, mehrschrittige Zielrepräsentation | rationales Sparziel, Sicherheit, Vertrauen oder Beziehung erklären das Verhalten besser | mehrere vergleichbare Situationen und Gegenbeispiele | Zwischenschritte sichtbar machen; Unsicherheit reduzieren; nicht pathologisieren |
 | Sonderaktivitäten werden entzogen | Scaffolding / sozialer Konstruktivismus | fehlende Lernbrücke zwischen Grenze und geforderter Kompetenz | zeitweiser Entzug war zum Schutz oder zur Deeskalation notwendig | genaue Funktion und Wirkung der Konsequenz | Grenze erhalten, aber Kompetenz in überschaubaren Schritten üben |
@@ -421,7 +421,7 @@ Im Ausbildungskorpus nur benannt, nicht ausreichend entfaltet. Nur verwenden, we
 
 ## „Reziprozität nicht gelernt“
 
-Das bleibt eine Hypothese, keine Theorieentscheidung. Zuerst muss geklärt werden, **wann**, **gegenüber wem** und **unter welchen Bedingungen** X bereits Gegenseitigkeit erlebt und selbst praktiziert.
+Das bleibt eine Hypothese, keine Theorieentscheidung. Zuerst muss geklärt werden, **wann**, **gegenüber wem** und **unter welchen Bedingungen** Ali bereits Gegenseitigkeit erlebt und selbst praktiziert.
 
 ---
 
@@ -443,7 +443,7 @@ Hier sollen die konkurrierenden Erklärungen gegeneinander geprüft werden.
 
 Möglicher späterer Kern:
 
-> Nicht „X kann nicht loslassen“, sondern eine präzisere Hypothese darüber, unter welchen Bedingungen unmittelbares Sichern gegenüber verzögertem oder sozial vermitteltem Return handlungsleitend wird.
+> Nicht „Ali kann nicht loslassen“, sondern eine präzisere Hypothese darüber, unter welchen Bedingungen unmittelbares Sichern gegenüber verzögertem oder sozial vermitteltem Return handlungsleitend wird.
 
 ## 3.1 Ziel
 
@@ -470,7 +470,7 @@ Scaffolding operationalisieren:
 - welche Wahl besteht,
 - welche Hilfe wird angeboten,
 - wann wird Hilfe zurückgenommen,
-- wie kann X einen veränderten Wunsch äußern,
+- wie kann Ali einen veränderten Wunsch äußern,
 - wie bleibt die Grenze klar.
 
 ## 3.4 Antizipieren
