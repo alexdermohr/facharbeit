@@ -317,11 +317,11 @@
           "title": "Heilpädagogische Struktur von Wahrnehmen und Erleben",
           "items": [
             {
-              "label": "Struktur",
+              "label": "1.1",
               "text": "Kontext"
             },
             {
-              "label": "Struktur",
+              "label": "1.2",
               "text": "Beschreibung des Menschen"
             },
             {
@@ -329,7 +329,7 @@
               "text": "Welche Informationen werden benötigt, um die nachfolgende Ausgangslage zu verstehen?"
             },
             {
-              "label": "Struktur",
+              "label": "1.3",
               "text": "Detaillierte Beschreibung der Ausgangssituation"
             }
           ],
