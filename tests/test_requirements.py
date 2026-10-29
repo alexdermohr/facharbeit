@@ -80,6 +80,11 @@ class RequirementsModelTests(unittest.TestCase):
         self.assertEqual(outline_numbers["Kontext"], "1.1")
         self.assertEqual(outline_numbers["Beschreibung des Menschen"], "1.2")
         self.assertEqual(outline_numbers["Detaillierte Beschreibung der Ausgangssituation"], "1.3")
+        phase = next(item for item in hp["phase_guidance"] if item["phase"] == "wahrnehmen-erleben")
+        self.assertEqual(
+            [item["label"] for item in phase["items"]],
+            ["1.1", "1.2", "Orientierungsfrage", "1.3"],
+        )
         self.assertIn("Einleitung", outline_titles)
         self.assertIn("Beschreibung des Menschen", outline_titles)
         self.assertIn("Antizipieren", outline_titles)
